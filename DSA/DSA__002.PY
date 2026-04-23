@@ -1,27 +1,26 @@
-"""
+#🔹 4. Check Palindrome Array
 
-🔥 PATTERN 1: TWO POINTER (VERY IMPORTANT)
+nums = [1,2,3,2,1]
+# Output: True
 
-👉 Used in:
+#Here will solve this with two pointer approach will take two variable first and last will compare them if matches will move pointers Towards centre
 
-Reverse array
-Palindrome
-Many future problems
-Core Idea:
-Start pointer → beginning  
-End pointer → last  
-Move towards center
-🔥 PATTERN 2: SHIFTING ELEMENTS
-
-👉 Used in:
-
-Rotation
-Move zeros
-
-"""
+#Steps 1.intialize two two pointer one staring from intial index and one more start from last index 2. Run a loop over list whenever a condition fails exit the loop or will compare all elemets untill the mid.
 
 
-#🔥 PROBLEMS (DAY 2)
+left=0
+right=len(nums)-1
+is_true=True
 
-#🔹 1. Reverse Array (IN-PLACE)
+while left<right:
+    print(is_true)
+    if nums[left]!=nums[right]:
+        is_true=False
+        break
+    else:
+        left+=1
+        right-=1
+
+print(is_true)    
+  
 
