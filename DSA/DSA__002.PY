@@ -1,26 +1,61 @@
-#🔹 4. Check Palindrome Array
+# #🔹 3. Remove Duplicates (Manual)
 
-nums = [1,2,3,2,1]
-# Output: True
+# nums = [1,2,2,3,4,4,5]
+# # Output: [1,2,3,4,5]
 
-#Here will solve this with two pointer approach will take two variable first and last will compare them if matches will move pointers Towards centre
+# seen=[]
 
-#Steps 1.intialize two two pointer one staring from intial index and one more start from last index 2. Run a loop over list whenever a condition fails exit the loop or will compare all elemets untill the mid.
+# #the input is list of integers now we have to remove the duplicated.
+
+# #will run a loop over list and append the elements in new list while cheking the elemet exist in new lis or not
+
+# for i in nums:
+
+#     found= False
+#     for j in seen:
+#         if i==j:
+#             found=True
+#             break
+#     if not found:
+#         seen.append(i)
+# print(seen)
+
+    
+
+#1 i=1  i in seen? false seen=[1]
+#2 i=2  i in seen? false seen=[1,2]
+#3 i=2  i in seen? true seen=[1,2]
+#4 i=3 i  in seen? false seen=[1,2,3]
+#so on 
 
 
-left=0
-right=len(nums)-1
-is_true=True
 
-while left<right:
-    print(is_true)
-    if nums[left]!=nums[right]:
-        is_true=False
-        break
-    else:
-        left+=1
-        right-=1
+"""
+2. Check if Array is Sorted
+nums = [1,2,3,4,5] → True  
+nums = [1,3,2,5] → False
 
-print(is_true)    
-  
+👉 Hint:
 
+Compare nums[i] with nums[i+1]
+
+"""
+
+#4. Find Missing Number
+nums = [1,2,4,5]
+# Output: 3
+
+#👉 Hint:
+
+#Check from 1 to n
+
+n=len(nums)
+
+for i in range(1,n+1):
+    found=True
+    for j in nums:
+       if j==i:
+           found=False
+           break
+    if found:
+        print(i)
