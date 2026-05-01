@@ -9,7 +9,7 @@ Weekly target: 55-75 attempted problems
 
 | Phase | Weeks | Topic | Status | Must-Cover Done | Phase Test |
 | --- | ---: | --- | --- | ---: | --- |
-| 1 | 1-3 | Arrays + Hashing + Strings | Not started | 0/10 | Not taken |
+| 1 | 1-3 | Arrays + Hashing + Strings | In progress | 0/10 | Not taken |
 | 2 | 4-5 | Two Pointer + Sliding Window | Not started | 0/8 | Not taken |
 | 3 | 6-7 | Stack + Queue + Recursion | Not started | 0/10 | Not taken |
 | 4 | 8-9 | Linked List + Binary Search | Not started | 0/10 | Not taken |
@@ -20,7 +20,7 @@ Weekly target: 55-75 attempted problems
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics + hashing + strings | 0 | 0 | 0 | 0 | 0% | Pending |
+| 1 | Array basics + hashing + strings | 10 | 9 | 1 | 0 | 90% | Continue to Day 2 after fixing notes |
 | 2 | Prefix/suffix + grouping + frequency | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Interview arrays/hash/strings | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Two pointers | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -39,42 +39,61 @@ Weekly target: 55-75 attempted problems
 
 ## Daily Logs
 
-### 2026-05-01
+### 2026-05-02
 
-Week / Day:
-Phase:
-Topic:
+Week / Day: Week 1 / Day 1  
+Phase: Phase 1 - Arrays + Hashing + Strings  
+Topic: Array traversal, tracking, adjacent comparison, in-place update, basic frequency map
 
 Concept studied:
+- List traversal
+- Manual sum/count tracking
+- Max/min tracking
+- Reverse using extra list and two pointers
+- Adjacent comparison for sorted check
+- Position tracking for moving zeroes
+- Dictionary frequency for majority element
 
-Problems attempted:
-Solved independently:
-Solved after hint:
-Solved after solution:
-Unsolved:
+Problems attempted: 10  
+Solved independently: 9  
+Solved after hint: 1  
+Solved after solution: 0  
+Unsolved: 0
 
 Problem list:
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+1. Print All Elements - correct
+2. Sum Of List - correct
+3. Count Even Numbers - correct
+4. Find Maximum Element - correct
+5. Find Minimum Element - correct
+6. Reverse Array - correct, but rename duplicate function versions
+7. Check If Array Is Sorted - correct
+8. Second Largest Distinct Element - correct after edge-case hint
+9. Move Zeroes To End - correct
+10. Majority Element - correct with dictionary; Boyer-Moore still pending
 
 Main mistakes:
+- Used `print(print_element(nums))` initially, causing an extra `None`; fixed by calling the function directly.
+- Second largest needed explicit handling for lists with fewer than 2 items and all-duplicate values.
+- Forgot to increment the position pointer while moving zeroes, then corrected it.
+- Reverse array extra-list space was written as `O(2)`; correct space is `O(n)`.
+- Majority element dictionary approach uses `O(n)` extra space, not `O(1)`.
+- Boyer-Moore voting approach is not learned yet.
 
 Patterns recognized:
+- Linear traversal
+- Tracking variable
+- Adjacent comparison
+- Two-pointer reverse
+- Position tracking
+- Dictionary frequency map
 
-Brute force written for all problems? yes/no
-Dry runs completed? yes/no
-Complexities written? yes/no
+Brute force written for all problems? yes  
+Dry runs completed? yes  
+Complexities written? yes, with corrections needed for reverse extra-list and majority element  
 
-Continue / repeat / slow down:
-Reason:
+Continue / repeat / slow down: Continue  
+Reason: Strong Day 1 accuracy. Continue to Day 2, but first correct the complexity notes and learn Boyer-Moore as a revision item.
 
 ## Must-Cover Tracker
 
@@ -92,6 +111,18 @@ Reason:
 | Subarray Sum Equals K | Not started |  |  |
 | Valid Palindrome | Not started |  |  |
 | First Unique Character in a String | Not started |  |  |
+
+Day 1 foundation problems completed:
+- Print All Elements
+- Sum Of List
+- Count Even Numbers
+- Find Maximum Element
+- Find Minimum Element
+- Reverse Array
+- Check If Array Is Sorted
+- Second Largest Distinct Element
+- Move Zeroes To End
+- Majority Element
 
 ### Phase 2: Two Pointer + Sliding Window
 
@@ -172,4 +203,6 @@ Use this table whenever a problem needs revision.
 
 | Problem | Topic | Mistake Type | Failed Count | Next Revisit | Notes |
 | --- | --- | --- | ---: | --- | --- |
-|  |  |  |  |  |  |
+| Second Largest Distinct Element | Arrays / Tracking | Edge cases: length < 2 and all duplicates | 1 | 2026-05-03 | Re-solve without checking notes |
+| Reverse Array | Arrays / Two Pointer | Complexity note: extra-list version is O(n) space | 1 | 2026-05-03 | Keep separate names for extra-list and in-place functions |
+| Majority Element | Hashing / Voting | Optimization not known: Boyer-Moore pending; dict space is O(n) | 1 | 2026-05-03 | First re-solve dict version, then learn Boyer-Moore |

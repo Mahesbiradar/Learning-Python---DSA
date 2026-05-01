@@ -415,7 +415,7 @@ print(reverse_list([5]))
 print(reverse_list([]))
 
 #Time Complexcity 1.O(n) for both solutions
-#Space Complexcity 1.O(2) 2.O(1)
+#Space Complexcity 1.O(n) 2.O(1)
 
 #Status: Solved independently
 
@@ -671,4 +671,76 @@ print(move_zeros([]))
 
 #Status: Solved independently
 
-#Mistake or confusion: intially i have not handled the two edge case explicitly 1.Len of list <2 and if all the element in list comtains same value then seen in chatgpt remaing all the logic is mine 
+#Mistake or confusion: while solving forgot to increment the pointer then realize for all the list passing to function printing zeros in list. 
+
+
+"""
+## Problem 10: Majority Element
+
+Given a list of integers where one element appears more than `n // 2` times, return that majority element.
+
+Example:
+
+```python
+nums = [3, 2, 3]
+```
+
+Expected output:
+
+```python
+3
+```
+
+Requirements:
+- First solve using a dictionary frequency map.
+- Then try the Boyer-Moore voting approach if you can.
+- You may assume a majority element always exists.
+
+Test cases:
+
+```python
+[3, 2, 3] -> 3
+[2, 2, 1, 1, 1, 2, 2] -> 2
+[1] -> 1
+[5, 5, 5, 2, 2] -> 5
+```
+"""
+
+#Understanding: The list is given now i have to find the element which appears maximum time 
+
+#Brute Force: first i will make one Dict then add all the elements of list in the dict with the frequency occurance
+
+#Then Run one more Loop to Find the Majar element
+
+#Optimal: 
+
+
+#Code: 
+
+def major_element(nums):
+    seen={}
+    major_ele=0
+    major_Elements=None
+    for i in nums:
+        if i in seen:
+            seen[i]+=1
+        else:
+            seen[i]=1
+    for key,value in seen.items():
+        if value>major_ele:
+            major_ele=value
+            major_Elements=key
+    return major_Elements
+
+print( major_element([3, 2, 3]))
+print( major_element([2, 2, 1, 1, 1, 2, 2]))
+print( major_element([1]))
+print( major_element([5, 5, 5, 2, 2]))
+
+        
+#Time Complexcity:  O(n)
+#Space Complexcity: O(n)
+
+#Status: Solved independently 
+
+#Mistake or confusion: Not able to think the optimal solution  and unaware of the Boyer-Moore voting approach
