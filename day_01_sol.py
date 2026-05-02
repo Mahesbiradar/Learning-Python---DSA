@@ -743,4 +743,3 @@ print( major_element([5, 5, 5, 2, 2]))
 
 #Status: Solved independently 
 
-#Mistake or confusion: Not able to think the optimal solution  and unaware of the Boyer-Moore voting approach

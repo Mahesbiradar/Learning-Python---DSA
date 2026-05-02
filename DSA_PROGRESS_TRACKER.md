@@ -93,7 +93,16 @@ Dry runs completed? yes
 Complexities written? yes, with corrections needed for reverse extra-list and majority element  
 
 Continue / repeat / slow down: Continue  
-Reason: Strong Day 1 accuracy. Continue to Day 2, but first correct the complexity notes and learn Boyer-Moore as a revision item.
+Reason: Strong Day 1 accuracy. Revision completed before Day 2. Boyer-Moore candidate logic is now understood and implemented; validation pass was learned with help.
+
+Revision completed:
+- Second Largest Distinct Element re-solved, with one remaining edge-case note: check `len(nums) < 2` before reading `nums[0]`.
+- Move Zeroes To End re-solved correctly using a write pointer.
+- Majority Element re-solved correctly using a dictionary frequency map.
+- Boyer-Moore implemented with candidate selection and validation.
+
+Next task file:
+- `DAY_02_PROBLEMS.md`
 
 ## Must-Cover Tracker
 
@@ -203,6 +212,6 @@ Use this table whenever a problem needs revision.
 
 | Problem | Topic | Mistake Type | Failed Count | Next Revisit | Notes |
 | --- | --- | --- | ---: | --- | --- |
-| Second Largest Distinct Element | Arrays / Tracking | Edge cases: length < 2 and all duplicates | 1 | 2026-05-03 | Re-solve without checking notes |
+| Second Largest Distinct Element | Arrays / Tracking | Edge cases: length < 2 and all duplicates | 1 | Completed 2026-05-02 | Re-solved; move the length check before `nums[0]` to handle `[]` safely |
 | Reverse Array | Arrays / Two Pointer | Complexity note: extra-list version is O(n) space | 1 | 2026-05-03 | Keep separate names for extra-list and in-place functions |
-| Majority Element | Hashing / Voting | Optimization not known: Boyer-Moore pending; dict space is O(n) | 1 | 2026-05-03 | First re-solve dict version, then learn Boyer-Moore |
+| Majority Element | Hashing / Voting | Optimization not known: Boyer-Moore pending; dict space is O(n) | 1 | Completed 2026-05-02 | Dictionary version re-solved; Boyer-Moore candidate logic implemented, validation learned with help |
