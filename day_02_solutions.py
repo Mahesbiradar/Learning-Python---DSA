@@ -586,4 +586,93 @@ print(rotate_array([1, 2],3))
 #Status: Understood and implemented reverse-based rotation pattern independently after guidance
 
 
+"""
+## Problem 9: Product Of Array Except Self
 
+Given a list of integers, return a list where each index contains the product of all numbers except the number at that index.
+
+Example:
+
+```python
+nums = [1, 2, 3, 4]
+```
+
+Expected output:
+
+```python
+[24, 12, 8, 6]
+```
+
+Requirements:
+- Do not use division.
+- First solve using left and right product arrays.
+- Then try optimizing to output array plus one running suffix variable.
+
+Test cases:
+
+```python
+[1, 2, 3, 4] -> [24, 12, 8, 6]
+[-1, 1, 0, -3, 3] -> [0, 0, 9, 0, 0]
+[2, 3] -> [3, 2]
+[0, 0] -> [0, 0]
+```
+
+---
+"""
+
+#Understanding:Here the list of the intergeres given and i have to retun the list which contains the Product of array of all element except the Self Index.
+
+#Brute Force Solution: Here ill Run a nested loop to calculate the Product of array except Self.
+
+def prod_array(nums):
+    result=[]
+    
+
+    for i in range(len(nums)):
+        product=1
+        for j in range(len(nums)):
+            if i!=j:
+                product*=nums[j]
+        result.append(product)
+    return result
+
+print(prod_array([1, 2, 3, 4]))
+print(prod_array([-1, 1, 0, -3, 3]))
+print(prod_array([2, 3]))
+print(prod_array([0, 0]))
+
+#Time Complexcity: O(n^2)  
+#Space Complexcity: O(n)
+
+#Status: Solved independently
+
+#Mistakes: intially i was comparing the Values in list But lated Fixed and now comparing the Index.
+
+#optimal solution:
+
+def prod_array(nums):
+    left=[1]
+    for i in range(1,len(nums)):
+        left.append(left[i-1]*nums[i-1])
+    right=[None]*len(nums)
+    right[-1]=1
+    for i in range(len(nums)-2,-1,-1):
+        right[i]=right[i+1]*nums[i+1]
+    result=[]
+    for i in range(len(nums)):
+        result.append(left[i]*right[i])
+
+    return result
+
+
+print(prod_array([1, 2, 3, 4]))
+print(prod_array([-1, 1, 0, -3, 3]))
+print(prod_array([2, 3]))
+print(prod_array([0, 0]))
+
+#Time Complexcity: O(n)  
+#Space Complexcity: Not sure
+
+#Status: Solved independently
+
+#Mistakes: Mistakes:Initially struggled to convert prefix/suffix concept into code logic.Learned how left product and right product arrays reuse previous computations.
