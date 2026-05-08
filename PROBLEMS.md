@@ -3137,10 +3137,22 @@ This is a clean nested-loop exercise.
 
 ## To Revisit
 
-| Problem Name | Topic |
-| --- | --- |
-| Return Multiple Values | Functions / Tuples |
-| Functions Fundamentals | Python Fundamentals |
-| Sliding Window Practice | DSA Patterns |
-| Arrays Advanced | Arrays / Lists |
-| Recursion Basics | DSA Concepts |
+| Problem Name | Topic | Priority | Reason |
+| --- | --- | --- | --- |
+| Remove Duplicates From Sorted Array | Arrays / Write Pointer | High | Needed concept help; must become automatic. |
+| Remove Element | Arrays / Write Pointer | High | Solved using nearby reference pattern. |
+| Missing Number | Arrays / Hashing / Math | High | Set method needed hint; complexity notes need correction. |
+| Best Time To Buy And Sell Stock | Arrays / Running Minimum | High | Logic required AI help. |
+| Plus One | Arrays / Carry Simulation | High | Solution was viewed; re-solve from memory. |
+| Product Of Array Except Self | Arrays / Prefix-Suffix | High | Prefix/suffix idea and space complexity are unstable. |
+| Rotate Array | Arrays / Reverse Method | Medium | Edge cases and in-place reverse method need practice. |
+| Second Largest Distinct Element | Arrays / Tracking | Medium | Empty/all-duplicate edge cases caused trouble. |
+| Boyer-Moore Majority Element | Arrays / Voting | Medium | Candidate logic known; validation learned with help. |
+| Move Negative Numbers To End | Arrays / Partition | Medium | Revision solution copied from AI. |
+| Third Largest Distinct Element | Arrays / Tracking | Medium | Revision solution copied from AI. |
+| Two Sum | Hashing | High | Must-cover placement problem; solve and submit on LeetCode. |
+| Valid Anagram | Hashing / Strings | High | Must-cover placement problem. |
+| First Unique Character in a String | Hashing / Strings | High | Must-cover placement problem. |
+| Valid Palindrome | Strings / Two Pointers | High | Must-cover placement problem. |
+| Group Anagrams | Hashing / Grouping | Medium | Next medium grouping pattern. |
+| Top K Frequent Elements | Hashing / Frequency | Medium | Next medium frequency pattern. |

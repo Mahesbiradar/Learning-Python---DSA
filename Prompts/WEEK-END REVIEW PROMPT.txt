@@ -1,0 +1,50 @@
+Analyze all DAY_XX_WORK.md files from the current week only.
+
+Tasks:
+
+1. Generate a weekly performance review.
+
+2. Analyze:
+
+* consistency
+* independent-solving rate
+* hint dependency
+* weak topics
+* strong topics
+* revisit frequency
+* implementation quality
+* pattern-recognition growth
+* complexity understanding
+* LeetCode progress
+
+3. Update:
+
+* weekly tracker
+* must-cover tracker
+* mastery status
+* failed queue
+* roadmap pacing
+
+4. Determine:
+
+* whether current speed is sustainable
+* whether revision is sufficient
+* whether overload exists
+* whether topic pacing should change
+
+5. Generate:
+
+* next week's execution plan
+* daily topic distribution
+* revision targets
+* must-cover priorities
+* fundamentals alignment
+* mock-test strategy
+
+6. Keep the next-week system optimized for:
+
+* placement preparation
+* consistency
+* medium-level interview readiness
+* long-term retention
+* avoiding burnout

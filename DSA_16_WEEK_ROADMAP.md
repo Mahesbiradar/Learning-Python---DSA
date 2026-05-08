@@ -1,683 +1,493 @@
-# 16-Week DSA Roadmap
+# 4-Month Placement DSA Roadmap
 
-Goal: become interview-ready in DSA using Python through daily problem solving, pattern recognition, revision, and timed evaluation.
+Goal: become placement-interview ready in DSA using Python through sustainable solving, revision, pattern recognition, LeetCode submissions, and timed practice.
 
-Daily time: 8-10 hours  
-Weekly rhythm: 6 study/practice days + 1 test/revision day  
-Main platforms: LeetCode, NeetCode 150 / Blind 75  
-Local files to use: `CONCEPTS.md`, `PROBLEMS.md`, `REVISION_PROBLEMS.md`, `DSA_DAILY_EXECUTION_SYSTEM.md`, `DSA_PROGRESS_TRACKER.md`
+Daily time: 3-5 focused hours  
+Daily new problems: 3-5 maximum  
+Weekly rhythm: 5 learning days + 1 revision day + 1 mock/review day  
+Main platforms: LeetCode, NeetCode 150 / Blind 75, local Python files  
+Priority: consistency, revision, medium problem solving, interview explanation, and retention.
 
 ## Non-Negotiable Rules
 
-- No unnecessary theory.
-- Every concept must connect to problems.
-- Always write brute force before optimization.
-- Always dry run before coding.
-- Always write time and space complexity.
-- Do not mark a problem complete after only watching or reading the solution.
-- Move to the next topic only when the stop/continue rules allow it.
+- Do not solve 10 problems/day as the default.
+- Every day includes fundamentals revision.
+- Every day includes old problem revision.
+- Every important problem gets brute force, optimized idea, dry run, time, space, and mistake note.
+- Do not mark a problem mastered after watching or reading a solution.
+- Medium problems matter more than high easy-problem volume.
+- Weekly mocks are required.
+- Burnout prevention is part of the plan.
 
-## Phase 1: Arrays + Hashing + Strings
+## Month 1: Arrays + Hashing + Strings + Revision Discipline
 
-Duration: Weeks 1-3
+Duration: Weeks 1-4  
+Interview relevance: highest-frequency foundation for placement rounds.
 
-### Concepts
+### Topics
 
-Arrays:
-- Traversal, indexing, prefix/suffix logic.
-- Frequency counting, in-place updates, sorting basics.
-- Edge cases: empty list, duplicates, negatives, single element.
+- Array traversal, indexing, in-place updates.
+- Tracking variables: max, min, count, second largest.
+- Write pointer: remove, compact, move values.
+- Hashing with sets and dictionaries.
+- Frequency maps and grouping.
+- Strings: traversal, palindrome, anagram, character counts.
+- Prefix/suffix and running state.
 
-Hashing:
-- Dictionary frequency map, set lookup, key existence.
-- Counting pairs, grouping by key, duplicate detection.
+### Target Patterns
 
-Strings:
-- Character traversal, frequency counting, palindrome basics.
-- Anagram logic, string building, ASCII/lowercase assumptions, split/join.
+- Linear scan.
+- Tracking variable.
+- Adjacent comparison.
+- Set lookup.
+- Dictionary frequency.
+- Dictionary index lookup.
+- Write pointer.
+- Prefix/suffix product.
+- String normalization.
+- Grouping by computed key.
 
-### Patterns
+### Problem Count Goals
 
-- Linear scan
-- Frequency map
-- Prefix sum
-- Set lookup
-- Counting occurrences
-- Grouping
-- Sorting + comparison
-- Character frequency
-- Reverse traversal
-- Index tracking
+- New problems: 70-85.
+- Revision re-solves: 35-50.
+- LeetCode submissions: 35-45.
+- Must-cover problems mastered: 10-12.
 
-### Problems
+### Must-Cover Problems
 
-Beginner:
-- Contains Duplicate
-- Valid Anagram
-- Find Maximum / Minimum
-- Second Largest Element
-- Count Frequency of Elements
-- Check if Array is Sorted
-- Reverse Array
-- Reverse String
-- First Unique Character in a String
-- Is Subsequence
+1. Contains Duplicate
+2. Two Sum
+3. Valid Anagram
+4. First Unique Character in a String
+5. Valid Palindrome
+6. Best Time to Buy and Sell Stock
+7. Product of Array Except Self
+8. Group Anagrams
+9. Top K Frequent Elements
+10. Longest Consecutive Sequence
+11. Subarray Sum Equals K
+12. Encode and Decode Strings or String Compression
 
-Intermediate:
-- Two Sum
-- Group Anagrams
-- Top K Frequent Elements
-- Product of Array Except Self
-- Longest Common Prefix
-- Majority Element
-- Missing Number
-- Intersection of Two Arrays
-- Encode and Decode Strings
-- Valid Palindrome
-
-Interview:
-- Longest Consecutive Sequence
-- Subarray Sum Equals K
-- 3Sum
-- Find All Anagrams in a String
-- Minimum Window Substring
-- First Missing Positive
-- String Compression
-- Roman to Integer
-- Integer to Roman
-- Valid Sudoku
-
-Must-cover:
-- Two Sum
-- Contains Duplicate
-- Valid Anagram
-- Group Anagrams
-- Top K Frequent Elements
-- Product of Array Except Self
-- Longest Consecutive Sequence
-- Subarray Sum Equals K
-- Valid Palindrome
-- First Unique Character in a String
-
-### Weekly Execution
+### Weekly Expectations
 
 Week 1:
-- Day 1: Array traversal, max/min, count, reverse. Solve 10 problems.
-- Day 2: Index tracking, second largest, sorted check, duplicates. Solve 10-12 problems.
-- Day 3: Hash map frequency and set lookup. Solve 10-12 problems.
-- Day 4: Two Sum, duplicates, grouping basics. Solve 8-10 problems.
-- Day 5: Strings, palindrome, anagram, character count. Solve 10-12 problems.
-- Day 6: Mixed arrays + hashing + strings revision. Re-solve failed problems.
-- Day 7: Weekly test: 2 easy, 3 medium, 1 interview problem.
+- Stabilize Day 1 and Day 2 basics.
+- Finish set lookup, write pointer, basic dictionary.
+- Keep volume low until weak Day 2 problems are re-solved.
 
 Week 2:
-- Day 1: Prefix sum basics and running totals. Solve 8-10 problems.
-- Day 2: Product except self, prefix/suffix arrays. Solve 8-10 problems.
-- Day 3: Grouping problems: anagrams, buckets, frequency. Solve 8-10 problems.
-- Day 4: Top K and majority logic. Solve 8-10 problems.
-- Day 5: String compression, subsequence, common prefix. Solve 10 problems.
-- Day 6: Must-cover reattempts from memory.
-- Day 7: Weekly test and topic weakness review.
+- Hash map frequency, anagrams, first unique, Two Sum.
+- Begin grouping and Top K.
+- First weekly mock with 4 problems.
 
 Week 3:
-- Day 1: Longest consecutive, set expansion. Solve 7-9 problems.
-- Day 2: Subarray sum equals K and prefix-hash. Solve 7-9 problems.
-- Day 3: Valid Sudoku and matrix hashing. Solve 7-9 problems.
-- Day 4: Interview mixed set. Solve 6-8 problems.
-- Day 5: Timed arrays/hash/strings mock. Solve 6 problems.
-- Day 6: Redo all must-cover misses.
-- Day 7: Phase 1 test. Continue only if criteria are met.
-
-## Phase 2: Two Pointer + Sliding Window
-
-Duration: Weeks 4-5
-
-### Concepts
-
-Two Pointer:
-- Left/right pointers, opposite direction pointers, same direction pointers.
-- Sorted array usage, in-place movement, duplicate skipping.
-
-Sliding Window:
-- Fixed-size window, variable-size window, window expand/shrink.
-- Frequency inside window, maximum/minimum window condition, substring/subarray window.
-
-### Patterns
-
-- Left/right shrinking
-- Fast/slow pointer
-- Fixed window sum/count
-- Variable window with condition
-- Window with hash map
-- Window with set
-- Duplicate skipping after sorting
-
-### Problems
-
-Beginner:
-- Valid Palindrome
-- Reverse String
-- Merge Sorted Array
-- Move Zeroes
-- Remove Duplicates from Sorted Array
-- Squares of a Sorted Array
-- Best Time to Buy and Sell Stock
-- Maximum Average Subarray I
-
-Intermediate:
-- Two Sum II
-- Container With Most Water
-- 3Sum
-- Longest Substring Without Repeating Characters
-- Longest Repeating Character Replacement
-- Permutation in String
-- Minimum Size Subarray Sum
-- Max Consecutive Ones III
-
-Interview:
-- Trapping Rain Water
-- Minimum Window Substring
-- Sliding Window Maximum
-- Subarrays with K Different Integers
-- Fruit Into Baskets
-- Longest Substring with At Most K Distinct Characters
-
-Must-cover:
-- Two Sum II
-- 3Sum
-- Container With Most Water
-- Trapping Rain Water
-- Longest Substring Without Repeating Characters
-- Longest Repeating Character Replacement
-- Permutation in String
-- Minimum Window Substring
-
-### Weekly Execution
+- Prefix/suffix, running sums, Longest Consecutive, Subarray Sum Equals K.
+- More medium problems.
 
 Week 4:
-- Day 1: Opposite direction two pointers. Solve 10 problems.
-- Day 2: Same direction two pointers and in-place updates. Solve 10 problems.
-- Day 3: Sorted arrays and duplicate skipping. Solve 8-10 problems.
-- Day 4: 3Sum and container patterns. Solve 6-8 problems.
-- Day 5: Trapping Rain Water and harder two-pointer cases. Solve 5-7 problems.
-- Day 6: Re-solve missed two-pointer problems.
-- Day 7: Weekly test.
+- Mixed arrays/hash/strings revision.
+- Re-solve all must-cover problems.
+- Timed mock: 2 easy + 3 medium.
+
+### Difficulty Progression
+
+- Week 1: easy and easy-medium.
+- Week 2: easy-medium to medium.
+- Week 3: medium focus.
+- Week 4: timed mixed medium practice.
+
+### Revision Goals
+
+- Failed problems revisited after 24h, 3d, 7d.
+- Every must-cover problem re-solved without notes before Month 2.
+- Complexity notes corrected daily.
+
+## Month 2: Two Pointers + Sliding Window + Stack + Queue
+
+Duration: Weeks 5-8  
+Interview relevance: common medium-pattern month.
+
+### Topics
+
+- Opposite-direction two pointers.
+- Same-direction fast/slow pointers.
+- Sorted-array duplicate skipping.
+- Fixed and variable sliding windows.
+- Stack basics and monotonic stack.
+- Queue/deque basics and monotonic queue.
+
+### Target Patterns
+
+- Left/right shrink.
+- Fast/slow pointer.
+- Duplicate skipping after sorting.
+- Fixed-size window.
+- Variable-size window with set/map.
+- Parentheses matching.
+- Monotonic stack.
+- Monotonic queue.
+
+### Problem Count Goals
+
+- New problems: 75-90.
+- Revision re-solves: 40-55.
+- LeetCode submissions: 40-50.
+- Must-cover mastered: 14-16.
+
+### Must-Cover Problems
+
+Two pointers:
+1. Two Sum II
+2. Valid Palindrome
+3. 3Sum
+4. Container With Most Water
+5. Trapping Rain Water
+
+Sliding window:
+6. Best Time to Buy and Sell Stock revisit
+7. Longest Substring Without Repeating Characters
+8. Longest Repeating Character Replacement
+9. Permutation in String
+10. Minimum Window Substring
+
+Stack/queue:
+11. Valid Parentheses
+12. Min Stack
+13. Daily Temperatures
+14. Evaluate Reverse Polish Notation
+15. Sliding Window Maximum
+16. Implement Queue using Stacks or Number of Recent Calls
+
+### Weekly Expectations
 
 Week 5:
-- Day 1: Fixed-size sliding window. Solve 10 problems.
-- Day 2: Variable-size sliding window with set/map. Solve 8-10 problems.
-- Day 3: Window frequency problems. Solve 8-10 problems.
-- Day 4: Minimum window and permutation logic. Solve 6-8 problems.
-- Day 5: Timed mixed two-pointer/window set. Solve 6-8 problems.
-- Day 6: Must-cover reattempts.
-- Day 7: Phase 2 test.
-
-## Phase 3: Stack + Queue + Recursion Depth
-
-Duration: Weeks 6-7
-
-### Concepts
-
-Stack:
-- LIFO, push/pop/top, monotonic stack.
-- Matching brackets, previous/next greater element, expression evaluation.
-
-Queue:
-- FIFO, `collections.deque`, BFS preparation.
-- Fixed-size queue, monotonic queue.
-
-Recursion:
-- Base case, recursive case, call stack.
-- Backtracking foundation, recursion tree, avoiding infinite recursion.
-
-### Patterns
-
-- Parentheses matching
-- Monotonic increasing stack
-- Monotonic decreasing stack
-- Next greater / previous greater
-- Min stack design
-- Queue simulation
-- BFS queue structure
-- Recursive decomposition
-
-### Problems
-
-Beginner:
-- Valid Parentheses
-- Implement Stack using Queues
-- Implement Queue using Stacks
-- Baseball Game
-- Backspace String Compare
-- Reverse String using Recursion
-- Factorial
-- Fibonacci
-- Sum of Array Recursively
-
-Intermediate:
-- Min Stack
-- Daily Temperatures
-- Next Greater Element I
-- Evaluate Reverse Polish Notation
-- Generate Parentheses
-- Decode String
-- Asteroid Collision
-- Simplify Path
-- Number of Recent Calls
-
-Interview:
-- Largest Rectangle in Histogram
-- Sliding Window Maximum
-- Basic Calculator
-- Remove K Digits
-- Online Stock Span
-- Car Fleet
-- Next Greater Element II
-- Subsets
-- Permutations
-
-Must-cover:
-- Valid Parentheses
-- Min Stack
-- Daily Temperatures
-- Evaluate Reverse Polish Notation
-- Generate Parentheses
-- Decode String
-- Largest Rectangle in Histogram
-- Sliding Window Maximum
-- Subsets
-- Permutations
-
-### Weekly Execution
+- Two pointers only.
+- Focus on pointer movement explanation.
 
 Week 6:
-- Day 1: Basic stack and parentheses. Solve 10-12 problems.
-- Day 2: Stack simulation and expression evaluation. Solve 8-10 problems.
-- Day 3: Monotonic stack basics. Solve 8-10 problems.
-- Day 4: Daily Temperatures, stock span, next greater. Solve 7-9 problems.
-- Day 5: Largest rectangle and hard stack cases. Solve 5-7 problems.
-- Day 6: Re-solve stack misses.
-- Day 7: Weekly test.
+- Sliding window.
+- Keep a window-state table during dry runs.
 
 Week 7:
-- Day 1: Queue and deque usage. Solve 8-10 problems.
-- Day 2: Monotonic queue and sliding max. Solve 6-8 problems.
-- Day 3: Recursion basics and call stack. Solve 8-10 problems.
-- Day 4: Subsets and permutations. Solve 6-8 problems.
-- Day 5: Generate parentheses and recursion mixed set. Solve 6-8 problems.
-- Day 6: Must-cover reattempts.
-- Day 7: Phase 3 test.
-
-## Phase 4: Linked List + Binary Search
-
-Duration: Weeks 8-9
-
-### Concepts
-
-Linked List:
-- Node structure, head pointer, traversal.
-- Insert/delete basics, reversing links, slow/fast pointer.
-- Dummy node, cycle detection.
-
-Binary Search:
-- Search space, mid calculation, left/right boundary.
-- Exact search, lower bound / upper bound.
-- Binary search on answer, sorted rotated arrays.
-
-### Patterns
-
-Linked List:
-- Dummy node
-- Fast/slow pointer
-- Reverse links
-- Merge lists
-- Cycle detection
-- Remove nth node
-- Reorder list
-
-Binary Search:
-- Classic binary search
-- First/last occurrence
-- Search rotated sorted array
-- Binary search on answer
-- Matrix binary search
-
-### Problems
-
-Beginner:
-- Reverse Linked List
-- Merge Two Sorted Lists
-- Linked List Cycle
-- Middle of the Linked List
-- Remove Duplicates from Sorted List
-- Binary Search
-- Search Insert Position
-- Guess Number Higher or Lower
-- First Bad Version
-
-Intermediate:
-- Remove Nth Node From End
-- Reorder List
-- Add Two Numbers
-- Palindrome Linked List
-- Intersection of Two Linked Lists
-- Search in Rotated Sorted Array
-- Find Minimum in Rotated Sorted Array
-- Find First and Last Position
-- Search a 2D Matrix
-- Koko Eating Bananas
-
-Interview:
-- Merge K Sorted Lists
-- Reverse Nodes in K Group
-- Copy List with Random Pointer
-- LRU Cache
-- Median of Two Sorted Arrays
-- Split Array Largest Sum
-- Capacity to Ship Packages
-- Time Based Key-Value Store
-
-Must-cover:
-- Reverse Linked List
-- Merge Two Sorted Lists
-- Linked List Cycle
-- Remove Nth Node From End
-- Reorder List
-- Merge K Sorted Lists
-- Binary Search
-- Search in Rotated Sorted Array
-- Find Minimum in Rotated Sorted Array
-- Koko Eating Bananas
-
-### Weekly Execution
+- Stack basics and monotonic stack.
+- Daily Temperatures should be re-solved multiple times.
 
 Week 8:
-- Day 1: Linked list node/traversal/reversal. Solve 8-10 problems.
-- Day 2: Dummy node and deletion problems. Solve 8-10 problems.
-- Day 3: Slow/fast pointer and cycle problems. Solve 8-10 problems.
-- Day 4: Merge/reorder linked lists. Solve 6-8 problems.
-- Day 5: Merge K and interview linked list set. Solve 5-7 problems.
-- Day 6: Re-solve linked list misses.
-- Day 7: Weekly test.
+- Queue/deque, monotonic queue, mixed Month 2 mock.
+
+### Difficulty Progression
+
+- Start with pointer easy problems.
+- Move to medium two-pointer and window problems.
+- End with monotonic stack/window maximum exposure.
+
+### Revision Goals
+
+- Re-solve Month 1 must-cover twice during Month 2.
+- Maintain failed queue for every window/stack miss.
+
+## Month 3: Linked List + Binary Search + Trees
+
+Duration: Weeks 9-12  
+Interview relevance: core data structure month.
+
+### Topics
+
+- Linked list traversal, reversal, dummy node.
+- Fast/slow pointer on linked lists.
+- Binary search exact search, bounds, rotated arrays, answer search.
+- Tree DFS recursion.
+- Tree BFS level order.
+- BST validation and LCA.
+
+### Target Patterns
+
+- Dummy node.
+- Reverse links.
+- Fast/slow pointer.
+- Merge two lists.
+- Classic binary search.
+- Lower/upper bound.
+- Binary search on answer.
+- Recursive DFS.
+- Iterative BFS.
+- BST property.
+
+### Problem Count Goals
+
+- New problems: 70-85.
+- Revision re-solves: 45-60.
+- LeetCode submissions: 40-50.
+- Must-cover mastered: 16-18.
+
+### Must-Cover Problems
+
+Linked list:
+1. Reverse Linked List
+2. Merge Two Sorted Lists
+3. Linked List Cycle
+4. Remove Nth Node From End
+5. Reorder List
+6. Merge K Sorted Lists
+
+Binary search:
+7. Binary Search
+8. Search Insert Position
+9. Search in Rotated Sorted Array
+10. Find Minimum in Rotated Sorted Array
+11. Koko Eating Bananas
+12. Search a 2D Matrix
+
+Trees:
+13. Maximum Depth of Binary Tree
+14. Invert Binary Tree
+15. Diameter of Binary Tree
+16. Binary Tree Level Order Traversal
+17. Validate Binary Search Tree
+18. Lowest Common Ancestor
+
+### Weekly Expectations
 
 Week 9:
-- Day 1: Classic binary search. Solve 10-12 problems.
-- Day 2: Boundaries and first/last occurrence. Solve 8-10 problems.
-- Day 3: Rotated sorted arrays. Solve 8-10 problems.
-- Day 4: Matrix and answer-space binary search. Solve 6-8 problems.
-- Day 5: Koko/shipping/split array style problems. Solve 5-7 problems.
-- Day 6: Must-cover reattempts.
-- Day 7: Phase 4 test.
-
-## Phase 5: Trees + Graph Basics
-
-Duration: Weeks 10-12
-
-### Concepts
-
-Trees:
-- Binary tree node, DFS preorder/inorder/postorder.
-- BFS level order, height/depth, balanced tree.
-- BST property, lowest common ancestor, tree recursion.
-
-Graphs:
-- Adjacency list, visited set, BFS, DFS.
-- Connected components, cycle basics, grid traversal, topological sort basics.
-
-### Patterns
-
-Trees:
-- Recursive DFS
-- Iterative BFS
-- Level order traversal
-- Tree height/depth
-- Path sum
-- BST validation
-- LCA
-- Build tree from traversal
-
-Graphs:
-- BFS from source
-- DFS connected components
-- Matrix/grid DFS
-- Multi-source BFS
-- Cycle detection
-- Topological sorting
-- Union-find basics
-
-### Problems
-
-Beginner:
-- Maximum Depth of Binary Tree
-- Invert Binary Tree
-- Same Tree
-- Subtree of Another Tree
-- Binary Tree Level Order Traversal
-- Diameter of Binary Tree
-- Balanced Binary Tree
-- Search in a BST
-- Flood Fill
-- Number of Islands
-
-Intermediate:
-- Validate Binary Search Tree
-- Lowest Common Ancestor of BST
-- Binary Tree Right Side View
-- Path Sum II
-- Kth Smallest Element in BST
-- Construct Binary Tree from Preorder and Inorder
-- Clone Graph
-- Rotting Oranges
-- Pacific Atlantic Water Flow
-- Course Schedule
-
-Interview:
-- Serialize and Deserialize Binary Tree
-- Binary Tree Maximum Path Sum
-- Word Ladder
-- Graph Valid Tree
-- Number of Connected Components
-- Redundant Connection
-- Alien Dictionary
-- Course Schedule II
-- Walls and Gates
-- Network Delay Time
-
-Must-cover:
-- Maximum Depth of Binary Tree
-- Invert Binary Tree
-- Diameter of Binary Tree
-- Binary Tree Level Order Traversal
-- Validate Binary Search Tree
-- Lowest Common Ancestor
-- Number of Islands
-- Clone Graph
-- Rotting Oranges
-- Course Schedule
-
-### Weekly Execution
+- Linked list basics and reversal.
 
 Week 10:
-- Day 1: Tree DFS basics. Solve 8-10 problems.
-- Day 2: Tree BFS/level order. Solve 8-10 problems.
-- Day 3: Height, diameter, balanced tree. Solve 8-10 problems.
-- Day 4: BST validation/search/LCA. Solve 7-9 problems.
-- Day 5: Tree construction and harder recursion. Solve 5-7 problems.
-- Day 6: Re-solve tree misses.
-- Day 7: Weekly test.
+- Binary search and boundaries.
 
 Week 11:
-- Day 1: Graph representation and DFS. Solve 8-10 problems.
-- Day 2: BFS basics and visited set. Solve 8-10 problems.
-- Day 3: Grid DFS/BFS. Solve 8-10 problems.
-- Day 4: Multi-source BFS. Solve 6-8 problems.
-- Day 5: Clone graph and connected components. Solve 6-8 problems.
-- Day 6: Graph revision.
-- Day 7: Weekly test.
+- Tree DFS/BFS basics.
 
 Week 12:
-- Day 1: Cycle detection basics. Solve 7-9 problems.
-- Day 2: Course Schedule and topological sort. Solve 6-8 problems.
-- Day 3: Union-find basics. Solve 6-8 problems.
-- Day 4: Mixed trees + graphs interview set. Solve 6-8 problems.
-- Day 5: Timed mock. Solve 5-6 problems.
-- Day 6: Must-cover reattempts.
-- Day 7: Phase 5 test.
+- Tree interview patterns + mixed month mock.
 
-## Phase 6: Dynamic Programming + Greedy
+### Difficulty Progression
 
-Duration: Weeks 13-16
+- Start from easy structural problems.
+- Move to medium implementation-heavy problems.
+- End with timed mixed mocks.
 
-### Concepts
+### Revision Goals
 
-Dynamic Programming:
-- Overlapping subproblems, optimal substructure.
-- Memoization, tabulation, 1D DP, 2D DP.
-- State definition, transition, base cases.
+- Re-solve Month 1 and Month 2 weak problems weekly.
+- Do not let binary search boundary errors accumulate.
+
+## Month 4: Graph Basics + DP Basics + Greedy Basics + Interview Readiness
+
+Duration: Weeks 13-16  
+Interview relevance: breadth coverage and final readiness.
+
+### Topics
+
+- Graph representation.
+- BFS and DFS.
+- Grid traversal.
+- Multi-source BFS.
+- Topological sort basics.
+- 1D DP.
+- Grid DP basics.
+- Greedy intervals and reachability.
+- Mock interviews and timed practice.
+
+### Target Patterns
+
+- Adjacency list.
+- Visited set.
+- BFS queue.
+- DFS recursion.
+- Grid DFS/BFS.
+- Multi-source BFS.
+- Topological sort.
+- Memoization/tabulation.
+- DP state and transition.
+- Greedy sort by rule.
+- Interval merge.
+- Reachability.
+
+### Problem Count Goals
+
+- New problems: 65-80.
+- Revision re-solves: 60-80.
+- LeetCode submissions: 40-50.
+- Mocks: 8-10 timed sets.
+
+### Must-Cover Problems
+
+Graphs:
+1. Number of Islands
+2. Flood Fill
+3. Clone Graph
+4. Rotting Oranges
+5. Course Schedule
+6. Pacific Atlantic Water Flow or Walls and Gates
+
+DP basics:
+7. Climbing Stairs
+8. Min Cost Climbing Stairs
+9. House Robber
+10. Coin Change
+11. Longest Increasing Subsequence
+12. Word Break
+13. Unique Paths
 
 Greedy:
-- Local optimal choice, sorting by rule, interval decisions.
-- Heap-assisted greedy basics, when greedy fails.
+14. Merge Intervals
+15. Insert Interval
+16. Non-overlapping Intervals
+17. Jump Game
+18. Gas Station or Meeting Rooms II
 
-### Patterns
-
-DP:
-- Fibonacci-style DP
-- House robber pattern
-- Coin change pattern
-- Grid DP
-- Subsequence DP
-- Knapsack-style choices
-- Palindrome DP
-- Partition DP basics
-
-Greedy:
-- Interval scheduling
-- Jump reachability
-- Sort by start/end
-- Merge intervals
-- Choose minimum/maximum needed
-- Heap for ongoing choices
-
-### Problems
-
-Beginner:
-- Climbing Stairs
-- Min Cost Climbing Stairs
-- House Robber
-- Maximum Subarray
-- Best Time to Buy and Sell Stock
-- Can Jump
-- Merge Intervals
-- Insert Interval
-- Assign Cookies
-
-Intermediate:
-- Coin Change
-- Longest Increasing Subsequence
-- Word Break
-- Unique Paths
-- Decode Ways
-- Partition Equal Subset Sum
-- House Robber II
-- Jump Game II
-- Non-overlapping Intervals
-- Gas Station
-
-Interview:
-- Longest Common Subsequence
-- Edit Distance
-- Palindromic Substrings
-- Longest Palindromic Subsequence
-- Maximum Product Subarray
-- Burst Balloons
-- Regular Expression Matching
-- Meeting Rooms II
-- Task Scheduler
-- Minimum Number of Arrows to Burst Balloons
-
-Must-cover:
-- Climbing Stairs
-- House Robber
-- Coin Change
-- Longest Increasing Subsequence
-- Word Break
-- Unique Paths
-- Partition Equal Subset Sum
-- Longest Common Subsequence
-- Merge Intervals
-- Jump Game
-
-### Weekly Execution
+### Weekly Expectations
 
 Week 13:
-- Day 1: DP thinking, recursion to memoization. Solve 6-8 problems.
-- Day 2: 1D DP: climbing stairs, min cost. Solve 8-10 problems.
-- Day 3: House robber and maximum subarray patterns. Solve 7-9 problems.
-- Day 4: Coin change basics. Solve 6-8 problems.
-- Day 5: Word Break and Decode Ways. Solve 5-7 problems.
-- Day 6: Re-solve DP misses.
-- Day 7: Weekly test.
+- Graph BFS/DFS and grids.
 
 Week 14:
-- Day 1: Grid DP. Solve 7-9 problems.
-- Day 2: LIS pattern. Solve 6-8 problems.
-- Day 3: Partition/knapsack basics. Solve 6-8 problems.
-- Day 4: LCS and subsequence DP. Solve 5-7 problems.
-- Day 5: Palindrome DP. Solve 5-7 problems.
-- Day 6: DP must-cover revision.
-- Day 7: Weekly test.
+- DP basics: 1D, grid, coin change.
 
 Week 15:
-- Day 1: Greedy basics and sorting decisions. Solve 8-10 problems.
-- Day 2: Intervals: merge/insert/non-overlap. Solve 8-10 problems.
-- Day 3: Jump Game and reachability. Solve 7-9 problems.
-- Day 4: Heap-assisted greedy. Solve 6-8 problems.
-- Day 5: Greedy mixed interview set. Solve 6-8 problems.
-- Day 6: Re-solve greedy misses.
-- Day 7: Weekly test.
+- Greedy basics and intervals.
 
 Week 16:
-- Day 1: Mixed DP revision. Solve 6-8 problems.
-- Day 2: Mixed greedy revision. Solve 6-8 problems.
-- Day 3: Full mixed DSA mock 1. Solve 5-6 timed problems.
-- Day 4: Full mixed DSA mock 2. Solve 5-6 timed problems.
-- Day 5: Re-solve all failed must-cover problems.
-- Day 6: Final interview simulation. Solve 6 timed problems.
-- Day 7: Final review and next-cycle planning.
+- Final mixed revision, mock interviews, timed LeetCode sets.
+
+### Difficulty Progression
+
+- Graph/DP starts easy.
+- Mediums become the main target.
+- Hard problems are optional exposure only.
+
+### Revision Goals
+
+- Re-solve all must-cover misses.
+- Build final pattern sheet.
+- Complete 3 full interview simulations.
+
+## Platform Strategy
+
+### Local Solving Workflow
+
+Use local files when:
+- Learning a new pattern.
+- Writing brute force first.
+- Testing custom edge cases.
+- Debugging calmly without LeetCode pressure.
+
+Local steps:
+1. Restate problem.
+2. Write brute force.
+3. Dry run.
+4. Code optimized solution.
+5. Test visible and custom cases.
+6. Write complexity.
+
+### LeetCode Submission Workflow
+
+Submit on LeetCode when:
+- Local solution passes.
+- You can explain the pattern.
+- The problem is must-cover or interview-relevant.
+
+After submission:
+- Accepted: record date and pattern.
+- Wrong answer: add failed test and reason.
+- Two failed submissions: stop and review before another submit.
+
+### Revision Workflow
+
+Use the failed queue:
+- 24h for hint/solution problems.
+- 3d for unstable implementations.
+- 7d for all must-cover problems.
+- Weekly for mastered problems.
+
+### Re-Solving Workflow
+
+When re-solving:
+- Do not read old code first.
+- Write pattern trigger from memory.
+- Code from scratch.
+- Compare after finishing.
+- Mark mastered only after independent re-solve.
+
+### Mock-Test Workflow
+
+Weekly:
+- 1 easy, 2 mediums, 1 old mixed problem.
+- No hints.
+- Review longer than the mock if needed.
+
+Month 4:
+- 2-3 problems in 90 minutes.
+- Explain approach aloud.
+- Track pattern recognition time.
+
+## Resource Map
+
+Use only one main source and one revision source per topic. Avoid resource hopping.
+
+| Topic | Best learning source | Beginner explanation | Short revision | Practice | Interview focus |
+| --- | --- | --- | --- | --- | --- |
+| Arrays | NeetCode Arrays & Hashing | YouTube: takeUforward arrays basics | NeetCode notes/video recap | LeetCode Easy/Medium arrays | Blind 75 arrays |
+| Hashing | NeetCode Arrays & Hashing | Python docs: dict/set basics | Your `CONCEPTS.md` hashing section | LeetCode hash table tag | NeetCode 150 hashing |
+| Strings | NeetCode string problems | YouTube: string traversal + anagram | Your string notes | LeetCode strings tag | Valid Palindrome, Anagram, Group Anagrams |
+| Two pointers | NeetCode Two Pointers | Visual two-pointer YouTube examples | Pattern sheet | LeetCode two pointers tag | 3Sum, Container, Palindrome |
+| Sliding window | NeetCode Sliding Window | Visual window expand/shrink videos | Fixed vs variable checklist | LeetCode sliding window tag | Longest substring, permutation, min window |
+| Stack | NeetCode Stack | Visual stack explanation | Monotonic stack template | LeetCode stack tag | Valid Parentheses, Daily Temperatures |
+| Queue | NeetCode Queue/BFS problems | Python docs: `collections.deque` | Deque operations notes | LeetCode queue/BFS basics | Sliding Window Maximum |
+| Linked list | NeetCode Linked List | Visual linked list pointer videos | Dummy/reverse/fast-slow sheet | LeetCode linked list tag | Reverse, cycle, reorder |
+| Binary search | NeetCode Binary Search | Visual binary search boundaries | Boundary template sheet | LeetCode binary search tag | Rotated search, Koko |
+| Trees | NeetCode Trees | Visual tree DFS/BFS videos | DFS/BFS templates | LeetCode tree tag | Depth, diameter, LCA, BST |
+| Graphs | NeetCode Graphs | Visual BFS/DFS grid videos | BFS/DFS templates | LeetCode graph/grid tag | Islands, clone, course schedule |
+| DP basics | NeetCode 1D DP | YouTube: DP state/transition basics | State-transition checklist | LeetCode DP easy/medium | Climbing, robber, coin change |
+| Greedy | NeetCode Greedy/Intervals | Visual interval sorting videos | Greedy choice checklist | LeetCode greedy/intervals tag | Merge intervals, jump game |
+
+## Interview Readiness Milestones
+
+End of Month 1:
+- Can solve common arrays/hash/strings easy problems quickly.
+- Can solve 40-50% of medium arrays/hash problems independently.
+- Can explain set vs dict vs prefix/suffix.
+
+End of Month 2:
+- Can identify two-pointer/window/stack triggers within 5 minutes.
+- Can solve most easy and many medium pattern problems without full solution help.
+
+End of Month 3:
+- Comfortable with linked list pointer manipulation, binary search boundaries, and tree DFS/BFS.
+- Can complete a 4-problem weekly mock with at least 70% score.
+
+End of Month 4:
+- Can handle mixed-topic timed practice.
+- Can explain brute force and optimized solution clearly.
+- Can re-solve must-cover problems from memory.
+- Ready for placement-style DSA interviews, not competitive programming contests.
 
 ## End Of Topic Criteria
 
-A topic is complete only when all are true:
-
-- You solved at least 70-80% of medium problems without full solution help.
-- You can identify the pattern within 5 minutes for most unseen problems.
-- You can explain brute force and optimized approach clearly.
-- You can dry run the optimized solution.
-- You can write time and space complexity correctly.
-- You can re-solve must-cover problems from memory.
-- In a timed set of 5 unseen problems:
-  - Easy: 10-15 minutes.
-  - Medium: 25-40 minutes.
-  - Hard/interview: meaningful progress in 45-60 minutes.
+A topic is complete only when:
+- 70-80% of medium problems are solved without full solution help.
+- Pattern is identified within 5 minutes for most unseen problems.
+- Brute force and optimized approach can be explained.
+- Dry run is correct.
+- Time and space complexity are correct.
+- Must-cover problems can be re-solved from memory after several days.
 
 ## Stop / Continue Rules
 
-Continue to next topic when:
-- Must-cover problems are complete.
-- 70-80% of mixed medium problems are solved independently.
-- Main patterns can be explained without notes.
-- Weekly test is passed.
+Continue when:
+- Must-cover basics are complete.
+- Failed queue is shrinking.
+- Weekly mock score is 70%+.
 
-Repeat topic when:
-- Pattern recognition is weak.
+Repeat when:
 - Full solutions are needed for more than 40% of problems.
-- Must-cover problems fail repeatedly.
-- Time and space complexity cannot be explained.
+- Pattern triggers are unclear.
+- Same implementation mistakes repeat.
 
 Slow down when:
-- You are memorizing solutions.
-- You skip brute force.
-- You cannot dry run your code.
-- Implementation mistakes repeat.
-- Speed improves but understanding weakens.
+- You are memorizing code.
+- You skip dry runs.
+- You cannot explain complexity.
+- Daily volume causes missed revision.
+

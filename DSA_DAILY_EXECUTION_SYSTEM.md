@@ -1,41 +1,81 @@
 # DSA Daily Execution System
 
-Use this file every study day. This is the operating system for the 16-week roadmap.
+Use this file every study day. This is the sustainable operating system for the 4-month placement DSA roadmap.
 
-## Daily Time Blocks
+## Workspace Organization Rules
+
+Use only:
+- `Daily_Work/` for daily problems, daily solutions, evaluations, and revision solutions.
+- `Prompts/` for reusable AI prompts only.
+- Root-level files for global roadmaps, trackers, weekly plans, master concepts, and progress systems.
+
+Daily file names must follow this exact format:
+- `DAY_XX_PROBLEMS.md`
+- `DAY_XX_SOLUTIONS.py`
+- `DAY_XX_EVALUATION.md`
+
+All Python solutions must go inside the matching `Daily_Work/DAY_XX_SOLUTIONS.py` file. Do not create separate topic solution files, duplicate trackers, extra roadmap files, archive copies, or nested planning systems.
+
+## Core Rule
+
+Maximum new problems per day: 5.  
+Minimum revision every day: 2 problems or 45 minutes.  
+Target consistency: 70-80% of planned days completed.  
+Do not chase 10+ problems/day. Retention beats volume.
+
+## Recommended Daily Study Hours
+
+Normal day: 3-4 focused hours.  
+Strong day: 4-5 focused hours.  
+Low-energy day: 90-120 minutes, but still do fundamentals + one revision problem.
+
+## Daily Workflow
 
 | Block | Time | Work |
 | --- | ---: | --- |
-| Concept study | 60-90 min | Learn only what is needed for today's pattern |
-| Guided examples | 90 min | Solve 2-3 known/simple problems slowly |
-| Independent solving | 3-4 hrs | Solve new problems without solutions |
-| Review failed problems | 60-90 min | Re-attempt stuck problems after hints |
-| Complexity writing | 30 min | Write time and space for every problem |
-| Revision | 45-60 min | Redo old problems or pattern recall |
-| Notes cleanup | 20-30 min | Record mistake, pattern, and trigger |
+| Fundamentals revision | 20-30 min | Python concept needed today: loops, functions, list/set/dict, strings, complexity |
+| Pattern warm-up | 15-20 min | Recall yesterday's pattern trigger and write it in 2-3 lines |
+| New DSA problems | 90-150 min | 3-5 new problems max; usually 2 easy + 2 medium + 1 optional |
+| Revision problems | 45-75 min | Re-solve failed queue using 24h/3d/7d spacing |
+| LeetCode submissions | 20-40 min | Submit must-cover or medium problems after local dry run |
+| Pattern notes | 15 min | Write trigger, brute force, optimized idea, edge cases |
+| Mistake tracking | 10 min | Update failed queue immediately |
 
-## Daily Problem Counts
+## Problem Count Targets
 
 Normal day:
-- 10-12 problems.
-- 5 easy.
-- 5 medium.
-- 0-2 hard/interview.
+- 3 new problems.
+- 2 revision problems.
+- 1 LeetCode submission minimum.
 
-Heavy topic day:
-- 7-9 problems.
-- 2 easy.
-- 5 medium.
-- 1-2 hard/interview.
+High-focus day:
+- 5 new problems maximum.
+- 2-3 revision problems.
+- 2 LeetCode submissions.
 
 Revision/mock day:
-- 6-8 problems.
-- All unseen or previously failed.
-- Timed solving only.
+- 0-2 new problems.
+- 4-6 old/failed problems.
+- Timed practice only.
+
+## Difficulty Progression
+
+Month 1:
+- 60% easy, 40% medium.
+- Hard problems are optional and only for reading pattern exposure.
+
+Month 2:
+- 40% easy, 55% medium, 5% hard exposure.
+
+Month 3:
+- 30% easy, 60% medium, 10% interview-level exposure.
+
+Month 4:
+- 20% easy, 65% medium, 15% hard/interview exposure.
 
 ## Exact Problem Solving Steps
 
-Follow this sequence for every problem.
+Follow this sequence for every important problem.
 
 ### 1. Understand
 
@@ -43,13 +83,22 @@ Follow this sequence for every problem.
 - Identify input, output, constraints, and edge cases.
 - Write 2-3 examples manually.
 
-### 2. Brute Force
+### 2. Prerequisite Check
+
+Before coding, ask:
+- Do I know the Python structure needed?
+- Do I know the pattern trigger?
+- Have I solved a simpler version?
+
+If prerequisites are weak, revise for 10-20 minutes before solving.
+
+### 3. Brute Force
 
 - Write the simplest possible idea first.
-- Do not skip this step.
 - Estimate time and space.
+- Keep it short; do not spend the whole session here.
 
-### 3. Optimize
+### 4. Optimize
 
 Ask which pattern can improve it:
 - Hashing
@@ -57,85 +106,81 @@ Ask which pattern can improve it:
 - Two pointers
 - Sliding window
 - Stack
-- Queue
+- Queue/deque
 - Recursion
 - BFS/DFS
 - Binary search
 - DP
 - Greedy
 
-### 4. Dry Run
+### 5. Dry Run
 
 - Use one normal case.
 - Use one edge case.
 - Track variables step by step.
 
-### 5. Code
+### 6. Code Locally
 
 - Write a clean Python function.
 - Use clear names.
-- Avoid clever shortcuts at first.
-- Test with your examples before submitting.
+- Test with visible cases.
+- Add one custom edge case.
 
-### 6. Analyze Complexity
+### 7. Submit On LeetCode
 
-- Write time complexity.
-- Write space complexity.
-- Explain both in 1-2 lines.
+Submit when:
+- The local solution passes visible examples.
+- You can explain the pattern.
+- Complexity is written.
+
+Do not submit random guesses repeatedly. If rejected twice, stop and review.
+
+### 8. Record Result
+
+Update:
+- Status: independent / hint / solution / unsolved.
+- Pattern trigger.
+- Mistake type.
+- Revisit date.
 
 ## If Stuck Rules
 
-Use this exact ladder.
+Use this ladder.
 
-1. Try independently for 30-45 minutes.
-2. Write the brute force idea even if it is slow.
-3. Break the problem into smaller parts.
-4. Try a tiny example manually.
-5. Dry run with variables on paper.
-6. Identify the blocker:
-   - pattern unknown
-   - edge case confusion
-   - implementation issue
-   - optimization issue
-7. If still stuck, see one hint only.
-8. Close the hint and re-attempt for 20-30 minutes.
-9. If still stuck, read only the solution idea.
-10. Code it yourself from memory.
-11. Re-solve after 24 hours, 3 days, and 7 days.
+1. Try independently for 25-35 minutes.
+2. Write brute force even if slow.
+3. Dry run a tiny example.
+4. Identify blocker: pattern, edge case, implementation, or optimization.
+5. Take one hint only.
+6. Close the hint and reattempt for 20 minutes.
+7. If still stuck, read the solution idea only.
+8. Code from memory.
+9. Re-solve after 24 hours, 3 days, and 7 days.
 
-Never mark a problem complete if you only understood it after reading the full solution.
+Never mark mastered if you only understood after a full solution.
 
-## Weekly Revision System
+## Spaced Repetition System
 
-Day 1:
-- Revise last week's failed problems for 45 minutes.
+| Result | Revisit |
+| --- | --- |
+| Independent and clean | 7 days |
+| Solved after hint | 24 hours, 3 days, 7 days |
+| Solved after full solution | 24 hours, 3 days, 7 days, 14 days |
+| Failed twice | Return to concept + 3 easier pattern problems |
+| Failed three times | Pause topic progression and rebuild prerequisites |
 
-Day 2:
-- Re-solve 2 old easy + 2 old medium problems.
+## Weekly Mock System
 
-Day 3:
-- Pattern recall: write all patterns learned so far from memory.
+Every 7th study day:
+- 1 easy warm-up, 15 minutes.
+- 2 medium problems, 35-40 minutes each.
+- 1 mixed old problem, 25 minutes.
+- Review for 60-90 minutes.
 
-Day 4:
-- Re-solve 1 must-cover problem without notes.
-
-Day 5:
-- Timed mixed set: 3 problems from older topics.
-
-Day 6:
-- Deep revision: re-solve all failed/stuck problems from the week.
-
-Day 7:
-- Weekly test:
-  - 2 easy
-  - 3 medium
-  - 1 interview-level problem
-  - 2 hours of review after the test
-
-Revision rule:
-- Failed once: revisit after 24 hours.
-- Failed twice: revisit after 3 days.
-- Failed three times: return to concept + solve 5 easier pattern problems.
+Mock rules:
+- No hints during the timed block.
+- After the block, write why each miss happened.
+- Failed mock problems go into the failed queue.
 
 ## Daily Log Template
 
@@ -144,12 +189,20 @@ Copy this into `DSA_PROGRESS_TRACKER.md` each day.
 ```text
 Date:
 Week / Day:
-Phase:
+Month:
 Topic:
+Today's topic:
+Why this topic now:
+Prerequisites checked:
+Weak prerequisites:
+Prerequisite revision completed:
 
-Concept studied:
+Fundamentals revised:
 
-Problems attempted:
+New problems attempted:
+Revision problems attempted:
+LeetCode submissions:
+
 Solved independently:
 Solved after hint:
 Solved after solution:
@@ -161,64 +214,31 @@ Problem list:
 3.
 4.
 5.
-6.
-7.
-8.
-9.
-10.
+
+Revision list:
+1.
+2.
 
 Main mistakes:
 
 Patterns recognized:
 
-Brute force written for all problems? yes/no
+Brute force written? yes/no
 Dry runs completed? yes/no
 Complexities written? yes/no
+Failed queue updated? yes/no
 
 Continue / repeat / slow down:
 Reason:
 ```
 
-## Problem Note Template
+## Mastery Score
 
-Use this for every important problem.
+For each problem, assign:
+- 4: independent, optimized, correct complexity, LeetCode accepted, re-solved later.
+- 3: independent after thinking, minor mistakes fixed.
+- 2: solved after hint or nearby reference.
+- 1: solved after full solution.
+- 0: unsolved.
 
-```text
-Problem:
-Topic:
-Pattern:
-Difficulty:
-Status: independent / hint / solution / unsolved
-
-Brute force:
-Optimized idea:
-Dry run:
-Time:
-Space:
-
-Mistake:
-Trigger to recognize pattern next time:
-Revisit dates:
-```
-
-## Daily Score
-
-Accuracy:
-- Independent solved / attempted.
-- Target: 70%+.
-- Strong: 80%+.
-
-Speed:
-- Easy: 10-15 minutes.
-- Medium: 25-40 minutes.
-- Hard: 45-75 minutes for meaningful progress.
-
-Pattern Recognition:
-- Strong: pattern identified within 5 minutes.
-- Weak: solution understood but pattern trigger unclear.
-
-Optimization:
-- Level 1: brute force only.
-- Level 2: brute force + partial optimization.
-- Level 3: correct optimized solution after thinking.
-- Level 4: optimized solution + clean explanation + correct complexity.
+Only scores 3-4 count toward interview readiness.

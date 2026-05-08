@@ -1,7 +1,7 @@
 # Day 1 Evaluation
 
 Date reviewed: 2026-05-02  
-Solution file: `day_01_sol.py`  
+Solution file: `Daily_Work/DAY_01_SOLUTIONS.py`  
 Result: Pass  
 Decision: Continue to Day 2 after fixing notes
 

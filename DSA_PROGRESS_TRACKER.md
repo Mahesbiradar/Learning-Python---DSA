@@ -1,58 +1,124 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Plan length: 16 weeks  
-Daily study target: 8-10 hours  
-Weekly target: 55-75 attempted problems
+Current review date: 2026-05-08  
+Plan length: 4 months / 16 weeks  
+Daily study target: 3-5 focused hours  
+Daily problem target: max 5 new problems + mandatory revision  
+Goal: placement-oriented DSA preparation using Python, LeetCode, revision, and interview pattern recognition.
+
+## Current State Summary
+
+You are in Month 1, Week 1: Arrays + Hashing + Strings foundation.
+
+Overall status:
+- Day 1 array basics: strong.
+- Day 1 revision: completed.
+- Day 2 array/write-pointer/hash basics: attempted and partially revised.
+- LeetCode-ready must-cover set: barely started; only `Contains Duplicate` and `Product of Array Except Self` have meaningful Day 2 exposure.
+- Main risk: moving too fast before write-pointer, prefix/suffix, and edge-case discipline become automatic.
+
+## Strengths
+
+| Area | Evidence | Status |
+| --- | --- | --- |
+| Basic traversal | Print, sum, count, max/min solved correctly | Strong |
+| Tracking variables | Max/min, second largest, majority frequency | Strong but edge cases need care |
+| Adjacent comparison | Sorted check, duplicate comparison | Strong |
+| Basic in-place writes | Move zeroes, remove element, remove duplicates after concept help | Improving |
+| Hashing for lookup | Contains duplicate, intersection, missing number set method | Improving |
+| Brute-force discipline | Written for most Day 1/Day 2 problems | Strong habit |
+| Complexity awareness | Usually written, but some mistakes remain | Partial |
+
+## Weak / Unstable Areas
+
+| Area | Evidence | Action |
+| --- | --- | --- |
+| Write-pointer pattern | Remove duplicates needed concept help; remove element used reference | Re-solve 3 times across 7 days |
+| Prefix/suffix product | Product except self solved but space complexity uncertain and concept conversion was hard | Revisit before marking mastered |
+| One-pass stock profit | Best Time to Buy/Sell Stock needed AI help | Add to failed queue |
+| Carry handling | Plus One required solution viewing | Revisit after 24h/3d/7d |
+| Rotation edge cases | `k > n`, empty list, reverse method learned with guidance | Revisit |
+| In-place cyclic placement | First Missing Positive optimized version not learned | Defer; set method is enough for now |
+| Complexity precision | Set membership and sum-formula space were sometimes mislabeled | Daily 10-minute complexity drill |
+
+## Pattern Recognition State
+
+| Pattern | Recognition Level | Notes |
+| --- | --- | --- |
+| Linear traversal | Mastered | Can solve and explain. |
+| Tracking max/min/count | Mastered with edge-case caution | Initialize from input when non-empty; handle empty explicitly. |
+| Adjacent comparison | Mastered | Trigger: sorted/neighbour relation. |
+| Basic two pointer | Partial | Reverse and move zeroes seen; not yet broad enough. |
+| Write pointer | Partial | Trigger: "in-place", "remove", "keep order", "return new length". |
+| Set lookup | Partial-to-strong | Trigger: duplicate, membership, intersection, missing value. |
+| Frequency dictionary | Partial-to-strong | Trigger: count occurrences, majority, first unique, anagram. |
+| Prefix/suffix | Unstable | Trigger: product except self, left/right accumulated information. |
+| Carry from right | Unstable | Trigger: digit array, plus one, addition simulation. |
+| One-pass min tracking | Unstable | Trigger: max profit with buy before sell. |
+
+## Problems Solved By Status
+
+### Mastered Now
+
+These are safe to treat as mastered, but still revise lightly once per week.
+
+| Problem | Topic | Reason |
+| --- | --- | --- |
+| Print All Elements | Array traversal | Independent and simple. |
+| Sum Of List | Array traversal | Independent with empty case. |
+| Count Even Numbers | Counting | Independent. |
+| Find Maximum Element | Tracking | Independent. |
+| Find Minimum Element | Tracking | Independent. |
+| Check If Array Is Sorted | Adjacent comparison | Independent. |
+| Move Zeroes To End | Write pointer | Re-solved correctly after initial pointer mistake. |
+| Majority Element - dictionary | Frequency map | Re-solved correctly. |
+| Contains Duplicate - set | Hashing | Solved with correct pattern; time note corrected to O(n). |
+| Intersection Of Two Arrays | Set operations | Independent; complexity corrected to O(n + m). |
+
+### Requires Revisit
+
+| Problem | Topic | Reason |
+| --- | --- | --- |
+| Second Largest Distinct Element | Tracking edge cases | Correct now, but empty/all-duplicate handling was learned after hint. |
+| Reverse Array | Two pointer / extra list | Function naming and space complexity need precision. |
+| Boyer-Moore Majority | Voting | Candidate logic known; validation was learned with help. |
+| Remove Duplicates From Sorted Array | Write pointer | Needed concept help. |
+| Remove Element | Write pointer | Solved using nearby reference. |
+| Missing Number | Set + sum formula | Set method needed hint; complexity note needs correction. |
+| Best Time To Buy And Sell Stock | One-pass min tracking | Needed AI help. |
+| Plus One | Carry simulation | Solution viewed. |
+| Rotate Array | Extra list + reverse | Edge cases and reverse method learned with guidance. |
+| Product Of Array Except Self | Prefix/suffix | Solved, but concept and space complexity unstable. |
+| First Missing Positive | Set / cyclic placement | Set solved; cyclic placement deferred. |
+| Move Negative Numbers To End | Partition/write pointer | Revision solution copied from AI. |
+| Third Largest Distinct Element | Tracking | Revision solution copied from AI. |
 
 ## Master Progress
 
-| Phase | Weeks | Topic | Status | Must-Cover Done | Phase Test |
+| Month | Weeks | Topic | Status | Must-Cover Done | Phase Test |
 | --- | ---: | --- | --- | ---: | --- |
-| 1 | 1-3 | Arrays + Hashing + Strings | In progress | 0/10 | Not taken |
-| 2 | 4-5 | Two Pointer + Sliding Window | Not started | 0/8 | Not taken |
-| 3 | 6-7 | Stack + Queue + Recursion | Not started | 0/10 | Not taken |
-| 4 | 8-9 | Linked List + Binary Search | Not started | 0/10 | Not taken |
-| 5 | 10-12 | Trees + Graph Basics | Not started | 0/10 | Not taken |
-| 6 | 13-16 | Dynamic Programming + Greedy | Not started | 0/10 | Not taken |
+| 1 | 1-4 | Arrays + Hashing + Strings + revision discipline | In progress | 1/12 | Not taken |
+| 2 | 5-8 | Two pointers + Sliding window + Stack + Queue | Not started | 0/16 | Not taken |
+| 3 | 9-12 | Linked list + Binary search + Trees | Not started | 0/18 | Not taken |
+| 4 | 13-16 | Graph basics + DP basics + Greedy basics + mocks | Not started | 0/18 | Not taken |
 
 ## Weekly Scoreboard
 
-| Week | Topic Focus | Attempted | Independent | Hint | Solution | Accuracy | Decision |
+| Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics + hashing + strings | 10 | 9 | 1 | 0 | 90% | Continue to Day 2 after fixing notes |
-| 2 | Prefix/suffix + grouping + frequency | 0 | 0 | 0 | 0 | 0% | Pending |
-| 3 | Interview arrays/hash/strings | 0 | 0 | 0 | 0 | 0% | Pending |
-| 4 | Two pointers | 0 | 0 | 0 | 0 | 0% | Pending |
-| 5 | Sliding window | 0 | 0 | 0 | 0 | 0% | Pending |
-| 6 | Stack | 0 | 0 | 0 | 0 | 0% | Pending |
-| 7 | Queue + recursion | 0 | 0 | 0 | 0 | 0% | Pending |
-| 8 | Linked list | 0 | 0 | 0 | 0 | 0% | Pending |
-| 9 | Binary search | 0 | 0 | 0 | 0 | 0% | Pending |
-| 10 | Trees | 0 | 0 | 0 | 0 | 0% | Pending |
-| 11 | Graph basics | 0 | 0 | 0 | 0 | 0% | Pending |
-| 12 | Graph interview basics | 0 | 0 | 0 | 0 | 0% | Pending |
-| 13 | DP basics | 0 | 0 | 0 | 0 | 0% | Pending |
-| 14 | DP intermediate | 0 | 0 | 0 | 0 | 0% | Pending |
-| 15 | Greedy | 0 | 0 | 0 | 0 | 0% | Pending |
-| 16 | Final mixed revision | 0 | 0 | 0 | 0 | 0% | Pending |
+| 1 | Array basics, write pointer, hashing intro | 20 new + revision | 14 | 3 | 3 | 70% | Continue slowly; revise Day 2 before more mediums |
+| 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
+| 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
+| 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
 
 ## Daily Logs
 
 ### 2026-05-02
 
 Week / Day: Week 1 / Day 1  
-Phase: Phase 1 - Arrays + Hashing + Strings  
+Phase: Month 1 - Arrays + Hashing + Strings  
 Topic: Array traversal, tracking, adjacent comparison, in-place update, basic frequency map
-
-Concept studied:
-- List traversal
-- Manual sum/count tracking
-- Max/min tracking
-- Reverse using extra list and two pointers
-- Adjacent comparison for sorted check
-- Position tracking for moving zeroes
-- Dictionary frequency for majority element
 
 Problems attempted: 10  
 Solved independently: 9  
@@ -60,80 +126,62 @@ Solved after hint: 1
 Solved after solution: 0  
 Unsolved: 0
 
-Problem list:
-1. Print All Elements - correct
-2. Sum Of List - correct
-3. Count Even Numbers - correct
-4. Find Maximum Element - correct
-5. Find Minimum Element - correct
-6. Reverse Array - correct, but rename duplicate function versions
-7. Check If Array Is Sorted - correct
-8. Second Largest Distinct Element - correct after edge-case hint
-9. Move Zeroes To End - correct
-10. Majority Element - correct with dictionary; Boyer-Moore still pending
-
 Main mistakes:
-- Used `print(print_element(nums))` initially, causing an extra `None`; fixed by calling the function directly.
-- Second largest needed explicit handling for lists with fewer than 2 items and all-duplicate values.
-- Forgot to increment the position pointer while moving zeroes, then corrected it.
-- Reverse array extra-list space was written as `O(2)`; correct space is `O(n)`.
-- Majority element dictionary approach uses `O(n)` extra space, not `O(1)`.
-- Boyer-Moore voting approach is not learned yet.
+- Extra `None` from `print(function_that_prints())`.
+- Second largest needed empty and all-duplicate handling.
+- Move zeroes initially missed `pos += 1`.
+- Reverse extra-list space is O(n), not O(2).
+- Dictionary majority is O(n) space, not O(1).
+- Boyer-Moore validation was learned with help.
 
-Patterns recognized:
-- Linear traversal
-- Tracking variable
-- Adjacent comparison
-- Two-pointer reverse
-- Position tracking
-- Dictionary frequency map
+Decision: Continue, but keep edge-case and complexity revision active.
 
-Brute force written for all problems? yes  
-Dry runs completed? yes  
-Complexities written? yes, with corrections needed for reverse extra-list and majority element  
+### 2026-05-08
 
-Continue / repeat / slow down: Continue  
-Reason: Strong Day 1 accuracy. Revision completed before Day 2. Boyer-Moore candidate logic is now understood and implemented; validation pass was learned with help.
+Week / Day: Week 1 / Day 2 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic: Duplicate detection, write pointer, missing values, carry, rotation, prefix/suffix
 
-Revision completed:
-- Second Largest Distinct Element re-solved, with one remaining edge-case note: check `len(nums) < 2` before reading `nums[0]`.
-- Move Zeroes To End re-solved correctly using a write pointer.
-- Majority Element re-solved correctly using a dictionary frequency map.
-- Boyer-Moore implemented with candidate selection and validation.
+Problems attempted: 10  
+Solved independently: 5 clear independent, 2 partial/reference-based, 3 after help/solution  
+Solved after hint/help: Contains Duplicate optimized note, Remove Duplicates concept, Missing Number set method, Rotate edge cases/reverse method  
+Solved after solution/AI: Best Time to Buy/Sell Stock, Plus One, some revision variants  
+Unsolved: 0 visible, but several are not mastered
 
-Next task file:
-- `DAY_02_PROBLEMS.md`
+Problem list:
+1. Contains Duplicate - mastered after correcting optimized time to O(n)
+2. Remove Duplicates From Sorted Array - revisit
+3. Remove Element - revisit
+4. Missing Number - revisit
+5. Intersection Of Two Arrays - mastered
+6. Best Time To Buy And Sell Stock - revisit
+7. Plus One - revisit
+8. Rotate Array - revisit
+9. Product Of Array Except Self - revisit until prefix/suffix is automatic
+10. First Missing Positive - set version okay; cyclic placement not required yet
+
+Decision: Do not increase volume. Next 3 study days should mix 3 new problems max with 2-3 revision problems.
 
 ## Must-Cover Tracker
 
-### Phase 1: Arrays + Hashing + Strings
+### Month 1: Arrays + Hashing + Strings
 
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
-| Two Sum | Not started |  |  |
-| Contains Duplicate | Not started |  |  |
-| Valid Anagram | Not started |  |  |
-| Group Anagrams | Not started |  |  |
-| Top K Frequent Elements | Not started |  |  |
-| Product of Array Except Self | Not started |  |  |
-| Longest Consecutive Sequence | Not started |  |  |
-| Subarray Sum Equals K | Not started |  |  |
-| Valid Palindrome | Not started |  |  |
-| First Unique Character in a String | Not started |  |  |
+| Contains Duplicate | Mastered | 2026-05-08 | Weekly |
+| Two Sum | Not started in current Day files |  | Current week |
+| Valid Anagram | Not started in current Day files |  | Current week |
+| First Unique Character in a String | Not started in current Day files |  | Current week |
+| Group Anagrams | Not started |  | Week 2 |
+| Top K Frequent Elements | Not started |  | Week 2 |
+| Product of Array Except Self | Revisit | 2026-05-08 | 24h, 3d, 7d |
+| Longest Consecutive Sequence | Not started |  | Week 3 |
+| Subarray Sum Equals K | Not started |  | Week 3 |
+| Valid Palindrome | Not started in current Day files |  | Current week |
+| Best Time To Buy And Sell Stock | Revisit | 2026-05-08 | 24h, 3d, 7d |
+| Plus One | Revisit | 2026-05-08 | 24h, 3d, 7d |
 
-Day 1 foundation problems completed:
-- Print All Elements
-- Sum Of List
-- Count Even Numbers
-- Find Maximum Element
-- Find Minimum Element
-- Reverse Array
-- Check If Array Is Sorted
-- Second Largest Distinct Element
-- Move Zeroes To End
-- Majority Element
-
-### Phase 2: Two Pointer + Sliding Window
+### Month 2: Two Pointers + Sliding Window + Stack + Queue
 
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
@@ -145,23 +193,12 @@ Day 1 foundation problems completed:
 | Longest Repeating Character Replacement | Not started |  |  |
 | Permutation in String | Not started |  |  |
 | Minimum Window Substring | Not started |  |  |
-
-### Phase 3: Stack + Queue + Recursion
-
-| Problem | Status | Last Attempt | Revisit |
-| --- | --- | --- | --- |
 | Valid Parentheses | Not started |  |  |
 | Min Stack | Not started |  |  |
 | Daily Temperatures | Not started |  |  |
-| Evaluate Reverse Polish Notation | Not started |  |  |
-| Generate Parentheses | Not started |  |  |
-| Decode String | Not started |  |  |
-| Largest Rectangle in Histogram | Not started |  |  |
 | Sliding Window Maximum | Not started |  |  |
-| Subsets | Not started |  |  |
-| Permutations | Not started |  |  |
 
-### Phase 4: Linked List + Binary Search
+### Month 3: Linked List + Binary Search + Trees
 
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
@@ -169,49 +206,82 @@ Day 1 foundation problems completed:
 | Merge Two Sorted Lists | Not started |  |  |
 | Linked List Cycle | Not started |  |  |
 | Remove Nth Node From End | Not started |  |  |
-| Reorder List | Not started |  |  |
-| Merge K Sorted Lists | Not started |  |  |
 | Binary Search | Not started |  |  |
 | Search in Rotated Sorted Array | Not started |  |  |
-| Find Minimum in Rotated Sorted Array | Not started |  |  |
 | Koko Eating Bananas | Not started |  |  |
+| Maximum Depth of Binary Tree | Not started |  |  |
+| Invert Binary Tree | Not started |  |  |
+| Binary Tree Level Order Traversal | Not started |  |  |
+| Validate Binary Search Tree | Not started |  |  |
 
-### Phase 5: Trees + Graph Basics
+### Month 4: Graph Basics + DP Basics + Greedy Basics
 
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
-| Maximum Depth of Binary Tree | Not started |  |  |
-| Invert Binary Tree | Not started |  |  |
-| Diameter of Binary Tree | Not started |  |  |
-| Binary Tree Level Order Traversal | Not started |  |  |
-| Validate Binary Search Tree | Not started |  |  |
-| Lowest Common Ancestor | Not started |  |  |
 | Number of Islands | Not started |  |  |
 | Clone Graph | Not started |  |  |
 | Rotting Oranges | Not started |  |  |
 | Course Schedule | Not started |  |  |
-
-### Phase 6: Dynamic Programming + Greedy
-
-| Problem | Status | Last Attempt | Revisit |
-| --- | --- | --- | --- |
 | Climbing Stairs | Not started |  |  |
 | House Robber | Not started |  |  |
 | Coin Change | Not started |  |  |
 | Longest Increasing Subsequence | Not started |  |  |
-| Word Break | Not started |  |  |
-| Unique Paths | Not started |  |  |
-| Partition Equal Subset Sum | Not started |  |  |
-| Longest Common Subsequence | Not started |  |  |
 | Merge Intervals | Not started |  |  |
 | Jump Game | Not started |  |  |
 
 ## Failed Problem Queue
 
-Use this table whenever a problem needs revision.
-
 | Problem | Topic | Mistake Type | Failed Count | Next Revisit | Notes |
 | --- | --- | --- | ---: | --- | --- |
-| Second Largest Distinct Element | Arrays / Tracking | Edge cases: length < 2 and all duplicates | 1 | Completed 2026-05-02 | Re-solved; move the length check before `nums[0]` to handle `[]` safely |
-| Reverse Array | Arrays / Two Pointer | Complexity note: extra-list version is O(n) space | 1 | 2026-05-03 | Keep separate names for extra-list and in-place functions |
-| Majority Element | Hashing / Voting | Optimization not known: Boyer-Moore pending; dict space is O(n) | 1 | Completed 2026-05-02 | Dictionary version re-solved; Boyer-Moore candidate logic implemented, validation learned with help |
+| Second Largest Distinct Element | Arrays / Tracking | Empty input and all duplicates | 1 | Weekly | Correct now; keep edge-case order strict. |
+| Reverse Array | Arrays / Two Pointer | Extra-list space and duplicate function name | 1 | Weekly | Use separate names for extra-list and in-place. |
+| Boyer-Moore Majority | Voting | Validation pass learned with help | 1 | Week 2 | Explain candidate cancellation before coding. |
+| Remove Duplicates From Sorted Array | Write pointer | Concept learned from help | 1 | Next study day | Trigger: sorted + unique + in-place. |
+| Remove Element | Write pointer | Solved from reference pattern | 1 | Next study day | Trigger: keep non-target values at front. |
+| Missing Number | Set / math | Set method needed hint; complexity confusion | 1 | Next study day | Sum formula uses O(1) extra space. |
+| Best Time To Buy And Sell Stock | One-pass min tracking | Could not build logic independently | 1 | Next study day | Track `min_price`, update `max_profit`. |
+| Plus One | Carry simulation | Saw solution | 1 | Next study day | Traverse right to left; return early if no carry. |
+| Rotate Array | Reverse method | Edge cases learned with guidance | 1 | 3 days | Always reduce `k %= n`; handle empty before modulo. |
+| Product Of Array Except Self | Prefix/suffix | Space complexity and idea translation unstable | 1 | Next study day | Output array + suffix variable counts as O(1) extra beyond output. |
+| Move Negative Numbers To End | Write pointer / partition | Copied from AI in revision | 1 | After write-pointer drill | Re-solve without notes. |
+| Third Largest Distinct Element | Tracking | Copied from AI in revision | 1 | After second-largest review | Generalize first/second/third tracking. |
+
+## Revision Status
+
+| Revision Type | Status | Next Action |
+| --- | --- | --- |
+| Day 1 required revision | Completed | Weekly light recall |
+| Day 2 revision | Partial | Re-solve failed queue before Day 3 volume |
+| 24-hour spaced repetition | Behind | Start immediately with Day 2 weak problems |
+| 3-day spaced repetition | Pending | Schedule after next successful re-solve |
+| 7-day spaced repetition | Pending | Use weekly review day |
+| LeetCode submission proof | Not tracked yet | Add LC result/date after every must-cover problem |
+
+## Pattern-Recognition Notes
+
+| Trigger in Problem Statement | Pattern To Try | Example Problems |
+| --- | --- | --- |
+| "duplicate", "exists twice", "seen before" | Set lookup | Contains Duplicate |
+| "frequency", "most common", "first unique" | Dictionary count | Majority Element, First Unique Character |
+| "in-place", "remove", "keep order", "return length" | Write pointer | Move Zeroes, Remove Element, Remove Duplicates |
+| "buy before sell", "maximum profit" | One-pass min tracking | Best Time to Buy/Sell Stock |
+| "all elements except self", "without division" | Prefix/suffix products | Product of Array Except Self |
+| "digits", "add one", "carry" | Right-to-left carry simulation | Plus One |
+| "rotate by k" | Modulo + reverse / extra list | Rotate Array |
+| "smallest missing positive" | Set scan first, cyclic placement later | First Missing Positive |
+
+## Rules For Marking Mastered
+
+Mark a problem `Mastered` only when all are true:
+- Solved without hints on a fresh day.
+- Accepted on LeetCode or passes all local tests.
+- Brute force and optimized idea can be explained.
+- Time and space are correct.
+- Re-solved once after 3+ days without notes.
+
+Mark `Revisit` when:
+- Any hint/full solution was used.
+- Complexity is uncertain.
+- The pattern trigger is unclear.
+- The solution was copied from AI/video/editorial.
+

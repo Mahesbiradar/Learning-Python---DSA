@@ -1,198 +1,187 @@
-# Week 1 Execution Plan
+# Current Week Execution Plan
 
-Phase: Arrays + Hashing + Strings  
-Goal: rebuild array discipline, basic hashing, and string pattern recognition.
+Phase: Month 1 - Arrays + Hashing + Strings  
+Current position: Day 1 complete, Day 2 attempted, Day 2 revision partially complete  
+Goal for this week: stabilize array/write-pointer/hash basics before increasing medium volume.
 
-## Week 1 Targets
+## Week Targets
 
-- Attempt 60-70 problems.
-- Complete at least 6 Phase 1 must-cover problems.
-- Write brute force, optimized idea, dry run, time, and space for every important problem.
-- End the week with a timed test.
+- New problems: 18-24 maximum.
+- Revision problems: 12-18.
+- LeetCode submissions: 8-12.
+- Must-cover progress: finish `Contains Duplicate`, `Two Sum`, `Valid Anagram`, `First Unique Character`, `Valid Palindrome`, and reattempt `Product of Array Except Self`.
+- Weekly mock: 4 timed problems, not 6+.
+- Success target: 70-80% completion, not perfection.
 
-## Day 1: Array Traversal + Tracking
+## Day 1: Completed - Array Traversal + Tracking
 
-Time: 8-10 hours  
-Target: 10 problems  
-Difficulty split: 7 easy, 3 medium
+Today's topic: traversal, count, max/min, reverse, sorted check, second largest, move zeroes, majority.  
+Why this topic now: these are the base mechanics for all later arrays.  
+Prerequisites: loops, indexing, `range`, list mutation, dictionaries.  
+Status: complete and passed.
 
-Concepts:
-- Traversal
-- Indexing
-- Max/min tracking
-- Count tracking
-- Reverse traversal
+Revision required:
+- Second Largest Distinct Element.
+- Move Zeroes.
+- Majority Element dictionary and Boyer-Moore.
 
-Problems:
-1. Print Elements
-2. Sum of List
-3. Count Even Numbers
-4. Find Maximum
-5. Find Minimum
-6. Reverse Array
-7. Check if Array is Sorted
-8. Second Largest Element
-9. Move Zeroes
-10. Majority Element
+## Day 2: Completed/Reviewed - Duplicates + In-Place Updates
 
-Must do:
-- Write brute force even when obvious.
-- Dry run Second Largest and Move Zeroes carefully.
-- Log mistakes in `DSA_PROGRESS_TRACKER.md`.
+Today's topic: set lookup, write pointer, missing values, carry, rotation, prefix/suffix.  
+Why this topic now: these are the first real placement patterns after basic traversal.  
+Prerequisites: sets, dictionaries, modulo, right-to-left loops, list assignment.
 
-## Day 2: Arrays + Duplicates + In-Place Updates
+Weak prerequisites:
+- Write-pointer confidence.
+- Prefix/suffix mental model.
+- Carry handling from right to left.
+- Complexity of extra containers.
 
-Time: 8-10 hours  
-Target: 10-12 problems  
-Difficulty split: 5 easy, 5 medium, 0-2 interview
+Exact prerequisite revision before continuing:
+- Revise `set.add`, `x in seen`, `dict.get`.
+- Re-write the write-pointer template:
 
-Concepts:
-- Duplicate detection
-- In-place updates
-- Adjacent comparison
-- Sorting basics
+```python
+write = 0
+for read in range(len(nums)):
+    if keep_condition(nums[read]):
+        nums[write] = nums[read]
+        write += 1
+return write
+```
 
-Problems:
-1. Contains Duplicate
-2. Remove Duplicates from Sorted Array
-3. Move Zeroes
-4. Missing Number
-5. Intersection of Two Arrays
-6. Best Time to Buy and Sell Stock
-7. Plus One
-8. Rotate Array
-9. Product of Array Except Self
-10. First Missing Positive
+Required revision:
+- Remove Duplicates From Sorted Array.
+- Remove Element.
+- Best Time To Buy And Sell Stock.
+- Plus One.
+- Product Of Array Except Self.
 
-Must-cover focus:
-- Contains Duplicate
-- Product of Array Except Self
+## Day 3: Hash Map Frequency + Two Sum
 
-## Day 3: Hash Map Frequency
+Today's topic: hash map lookup and frequency counting.  
+Why this topic now: Day 2 introduced sets; the next placement step is using dictionaries for indexes and counts.  
+Required prerequisite concepts: dictionary insertion, membership check, `dict.get`, complements.
 
-Time: 8-10 hours  
-Target: 10-12 problems  
-Difficulty split: 4 easy, 6 medium
-
-Concepts:
-- Dictionary frequency
-- Set lookup
-- Key existence
-- Counting occurrences
+If prerequisites are weak:
+- Revise `CONCEPTS.md` sections: Dictionaries, Hashing, Time Complexity, Space Complexity.
+- Write a 5-line frequency counter before solving.
 
 Problems:
-1. Two Sum
-2. Valid Anagram
-3. First Unique Character in a String
-4. Majority Element
-5. Top K Frequent Elements
-6. Group Anagrams
-7. Ransom Note
-8. Isomorphic Strings
-9. Word Pattern
-10. Find All Numbers Disappeared in an Array
+1. Two Sum - must-cover, LeetCode.
+2. Valid Anagram - must-cover, LeetCode.
+3. First Unique Character in a String - must-cover, LeetCode.
+4. Ransom Note or Majority Element revision.
+5. Optional: Top K Frequent Elements only if first 4 are clean.
 
-Must-cover focus:
-- Two Sum
-- Valid Anagram
-- First Unique Character in a String
-- Group Anagrams
-- Top K Frequent Elements
+Revision:
+- Contains Duplicate.
+- Remove Element.
+- Missing Number.
 
-## Day 4: Hashing + Grouping + Prefix Sum Intro
+Expected difficulty:
+- 2 easy, 2 medium/easy-medium, 1 optional medium.
 
-Time: 8-10 hours  
-Target: 8-10 problems  
-Difficulty split: 3 easy, 5 medium, 1-2 interview
+## Day 4: Strings + Palindrome + Character Counting
 
-Concepts:
-- Grouping by key
-- Prefix sum
-- Prefix hash map
-- Running count
+Today's topic: string traversal, normalization, palindrome, character frequency.  
+Why this topic now: strings use the same traversal/hash patterns but require careful immutability handling.  
+Required prerequisite concepts: string indexing, `.lower()`, `.isalnum()`, list building + `"".join`.
+
+If prerequisites are weak:
+- Revise `CONCEPTS.md` sections: Strings, String Building, Dictionaries.
+- Practice reversing a string and counting characters locally.
 
 Problems:
-1. Subarray Sum Equals K
-2. Longest Consecutive Sequence
-3. Continuous Subarray Sum
-4. Find Pivot Index
-5. Range Sum Query Immutable
-6. Contiguous Array
-7. Longest Harmonious Subsequence
-8. Check if N and Its Double Exist
+1. Valid Palindrome - must-cover, LeetCode.
+2. Reverse String.
+3. Is Subsequence.
+4. Longest Common Prefix.
+5. First Unique Character re-solve if not mastered.
 
-Must-cover focus:
-- Subarray Sum Equals K
-- Longest Consecutive Sequence
+Revision:
+- Plus One.
+- Best Time To Buy And Sell Stock.
 
-## Day 5: Strings
+Expected difficulty:
+- Mostly easy; focus on clean explanations.
 
-Time: 8-10 hours  
-Target: 10-12 problems  
-Difficulty split: 5 easy, 5 medium
+## Day 5: Prefix/Suffix + Running State
 
-Concepts:
-- Character traversal
-- Palindrome
-- Anagram
-- String building
-- Split/join
+Today's topic: running values from left/right, prefix/suffix products, one-pass min/max.  
+Why this topic now: Day 2 showed this is unstable, and it becomes essential for medium arrays.  
+Required prerequisite concepts: forward loop, reverse loop, output array, accumulated product.
+
+If prerequisites are weak:
+- Write prefix sum for `[1,2,3,4]`.
+- Write suffix product manually for `[1,2,3,4]`.
+- Re-read Product Except Self notes before coding.
 
 Problems:
-1. Valid Palindrome
-2. Reverse String
-3. Longest Common Prefix
-4. Is Subsequence
-5. String Compression
-6. Find All Anagrams in a String
-7. Roman to Integer
-8. Integer to Roman
-9. Encode and Decode Strings
-10. Valid Parentheses
+1. Product of Array Except Self - re-solve from memory, LeetCode.
+2. Best Time To Buy And Sell Stock - re-solve from memory, LeetCode.
+3. Find Pivot Index.
+4. Running Sum of 1d Array.
+5. Optional: Subarray Sum Equals K intro only if prefix basics are clean.
 
-Must-cover focus:
-- Valid Palindrome
+Revision:
+- Rotate Array.
+- Missing Number.
 
-## Day 6: Revision + Re-Solving
+Expected difficulty:
+- 2 easy, 2 medium, 1 optional medium.
 
-Time: 8-10 hours  
-Target: 8-10 problems  
-Difficulty split: failed problems first
+## Day 6: Grouping + Frequency Mediums
 
-Work:
-- Re-solve every problem marked hint/solution/unsolved from Days 1-5.
-- Re-solve 3 must-cover problems without notes.
-- Write pattern triggers from memory:
-  - When to use hash map
-  - When to use set
-  - When to sort
-  - When to use prefix sum
+Today's topic: grouping with dictionary keys and frequency buckets.  
+Why this topic now: after basic dictionary count, grouping is the next interview pattern.  
+Required prerequisite concepts: tuple/list as key rules, sorting string characters, dictionary of lists.
 
-Required output in tracker:
-- Failed problem queue updated.
-- Must-cover statuses updated.
-- 5 biggest mistakes written clearly.
+If prerequisites are weak:
+- Revise tuples as dictionary keys.
+- Write `''.join(sorted(word))` and explain its cost.
 
-## Day 7: Weekly Test + Analysis
+Problems:
+1. Group Anagrams - must-cover, LeetCode.
+2. Top K Frequent Elements - must-cover, LeetCode.
+3. Sort Characters By Frequency or Majority Element.
+4. Contains Duplicate re-solve timed.
+5. Optional: Valid Anagram timed re-solve.
 
-Time: 6-8 hours  
-Target: 6 timed problems + 2 hours review
+Revision:
+- Product of Array Except Self.
+- Remove Duplicates From Sorted Array.
 
-Test set:
-1. Contains Duplicate
-2. Valid Anagram
-3. Two Sum
-4. Group Anagrams
-5. Product of Array Except Self
-6. Longest Consecutive Sequence
+Expected difficulty:
+- 1 easy, 3 medium, 1 optional.
 
-Rules:
-- No hints during the test.
-- Easy problems: 15 minutes max.
-- Medium problems: 40 minutes max.
-- After test, write why each failed or slow problem was difficult.
+## Day 7: Weekly Mock + Review
 
-Decision:
-- Continue if accuracy is 70%+ and must-cover explanations are clear.
-- Repeat Week 1 weak patterns if accuracy is below 70%.
-- Slow down if you solved by memory but cannot explain pattern triggers.
+Today's topic: mixed arrays/hash/strings under time.  
+Why this topic now: interview readiness comes from retrieval, not just fresh solving.  
+Required prerequisite concepts: all Week 1 pattern triggers.
+
+Mock set:
+1. Contains Duplicate - 10 minutes.
+2. Valid Anagram - 15 minutes.
+3. Two Sum - 25 minutes.
+4. Product of Array Except Self - 40 minutes.
+
+Review:
+- Write why each slow/fail problem was difficult.
+- Update failed queue.
+- Mark only truly independent re-solves as mastered.
+
+Decision rule:
+- Continue to Week 2 if 3/4 mock problems are solved without full solution help.
+- Repeat weak patterns for 2-3 days if Product Except Self, Two Sum, or Valid Anagram fail.
+
+## LeetCode Practice Structure
+
+For each must-cover problem:
+1. Solve locally first.
+2. Submit once locally tested.
+3. If accepted, write pattern trigger.
+4. If rejected, fix locally and submit once more.
+5. If rejected twice, stop and analyze; do not spam submissions.
+

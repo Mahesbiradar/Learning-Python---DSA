@@ -676,3 +676,812 @@ print(prod_array([0, 0]))
 #Status: Solved independently
 
 #Mistakes: Mistakes:Initially struggled to convert prefix/suffix concept into code logic.Learned how left product and right product arrays reuse previous computations.
+
+"""
+## Problem 10: First Missing Positive
+
+Given an unsorted list of integers, return the smallest missing positive integer.
+
+Example:
+
+```python
+nums = [1, 2, 0]
+```
+
+Expected output:
+
+```python
+3
+```
+
+Requirements:
+- First solve using a set.
+- Then read about the in-place cyclic placement approach and attempt it if you have time.
+- This is the hard/stretch problem for Day 2.
+
+Test cases:
+
+```python
+[1, 2, 0] -> 3
+[3, 4, -1, 1] -> 2
+[7, 8, 9, 11, 12] -> 1
+[1] -> 2
+```
+
+"""
+
+#understanding: Here the list of intergers are given i have to retunr the smallest missing integer in a list.
+
+#Brute Force: my first approch is to run a inner loop to comparing the elements of list with numbers 1 to n.
+
+def first_missing_positive(nums):
+    
+    for i in range(1,len(nums)+2):
+        if i not in nums:
+            return i
+
+print(first_missing_positive([1, 2, 0]))   #3
+print(first_missing_positive([3, 4, -1, 1]))  #2
+print(first_missing_positive([7, 8, 9, 11, 12])) #1
+print(first_missing_positive([1]))   #2
+
+#Time Complexcity: O(n^2)  
+#Space Complexcity: O(1)
+
+#Status: Solved independently
+    
+
+#Unsing The set
+
+def first_missing_positive(nums):
+    
+    seen=set(nums)
+
+    for i in range(1,len(seen)+2):
+        if i not in seen:
+            return i
+        
+print(first_missing_positive([1, 2, 0]))   #3
+print(first_missing_positive([3, 4, -1, 1]))  #2
+print(first_missing_positive([7, 8, 9, 11, 12])) #1
+print(first_missing_positive([1])) #2
+
+#Time Complexcity: O(n)  
+#Space Complexcity: O(n)
+
+#Status: Solved independently
+    
+
+# ==================== DAY 02 REVISION SOLUTIONS ====================
+
+"""
+# Problem 10: First Missing Positive II
+
+Return the smallest missing positive integer.
+
+Example:
+
+```python
+nums = [2, 3, 7, 6, 8, -1, -10, 15]
+```
+
+Expected Output:
+
+```python
+1
+```
+
+Requirements:
+
+* Solve using set only
+* Ignore negative numbers
+* Think in range `1 -> n+1`
+
+Test Cases:
+
+```python
+[1, 2, 0] -> 3
+[3, 4, -1, 1] -> 2
+[7, 8, 9, 11, 12] -> 1
+[1] -> 2
+[2, 3, 7, 6, 8, -1, -10, 15] -> 1
+
+"""
+
+#Understanding: Here i have to retun the first smallest interger Number.
+
+#Sol: As per the Requiremet ill use the Set and and run a loop from 1 to n+1 and using in function do fast lookup in set and returns the smallest missing Number.
+
+def first_missing_interger(nums):
+    seen=set(nums)
+
+    for i in range(1,len(nums)+2):
+        if i not in seen:
+            return i
+        
+
+print(first_missing_interger([1, 2, 0]))  #3
+print(first_missing_interger([3, 4, -1, 1]))  #2
+print(first_missing_interger([7, 8, 9, 11, 12]))  #1
+print(first_missing_interger([1])) #2
+print(first_missing_interger([2, 3, 7, 6, 8, -1, -10, 15]))  #1
+
+#time Comp: O(n)
+#space Comp: O(n)
+
+
+"""
+# Problem 8: Product Of Array Except Self II
+
+Return a list where each index contains the product of all numbers except itself.
+
+Example:
+
+```python
+nums = [2, 3, 4]
+```
+
+Expected Output:
+
+```python
+[12, 8, 6]
+```
+
+Requirements:
+
+* Do not use division
+* Build left array
+* Build right array
+* Multiply both
+
+Test Cases:
+
+```python
+[1, 2, 3, 4] -> [24, 12, 8, 6]
+[2, 3, 4] -> [12, 8, 6]
+[-1, 1, 0, -3, 3] -> [0, 0, 9, 0, 0]
+[0, 0] -> [0, 0]
+[5] -> [1]
+```
+
+
+"""
+
+#Solution using the Prefix and suffix prod
+
+def prod_array(nums):
+
+
+    #Cal prodcut of left array
+    left=[1]
+    for i in  range(1,len(nums)):
+        left.append(left[i-1]*nums[i-1])
+
+    #Cal prodcut of left array
+
+    right=[None]*len(nums)
+    right[-1]=1
+
+    for i in range(len(nums)-2,-1,-1):
+        right[i]=right[i+1]*nums[i+1]
+    
+    #Multiply Both array to get Productt of array
+    
+    result=[]
+
+    for i in range(len(nums)):
+        result.append(left[i]*right[i])
+
+
+    return result
+
+print(prod_array([1, 2, 3, 4]))
+print(prod_array([2, 3, 4]))
+print(prod_array([-1, 1, 0, -3, 3]))
+print(prod_array([0, 0]))
+print(prod_array([5]))
+
+
+    
+#time Comp: O(n)
+#space Comp: O(n)
+
+"""
+# Problem 6: Smallest Missing Number
+
+Given numbers from:
+
+```python
+0 -> n
+```
+
+with one missing number, return the missing number.
+
+Example:
+
+```python
+nums = [0, 1, 3]
+```
+
+Expected Output:
+
+```python
+2
+```
+
+Requirements:
+
+* Solve using set
+* Solve using sum formula
+
+Test Cases:
+
+```python
+[0, 1, 3] -> 2
+[3, 0, 1] -> 2
+[0, 1] -> 2
+[0] -> 1
+[1] -> 0
+```
+
+---
+
+
+"""
+#using the set
+
+def smallest_missing_num(nums):
+    seen=set(nums)
+
+    for i in range(len(nums)+1):
+        if i not in seen:
+            return i
+
+print(smallest_missing_num([0, 1, 8])) #2
+print(smallest_missing_num([3, 0, 1]))  #2
+print(smallest_missing_num([0, 1] )) # 2
+print(smallest_missing_num([1])) #0
+print(smallest_missing_num([0])) #1
+
+#time Comp: O(n)
+#space Comp: O(n)
+
+#using the sum formula
+
+def smallest_missing_num(nums):
+    sum_of_n=(len(nums)*(len(nums)+1))//2
+    return sum_of_n-sum(nums)
+
+print(smallest_missing_num([3, 0, 1]))  #2
+print(smallest_missing_num([0, 1] )) # 2
+print(smallest_missing_num([1])) #0
+print(smallest_missing_num([0])) #1
+
+#time Comp: O(1)
+#space Comp: O(n)
+
+"""
+# Problem 5: Remove Target Element In-Place
+
+Remove all occurrences of `val` in-place.
+
+Return the new length.
+
+Example:
+
+```python
+nums = [1, 2, 3, 2, 4]
+val = 2
+```
+
+Expected Output:
+
+```python
+3
+```
+
+After operation:
+
+```python
+[1, 3, 4]
+```
+
+Requirements:
+
+* Use write pointer
+* Solve in-place
+* Do not create second list
+
+Test Cases:
+
+```python
+[1, 2, 3, 2, 4], val = 2 -> 3
+[0, 1, 2, 2, 3], val = 2 -> 3
+[1, 1, 1], val = 1 -> 0
+[], val = 1 -> 0
+[4, 5, 6], val = 7 -> 3
+```
+
+---
+
+"""
+
+
+def remove_occurances(nums,val):
+    if not nums:
+        return 0
+    write=0
+
+    for i in range(len(nums)):
+        if nums[i]!=val:
+            nums[write]=nums[i]
+            write+=1
+    return write
+
+print(remove_occurances([1, 2, 3, 2, 4],2))  # 3
+print(remove_occurances([0, 1, 2, 2, 3],2)) #3
+print(remove_occurances([1, 1, 1],1))  #0
+print(remove_occurances([],1))  #0
+print(remove_occurances([4, 5, 6],7))  #0
+        
+#time Comp: O(n)
+#space Comp: O(1)
+
+
+"""
+# Problem 4: Contains Duplicate II
+
+Return `True` if any element appears at least twice.
+
+Example:
+
+```python
+nums = [1, 2, 3, 4, 1]
+```
+
+Expected Output:
+
+```python
+True
+```
+
+Requirements:
+
+* Solve using brute force
+* Solve using set/hash lookup
+
+Test Cases:
+
+```python
+[1, 2, 3, 4, 1] -> True
+[1, 2, 3, 4] -> False
+[5, 5, 5] -> True
+[] -> False
+[1] -> False
+```
+
+
+"""
+
+#Using Brute Force: ill use nested loop to the check the existnace of elements
+
+def duplicate(nums):
+    if not nums:
+        return False
+
+    for i in nums:
+        count=0
+        for j in nums:
+            if i==j:
+                count+=1
+        if count>=2:
+            return True
+    return False
+
+print(duplicate([1, 2, 3, 4, 1]))            
+print(duplicate([1, 2, 3, 4]))            
+print(duplicate([5, 5, 5] ))            
+print(duplicate([]))            
+print(duplicate([1]))            
+
+# time comp:  O(n^2)
+# space comp: O(1)
+
+#Using Hasing;
+
+def duplicate(nums):
+    if not nums:
+        return False
+    
+    seen={}
+
+    for i in nums:
+        if i in seen:
+            seen[i]+=1
+        else:
+            seen[i]=1
+    for key,value in seen.items():
+        if value>1:
+            return True
+        
+    return False
+
+print(duplicate([1, 2, 3, 4, 1]))            
+print(duplicate([1, 2, 3, 4]))            
+print(duplicate([5, 5, 5] ))            
+print(duplicate([]))            
+print(duplicate([1]))     
+
+
+   
+# time comp:  O(n)
+# space comp: O(n)
+
+"""
+# Problem 7: Rotate Array Left
+
+Rotate array LEFT by `k`.
+
+Example:
+
+```python
+nums = [1, 2, 3, 4, 5]
+k = 2
+```
+
+Expected Output:
+
+```python
+[3, 4, 5, 1, 2]
+```
+
+Requirements:
+
+* First solve using extra list
+* Then solve using reverse method
+* Handle `k > len(nums)`
+
+Test Cases:
+
+```python
+[1, 2, 3, 4, 5], k = 2 -> [3, 4, 5, 1, 2]
+[1, 2], k = 3 -> [2, 1]
+[-1, -100, 3, 99], k = 2 -> [3, 99, -1, -100]
+[] , k = 3 -> []
+
+"""
+
+#Using the Extra List:
+
+def array_rotation(nums,k):
+    if not nums:
+        return nums
+    k=k%len(nums)
+
+    left=nums[:len(nums)-k]
+    right=nums[len(nums)-k:]
+    Result=right+left
+    return Result
+
+print(array_rotation([1, 2, 3, 4, 5],2))
+print(array_rotation([1, 2],3))
+print(array_rotation([-1, -100, 3, 99],2))
+print(array_rotation([],3))
+
+
+#time comp: O(1)
+#Space Comp: O(n)
+
+#Using in place:
+
+def array_rotation(nums,k):
+    if not nums:
+        return nums
+
+    k=k%len(nums)
+
+    #step-1 Reverese the array
+
+    left=0
+    right=len(nums)-1
+
+    while left<right:
+        nums[left],nums[right]=nums[right],nums[left]
+        left+=1
+        right-=1
+    
+    
+    #rotate the left part
+    left=0
+    right=k-1
+    while left<right:
+        nums[left],nums[right]=nums[right],nums[left]
+        left+=1
+        right-=1
+    #rotate Remainng part
+
+    left=k
+    right=len(nums)-1
+    while left<right:
+        nums[left],nums[right]=nums[right],nums[left]
+        left+=1
+        right-=1
+    return nums
+print(array_rotation([1, 2, 3, 4, 5],2))
+print(array_rotation([1, 2],3))
+print(array_rotation([-1, -100, 3, 99],2))
+print(array_rotation([],3))
+
+
+#time comp: O(n)
+#Space Comp: O(1)
+
+
+"""
+# Problem 9: Plus One II
+
+Add one to a digit array.
+
+Example:
+
+```python
+digits = [8, 9, 9, 9]
+```
+
+Expected Output:
+
+```python
+[9, 0, 0, 0]
+```
+
+Requirements:
+
+* Traverse right to left
+* Handle carry
+* Handle all 9s case
+
+Test Cases:
+
+```python
+[1, 2, 3] -> [1, 2, 4]
+[9] -> [1, 0]
+[9, 9, 9] -> [1, 0, 0, 0]
+[8, 9, 9, 9] -> [9, 0, 0, 0]
+[4, 3, 2, 1] -> [4, 3, 2, 2]
+```
+
+---
+
+"""
+
+def plus_one(nums):
+    if not nums:
+        return nums
+    for i in range(len(nums)-1,-1,-1):
+
+        if nums[i]<9:
+            nums[i]+=1
+            return nums
+        nums[i]=0
+    return [1]+nums
+
+print(plus_one([1, 2, 3]))
+print(plus_one([9]))
+print(plus_one([9,9,9]))
+print(plus_one([8,9,9,9]))
+print(plus_one([4, 3, 2, 1]))
+
+
+
+
+"""
+
+# Problem 1: Maximum Difference
+
+Given a list of integers, return the maximum difference:
+
+```python
+nums[j] - nums[i]
+where j > i
+````
+
+If no positive difference exists, return `0`.
+
+Example:
+
+```python
+nums = [7, 1, 5, 3, 6, 4]
+```
+
+Expected Output:
+
+```python
+5
+```
+
+Requirements:
+
+* First think brute force
+* Then optimize using one-pass minimum tracking
+
+Test Cases:
+
+```python
+[7, 1, 5, 3, 6, 4] -> 5
+[7, 6, 4, 3, 1] -> 0
+[1, 2] -> 1
+[2, 4, 1] -> 2
+[5] -> 0
+```
+
+"""
+    
+def max_diff(nums):
+
+    min_num=nums[0]
+    max_diff=0
+
+    for i in nums:
+        if i<min_num:
+            min_num=i
+        else:
+            Diff=i-min_num
+            if Diff>max_diff:
+                max_diff=Diff
+    
+    if max_diff<0:
+        return 0
+    return max_diff
+
+    
+print( max_diff([1, 7, 5, 3, 6, 4]))
+print( max_diff([7, 6, 4, 3, 1]))
+print( max_diff([1, 2]))
+print( max_diff([7, 6, 4, 3, 1]))
+
+#timecomp: O(n)
+#Spacecomp: O(1)
+
+
+"""
+# Problem 2: Move Negative Numbers To End
+
+Move all negative numbers to the end while maintaining the order of non-negative numbers.
+
+Example:
+
+```python
+nums = [1, -2, 3, -4, 5]
+```
+
+Expected Output:
+
+```python
+[1, 3, 5, -2, -4]
+```
+
+Requirements:
+
+* Solve in-place
+* Use write-pointer approach
+* Maintain order
+
+Test Cases:
+
+```python
+[1, -2, 3, -4, 5] -> [1, 3, 5, -2, -4]
+[-1, -2, 3, 4] -> [3, 4, -1, -2]
+[1, 2, 3] -> [1, 2, 3]
+[-1, -2] -> [-1, -2]
+[] -> []
+```
+"""
+
+
+def move_negative(nums):
+
+    end=len(nums)-1
+    i=0
+    
+
+    while i<end:
+
+        if nums[i]<0:
+            temp=nums[i]
+
+            for j in range(i,len(nums)-1):
+                nums[j]=nums[j+1]
+            
+            nums[end]=temp
+
+            end-=1
+        else:
+            i+=1
+
+    return nums
+
+print(move_negative([1, -2, 3, -4, 5]))
+print(move_negative([1, -2, 3, -4, 5]))
+print(move_negative([1, -2, 3, -4, 5]))
+print(move_negative([1, -2, 3, -4, 5]))
+
+#timecomp=O(n^2)
+#SpaceCOMP=O(1)
+
+#Remarks:This Solution is not soved by me i took it from AI as i wan not able to build the logic.
+
+"""
+# Problem 3: Third Largest Distinct Element
+
+Return the third largest distinct element.
+
+If it doesn’t exist, return `None`.
+
+Example:
+
+```python
+nums = [10, 20, 5, 8, 20, 15]
+```
+
+Expected Output:
+
+```python
+10
+```
+
+Requirements:
+
+* Do not sort
+* Handle duplicates
+* Handle negative numbers
+
+Test Cases:
+
+```python
+[10, 20, 5, 8, 20, 15] -> 10
+[5, 5, 5] -> None
+[1, 2] -> None
+[-10, -5, -20, -1] -> -10
+[3, 2, 1] -> 1
+
+"""
+
+
+def third_largest(nums):
+
+    first=float('-inf')
+    second=float('-inf')
+    third=float('-inf')
+
+    for i in nums:
+        if i>first:
+
+            third=second
+            second=first
+            first=i
+        
+        elif i>second and i!=first:
+            third=second
+            second=i
+        elif i>third and i!=second and i!=first:
+            third=i
+    if third==float('-inf'):
+        return None
+    
+    return third
+
+
+print(third_largest([10, 20, 5, 8, 20, 15]))
+print(third_largest([5, 5, 5]))
+print(third_largest([1, 2]))
+print(third_largest([-10, -5, -20, -1]))
+print(third_largest([3, 2, 1] ))
+
+
+
+#timecomp=O(n)
+#SpaceCOMP=O(1)
+
+#Remarks:This Solution is not soved by me i took it from AI as i wan not able to build the logic.
+
+
