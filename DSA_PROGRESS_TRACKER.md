@@ -1,7 +1,7 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Current review date: 2026-05-08  
+Current review date: 2026-05-09  
 Plan length: 4 months / 16 weeks  
 Daily study target: 3-5 focused hours  
 Daily problem target: max 5 new problems + mandatory revision  
@@ -15,8 +15,9 @@ Overall status:
 - Day 1 array basics: strong.
 - Day 1 revision: completed.
 - Day 2 array/write-pointer/hash basics: attempted and partially revised.
-- LeetCode-ready must-cover set: barely started; only `Contains Duplicate` and `Product of Array Except Self` have meaningful Day 2 exposure.
-- Main risk: moving too fast before write-pointer, prefix/suffix, and edge-case discipline become automatic.
+- Day 3 hash map frequency work completed with good effort but not yet LeetCode-submitted.
+- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `Valid Anagram`, `First Unique Character`, and `Product of Array Except Self` have local exposure but still need clean independent re-solves and submissions.
+- Main risk: moving too fast before dictionary storage semantics, prefix/suffix, and edge-case discipline become automatic.
 
 ## Strengths
 
@@ -26,7 +27,8 @@ Overall status:
 | Tracking variables | Max/min, second largest, majority frequency | Strong but edge cases need care |
 | Adjacent comparison | Sorted check, duplicate comparison | Strong |
 | Basic in-place writes | Move zeroes, remove element, remove duplicates after concept help | Improving |
-| Hashing for lookup | Contains duplicate, intersection, missing number set method | Improving |
+| Hashing for lookup | Contains duplicate, intersection, missing number set method, Two Sum complement attempt | Improving |
+| Frequency counting | Day 3 frequency counter and First Unique count map were built locally | Improving |
 | Brute-force discipline | Written for most Day 1/Day 2 problems | Strong habit |
 | Complexity awareness | Usually written, but some mistakes remain | Partial |
 
@@ -41,6 +43,9 @@ Overall status:
 | Rotation edge cases | `k > n`, empty list, reverse method learned with guidance | Revisit |
 | In-place cyclic placement | First Missing Positive optimized version not learned | Defer; set method is enough for now |
 | Complexity precision | Set membership and sum-formula space were sometimes mislabeled | Daily 10-minute complexity drill |
+| Dictionary storage semantics | Two Sum confused storing `needed` vs storing current number/index | Re-solve complement lookup before new hashing mediums |
+| Second pass after frequency map | First Unique initially looped over dictionary and lost original index order | Drill count-first, scan-original-second pattern |
+| Sorting complexity | Valid Anagram sorting method time complexity was not understood | Review `sorted()` cost: O(n log n) time, O(n) space in Python |
 
 ## Pattern Recognition State
 
@@ -52,7 +57,8 @@ Overall status:
 | Basic two pointer | Partial | Reverse and move zeroes seen; not yet broad enough. |
 | Write pointer | Partial | Trigger: "in-place", "remove", "keep order", "return new length". |
 | Set lookup | Partial-to-strong | Trigger: duplicate, membership, intersection, missing value. |
-| Frequency dictionary | Partial-to-strong | Trigger: count occurrences, majority, first unique, anagram. |
+| Frequency dictionary | Partial | Trigger is visible, but manual comparison, second-pass indexing, and complexity still need repetition. |
+| Complement lookup dictionary | Partial | Trigger: pair sum / target. Store seen values with indexes, not needed values. |
 | Prefix/suffix | Unstable | Trigger: product except self, left/right accumulated information. |
 | Carry from right | Unstable | Trigger: digit array, plus one, addition simulation. |
 | One-pass min tracking | Unstable | Trigger: max profit with buy before sell. |
@@ -84,15 +90,18 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | Reverse Array | Two pointer / extra list | Function naming and space complexity need precision. |
 | Boyer-Moore Majority | Voting | Candidate logic known; validation was learned with help. |
 | Remove Duplicates From Sorted Array | Write pointer | Needed concept help. |
-| Remove Element | Write pointer | Solved using nearby reference. |
+| Remove Element | Write pointer | Day 03 independent re-solve succeeded; needs spaced recall before mastery. |
 | Missing Number | Set + sum formula | Set method needed hint; complexity note needs correction. |
 | Best Time To Buy And Sell Stock | One-pass min tracking | Needed AI help. |
 | Plus One | Carry simulation | Solution viewed. |
 | Rotate Array | Extra list + reverse | Edge cases and reverse method learned with guidance. |
-| Product Of Array Except Self | Prefix/suffix | Solved, but concept and space complexity unstable. |
+| Product Of Array Except Self | Prefix/suffix | Day 03 two-array prefix/suffix improved; output-array + suffix version still unstable. |
 | First Missing Positive | Set / cyclic placement | Set solved; cyclic placement deferred. |
 | Move Negative Numbers To End | Partition/write pointer | Revision solution copied from AI. |
 | Third Largest Distinct Element | Tracking | Revision solution copied from AI. |
+| Two Sum | Hashing / complement lookup | Optimized version required solution help for dictionary storage line. |
+| Valid Anagram | Hashing / strings | Hash-map comparison needed hint; sorting complexity uncertain. |
+| First Unique Character in a String | Hashing / strings | Optimized second pass needed hint to preserve original index order. |
 
 ## Master Progress
 
@@ -107,7 +116,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics, write pointer, hashing intro | 20 new + revision | 14 | 3 | 3 | 70% | Continue slowly; revise Day 2 before more mediums |
+| 1 | Array basics, write pointer, hashing intro | 25 new + revision | 16 | 5 | 4 | 64% clean / 80% completed | Continue slowly; do Day 4 strings with mandatory Day 3/Day 2 revision |
 | 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -162,6 +171,40 @@ Problem list:
 
 Decision: Do not increase volume. Next 3 study days should mix 3 new problems max with 2-3 revision problems.
 
+### 2026-05-09
+
+Week / Day: Week 1 / Day 3 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic: Hash map frequency, complement lookup, dictionary counting, write-pointer revision, prefix/suffix revision
+
+Problems attempted: 5 plus fundamentals frequency counter  
+Solved independently: Fundamentals frequency counter, Remove Element revision, Product of Array Except Self two-array prefix/suffix version  
+Solved after hint: Valid Anagram hash-map comparison, First Unique Character optimized second pass  
+Solved after solution: Two Sum optimized complement dictionary line  
+Unsolved: 0, but no new Day 3 must-cover problem is mastered yet
+
+Problem list:
+1. Two Sum - brute force correct; optimized pattern required solution help for `seen[nums[i]] = i`; revisit in 24h and submit only after clean local solve
+2. Valid Anagram - brute/sorting/hash versions attempted; hash comparison needed hint and sorting complexity was unclear; revisit in 24h
+3. First Unique Character in a String - brute force independent; optimized version needed hint for second pass over original string; revisit in 24h
+4. Remove Element - independent revision success; keep in 3-day spaced revision before marking mastered
+5. Product Of Array Except Self - improved from Day 2 and passed local examples using left/right arrays; still needs output-array plus one suffix variable version
+
+Strong patterns:
+- Brute-force-first habit is becoming reliable.
+- Frequency counter fundamentals are workable.
+- Write pointer for Remove Element improved meaningfully.
+- Local test coverage used multiple edge cases from the work file.
+
+Weak patterns and repeated mistakes:
+- Confusing what the dictionary should store in complement lookup.
+- Losing original index order when scanning a frequency dictionary.
+- Missing or uncertain complexity notes, especially `sorted()` and optimized hash-map methods.
+- Prefix/suffix still works mechanically but not yet at the target optimized-space form.
+- No LeetCode submission proof yet for Day 3 must-cover problems.
+
+Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revision problems. No optional medium. Revision is improving but still insufficient because Day 3 weak patterns need a 24-hour re-solve.
+
 ## Must-Cover Tracker
 
 ### Month 1: Arrays + Hashing + Strings
@@ -169,12 +212,12 @@ Decision: Do not increase volume. Next 3 study days should mix 3 new problems ma
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
 | Contains Duplicate | Mastered | 2026-05-08 | Weekly |
-| Two Sum | Not started in current Day files |  | Current week |
-| Valid Anagram | Not started in current Day files |  | Current week |
-| First Unique Character in a String | Not started in current Day files |  | Current week |
+| Two Sum | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
+| Valid Anagram | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
+| First Unique Character in a String | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
 | Group Anagrams | Not started |  | Week 2 |
 | Top K Frequent Elements | Not started |  | Week 2 |
-| Product of Array Except Self | Revisit | 2026-05-08 | 24h, 3d, 7d |
+| Product of Array Except Self | Revisit | 2026-05-09 | 3d, 7d; redo output-array + suffix version |
 | Longest Consecutive Sequence | Not started |  | Week 3 |
 | Subarray Sum Equals K | Not started |  | Week 3 |
 | Valid Palindrome | Not started in current Day files |  | Current week |
@@ -237,22 +280,26 @@ Decision: Do not increase volume. Next 3 study days should mix 3 new problems ma
 | Reverse Array | Arrays / Two Pointer | Extra-list space and duplicate function name | 1 | Weekly | Use separate names for extra-list and in-place. |
 | Boyer-Moore Majority | Voting | Validation pass learned with help | 1 | Week 2 | Explain candidate cancellation before coding. |
 | Remove Duplicates From Sorted Array | Write pointer | Concept learned from help | 1 | Next study day | Trigger: sorted + unique + in-place. |
-| Remove Element | Write pointer | Solved from reference pattern | 1 | Next study day | Trigger: keep non-target values at front. |
+| Remove Element | Write pointer | Previously solved from reference; Day 03 independent re-solve succeeded | 1 | 3 days | Trigger: keep non-target values at front. |
 | Missing Number | Set / math | Set method needed hint; complexity confusion | 1 | Next study day | Sum formula uses O(1) extra space. |
 | Best Time To Buy And Sell Stock | One-pass min tracking | Could not build logic independently | 1 | Next study day | Track `min_price`, update `max_profit`. |
 | Plus One | Carry simulation | Saw solution | 1 | Next study day | Traverse right to left; return early if no carry. |
 | Rotate Array | Reverse method | Edge cases learned with guidance | 1 | 3 days | Always reduce `k %= n`; handle empty before modulo. |
-| Product Of Array Except Self | Prefix/suffix | Space complexity and idea translation unstable | 1 | Next study day | Output array + suffix variable counts as O(1) extra beyond output. |
+| Product Of Array Except Self | Prefix/suffix | Two-array version improved; optimized extra-space target still unstable | 1 | 3 days | Output array + suffix variable counts as O(1) extra beyond output. |
 | Move Negative Numbers To End | Write pointer / partition | Copied from AI in revision | 1 | After write-pointer drill | Re-solve without notes. |
 | Third Largest Distinct Element | Tracking | Copied from AI in revision | 1 | After second-largest review | Generalize first/second/third tracking. |
+| Two Sum | Hashing / Complement lookup | Solution viewed for storing current value/index | 1 | Next study day | Check complement first, then store `seen[current] = index`. |
+| Valid Anagram | Hashing / Character frequency | Hint used for manual dictionary comparison; sorting complexity unclear | 1 | Next study day | Count both maps or count/decrement; know sorted cost. |
+| First Unique Character in a String | Hashing / Frequency + second pass | Hint used to scan original string for first index | 1 | Next study day | Count first, then loop over original indexes. |
 
 ## Revision Status
 
 | Revision Type | Status | Next Action |
 | --- | --- | --- |
 | Day 1 required revision | Completed | Weekly light recall |
-| Day 2 revision | Partial | Re-solve failed queue before Day 3 volume |
-| 24-hour spaced repetition | Behind | Start immediately with Day 2 weak problems |
+| Day 2 revision | Improving | Remove Element re-solved; Product needs optimized-space re-solve |
+| Day 3 revision | Needed | Re-solve Two Sum, Valid Anagram, First Unique within 24h |
+| 24-hour spaced repetition | Behind but restarted | Use Day 4 revision slots for Day 3 hashing and Day 2 carry/running-state |
 | 3-day spaced repetition | Pending | Schedule after next successful re-solve |
 | 7-day spaced repetition | Pending | Use weekly review day |
 | LeetCode submission proof | Not tracked yet | Add LC result/date after every must-cover problem |
@@ -263,6 +310,9 @@ Decision: Do not increase volume. Next 3 study days should mix 3 new problems ma
 | --- | --- | --- |
 | "duplicate", "exists twice", "seen before" | Set lookup | Contains Duplicate |
 | "frequency", "most common", "first unique" | Dictionary count | Majority Element, First Unique Character |
+| "two numbers", "target sum", "return indices" | Complement dictionary lookup | Two Sum |
+| "same characters with same frequency" | Character frequency comparison | Valid Anagram |
+| "first non-repeating" | Frequency map + second pass over original order | First Unique Character |
 | "in-place", "remove", "keep order", "return length" | Write pointer | Move Zeroes, Remove Element, Remove Duplicates |
 | "buy before sell", "maximum profit" | One-pass min tracking | Best Time to Buy/Sell Stock |
 | "all elements except self", "without division" | Prefix/suffix products | Product of Array Except Self |
@@ -284,4 +334,3 @@ Mark `Revisit` when:
 - Complexity is uncertain.
 - The pattern trigger is unclear.
 - The solution was copied from AI/video/editorial.
-

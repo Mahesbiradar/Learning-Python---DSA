@@ -788,8 +788,6 @@ Revisit again?
 
 def prod_array(nums):
 
-    
-
     p_array=[]
 
     for i in range(len(nums)):
@@ -827,3 +825,46 @@ print(prod_array([5] ))
 
 
 
+def prod_array(nums):
+
+    #product of left array(prefix)
+    left=[1]
+
+    for i in range(1,len(nums)):
+        left.append(left[i-1]*nums[i-1])
+    
+    #product of right array (Prefix)
+    right=[None]*len(nums)
+    right[-1]=1
+
+    for i in range(len(nums)-2,-1,-1):
+        right[i]=right[i+1]*nums[i+1]
+    
+    #Multiply both array
+
+    result=[]
+
+    for i in range(len(nums)):
+        result.append(left[i]*right[i])
+    
+
+    return result
+
+
+print(prod_array([1, 2, 3, 4]))
+print(prod_array([-1, 1, 0, -3, 3]))
+print(prod_array([2, 3] ))
+print(prod_array([0, 0]))
+print(prod_array([5] ))
+
+# Time complexity: O(n)
+
+# Space complexity: O(n)
+
+# Mistakes/confusions:
+
+# Status:- [] Independent re-solve -YES
+
+#Leetcode : Not submitted.
+
+#Pattern: List Traversal.

@@ -1,7 +1,7 @@
 # Current Week Execution Plan
 
 Phase: Month 1 - Arrays + Hashing + Strings  
-Current position: Day 1 complete, Day 2 attempted, Day 2 revision partially complete  
+Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required  
 Goal for this week: stabilize array/write-pointer/hash basics before increasing medium volume.
 
 ## Week Targets
@@ -57,7 +57,7 @@ Required revision:
 - Plus One.
 - Product Of Array Except Self.
 
-## Day 3: Hash Map Frequency + Two Sum
+## Day 3: Completed/Reviewed - Hash Map Frequency + Two Sum
 
 Today's topic: hash map lookup and frequency counting.  
 Why this topic now: Day 2 introduced sets; the next placement step is using dictionaries for indexes and counts.  
@@ -67,20 +67,19 @@ If prerequisites are weak:
 - Revise `CONCEPTS.md` sections: Dictionaries, Hashing, Time Complexity, Space Complexity.
 - Write a 5-line frequency counter before solving.
 
-Problems:
-1. Two Sum - must-cover, LeetCode.
-2. Valid Anagram - must-cover, LeetCode.
-3. First Unique Character in a String - must-cover, LeetCode.
-4. Ransom Note or Majority Element revision.
-5. Optional: Top K Frequent Elements only if first 4 are clean.
+Completed:
+1. Two Sum - brute force correct; optimized complement dictionary required solution help.
+2. Valid Anagram - sorting/hash approaches attempted; hash comparison needed hint.
+3. First Unique Character in a String - brute force independent; optimized second pass needed hint.
+4. Remove Element revision - independent re-solve succeeded.
+5. Product Of Array Except Self revision - two-array prefix/suffix version improved; target output-array + suffix version still pending.
 
-Revision:
-- Contains Duplicate.
-- Remove Element.
-- Missing Number.
+LeetCode:
+- No Day 3 submission proof yet. Day 4 must include at least one accepted submission from the Day 3 revisit set.
 
-Expected difficulty:
-- 2 easy, 2 medium/easy-medium, 1 optional medium.
+Decision:
+- Do not add optional mediums yet.
+- Continue to Day 4, but keep Day 3 hashing revision mandatory.
 
 ## Day 4: Strings + Palindrome + Character Counting
 
@@ -91,20 +90,40 @@ Required prerequisite concepts: string indexing, `.lower()`, `.isalnum()`, list 
 If prerequisites are weak:
 - Revise `CONCEPTS.md` sections: Strings, String Building, Dictionaries.
 - Practice reversing a string and counting characters locally.
+- Re-write from memory: `freq[x] = freq.get(x, 0) + 1`.
+- Re-write from memory: check complement first, then store current value/index.
 
 Problems:
-1. Valid Palindrome - must-cover, LeetCode.
-2. Reverse String.
-3. Is Subsequence.
-4. Longest Common Prefix.
-5. First Unique Character re-solve if not mastered.
+1. Valid Palindrome - must-cover, LeetCode, 30-40 minutes.
+2. Reverse String - fundamentals, 15-20 minutes.
+3. Is Subsequence - two-pointer string scan, 30-40 minutes.
 
 Revision:
-- Plus One.
-- Best Time To Buy And Sell Stock.
+- Two Sum - 24-hour revisit, 25 minutes, must submit if clean locally.
+- First Unique Character in a String or Valid Anagram - 24-hour revisit, 20-25 minutes.
+
+Prerequisite/fundamentals revision:
+- 10 minutes: dictionary frequency counter and `dict.get`.
+- 10 minutes: `sorted()` complexity and string immutability.
+- 10 minutes: two-pointer palindrome dry run.
+
+Weak-pattern reinforcement:
+- Complement lookup: never store `needed` as the seen value for standard Two Sum; store current number to its index after checking.
+- Frequency + order: build counts first, then scan the original string/list when the answer depends on first position.
+- Complexity: write time/space before checking old notes.
+
+LeetCode workflow:
+1. Solve locally first with all listed examples.
+2. Submit only after local tests pass.
+3. Target one accepted submission minimum; two accepted is a bonus.
+4. If rejected twice, stop and write the failed case into the revisit queue.
+
+Realistic completion target:
+- 70-80% success means 3 new problems attempted, 2 revision problems attempted, and at least 1 LeetCode accepted.
+- Skip Longest Common Prefix tomorrow unless all required items finish cleanly.
 
 Expected difficulty:
-- Mostly easy; focus on clean explanations.
+- Mostly easy; focus on clean explanations and 24-hour recall, not volume.
 
 ## Day 5: Prefix/Suffix + Running State
 
@@ -184,4 +203,3 @@ For each must-cover problem:
 3. If accepted, write pattern trigger.
 4. If rejected, fix locally and submit once more.
 5. If rejected twice, stop and analyze; do not spam submissions.
-

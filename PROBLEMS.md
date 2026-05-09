@@ -1197,7 +1197,7 @@ Use `j = i + 1` to avoid comparing an element with itself.
 
 ## [ARR-031] Two Sum
 
-Status: Solved  
+Status: Revisit  
 Topic: Arrays / Lists  
 Pattern: Hashing  
 Difficulty: Easy
@@ -1239,6 +1239,8 @@ Space: O(n)
 ### Notes
 
 Store the current number after checking to avoid using the same element twice.
+
+Day 03 review: brute force was correct, but the optimized version required solution help for the key storage line. Re-solve from memory before marking solved: check `needed = target - nums[i]`, then store `seen[nums[i]] = i`.
 
 ## Strings
 
@@ -1870,7 +1872,7 @@ Avoid using `max` as a variable name.
 
 ## [STR-017] Check Anagram
 
-Status: Solved  
+Status: Revisit  
 Topic: Strings  
 Pattern: Frequency Counting  
 Difficulty: Easy
@@ -1914,6 +1916,8 @@ Space: O(n)
 ### Notes
 
 Simple membership-only checks are not enough when duplicate counts differ.
+
+Day 03 review: sorting and frequency approaches were attempted, but manual dictionary comparison needed a hint and `sorted()` complexity was unclear. Revisit as LeetCode `Valid Anagram` and write both O(n log n) sorting and O(n) hashing complexities.
 
 ## [STR-018] Check Substring
 
@@ -3140,19 +3144,19 @@ This is a clean nested-loop exercise.
 | Problem Name | Topic | Priority | Reason |
 | --- | --- | --- | --- |
 | Remove Duplicates From Sorted Array | Arrays / Write Pointer | High | Needed concept help; must become automatic. |
-| Remove Element | Arrays / Write Pointer | High | Solved using nearby reference pattern. |
+| Remove Element | Arrays / Write Pointer | Medium | Day 03 independent re-solve succeeded; revisit again in 3 days before mastery. |
 | Missing Number | Arrays / Hashing / Math | High | Set method needed hint; complexity notes need correction. |
 | Best Time To Buy And Sell Stock | Arrays / Running Minimum | High | Logic required AI help. |
 | Plus One | Arrays / Carry Simulation | High | Solution was viewed; re-solve from memory. |
-| Product Of Array Except Self | Arrays / Prefix-Suffix | High | Prefix/suffix idea and space complexity are unstable. |
+| Product Of Array Except Self | Arrays / Prefix-Suffix | High | Day 03 two-array prefix/suffix improved; still needs output-array + one suffix variable version. |
 | Rotate Array | Arrays / Reverse Method | Medium | Edge cases and in-place reverse method need practice. |
 | Second Largest Distinct Element | Arrays / Tracking | Medium | Empty/all-duplicate edge cases caused trouble. |
 | Boyer-Moore Majority Element | Arrays / Voting | Medium | Candidate logic known; validation learned with help. |
 | Move Negative Numbers To End | Arrays / Partition | Medium | Revision solution copied from AI. |
 | Third Largest Distinct Element | Arrays / Tracking | Medium | Revision solution copied from AI. |
-| Two Sum | Hashing | High | Must-cover placement problem; solve and submit on LeetCode. |
-| Valid Anagram | Hashing / Strings | High | Must-cover placement problem. |
-| First Unique Character in a String | Hashing / Strings | High | Must-cover placement problem. |
+| Two Sum | Hashing | High | Day 03 optimized solution viewed for storing current value/index; re-solve and submit on LeetCode. |
+| Valid Anagram | Hashing / Strings | High | Day 03 hint used for hash comparison; sorting complexity unclear. |
+| First Unique Character in a String | Hashing / Strings | High | Day 03 hint used for second pass over original string to preserve index order. |
 | Valid Palindrome | Strings / Two Pointers | High | Must-cover placement problem. |
 | Group Anagrams | Hashing / Grouping | Medium | Next medium grouping pattern. |
 | Top K Frequent Elements | Hashing / Frequency | Medium | Next medium frequency pattern. |
