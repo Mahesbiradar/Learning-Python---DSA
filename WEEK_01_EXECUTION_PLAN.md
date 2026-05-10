@@ -1,7 +1,7 @@
 # Current Week Execution Plan
 
 Phase: Month 1 - Arrays + Hashing + Strings  
-Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required  
+Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required, Day 4 completed locally  
 Goal for this week: stabilize array/write-pointer/hash basics before increasing medium volume.
 
 ## Week Targets
@@ -81,7 +81,7 @@ Decision:
 - Do not add optional mediums yet.
 - Continue to Day 4, but keep Day 3 hashing revision mandatory.
 
-## Day 4: Strings + Palindrome + Character Counting
+## Day 4: Completed/Reviewed - Strings + Palindrome + Character Counting
 
 Today's topic: string traversal, normalization, palindrome, character frequency.  
 Why this topic now: strings use the same traversal/hash patterns but require careful immutability handling.  
@@ -125,30 +125,47 @@ Realistic completion target:
 Expected difficulty:
 - Mostly easy; focus on clean explanations and 24-hour recall, not volume.
 
-## Day 5: Prefix/Suffix + Running State
+Completed:
+1. Valid Palindrome - completed locally, but optimized skip-loop version needed hint/solution exposure.
+2. Reverse String - independent local solve; in-place swap pattern is strong.
+3. Is Subsequence - completed locally after repeated hints; needs 24-hour re-solve.
+4. Two Sum revision - independent brute force and optimized complement lookup.
+5. First Unique Character revision - independent brute force and optimized frequency + second pass.
+6. Valid Anagram extra revision - completed locally, but optimized complexity needs correction because of string membership inside the comparison loop.
 
-Today's topic: running values from left/right, prefix/suffix products, one-pass min/max.  
-Why this topic now: Day 2 showed this is unstable, and it becomes essential for medium arrays.  
-Required prerequisite concepts: forward loop, reverse loop, output array, accumulated product.
+LeetCode:
+- No Day 4 submission proof yet. Day 5 must include at least one accepted submission before optional work.
+
+Decision:
+- Continue to Day 5, but reduce overload. Keep 3 new problems max, 2 revision problems max, and make LeetCode submission proof mandatory.
+
+## Day 5: Prefix/Suffix + Running State + Day 4 String Revisit
+
+Today's topic: running values from left/right, prefix/suffix products, one-pass min/max, and 24-hour string two-pointer recall.  
+Why this topic now: Day 2 showed prefix/suffix and running-state are unstable, while Day 4 showed Valid Palindrome and Is Subsequence need immediate recall before moving on.  
+Required prerequisite concepts: forward loop, reverse loop, output array, accumulated product, `min_price`, string skip loops, subsequence match pointer.
 
 If prerequisites are weak:
 - Write prefix sum for `[1,2,3,4]`.
 - Write suffix product manually for `[1,2,3,4]`.
 - Re-read Product Except Self notes before coding.
+- Dry run Valid Palindrome on `"A man, a plan, a canal: Panama"`.
+- Dry run Is Subsequence on `s = "abc", t = "ahbgdc"`.
 
 Problems:
-1. Product of Array Except Self - re-solve from memory, LeetCode.
-2. Best Time To Buy And Sell Stock - re-solve from memory, LeetCode.
-3. Find Pivot Index.
-4. Running Sum of 1d Array.
-5. Optional: Subarray Sum Equals K intro only if prefix basics are clean.
+1. Running Sum of 1d Array - prefix basics, 15-20 minutes.
+2. Find Pivot Index - prefix/suffix reasoning, 30-40 minutes.
+3. Best Time To Buy And Sell Stock - one-pass running minimum, 30-40 minutes, LeetCode.
 
 Revision:
-- Rotate Array.
-- Missing Number.
+- Valid Palindrome - 24-hour re-solve, 25-30 minutes, LeetCode if clean locally.
+- Is Subsequence - 24-hour re-solve, 20-25 minutes.
+
+Optional only if all required work is clean:
+- Product of Array Except Self output-array + suffix version, 35-45 minutes.
 
 Expected difficulty:
-- 2 easy, 2 medium, 1 optional medium.
+- 3 easy/new, 2 revision. Product Except Self is optional because Day 4 already exceeded revision volume and LeetCode proof is behind.
 
 ## Day 6: Grouping + Frequency Mediums
 

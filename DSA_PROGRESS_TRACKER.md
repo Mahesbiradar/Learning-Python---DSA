@@ -1,7 +1,7 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Current review date: 2026-05-09  
+Current review date: 2026-05-10  
 Plan length: 4 months / 16 weeks  
 Daily study target: 3-5 focused hours  
 Daily problem target: max 5 new problems + mandatory revision  
@@ -16,8 +16,9 @@ Overall status:
 - Day 1 revision: completed.
 - Day 2 array/write-pointer/hash basics: attempted and partially revised.
 - Day 3 hash map frequency work completed with good effort but not yet LeetCode-submitted.
-- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `Valid Anagram`, `First Unique Character`, and `Product of Array Except Self` have local exposure but still need clean independent re-solves and submissions.
-- Main risk: moving too fast before dictionary storage semantics, prefix/suffix, and edge-case discipline become automatic.
+- Day 4 string/two-pointer work completed locally; `Reverse String`, `Two Sum`, and `First Unique Character` improved strongly.
+- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum` and `First Unique Character` are close but still need LeetCode proof and spaced recall; `Valid Palindrome`, `Valid Anagram`, and `Product of Array Except Self` remain revisit.
+- Main risk: moving too fast before pointer-skip loops, subsequence pointer movement, optimized complexity claims, and LeetCode submission discipline become automatic.
 
 ## Strengths
 
@@ -29,6 +30,9 @@ Overall status:
 | Basic in-place writes | Move zeroes, remove element, remove duplicates after concept help | Improving |
 | Hashing for lookup | Contains duplicate, intersection, missing number set method, Two Sum complement attempt | Improving |
 | Frequency counting | Day 3 frequency counter and First Unique count map were built locally | Improving |
+| Two Sum complement lookup | Day 04 optimized re-solve was independent and correct locally | Near mastered; needs LC + 3-day recall |
+| Frequency + second pass | Day 04 First Unique brute and optimized versions were independent | Near mastered; needs LC + spaced recall |
+| Basic in-place reverse | Day 04 Reverse String solved independently | Strong |
 | Brute-force discipline | Written for most Day 1/Day 2 problems | Strong habit |
 | Complexity awareness | Usually written, but some mistakes remain | Partial |
 
@@ -46,6 +50,10 @@ Overall status:
 | Dictionary storage semantics | Two Sum confused storing `needed` vs storing current number/index | Re-solve complement lookup before new hashing mediums |
 | Second pass after frequency map | First Unique initially looped over dictionary and lost original index order | Drill count-first, scan-original-second pattern |
 | Sorting complexity | Valid Anagram sorting method time complexity was not understood | Review `sorted()` cost: O(n log n) time, O(n) space in Python |
+| Pointer skipping in strings | Valid Palindrome optimized version needed hint/solution exposure for inner skip loops | Re-solve in 24h without notes |
+| Subsequence pointer movement | Is Subsequence required repeated hints before the single scan clicked | Re-solve in 24h with dry run first |
+| Optimized complexity validation | Valid Anagram final frequency version used `char not in t`, making the claimed O(n) version effectively O(n^2) | Compare dictionary membership vs string membership |
+| LeetCode submission discipline | Day 04 solved locally but submitted nothing | Day 05 must include at least one accepted submission |
 
 ## Pattern Recognition State
 
@@ -55,6 +63,8 @@ Overall status:
 | Tracking max/min/count | Mastered with edge-case caution | Initialize from input when non-empty; handle empty explicitly. |
 | Adjacent comparison | Mastered | Trigger: sorted/neighbour relation. |
 | Basic two pointer | Partial | Reverse and move zeroes seen; not yet broad enough. |
+| String two pointer with skipping | Partial | Valid Palindrome needs clean re-solve without hint/solution. |
+| Subsequence scan | Partial | Trigger understood after hints; needs independent recall. |
 | Write pointer | Partial | Trigger: "in-place", "remove", "keep order", "return new length". |
 | Set lookup | Partial-to-strong | Trigger: duplicate, membership, intersection, missing value. |
 | Frequency dictionary | Partial | Trigger is visible, but manual comparison, second-pass indexing, and complexity still need repetition. |
@@ -81,6 +91,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | Majority Element - dictionary | Frequency map | Re-solved correctly. |
 | Contains Duplicate - set | Hashing | Solved with correct pattern; time note corrected to O(n). |
 | Intersection Of Two Arrays | Set operations | Independent; complexity corrected to O(n + m). |
+| Reverse String | Two pointers / in-place swap | Day 04 independent local solve with correct O(n)/O(1). |
 
 ### Requires Revisit
 
@@ -102,6 +113,8 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | Two Sum | Hashing / complement lookup | Optimized version required solution help for dictionary storage line. |
 | Valid Anagram | Hashing / strings | Hash-map comparison needed hint; sorting complexity uncertain. |
 | First Unique Character in a String | Hashing / strings | Optimized second pass needed hint to preserve original index order. |
+| Valid Palindrome | Strings / two pointers | Optimized skip-loop solution needed hint/solution exposure. |
+| Is Subsequence | Strings / subsequence scan | Required repeated hints for pointer placement and match-order logic. |
 
 ## Master Progress
 
@@ -116,7 +129,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics, write pointer, hashing intro | 25 new + revision | 16 | 5 | 4 | 64% clean / 80% completed | Continue slowly; do Day 4 strings with mandatory Day 3/Day 2 revision |
+| 1 | Array basics, write pointer, hashing intro | 31 new + revision | 20 | 6 | 5 | 65% clean / 84% completed | Continue, but Day 5 must reduce volume and include LeetCode proof |
 | 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -205,6 +218,42 @@ Weak patterns and repeated mistakes:
 
 Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revision problems. No optional medium. Revision is improving but still insufficient because Day 3 weak patterns need a 24-hour re-solve.
 
+### 2026-05-10
+
+Week / Day: Week 1 / Day 4 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic: String two pointers, subsequence scan, and Day 3 hashing revision
+
+Problems attempted: 6 plus prerequisites/fundamentals  
+Solved independently: Reverse String, Two Sum brute force + optimized, First Unique Character brute force + optimized, Valid Anagram brute/sorted/frequency versions locally  
+Solved after hint: Is Subsequence  
+Solved after solution/hint exposure: Valid Palindrome optimized skip-loop version  
+Unsolved: 0 locally, but no Day 04 problem was submitted on LeetCode
+
+Problem list:
+1. Valid Palindrome - brute-force cleaned-string version used syntax help; optimized two-pointer skip-loop version needed hint/solution exposure. Revisit in 24h.
+2. Reverse String - independent and correct locally. Strong in-place swap pattern, but remember LeetCode expects mutation and no returned new list is required.
+3. Is Subsequence - eventually correct locally, but required repeated hints around replacing nested loops with one scan and checking completion inside the loop. Revisit in 24h.
+4. Two Sum - brute force and optimized complement lookup were independent and correct locally. Keep as revisit until LeetCode accepted and 3-day recall succeeds.
+5. First Unique Character - brute force and optimized frequency + second pass were independent and correct locally. Move toward mastered after LeetCode proof and spaced recall.
+6. Valid Anagram - multiple approaches completed independently, but the final "optimized" frequency version uses `char not in t`, so the claimed O(n) complexity is not fully clean. Revisit with dictionary membership or direct map comparison.
+
+Strong patterns:
+- Brute-force-first habit remained strong.
+- In-place two-pointer swap is solid.
+- Two Sum complement lookup improved meaningfully from Day 03.
+- Frequency map + second pass improved meaningfully for First Unique Character.
+- Sorting complexity for anagram was written correctly as O(n log n) time and O(n) space.
+
+Weak patterns and repeated mistakes:
+- Valid Palindrome skip loops were not independently recalled.
+- Is Subsequence pointer movement was unstable and overcomplicated with nested-loop thinking.
+- Valid Anagram optimized complexity was mislabeled because string membership inside a loop can add extra cost.
+- Several tasks were solved locally but none were submitted to LeetCode.
+- Some prerequisite code did not follow the requested `dict.get` style even though the concept was described.
+
+Decision: Pace is mostly sustainable, but Day 04 was slightly overloaded because both revision options were completed and no LeetCode submission happened. Day 05 should use 3 new problems max, 2 revision problems, and one accepted LeetCode submission as the non-negotiable target.
+
 ## Must-Cover Tracker
 
 ### Month 1: Arrays + Hashing + Strings
@@ -212,15 +261,15 @@ Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revisi
 | Problem | Status | Last Attempt | Revisit |
 | --- | --- | --- | --- |
 | Contains Duplicate | Mastered | 2026-05-08 | Weekly |
-| Two Sum | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
-| Valid Anagram | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
-| First Unique Character in a String | Revisit | 2026-05-09 | 24h, 3d, 7d; submit after clean solve |
+| Two Sum | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
+| Valid Anagram | Revisit | 2026-05-10 | 24h; fix O(n) hash version and submit after clean solve |
+| First Unique Character in a String | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
 | Group Anagrams | Not started |  | Week 2 |
 | Top K Frequent Elements | Not started |  | Week 2 |
 | Product of Array Except Self | Revisit | 2026-05-09 | 3d, 7d; redo output-array + suffix version |
 | Longest Consecutive Sequence | Not started |  | Week 3 |
 | Subarray Sum Equals K | Not started |  | Week 3 |
-| Valid Palindrome | Not started in current Day files |  | Current week |
+| Valid Palindrome | Revisit | 2026-05-10 | 24h; redo optimized skip-loop version without hints |
 | Best Time To Buy And Sell Stock | Revisit | 2026-05-08 | 24h, 3d, 7d |
 | Plus One | Revisit | 2026-05-08 | 24h, 3d, 7d |
 
@@ -291,6 +340,8 @@ Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revisi
 | Two Sum | Hashing / Complement lookup | Solution viewed for storing current value/index | 1 | Next study day | Check complement first, then store `seen[current] = index`. |
 | Valid Anagram | Hashing / Character frequency | Hint used for manual dictionary comparison; sorting complexity unclear | 1 | Next study day | Count both maps or count/decrement; know sorted cost. |
 | First Unique Character in a String | Hashing / Frequency + second pass | Hint used to scan original string for first index | 1 | Next study day | Count first, then loop over original indexes. |
+| Valid Palindrome | Strings / Two pointers | Hint/solution exposure for skipping non-alphanumeric chars with inner loops | 1 | Next study day | Skip invalid chars with `while left < right and not s[left].isalnum()`. |
+| Is Subsequence | Strings / Two pointers | Repeated hints for single-scan pointer movement | 1 | Next study day | Scan `t`; advance `s` pointer only on match; stop when pointer reaches `len(s)`. |
 
 ## Revision Status
 
@@ -298,11 +349,12 @@ Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revisi
 | --- | --- | --- |
 | Day 1 required revision | Completed | Weekly light recall |
 | Day 2 revision | Improving | Remove Element re-solved; Product needs optimized-space re-solve |
-| Day 3 revision | Needed | Re-solve Two Sum, Valid Anagram, First Unique within 24h |
-| 24-hour spaced repetition | Behind but restarted | Use Day 4 revision slots for Day 3 hashing and Day 2 carry/running-state |
+| Day 3 revision | Improving | Two Sum and First Unique re-solved independently; Valid Anagram needs clean O(n) hash version |
+| Day 4 revision | Needed | Re-solve Valid Palindrome and Is Subsequence within 24h |
+| 24-hour spaced repetition | Active but uneven | Use Day 5 revision slots for Day 4 strings and one Day 2/3 weak pattern |
 | 3-day spaced repetition | Pending | Schedule after next successful re-solve |
 | 7-day spaced repetition | Pending | Use weekly review day |
-| LeetCode submission proof | Not tracked yet | Add LC result/date after every must-cover problem |
+| LeetCode submission proof | Behind | Day 05 requires at least one accepted submission before optional work |
 
 ## Pattern-Recognition Notes
 
@@ -313,6 +365,8 @@ Decision: Pace is sustainable only if Day 4 stays at 3 new problems and 2 revisi
 | "two numbers", "target sum", "return indices" | Complement dictionary lookup | Two Sum |
 | "same characters with same frequency" | Character frequency comparison | Valid Anagram |
 | "first non-repeating" | Frequency map + second pass over original order | First Unique Character |
+| "ignore punctuation", "case-insensitive palindrome" | Two pointers with skip loops | Valid Palindrome |
+| "is a subsequence", "appears in same order" | One scan with match pointer | Is Subsequence |
 | "in-place", "remove", "keep order", "return length" | Write pointer | Move Zeroes, Remove Element, Remove Duplicates |
 | "buy before sell", "maximum profit" | One-pass min tracking | Best Time to Buy/Sell Stock |
 | "all elements except self", "without division" | Prefix/suffix products | Product of Array Except Self |

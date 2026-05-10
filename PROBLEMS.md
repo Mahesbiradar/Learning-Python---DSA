@@ -1242,6 +1242,8 @@ Store the current number after checking to avoid using the same element twice.
 
 Day 03 review: brute force was correct, but the optimized version required solution help for the key storage line. Re-solve from memory before marking solved: check `needed = target - nums[i]`, then store `seen[nums[i]] = i`.
 
+Day 04 review: brute force and optimized complement lookup were re-solved independently and passed local examples. Keep as `Revisit` until accepted on LeetCode and recalled again after 3 days.
+
 ## Strings
 
 ## [STR-001] Print Characters
@@ -1919,6 +1921,8 @@ Simple membership-only checks are not enough when duplicate counts differ.
 
 Day 03 review: sorting and frequency approaches were attempted, but manual dictionary comparison needed a hint and `sorted()` complexity was unclear. Revisit as LeetCode `Valid Anagram` and write both O(n log n) sorting and O(n) hashing complexities.
 
+Day 04 review: brute force, sorted, and frequency versions were completed locally. Still revisit because the final frequency version used `char not in t` during the comparison loop, which weakens the claimed O(n) optimized complexity. Use direct dictionary comparison or `char not in freq_t`.
+
 ## [STR-018] Check Substring
 
 Status: Solved  
@@ -2101,6 +2105,136 @@ Space: O(n)
 ### Notes
 
 This is the clean standard solution for rotation checks.
+
+## [STR-022] Valid Palindrome
+
+Status: Revisit  
+Topic: Strings  
+Pattern: Two Pointers / Skip Non-Alphanumeric  
+Difficulty: Easy
+
+### Problem
+
+Return `True` if a string is a palindrome after ignoring non-alphanumeric characters and case.
+
+### Approach
+
+1. Place `left` at the start and `right` at the end.
+2. Move `left` forward while it points to a non-alphanumeric character.
+3. Move `right` backward while it points to a non-alphanumeric character.
+4. Compare lowercase characters.
+5. Move both pointers inward until they meet or a mismatch is found.
+
+### Code
+
+```python
+def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+
+    while left < right:
+        while left < right and not s[left].isalnum():
+            left += 1
+        while left < right and not s[right].isalnum():
+            right -= 1
+        if s[left].lower() != s[right].lower():
+            return False
+        left += 1
+        right -= 1
+
+    return True
+```
+
+### Complexity
+
+Time: O(n)  
+Space: O(1)
+
+### Notes
+
+Day 04 review: brute-force cleaned-string version was completed with syntax help. Optimized two-pointer version needed hint/solution exposure for the inner skip loops. Revisit within 24h and submit after a clean local solve.
+
+## [STR-023] Reverse String In Place
+
+Status: Solved  
+Topic: Strings / Lists  
+Pattern: Two Pointers / In-Place Swap  
+Difficulty: Easy
+
+### Problem
+
+Reverse a list of characters in-place.
+
+### Approach
+
+1. Place `left` at the start and `right` at the end.
+2. Swap both characters.
+3. Move inward until pointers meet or cross.
+
+### Code
+
+```python
+def reverse_string(s):
+    left = 0
+    right = len(s) - 1
+
+    while left < right:
+        s[left], s[right] = s[right], s[left]
+        left += 1
+        right -= 1
+```
+
+### Complexity
+
+Time: O(n)  
+Space: O(1)
+
+### Notes
+
+Day 04 review: solved independently and passed local examples. In LeetCode style, mutate the input list; returning it is unnecessary.
+
+## [STR-024] Is Subsequence
+
+Status: Revisit  
+Topic: Strings  
+Pattern: Two Pointers / Match Pointer  
+Difficulty: Easy
+
+### Problem
+
+Return `True` if string `s` is a subsequence of string `t`.
+
+### Approach
+
+1. If `s` is empty, return `True`.
+2. Scan through `t`.
+3. Keep one pointer for the next needed character in `s`.
+4. Advance the `s` pointer only when characters match.
+5. Return `True` once the pointer reaches `len(s)`.
+
+### Code
+
+```python
+def is_subsequence(s, t):
+    pointer_s = 0
+
+    for char in t:
+        if pointer_s < len(s) and s[pointer_s] == char:
+            pointer_s += 1
+        if pointer_s == len(s):
+            return True
+
+    return pointer_s == len(s)
+```
+
+### Complexity
+
+Time: O(n), where n is `len(t)`  
+Space: O(1)
+
+### Notes
+
+Day 04 review: final local solution was correct, but required repeated hints. Main mistake was overthinking with nested loops and placing the completion check in the wrong place. Revisit within 24h.
 
 ## Sets / Hashing
 
@@ -3154,9 +3288,10 @@ This is a clean nested-loop exercise.
 | Boyer-Moore Majority Element | Arrays / Voting | Medium | Candidate logic known; validation learned with help. |
 | Move Negative Numbers To End | Arrays / Partition | Medium | Revision solution copied from AI. |
 | Third Largest Distinct Element | Arrays / Tracking | Medium | Revision solution copied from AI. |
-| Two Sum | Hashing | High | Day 03 optimized solution viewed for storing current value/index; re-solve and submit on LeetCode. |
-| Valid Anagram | Hashing / Strings | High | Day 03 hint used for hash comparison; sorting complexity unclear. |
-| First Unique Character in a String | Hashing / Strings | High | Day 03 hint used for second pass over original string to preserve index order. |
-| Valid Palindrome | Strings / Two Pointers | High | Must-cover placement problem. |
+| Two Sum | Hashing | High | Day 04 independent re-solve succeeded locally; still needs LeetCode accepted + 3-day recall before mastery. |
+| Valid Anagram | Hashing / Strings | High | Day 04 local solve improved, but optimized version used string membership in comparison loop; fix O(n) hash version. |
+| First Unique Character in a String | Hashing / Strings | Medium | Day 04 independent optimized re-solve succeeded locally; needs LeetCode accepted + spaced recall before mastery. |
+| Valid Palindrome | Strings / Two Pointers | High | Day 04 optimized skip-loop version needed hint/solution exposure; revisit in 24h. |
+| Is Subsequence | Strings / Two Pointers | High | Day 04 required repeated hints for match-pointer scan; revisit in 24h. |
 | Group Anagrams | Hashing / Grouping | Medium | Next medium grouping pattern. |
 | Top K Frequent Elements | Hashing / Frequency | Medium | Next medium frequency pattern. |
