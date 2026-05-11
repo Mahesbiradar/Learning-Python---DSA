@@ -2,6 +2,18 @@
 
 Solve these without looking at `PROBLEMS.md` first. After solving, compare your approach, edge cases, and complexity.
 
+## Current Priority Queue
+
+Use this queue before the full archive when the day plan asks for targeted revision.
+
+| ID | Problem | Pattern | Why revisit | Next target |
+| --- | --- | --- | --- | --- |
+| REV-LC-001 | Valid Palindrome | Two pointers with skip loops | Day 05 still needed hints for inner skip-loop flow | Re-solve without hints |
+| REV-LC-002 | Find Pivot Index | Prefix sum / check-before-update | Optimal solution worked, but update order was confusing | Dry run, then code |
+| REV-LC-003 | Product Of Array Except Self | Prefix/suffix products | Day 05 used left/right arrays; target is output array + suffix variable | O(n), O(1) extra beyond output |
+| REV-LC-004 | Is Subsequence | Match pointer scan | Day 05 improved, but avoid membership/frequency thinking | One scan over `t` |
+| REV-LC-005 | Best Time To Buy And Sell Stock | One-pass min tracking | Day 05 improved from help-needed to independent | Timed 15-minute re-solve |
+
 ## Arrays / Lists
 
 ## [REV-ARR-001] Move Zeros to End

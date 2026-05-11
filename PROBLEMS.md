@@ -3273,6 +3273,53 @@ Space: O(1)
 
 This is a clean nested-loop exercise.
 
+## Day 05 LeetCode-Style Problems
+
+## [LC-ARR-001] Running Sum of 1d Array
+
+Status: Near Mastered  
+Topic: Arrays / Prefix Sum  
+Pattern: Running Total  
+Difficulty: Easy
+
+### Problem
+
+Return a list where each index stores the sum of all values from index `0` to the current index.
+
+### Notes
+
+Day 05 review: solved independently in both new-list `O(n)` space and in-place `O(1)` extra-space forms. Handles empty input and negative values locally. Can move to `Mastered` after LeetCode/timed proof and one 3-day recall.
+
+## [LC-ARR-002] Find Pivot Index
+
+Status: Revisit  
+Topic: Arrays / Prefix Sum  
+Pattern: Left Sum Equals Right Sum  
+Difficulty: Easy
+
+### Problem
+
+Return the leftmost index where the sum on the left equals the sum on the right, or `-1`.
+
+### Notes
+
+Day 05 review: brute force and optimized versions were solved independently, but the optimal ordering was still a confusion point. The rule is: compute `right_sum = total_sum - left_sum - nums[i]`, compare `left_sum == right_sum`, then add `nums[i]` to `left_sum`.
+
+## [LC-ARR-003] Best Time To Buy And Sell Stock
+
+Status: Revisit  
+Topic: Arrays / Running State  
+Pattern: One-Pass Minimum Tracking  
+Difficulty: Easy
+
+### Problem
+
+Return the maximum profit from buying once and selling once later.
+
+### Notes
+
+Day 05 review: solved independently in brute-force and optimized forms, which is a strong improvement from Day 02. Keep as `Revisit` until it is submitted/accepted and re-solved after 3 days without notes.
+
 ## To Revisit
 
 | Problem Name | Topic | Priority | Reason |
@@ -3280,9 +3327,10 @@ This is a clean nested-loop exercise.
 | Remove Duplicates From Sorted Array | Arrays / Write Pointer | High | Needed concept help; must become automatic. |
 | Remove Element | Arrays / Write Pointer | Medium | Day 03 independent re-solve succeeded; revisit again in 3 days before mastery. |
 | Missing Number | Arrays / Hashing / Math | High | Set method needed hint; complexity notes need correction. |
-| Best Time To Buy And Sell Stock | Arrays / Running Minimum | High | Logic required AI help. |
+| Find Pivot Index | Arrays / Prefix Sum | High | Day 05 optimal solution worked, but check-before-add ordering was confusing. |
+| Best Time To Buy And Sell Stock | Arrays / Running Minimum | Medium | Day 05 independent solve improved it; still needs LeetCode proof and 3-day recall. |
 | Plus One | Arrays / Carry Simulation | High | Solution was viewed; re-solve from memory. |
-| Product Of Array Except Self | Arrays / Prefix-Suffix | High | Day 03 two-array prefix/suffix improved; still needs output-array + one suffix variable version. |
+| Product Of Array Except Self | Arrays / Prefix-Suffix | High | Day 05 optional attempt used left/right arrays; still needs output-array + one suffix variable version. |
 | Rotate Array | Arrays / Reverse Method | Medium | Edge cases and in-place reverse method need practice. |
 | Second Largest Distinct Element | Arrays / Tracking | Medium | Empty/all-duplicate edge cases caused trouble. |
 | Boyer-Moore Majority Element | Arrays / Voting | Medium | Candidate logic known; validation learned with help. |
@@ -3291,7 +3339,7 @@ This is a clean nested-loop exercise.
 | Two Sum | Hashing | High | Day 04 independent re-solve succeeded locally; still needs LeetCode accepted + 3-day recall before mastery. |
 | Valid Anagram | Hashing / Strings | High | Day 04 local solve improved, but optimized version used string membership in comparison loop; fix O(n) hash version. |
 | First Unique Character in a String | Hashing / Strings | Medium | Day 04 independent optimized re-solve succeeded locally; needs LeetCode accepted + spaced recall before mastery. |
-| Valid Palindrome | Strings / Two Pointers | High | Day 04 optimized skip-loop version needed hint/solution exposure; revisit in 24h. |
-| Is Subsequence | Strings / Two Pointers | High | Day 04 required repeated hints for match-pointer scan; revisit in 24h. |
+| Valid Palindrome | Strings / Two Pointers | High | Day 05 still required hints for optimized skip loops; repeat until no-hint. |
+| Is Subsequence | Strings / Two Pointers | Medium | Day 05 independent solve improved it, but avoid unnecessary membership/frequency checks. |
 | Group Anagrams | Hashing / Grouping | Medium | Next medium grouping pattern. |
 | Top K Frequent Elements | Hashing / Frequency | Medium | Next medium frequency pattern. |

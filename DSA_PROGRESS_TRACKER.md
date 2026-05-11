@@ -1,7 +1,7 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Current review date: 2026-05-10  
+Current review date: 2026-05-11  
 Plan length: 4 months / 16 weeks  
 Daily study target: 3-5 focused hours  
 Daily problem target: max 5 new problems + mandatory revision  
@@ -17,8 +17,9 @@ Overall status:
 - Day 2 array/write-pointer/hash basics: attempted and partially revised.
 - Day 3 hash map frequency work completed with good effort but not yet LeetCode-submitted.
 - Day 4 string/two-pointer work completed locally; `Reverse String`, `Two Sum`, and `First Unique Character` improved strongly.
-- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum` and `First Unique Character` are close but still need LeetCode proof and spaced recall; `Valid Palindrome`, `Valid Anagram`, and `Product of Array Except Self` remain revisit.
-- Main risk: moving too fast before pointer-skip loops, subsequence pointer movement, optimized complexity claims, and LeetCode submission discipline become automatic.
+- Day 5 prefix/running-state work completed locally; `Running Sum`, `Pivot Index`, and `Best Time To Buy And Sell Stock` were solved without solution viewing, and optional `Product of Array Except Self` was attempted.
+- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `First Unique Character`, `Running Sum`, and `Best Time To Buy And Sell Stock` are close but still need LeetCode proof and spaced recall; `Valid Palindrome`, `Valid Anagram`, `Pivot Index`, `Is Subsequence`, and `Product of Array Except Self` remain revisit.
+- Main risk: moving too fast before pointer-skip loops, check-before-update logic, output-array prefix/suffix, optimized complexity claims, and LeetCode submission discipline become automatic.
 
 ## Strengths
 
@@ -32,6 +33,8 @@ Overall status:
 | Frequency counting | Day 3 frequency counter and First Unique count map were built locally | Improving |
 | Two Sum complement lookup | Day 04 optimized re-solve was independent and correct locally | Near mastered; needs LC + 3-day recall |
 | Frequency + second pass | Day 04 First Unique brute and optimized versions were independent | Near mastered; needs LC + spaced recall |
+| Running total / prefix basics | Day 05 Running Sum new-list and in-place versions solved independently | Strong locally; needs LC proof |
+| One-pass minimum tracking | Day 05 stock brute force and optimized versions solved independently | Improving; needs 3-day recall |
 | Basic in-place reverse | Day 04 Reverse String solved independently | Strong |
 | Brute-force discipline | Written for most Day 1/Day 2 problems | Strong habit |
 | Complexity awareness | Usually written, but some mistakes remain | Partial |
@@ -51,9 +54,11 @@ Overall status:
 | Second pass after frequency map | First Unique initially looped over dictionary and lost original index order | Drill count-first, scan-original-second pattern |
 | Sorting complexity | Valid Anagram sorting method time complexity was not understood | Review `sorted()` cost: O(n log n) time, O(n) space in Python |
 | Pointer skipping in strings | Valid Palindrome optimized version needed hint/solution exposure for inner skip loops | Re-solve in 24h without notes |
-| Subsequence pointer movement | Is Subsequence required repeated hints before the single scan clicked | Re-solve in 24h with dry run first |
+| Subsequence pointer movement | Is Subsequence required repeated hints on Day 04 and still had unnecessary membership-check thinking on Day 05 | Re-solve again with no membership checks |
 | Optimized complexity validation | Valid Anagram final frequency version used `char not in t`, making the claimed O(n) version effectively O(n^2) | Compare dictionary membership vs string membership |
-| LeetCode submission discipline | Day 04 solved locally but submitted nothing | Day 05 must include at least one accepted submission |
+| Check-before-update ordering | Pivot Index required thought around comparing before adding current value to `left_sum` | Dry run left/current/right state |
+| Output-array prefix/suffix | Product Except Self Day 05 used two extra arrays, not the target output + suffix variable form | Re-solve optimized version |
+| LeetCode submission discipline | Day 04 and Day 05 solved locally but still show no accepted submission proof | Day 06 must submit before optional work |
 
 ## Pattern Recognition State
 
@@ -69,9 +74,10 @@ Overall status:
 | Set lookup | Partial-to-strong | Trigger: duplicate, membership, intersection, missing value. |
 | Frequency dictionary | Partial | Trigger is visible, but manual comparison, second-pass indexing, and complexity still need repetition. |
 | Complement lookup dictionary | Partial | Trigger: pair sum / target. Store seen values with indexes, not needed values. |
-| Prefix/suffix | Unstable | Trigger: product except self, left/right accumulated information. |
+| Prefix sum / running total | Partial-to-strong | Running Sum is clean; Pivot Index still needs check-before-add recall. |
+| Prefix/suffix products | Unstable | Trigger: product except self, left/right accumulated information. |
 | Carry from right | Unstable | Trigger: digit array, plus one, addition simulation. |
-| One-pass min tracking | Unstable | Trigger: max profit with buy before sell. |
+| One-pass min tracking | Partial | Day 05 improved; needs repeat until `min_price` and `max_profit` feel automatic. |
 
 ## Problems Solved By Status
 
@@ -115,6 +121,8 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | First Unique Character in a String | Hashing / strings | Optimized second pass needed hint to preserve original index order. |
 | Valid Palindrome | Strings / two pointers | Optimized skip-loop solution needed hint/solution exposure. |
 | Is Subsequence | Strings / subsequence scan | Required repeated hints for pointer placement and match-order logic. |
+| Find Pivot Index | Prefix sum | Solved locally but optimal check-before-add ordering was confusing. |
+| Best Time To Buy And Sell Stock | One-pass running minimum | Solved independently on Day 05, but the mental model still needs spaced recall. |
 
 ## Master Progress
 
@@ -129,7 +137,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics, write pointer, hashing intro | 31 new + revision | 20 | 6 | 5 | 65% clean / 84% completed | Continue, but Day 5 must reduce volume and include LeetCode proof |
+| 1 | Array basics, write pointer, hashing intro | 38 new + revision | 26 | 7 | 5 | 68% clean / 87% completed | Continue, but Day 6 must slow down and include LeetCode proof |
 | 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -254,6 +262,52 @@ Weak patterns and repeated mistakes:
 
 Decision: Pace is mostly sustainable, but Day 04 was slightly overloaded because both revision options were completed and no LeetCode submission happened. Day 05 should use 3 new problems max, 2 revision problems, and one accepted LeetCode submission as the non-negotiable target.
 
+### 2026-05-11
+
+Week / Day: Week 1 / Day 5 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic: Prefix sum, pivot reasoning, one-pass running minimum, Day 4 string revision
+
+Problems attempted: 7 total: 2 fundamentals, 3 new problems, 2 required revision problems, plus optional Product Except Self  
+Solved independently: Running Sum fundamentals, clean hash anagram after self-debug, Running Sum new-list and in-place, Pivot Index brute force and optimal, Best Time To Buy And Sell Stock brute force and optimal, Is Subsequence revision, Product Except Self two-array version  
+Solved after hint: Valid Palindrome revision  
+Solved after solution: 0 visible today  
+Unsolved: 0 locally, but Product Except Self target optimized-space version is still unfinished and no LeetCode acceptance is recorded
+
+Problem list:
+1. Running Sum - independently solved in new-list and in-place forms. Can move toward mastered after LeetCode/local timed proof and 3-day recall.
+2. Find Pivot Index - independently solved brute force and optimal, but compare-before-adding-current was a confusion point. Revisit in 24h.
+3. Best Time To Buy And Sell Stock - independently solved brute force and optimal, a major improvement from Day 2. Revisit in 3 days to confirm the one-pass mental model.
+4. Valid Palindrome - still needed hints for skip loops. Keep high-priority revisit.
+5. Is Subsequence - solved independently, but the first instinct still included unnecessary membership/frequency thinking. Revisit once more.
+6. Product Of Array Except Self - optional attempt succeeded with left/right arrays, but not with output array + one suffix variable. Keep revisit.
+7. Clean Hash Anagram - fixed membership/key-error issue, but dictionary comparison should become simpler and cleaner.
+
+Strong patterns:
+- Running total / prefix basics improved clearly.
+- Brute-force-first habit stayed strong.
+- One-pass min tracking improved from help-needed to independent local solve.
+- Local examples included empty list, decreasing stock prices, zeroes, and negative/pivot cases.
+
+Weak patterns and repeated mistakes:
+- Valid Palindrome skip-loop flow is still not automatic.
+- Pivot Index ordering is fragile: compute right sum and compare before updating `left_sum`.
+- Is Subsequence still tempts unnecessary membership checks, which can create wrong logic.
+- Product Except Self still uses extra left/right arrays instead of the target output-array + suffix pass.
+- LeetCode submission proof remains behind the plan.
+
+Edge-case weaknesses:
+- Dictionary key checks before frequency comparison.
+- Empty input behavior is mostly handled, but should be stated before coding.
+- Pivot at index `0` and all-zero arrays need deliberate dry runs.
+
+Implementation weaknesses:
+- Reusing the same function name multiple times in one file makes later tests override earlier versions.
+- Some comments show conceptual uncertainty even when the code passes examples.
+- Complexity notes are mostly correct today, but need more precision around what counts as extra space.
+
+Decision: Current pace is barely sustainable because optional work was added even though LeetCode proof was still missing. Tomorrow should be a consolidation day: 3 new problems max, 2 revision problems, and LeetCode submission before any optional task.
+
 ## Must-Cover Tracker
 
 ### Month 1: Arrays + Hashing + Strings
@@ -266,12 +320,14 @@ Decision: Pace is mostly sustainable, but Day 04 was slightly overloaded because
 | First Unique Character in a String | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
 | Group Anagrams | Not started |  | Week 2 |
 | Top K Frequent Elements | Not started |  | Week 2 |
-| Product of Array Except Self | Revisit | 2026-05-09 | 3d, 7d; redo output-array + suffix version |
+| Product of Array Except Self | Revisit | 2026-05-11 | 24h/3d; redo output-array + suffix version |
 | Longest Consecutive Sequence | Not started |  | Week 3 |
 | Subarray Sum Equals K | Not started |  | Week 3 |
-| Valid Palindrome | Revisit | 2026-05-10 | 24h; redo optimized skip-loop version without hints |
-| Best Time To Buy And Sell Stock | Revisit | 2026-05-08 | 24h, 3d, 7d |
+| Valid Palindrome | Revisit | 2026-05-11 | 24h; redo optimized skip-loop version without hints |
+| Best Time To Buy And Sell Stock | Revisit | 2026-05-11 | 3d, 7d; submit after one clean local timed solve |
 | Plus One | Revisit | 2026-05-08 | 24h, 3d, 7d |
+| Running Sum of 1d Array | Near mastered | 2026-05-11 | 3d; submit or timed local proof |
+| Find Pivot Index | Revisit | 2026-05-11 | 24h; dry run check-before-add |
 
 ### Month 2: Two Pointers + Sliding Window + Stack + Queue
 
@@ -331,30 +387,32 @@ Decision: Pace is mostly sustainable, but Day 04 was slightly overloaded because
 | Remove Duplicates From Sorted Array | Write pointer | Concept learned from help | 1 | Next study day | Trigger: sorted + unique + in-place. |
 | Remove Element | Write pointer | Previously solved from reference; Day 03 independent re-solve succeeded | 1 | 3 days | Trigger: keep non-target values at front. |
 | Missing Number | Set / math | Set method needed hint; complexity confusion | 1 | Next study day | Sum formula uses O(1) extra space. |
-| Best Time To Buy And Sell Stock | One-pass min tracking | Could not build logic independently | 1 | Next study day | Track `min_price`, update `max_profit`. |
+| Best Time To Buy And Sell Stock | One-pass min tracking | Day 02 needed help; Day 05 independent local solve improved it | 1 | 3 days | Track `min_price`, update `max_profit`; submit after clean timed solve. |
 | Plus One | Carry simulation | Saw solution | 1 | Next study day | Traverse right to left; return early if no carry. |
 | Rotate Array | Reverse method | Edge cases learned with guidance | 1 | 3 days | Always reduce `k %= n`; handle empty before modulo. |
-| Product Of Array Except Self | Prefix/suffix | Two-array version improved; optimized extra-space target still unstable | 1 | 3 days | Output array + suffix variable counts as O(1) extra beyond output. |
+| Product Of Array Except Self | Prefix/suffix | Two-array version improved again; optimized output-array + suffix target still unstable | 1 | Next study day | Output array + suffix variable counts as O(1) extra beyond output. |
 | Move Negative Numbers To End | Write pointer / partition | Copied from AI in revision | 1 | After write-pointer drill | Re-solve without notes. |
 | Third Largest Distinct Element | Tracking | Copied from AI in revision | 1 | After second-largest review | Generalize first/second/third tracking. |
 | Two Sum | Hashing / Complement lookup | Solution viewed for storing current value/index | 1 | Next study day | Check complement first, then store `seen[current] = index`. |
 | Valid Anagram | Hashing / Character frequency | Hint used for manual dictionary comparison; sorting complexity unclear | 1 | Next study day | Count both maps or count/decrement; know sorted cost. |
 | First Unique Character in a String | Hashing / Frequency + second pass | Hint used to scan original string for first index | 1 | Next study day | Count first, then loop over original indexes. |
-| Valid Palindrome | Strings / Two pointers | Hint/solution exposure for skipping non-alphanumeric chars with inner loops | 1 | Next study day | Skip invalid chars with `while left < right and not s[left].isalnum()`. |
-| Is Subsequence | Strings / Two pointers | Repeated hints for single-scan pointer movement | 1 | Next study day | Scan `t`; advance `s` pointer only on match; stop when pointer reaches `len(s)`. |
+| Valid Palindrome | Strings / Two pointers | Day 05 still solved using hints for skipping non-alphanumeric chars with inner loops | 2 | Next study day | Skip invalid chars with `while left < right and not s[left].isalnum()`. |
+| Is Subsequence | Strings / Two pointers | Day 05 independent solve, but unnecessary membership-check instinct remained | 1 | 3 days | Scan `t`; advance `s` pointer only on match; stop when pointer reaches `len(s)`. |
+| Find Pivot Index | Prefix sum | Optimal solution worked, but check-before-update placement was confusing | 1 | Next study day | Compute `right_sum = total - left_sum - nums[i]`, compare, then add current. |
 
 ## Revision Status
 
 | Revision Type | Status | Next Action |
 | --- | --- | --- |
 | Day 1 required revision | Completed | Weekly light recall |
-| Day 2 revision | Improving | Remove Element re-solved; Product needs optimized-space re-solve |
+| Day 2 revision | Improving | Stock improved on Day 05; Product still needs optimized-space re-solve |
 | Day 3 revision | Improving | Two Sum and First Unique re-solved independently; Valid Anagram needs clean O(n) hash version |
-| Day 4 revision | Needed | Re-solve Valid Palindrome and Is Subsequence within 24h |
-| 24-hour spaced repetition | Active but uneven | Use Day 5 revision slots for Day 4 strings and one Day 2/3 weak pattern |
+| Day 4 revision | Improving but incomplete | Is Subsequence improved; Valid Palindrome still needs no-hint re-solve |
+| Day 5 revision | Needed | Re-solve Pivot Index, Product optimized form, and one LeetCode submission |
+| 24-hour spaced repetition | Active but uneven | Use Day 6 revision slots for Day 5 pivot plus Day 4 palindrome |
 | 3-day spaced repetition | Pending | Schedule after next successful re-solve |
 | 7-day spaced repetition | Pending | Use weekly review day |
-| LeetCode submission proof | Behind | Day 05 requires at least one accepted submission before optional work |
+| LeetCode submission proof | Behind | Day 06 requires at least one accepted submission before optional work |
 
 ## Pattern-Recognition Notes
 
@@ -369,6 +427,8 @@ Decision: Pace is mostly sustainable, but Day 04 was slightly overloaded because
 | "is a subsequence", "appears in same order" | One scan with match pointer | Is Subsequence |
 | "in-place", "remove", "keep order", "return length" | Write pointer | Move Zeroes, Remove Element, Remove Duplicates |
 | "buy before sell", "maximum profit" | One-pass min tracking | Best Time to Buy/Sell Stock |
+| "left sum equals right sum", "pivot/equilibrium index" | Prefix sum with check-before-update | Find Pivot Index |
+| "running sum", "sum so far", "prefix total" | Running total / prefix sum | Running Sum |
 | "all elements except self", "without division" | Prefix/suffix products | Product of Array Except Self |
 | "digits", "add one", "carry" | Right-to-left carry simulation | Plus One |
 | "rotate by k" | Modulo + reverse / extra list | Rotate Array |

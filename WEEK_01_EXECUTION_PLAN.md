@@ -1,7 +1,7 @@
 # Current Week Execution Plan
 
 Phase: Month 1 - Arrays + Hashing + Strings  
-Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required, Day 4 completed locally  
+Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required, Day 4 completed locally, Day 5 completed locally  
 Goal for this week: stabilize array/write-pointer/hash basics before increasing medium volume.
 
 ## Week Targets
@@ -167,29 +167,43 @@ Optional only if all required work is clean:
 Expected difficulty:
 - 3 easy/new, 2 revision. Product Except Self is optional because Day 4 already exceeded revision volume and LeetCode proof is behind.
 
-## Day 6: Grouping + Frequency Mediums
+Completed:
+1. Running Sum of 1d Array - independent new-list and in-place versions.
+2. Find Pivot Index - independent brute force and optimal versions; optimal check-before-add ordering needs revisit.
+3. Best Time To Buy And Sell Stock - independent brute force and one-pass versions; strong improvement from Day 2.
+4. Valid Palindrome revision - solved with hints; skip-loop flow remains unstable.
+5. Is Subsequence revision - independent, but avoid unnecessary membership/frequency checks.
+6. Product Of Array Except Self optional - solved with left/right arrays, but not the target output-array + one suffix variable form.
 
-Today's topic: grouping with dictionary keys and frequency buckets.  
-Why this topic now: after basic dictionary count, grouping is the next interview pattern.  
-Required prerequisite concepts: tuple/list as key rules, sorting string characters, dictionary of lists.
+LeetCode:
+- No Day 5 accepted submission is recorded. Day 6 must submit before optional work.
+
+Decision:
+- Continue to Day 6 only as a controlled consolidation day. Do not increase volume. Keep 3 new problems, 2 revision problems, and a hard LeetCode-first rule.
+
+## Day 6: Grouping + Frequency Mediums + LeetCode Proof
+
+Today's topic: grouping with dictionary keys, frequency buckets, and cleanup of Day 5 prefix/pointer weaknesses.  
+Why this topic now: after basic dictionary count, grouping is the next interview pattern, but Day 5 also left LeetCode proof and prefix/skip-loop revision behind.  
+Required prerequisite concepts: tuple/list as key rules, sorting string characters, dictionary of lists, pivot check-before-update, palindrome skip loops.
 
 If prerequisites are weak:
 - Revise tuples as dictionary keys.
 - Write `''.join(sorted(word))` and explain its cost.
+- Dry run Pivot Index on `[2, 1, -1]` and `[0, 0, 0]`.
+- Re-write the Valid Palindrome skip-loop template once from memory.
 
 Problems:
-1. Group Anagrams - must-cover, LeetCode.
-2. Top K Frequent Elements - must-cover, LeetCode.
-3. Sort Characters By Frequency or Majority Element.
-4. Contains Duplicate re-solve timed.
-5. Optional: Valid Anagram timed re-solve.
+1. Group Anagrams - must-cover, LeetCode, 40-50 minutes.
+2. Top K Frequent Elements - must-cover, LeetCode, 45-55 minutes.
+3. Majority Element or Sort Characters By Frequency - choose one based on energy, 25-35 minutes.
 
 Revision:
-- Product of Array Except Self.
-- Remove Duplicates From Sorted Array.
+- Find Pivot Index - 20 minutes, no notes.
+- Valid Palindrome - 25 minutes, no hints if possible.
 
 Expected difficulty:
-- 1 easy, 3 medium, 1 optional.
+- 2 mediums, 1 easy/medium, 2 revisions. Realistic 70-80% completion means at least 2 new problems, both revisions attempted, and 1 accepted LeetCode submission. Skip optional extras.
 
 ## Day 7: Weekly Mock + Review
 

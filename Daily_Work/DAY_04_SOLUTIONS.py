@@ -972,8 +972,8 @@ def valid_anagram(s,t):
     # else: 
     #     return False
 
-    for char in s:
-        if char not in t:
+    for char in freq_s:
+        if char not in freq_t:
             return False
         if freq_s[char]!=freq_t[char]:
             return False
