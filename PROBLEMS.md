@@ -1197,7 +1197,7 @@ Use `j = i + 1` to avoid comparing an element with itself.
 
 ## [ARR-031] Two Sum
 
-Status: Revisit  
+Status: Near Mastered  
 Topic: Arrays / Lists  
 Pattern: Hashing  
 Difficulty: Easy
@@ -2152,7 +2152,9 @@ Space: O(1)
 
 ### Notes
 
-Day 04 review: brute-force cleaned-string version was completed with syntax help. Optimized two-pointer version needed hint/solution exposure for the inner skip loops. Revisit within 24h and submit after a clean local solve.
+Day 04 review: brute-force cleaned-string version was completed with syntax help. Optimized two-pointer version needed hint/solution exposure for the inner skip loops.
+
+Day 06 review: optimized skip-loop version was solved independently with correct `O(n)` time and `O(1)` extra space. Move to mastered only after LeetCode acceptance and one 3-day no-notes recall.
 
 ## [STR-023] Reverse String In Place
 
@@ -3320,6 +3322,68 @@ Return the maximum profit from buying once and selling once later.
 
 Day 05 review: solved independently in brute-force and optimized forms, which is a strong improvement from Day 02. Keep as `Revisit` until it is submitted/accepted and re-solved after 3 days without notes.
 
+## Day 06 LeetCode-Style Problems
+
+## [LC-HASH-001] Group Anagrams
+
+Status: Revisit  
+Topic: Hashing / Grouping  
+Pattern: Sorted Key to Dictionary of Lists  
+Difficulty: Medium
+
+### Problem
+
+Group strings that are anagrams of each other.
+
+### Notes
+
+Day 06 review: sorted-key dictionary grouping was implemented locally, but the status says solution viewed. The next re-solve must be from memory: build `key = ''.join(sorted(word))`, append the word into `groups[key]`, and return `list(groups.values())`.
+
+Complexity target: `O(n * k log k)` time for `n` words of max length `k`; `O(n * k)` space including grouped output and keys.
+
+## [LC-HASH-002] Top K Frequent Elements
+
+Status: Revisit  
+Topic: Hashing / Frequency Ranking  
+Pattern: Count, Then Sort or Bucket  
+Difficulty: Medium
+
+### Problem
+
+Return the `k` most frequent elements from a list.
+
+### Notes
+
+Day 06 review: sorting-based version worked after help with dictionary sorting syntax. Bucket-sort version was solution viewed. Re-solve sorting version first before attempting bucket sort again.
+
+Complexity target for sorting version: `O(n + m log m)` time where `m` is unique values, worst-case `O(n log n)`; `O(n)` space.
+
+## [LC-ARR-004] Majority Element
+
+Status: Near Mastered  
+Topic: Arrays / Frequency  
+Pattern: Dictionary Count  
+Difficulty: Easy
+
+### Problem
+
+Return the element that appears more than `n // 2` times.
+
+### Notes
+
+Day 06 review: dictionary frequency version was solved independently with correct `O(n)` time and `O(n)` space. Boyer-Moore remains a revisit/optional optimization. Move dictionary version to mastered after LeetCode proof or 3-day no-notes recall.
+
+## [LC-ARR-005] Find Pivot Index - Day 06 Revision
+
+Status: Revisit  
+Topic: Arrays / Prefix Sum  
+Pattern: Check Before Updating Left Sum  
+Difficulty: Easy
+
+### Notes
+
+Day 06 review: optimal structure was recalled independently, but the no-pivot return is wrong in the submitted practice file: it returns `0` instead of `-1`. Revisit immediately with `[1, 2, 3] -> -1`.
+
 ## To Revisit
 
 | Problem Name | Topic | Priority | Reason |
@@ -3327,7 +3391,7 @@ Day 05 review: solved independently in brute-force and optimized forms, which is
 | Remove Duplicates From Sorted Array | Arrays / Write Pointer | High | Needed concept help; must become automatic. |
 | Remove Element | Arrays / Write Pointer | Medium | Day 03 independent re-solve succeeded; revisit again in 3 days before mastery. |
 | Missing Number | Arrays / Hashing / Math | High | Set method needed hint; complexity notes need correction. |
-| Find Pivot Index | Arrays / Prefix Sum | High | Day 05 optimal solution worked, but check-before-add ordering was confusing. |
+| Find Pivot Index | Arrays / Prefix Sum | High | Day 06 recalled check-before-add, but no-pivot case returns `0` instead of `-1`. |
 | Best Time To Buy And Sell Stock | Arrays / Running Minimum | Medium | Day 05 independent solve improved it; still needs LeetCode proof and 3-day recall. |
 | Plus One | Arrays / Carry Simulation | High | Solution was viewed; re-solve from memory. |
 | Product Of Array Except Self | Arrays / Prefix-Suffix | High | Day 05 optional attempt used left/right arrays; still needs output-array + one suffix variable version. |
@@ -3339,7 +3403,7 @@ Day 05 review: solved independently in brute-force and optimized forms, which is
 | Two Sum | Hashing | High | Day 04 independent re-solve succeeded locally; still needs LeetCode accepted + 3-day recall before mastery. |
 | Valid Anagram | Hashing / Strings | High | Day 04 local solve improved, but optimized version used string membership in comparison loop; fix O(n) hash version. |
 | First Unique Character in a String | Hashing / Strings | Medium | Day 04 independent optimized re-solve succeeded locally; needs LeetCode accepted + spaced recall before mastery. |
-| Valid Palindrome | Strings / Two Pointers | High | Day 05 still required hints for optimized skip loops; repeat until no-hint. |
+| Valid Palindrome | Strings / Two Pointers | Medium | Day 06 no-hint optimized re-solve succeeded; needs LeetCode proof and 3-day recall. |
 | Is Subsequence | Strings / Two Pointers | Medium | Day 05 independent solve improved it, but avoid unnecessary membership/frequency checks. |
-| Group Anagrams | Hashing / Grouping | Medium | Next medium grouping pattern. |
-| Top K Frequent Elements | Hashing / Frequency | Medium | Next medium frequency pattern. |
+| Group Anagrams | Hashing / Grouping | High | Day 06 implementation was marked solution viewed; re-solve sorted-key version from memory. |
+| Top K Frequent Elements | Hashing / Frequency | High | Day 06 sorting syntax needed hint and bucket version was solution viewed; re-solve sorting version first. |

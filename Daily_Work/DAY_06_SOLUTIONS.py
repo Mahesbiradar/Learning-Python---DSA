@@ -360,10 +360,179 @@ print(major_element([1]))
 
 # LeetCode submission status:Not submitted
 
-#Revisite: Requered
+#Revisite: Requered and boyer more method also
 
 
+"""
+### Revision 1. Find Pivot Index
+
+Why revisit: Day 05 optimal version worked, but compare-before-add placement was confusing.  
+Pattern: Prefix sum with derived right sum  
+Difficulty: Easy
+
+Rules:
+- Do not use old code.
+- Dry run first.
+- At each index: compute right sum, compare, then add current value to left sum.
+
+Problem:
+
+Given a list `nums`, return the leftmost index where the sum of all values to the left equals the sum of all values to the right. If no such index exists, return `-1`.
+
+Example:
+
+```python
+nums = [1, 7, 3, 6, 5, 6]
+```
+
+Expected output:
+
+```python
+3
+```
+
+Why:
+
+```text
+Left of index 3: 1 + 7 + 3 = 11
+Right of index 3: 5 + 6 = 11
+```
+
+Test cases:
+
+```python
+[1, 7, 3, 6, 5, 6] -> 3
+[1, 2, 3] -> -1
+[2, 1, -1] -> 0
+[0, 0, 0] -> 0
+[-1, -1, 0, 1, 1, 0] -> 5
+
+"""
+
+#Using total sum
+
+def pivot_index(nums):
+
+    left=0
+    total_sum=sum(nums)
+
+    for i in range(len(nums)):
+
+        right=total_sum-nums[i]-left
+
+        if right==left:
+            return i
+        left+=nums[i]
+    return -1
+
+print("Pivot Index o/p start Here")
+print(pivot_index([1, 7, 3, 6, 5, 6]))
+print(pivot_index([1, 2, 3]))
+print(pivot_index([2, 1, -1]))
+print(pivot_index([-1, -1, 0, 1, 1, 0]))
+
+# Status:- Solved independently
+
+# Time complexity:O(n)
+
+# space_Comp: O(1)
+
+# Pattern trigger:prefix and suffix 
+
+# LeetCode submission status:Not submitted
+
+#Revisite:
 
 
+"""
+### Revision 2. Valid Palindrome
 
+Why revisit: Day 05 still used hints for optimized skip loops.  
+Pattern: Two pointers with skip loops  
+Difficulty: Easy  
+LeetCode: Required if clean locally
+
+Rules:
+- No cleaned-string extra-list version first.
+- Skip invalid characters before comparing.
+- Compare lowercase characters.
+
+Problem:
+
+Given a string `s`, return `True` if it is a palindrome after converting uppercase letters to lowercase and removing all non-alphanumeric characters. Otherwise, return `False`.
+
+Example:
+
+```python
+s = "A man, a plan, a canal: Panama"
+```
+
+Expected output:
+
+```python
+True
+```
+
+Why:
+
+```text
+After ignoring spaces, punctuation, and capitalization:
+"amanaplanacanalpanama"
+
+This reads the same forward and backward.
+```
+
+Test cases:
+
+```python
+"A man, a plan, a canal: Panama" -> True
+"race a car" -> False
+" " -> True
+"0P" -> False
+"No lemon, no melon" -> True
+".,," -> True
+```
+
+"""
+def valid_palindrome(s):
+
+    left=0
+    right=len(s)-1
+
+    while left<right:
+
+        #ignoring non alpha chars in left\
+
+        while left<right and not s[left].isalnum():
+            left+=1
+        
+        while left<right and not s[right].isalnum():
+            right-=1
+        
+        if s[left].lower()!=s[right].lower():
+            return False
+        
+        left+=1
+        right-=1
+    return True
+
+print(valid_palindrome("A man, a plan, a canal: Panama"))
+print(valid_palindrome("race a car"))
+print(valid_palindrome("No lemon, no melon"))
+print(valid_palindrome(".,,"))
+print(valid_palindrome("0P"))
+print(valid_palindrome(" "))
+        
+
+# Status:- Solved independently
+
+# Time complexity:O(n)
+
+# space_Comp: O(1)
+
+# Pattern trigger:two pointers
+
+# LeetCode submission status:Not submitted
+
+#Revisite:
 

@@ -1,7 +1,7 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Current review date: 2026-05-11  
+Current review date: 2026-05-12  
 Plan length: 4 months / 16 weeks  
 Daily study target: 3-5 focused hours  
 Daily problem target: max 5 new problems + mandatory revision  
@@ -18,8 +18,9 @@ Overall status:
 - Day 3 hash map frequency work completed with good effort but not yet LeetCode-submitted.
 - Day 4 string/two-pointer work completed locally; `Reverse String`, `Two Sum`, and `First Unique Character` improved strongly.
 - Day 5 prefix/running-state work completed locally; `Running Sum`, `Pivot Index`, and `Best Time To Buy And Sell Stock` were solved without solution viewing, and optional `Product of Array Except Self` was attempted.
-- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `First Unique Character`, `Running Sum`, and `Best Time To Buy And Sell Stock` are close but still need LeetCode proof and spaced recall; `Valid Palindrome`, `Valid Anagram`, `Pivot Index`, `Is Subsequence`, and `Product of Array Except Self` remain revisit.
-- Main risk: moving too fast before pointer-skip loops, check-before-update logic, output-array prefix/suffix, optimized complexity claims, and LeetCode submission discipline become automatic.
+- Day 6 hashing/grouping work completed locally: `Majority Element`, `Find Pivot Index`, and `Valid Palindrome` were marked independent; `Top K Frequent Elements` sorting version used syntax help; `Top K Frequent Elements` bucket version and `Group Anagrams` were marked solution viewed.
+- LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `First Unique Character`, `Running Sum`, `Best Time To Buy And Sell Stock`, `Valid Palindrome`, and `Pivot Index` are close locally but still need LeetCode proof and spaced recall; `Valid Anagram`, `Group Anagrams`, `Top K Frequent Elements`, `Is Subsequence`, and `Product of Array Except Self` remain revisit.
+- Main risk: moving too fast before medium hashing, output-array prefix/suffix, no-pivot return values, optimized complexity claims, and LeetCode submission discipline become automatic.
 
 ## Strengths
 
@@ -31,6 +32,9 @@ Overall status:
 | Basic in-place writes | Move zeroes, remove element, remove duplicates after concept help | Improving |
 | Hashing for lookup | Contains duplicate, intersection, missing number set method, Two Sum complement attempt | Improving |
 | Frequency counting | Day 3 frequency counter and First Unique count map were built locally | Improving |
+| Basic frequency maximum | Day 06 Majority Element dictionary version solved independently | Strong locally; Boyer-Moore still pending |
+| Dictionary grouping mechanics | Day 06 Group Anagrams implementation builds sorted keys and appends words correctly | Improving, but solution viewed |
+| Frequency ranking mechanics | Day 06 Top K sorting and bucket versions both implemented locally | Improving, but syntax help/solution viewing used |
 | Two Sum complement lookup | Day 04 optimized re-solve was independent and correct locally | Near mastered; needs LC + 3-day recall |
 | Frequency + second pass | Day 04 First Unique brute and optimized versions were independent | Near mastered; needs LC + spaced recall |
 | Running total / prefix basics | Day 05 Running Sum new-list and in-place versions solved independently | Strong locally; needs LC proof |
@@ -53,12 +57,15 @@ Overall status:
 | Dictionary storage semantics | Two Sum confused storing `needed` vs storing current number/index | Re-solve complement lookup before new hashing mediums |
 | Second pass after frequency map | First Unique initially looped over dictionary and lost original index order | Drill count-first, scan-original-second pattern |
 | Sorting complexity | Valid Anagram sorting method time complexity was not understood | Review `sorted()` cost: O(n log n) time, O(n) space in Python |
-| Pointer skipping in strings | Valid Palindrome optimized version needed hint/solution exposure for inner skip loops | Re-solve in 24h without notes |
+| Pointer skipping in strings | Day 06 Valid Palindrome optimized version was re-solved independently | Confirm with LeetCode proof and 3-day recall |
 | Subsequence pointer movement | Is Subsequence required repeated hints on Day 04 and still had unnecessary membership-check thinking on Day 05 | Re-solve again with no membership checks |
 | Optimized complexity validation | Valid Anagram final frequency version used `char not in t`, making the claimed O(n) version effectively O(n^2) | Compare dictionary membership vs string membership |
 | Check-before-update ordering | Pivot Index required thought around comparing before adding current value to `left_sum` | Dry run left/current/right state |
 | Output-array prefix/suffix | Product Except Self Day 05 used two extra arrays, not the target output + suffix variable form | Re-solve optimized version |
-| LeetCode submission discipline | Day 04 and Day 05 solved locally but still show no accepted submission proof | Day 06 must submit before optional work |
+| LeetCode submission discipline | Day 04, Day 05, and Day 06 solved locally but still show no accepted submission proof | Day 07 must submit before optional work |
+| Medium hashing independence | Day 06 Group Anagrams and bucket Top K were marked solution viewed | Re-solve from blank before advancing medium volume |
+| No-match return values | Day 06 Pivot Index returns `0` instead of `-1` when no pivot exists | Add explicit failed-case test before marking stable |
+| Function overwrite in practice files | Day 06 reused `top_k_elements` for sorting and bucket versions | Use distinct names or comment out older variants |
 
 ## Pattern Recognition State
 
@@ -68,11 +75,13 @@ Overall status:
 | Tracking max/min/count | Mastered with edge-case caution | Initialize from input when non-empty; handle empty explicitly. |
 | Adjacent comparison | Mastered | Trigger: sorted/neighbour relation. |
 | Basic two pointer | Partial | Reverse and move zeroes seen; not yet broad enough. |
-| String two pointer with skipping | Partial | Valid Palindrome needs clean re-solve without hint/solution. |
+| String two pointer with skipping | Near mastered locally | Day 06 no-hint Valid Palindrome succeeded; needs LeetCode proof and 3-day recall. |
 | Subsequence scan | Partial | Trigger understood after hints; needs independent recall. |
 | Write pointer | Partial | Trigger: "in-place", "remove", "keep order", "return new length". |
 | Set lookup | Partial-to-strong | Trigger: duplicate, membership, intersection, missing value. |
 | Frequency dictionary | Partial | Trigger is visible, but manual comparison, second-pass indexing, and complexity still need repetition. |
+| Dictionary grouping | Partial | Sorted-key grouping works locally, but Day 06 used solution viewing; re-solve `Group Anagrams` from memory. |
+| Frequency ranking / bucket sort | Partial | Sorting by frequency works after syntax help; bucket version was solution viewed and needs a no-notes re-solve. |
 | Complement lookup dictionary | Partial | Trigger: pair sum / target. Store seen values with indexes, not needed values. |
 | Prefix sum / running total | Partial-to-strong | Running Sum is clean; Pivot Index still needs check-before-add recall. |
 | Prefix/suffix products | Unstable | Trigger: product except self, left/right accumulated information. |
@@ -94,7 +103,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | Find Minimum Element | Tracking | Independent. |
 | Check If Array Is Sorted | Adjacent comparison | Independent. |
 | Move Zeroes To End | Write pointer | Re-solved correctly after initial pointer mistake. |
-| Majority Element - dictionary | Frequency map | Re-solved correctly. |
+| Majority Element - dictionary | Frequency map | Re-solved correctly, including Day 06 local independent solve. |
 | Contains Duplicate - set | Hashing | Solved with correct pattern; time note corrected to O(n). |
 | Intersection Of Two Arrays | Set operations | Independent; complexity corrected to O(n + m). |
 | Reverse String | Two pointers / in-place swap | Day 04 independent local solve with correct O(n)/O(1). |
@@ -119,10 +128,12 @@ These are safe to treat as mastered, but still revise lightly once per week.
 | Two Sum | Hashing / complement lookup | Optimized version required solution help for dictionary storage line. |
 | Valid Anagram | Hashing / strings | Hash-map comparison needed hint; sorting complexity uncertain. |
 | First Unique Character in a String | Hashing / strings | Optimized second pass needed hint to preserve original index order. |
-| Valid Palindrome | Strings / two pointers | Optimized skip-loop solution needed hint/solution exposure. |
+| Valid Palindrome | Strings / two pointers | Day 06 independent optimized re-solve succeeded; needs proof/recall before mastered. |
 | Is Subsequence | Strings / subsequence scan | Required repeated hints for pointer placement and match-order logic. |
 | Find Pivot Index | Prefix sum | Solved locally but optimal check-before-add ordering was confusing. |
 | Best Time To Buy And Sell Stock | One-pass running minimum | Solved independently on Day 05, but the mental model still needs spaced recall. |
+| Group Anagrams | Hashing / Grouping | Day 06 solution was marked solution viewed; re-solve sorted-key version from memory. |
+| Top K Frequent Elements | Hashing / Frequency ranking | Day 06 sorting syntax needed help and bucket version was solution viewed; re-solve sorting version first. |
 
 ## Master Progress
 
@@ -137,7 +148,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics, write pointer, hashing intro | 38 new + revision | 26 | 7 | 5 | 68% clean / 87% completed | Continue, but Day 6 must slow down and include LeetCode proof |
+| 1 | Array basics, write pointer, hashing intro | 43 new + revision | 29 | 8 | 7 | 67% clean / 88% completed | Continue, but Day 7 must consolidate and submit on LeetCode |
 | 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -308,6 +319,55 @@ Implementation weaknesses:
 
 Decision: Current pace is barely sustainable because optional work was added even though LeetCode proof was still missing. Tomorrow should be a consolidation day: 3 new problems max, 2 revision problems, and LeetCode submission before any optional task.
 
+### 2026-05-12
+
+Week / Day: Week 1 / Day 6 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic: Dictionary grouping, frequency ranking, majority frequency, pivot revision, palindrome revision
+
+Problems attempted: 5 required problems, with 2 approaches attempted for Top K Frequent Elements  
+Solved independently: Majority Element dictionary version, Find Pivot Index revision, Valid Palindrome optimized skip-loop revision  
+Solved after hint: Top K Frequent Elements sorting version used help for dictionary sorting syntax  
+Solved after solution: Group Anagrams sorted-key version, Top K Frequent Elements bucket-sort version  
+Unsolved: No local problem left blank, but Pivot Index has a correctness bug for the no-pivot case and no LeetCode acceptance is recorded
+
+Problem list:
+1. Group Anagrams - implementation uses sorted string keys and dictionary lists correctly, but status says solution viewed. Keep revisit.
+2. Top K Frequent Elements - sorting version works locally after syntax help; bucket version was solution viewed. Keep revisit and focus on sorting version first.
+3. Majority Element - solved independently with dictionary count and correct `O(n)` time / `O(n)` space. Keep near mastered; Boyer-Moore remains optional revisit.
+4. Find Pivot Index - marked independent and check-before-add order improved, but code returns `0` instead of `-1` when no pivot exists. Revisit immediately with `[1, 2, 3]`.
+5. Valid Palindrome - solved independently with the correct inner skip-loop structure and `O(1)` extra space. This is a strong improvement from Day 05; needs LeetCode proof and 3-day recall before mastered.
+
+Strong patterns:
+- Frequency dictionary construction is becoming reliable.
+- Valid Palindrome skip loops improved from hint-needed to independent local solve.
+- Pivot Index check-before-add structure was recalled.
+- Majority frequency solution is straightforward and correct locally.
+
+Weak patterns and repeated mistakes:
+- Medium hashing still depends on hints/solutions.
+- LeetCode submission is still not happening despite being a daily target.
+- Practice files reuse function names, which hides earlier implementations.
+- Return values for failure cases need stricter testing.
+- Several typos in comments/status labels make review harder, though they do not affect algorithm correctness.
+
+Edge-case weaknesses:
+- Pivot Index no-answer case should return `-1`, not `0`.
+- Top K tie cases are acceptable in any order, but this should be stated while testing.
+- Group Anagrams returns `dict_values`; LeetCode normally accepts list-like groups only after converting with `list(seen.values())`.
+
+Implementation weaknesses:
+- Reusing `top_k_elements` for two approaches overwrites the first function.
+- Group Anagrams should return `list(seen.values())` for cleaner LeetCode compatibility.
+- Frequency code is correct but can be simplified with `freq[x] = freq.get(x, 0) + 1`.
+
+Complexity mistakes:
+- Top K sorting version was marked `O(n log n)`; more precise is `O(n + m log m)`, where `m` is unique values. Worst case is `O(n log n)`.
+- Group Anagrams complexity `O(n * k log k)` is correct if `n` words have max length `k`; space should mention stored output plus keys.
+- Bucket Top K `O(n)` time / `O(n)` space is correct after counting and bucket traversal.
+
+Decision: Current pace is overloaded for medium hashing because solution viewing increased and LeetCode proof is still absent. Day 07 should not be a heavy weekly mock yet. It should be a controlled consolidation day with 3 new/easy-to-medium problems max, 2 revision problems, and one accepted LeetCode submission before any optional work.
+
 ## Must-Cover Tracker
 
 ### Month 1: Arrays + Hashing + Strings
@@ -318,16 +378,16 @@ Decision: Current pace is barely sustainable because optional work was added eve
 | Two Sum | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
 | Valid Anagram | Revisit | 2026-05-10 | 24h; fix O(n) hash version and submit after clean solve |
 | First Unique Character in a String | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
-| Group Anagrams | Not started |  | Week 2 |
-| Top K Frequent Elements | Not started |  | Week 2 |
+| Group Anagrams | Revisit | 2026-05-12 | Next study day; re-solve sorted-key version without solution |
+| Top K Frequent Elements | Revisit | 2026-05-12 | Next study day; re-solve sorting version without syntax help |
 | Product of Array Except Self | Revisit | 2026-05-11 | 24h/3d; redo output-array + suffix version |
 | Longest Consecutive Sequence | Not started |  | Week 3 |
 | Subarray Sum Equals K | Not started |  | Week 3 |
-| Valid Palindrome | Revisit | 2026-05-11 | 24h; redo optimized skip-loop version without hints |
+| Valid Palindrome | Near mastered | 2026-05-12 | 3d recall + LeetCode accepted submission |
 | Best Time To Buy And Sell Stock | Revisit | 2026-05-11 | 3d, 7d; submit after one clean local timed solve |
 | Plus One | Revisit | 2026-05-08 | 24h, 3d, 7d |
 | Running Sum of 1d Array | Near mastered | 2026-05-11 | 3d; submit or timed local proof |
-| Find Pivot Index | Revisit | 2026-05-11 | 24h; dry run check-before-add |
+| Find Pivot Index | Revisit | 2026-05-12 | Next study day; fix no-pivot return to `-1` |
 
 ### Month 2: Two Pointers + Sliding Window + Stack + Queue
 
@@ -396,9 +456,11 @@ Decision: Current pace is barely sustainable because optional work was added eve
 | Two Sum | Hashing / Complement lookup | Solution viewed for storing current value/index | 1 | Next study day | Check complement first, then store `seen[current] = index`. |
 | Valid Anagram | Hashing / Character frequency | Hint used for manual dictionary comparison; sorting complexity unclear | 1 | Next study day | Count both maps or count/decrement; know sorted cost. |
 | First Unique Character in a String | Hashing / Frequency + second pass | Hint used to scan original string for first index | 1 | Next study day | Count first, then loop over original indexes. |
-| Valid Palindrome | Strings / Two pointers | Day 05 still solved using hints for skipping non-alphanumeric chars with inner loops | 2 | Next study day | Skip invalid chars with `while left < right and not s[left].isalnum()`. |
+| Valid Palindrome | Strings / Two pointers | Day 05 needed hints; Day 06 no-hint re-solve improved it | 2 | 3 days | Confirm skip loops with LeetCode proof and no-notes recall. |
 | Is Subsequence | Strings / Two pointers | Day 05 independent solve, but unnecessary membership-check instinct remained | 1 | 3 days | Scan `t`; advance `s` pointer only on match; stop when pointer reaches `len(s)`. |
 | Find Pivot Index | Prefix sum | Optimal solution worked, but check-before-update placement was confusing | 1 | Next study day | Compute `right_sum = total - left_sum - nums[i]`, compare, then add current. |
+| Group Anagrams | Hashing / Grouping | Solution viewed for sorted-key grouping | 1 | Next study day | Use `key = ''.join(sorted(word))`; append word to `groups[key]`; return `list(groups.values())`. |
+| Top K Frequent Elements | Hashing / Frequency ranking | Sorting syntax needed hint; bucket version solution viewed | 1 | Next study day | Count first, sort `freq.items()` by count for first clean version; bucket sort is optional later. |
 
 ## Revision Status
 
@@ -407,12 +469,13 @@ Decision: Current pace is barely sustainable because optional work was added eve
 | Day 1 required revision | Completed | Weekly light recall |
 | Day 2 revision | Improving | Stock improved on Day 05; Product still needs optimized-space re-solve |
 | Day 3 revision | Improving | Two Sum and First Unique re-solved independently; Valid Anagram needs clean O(n) hash version |
-| Day 4 revision | Improving but incomplete | Is Subsequence improved; Valid Palindrome still needs no-hint re-solve |
-| Day 5 revision | Needed | Re-solve Pivot Index, Product optimized form, and one LeetCode submission |
-| 24-hour spaced repetition | Active but uneven | Use Day 6 revision slots for Day 5 pivot plus Day 4 palindrome |
+| Day 4 revision | Improving | Valid Palindrome improved on Day 06; Is Subsequence still needs spaced recall |
+| Day 5 revision | Improving but incomplete | Pivot and palindrome were re-solved on Day 06; Pivot needs no-answer bug fix; Product optimized form still pending |
+| Day 6 revision | Needed | Re-solve Group Anagrams, Top K sorting version, and Pivot no-answer case |
+| 24-hour spaced repetition | Active but uneven | Use Day 7 revision slots for Day 6 medium hashing and Day 5 Product optimized form |
 | 3-day spaced repetition | Pending | Schedule after next successful re-solve |
 | 7-day spaced repetition | Pending | Use weekly review day |
-| LeetCode submission proof | Behind | Day 06 requires at least one accepted submission before optional work |
+| LeetCode submission proof | Behind | Day 07 requires at least one accepted submission before optional work |
 
 ## Pattern-Recognition Notes
 
@@ -420,6 +483,8 @@ Decision: Current pace is barely sustainable because optional work was added eve
 | --- | --- | --- |
 | "duplicate", "exists twice", "seen before" | Set lookup | Contains Duplicate |
 | "frequency", "most common", "first unique" | Dictionary count | Majority Element, First Unique Character |
+| "group anagrams", "same letters grouped together" | Dictionary grouping with sorted string key | Group Anagrams |
+| "top k", "most frequent", "k most common" | Frequency count + ranking / bucket | Top K Frequent Elements |
 | "two numbers", "target sum", "return indices" | Complement dictionary lookup | Two Sum |
 | "same characters with same frequency" | Character frequency comparison | Valid Anagram |
 | "first non-repeating" | Frequency map + second pass over original order | First Unique Character |

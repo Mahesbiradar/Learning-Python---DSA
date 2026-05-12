@@ -1,7 +1,7 @@
 # Current Week Execution Plan
 
 Phase: Month 1 - Arrays + Hashing + Strings  
-Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required, Day 4 completed locally, Day 5 completed locally  
+Current position: Day 1 complete, Day 2 attempted, Day 3 completed with revisit required, Day 4 completed locally, Day 5 completed locally, Day 6 completed locally  
 Goal for this week: stabilize array/write-pointer/hash basics before increasing medium volume.
 
 ## Week Targets
@@ -205,17 +205,36 @@ Revision:
 Expected difficulty:
 - 2 mediums, 1 easy/medium, 2 revisions. Realistic 70-80% completion means at least 2 new problems, both revisions attempted, and 1 accepted LeetCode submission. Skip optional extras.
 
-## Day 7: Weekly Mock + Review
+Completed:
+1. Group Anagrams - implemented sorted-key grouping locally, but solution viewed. Revisit before mastery.
+2. Top K Frequent Elements - sorting version completed with syntax help; bucket version solution viewed. Revisit sorting version first.
+3. Majority Element - dictionary version solved independently with correct complexity. Near mastered after proof/recall.
+4. Find Pivot Index revision - solved independently in structure, but no-pivot case returns `0` instead of `-1`. Revisit immediately.
+5. Valid Palindrome revision - solved independently with optimized skip loops. Strong improvement; needs LeetCode proof and 3-day recall.
 
-Today's topic: mixed arrays/hash/strings under time.  
-Why this topic now: interview readiness comes from retrieval, not just fresh solving.  
-Required prerequisite concepts: all Week 1 pattern triggers.
+LeetCode:
+- No Day 6 accepted submission is recorded. Day 7 must submit before optional work.
 
-Mock set:
-1. Contains Duplicate - 10 minutes.
-2. Valid Anagram - 15 minutes.
-3. Two Sum - 25 minutes.
-4. Product of Array Except Self - 40 minutes.
+Decision:
+- Do not run a full weekly mock yet. Day 7 should be consolidation-first: fix Day 6 correctness issues, re-solve medium hashing from memory, and get one accepted LeetCode submission.
+
+## Day 7: Consolidation + LeetCode Proof
+
+Today's topic: Day 6 hashing consolidation, prefix/suffix repair, and delayed LeetCode proof.  
+Why this topic now: Day 6 showed improved recall on palindrome and majority frequency, but medium hashing still used help/solutions and LeetCode proof is still missing.  
+Required prerequisite concepts: dictionary count, dictionary of lists, sorted string keys, frequency sorting, pivot no-answer return, output-array prefix/suffix.
+
+Problems:
+1. Valid Anagram clean hash version - 25-30 minutes, LeetCode-ready.
+2. Intersection of Two Arrays II or Contains Duplicate timed proof - 20-25 minutes.
+3. Sort Characters By Frequency - 35-45 minutes, only sorting version first.
+
+Revision:
+- Group Anagrams - 30-35 minutes, no solution.
+- Find Pivot Index - 15-20 minutes, must pass `[1, 2, 3] -> -1`.
+
+Optional only if required work and LeetCode proof are clean:
+- Product of Array Except Self output-array + suffix version, 35-45 minutes.
 
 Review:
 - Write why each slow/fail problem was difficult.
@@ -223,8 +242,8 @@ Review:
 - Mark only truly independent re-solves as mastered.
 
 Decision rule:
-- Continue to Week 2 if 3/4 mock problems are solved without full solution help.
-- Repeat weak patterns for 2-3 days if Product Except Self, Two Sum, or Valid Anagram fail.
+- Continue to Week 2 if at least 4/5 required tasks are attempted, one LeetCode submission is accepted, and Group Anagrams is re-solved without solution help.
+- Repeat hashing/prefix revision for 1-2 days if Group Anagrams, Top K, or Pivot Index fail again.
 
 ## LeetCode Practice Structure
 
