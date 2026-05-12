@@ -246,13 +246,121 @@ def group_anagrams(list_w):
 
 
 print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+print(group_anagrams([""]))
+print(group_anagrams(["a"]))
+print(group_anagrams(["abc", "bca", "cab", "xyz", "zyx"]))
+print(group_anagrams(["bob", "obb", "boo"]))
 
     
+# Status:- olution viewed
 
 
+# Time complexity:O(n* k log k)
+
+# space_Comp: O(n)
+
+# Pattern trigger:Sorting and grouping of anagrams
+
+# LeetCode submission status:Not submitted
+
+#Revisite: Requered
 
 
+"""
+### 3. Majority Element
 
+Topic: Arrays / Frequency or Voting  
+Pattern: Frequency count first, Boyer-Moore optional  
+Difficulty: Easy  
+LeetCode: Recommended
+
+Problem:
+
+Given a non-empty integer list `nums`, return the element that appears more than `n // 2` times. You may assume the majority element always exists.
+
+Example:
+
+```python
+nums = [3, 2, 3]
+```
+
+Expected output:
+
+```python
+3
+```
+
+Why:
+
+```text
+n = 3
+n // 2 = 1
+3 appears 2 times, and 2 > 1.
+```
+
+Requirements:
+- Solve with dictionary count.
+- Explain why majority means count `> n // 2`.
+- Try Boyer-Moore only if time/energy remains.
+
+Test cases:
+
+```python
+[3, 2, 3] -> 3
+[2, 2, 1, 1, 1, 2, 2] -> 2
+[1] -> 1
+[-1, -1, -1, 2, 3] -> -1
+[6, 6, 6, 6, 7, 7, 7] -> 6
+```
+
+Edge cases:
+- One-element list.
+- Negative numbers.
+- Majority count must be strictly greater than `n // 2`.
+- The problem guarantees a majority exists, so no special "not found" return is needed on LeetCode.
+
+"""
+
+#Using the frequncy method.
+
+def major_element(nums):
+
+    seen={}
+
+    for i in nums:
+        if i in seen:
+            seen[i]+=1
+        else:
+            seen[i]=1
+    
+    major_element=0
+    frequncy=0
+
+    for key,value in seen.items():
+        if value>frequncy:
+            frequncy=value
+            major_element=key
+        
+    
+    return major_element
+
+print(major_element([-1, -1, -1, 2, 3]))
+print(major_element([3, 2, 3]))
+print(major_element([2, 2, 1, 1, 1, 2, 2]))
+print(major_element([6, 6, 6, 6, 7, 7, 7]))
+print(major_element([1]))
+
+# Status:- Solved independently
+
+# Time complexity:O(n)
+
+# space_Comp: O(n)
+
+# Pattern trigger:Fequency 
+
+# LeetCode submission status:Not submitted
+
+#Revisite: Requered
 
 
 
