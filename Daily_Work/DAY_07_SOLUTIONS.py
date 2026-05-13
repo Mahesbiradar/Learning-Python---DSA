@@ -377,3 +377,73 @@ Test cases:
 [-1, -1, 0, 1, 1, 0] -> 5
 
 """
+
+#USING TOTAL Sum Method:
+
+def pivot_index(nums):
+
+    left=0
+    totalsum=sum(nums)
+
+    for i in range(len(nums)):
+        right=totalsum-left-nums[i]
+
+        if left==right:
+            return i
+        left+=nums[i]
+    return -1
+
+print(pivot_index([1, 7, 3, 6, 5, 6]))
+print(pivot_index([1, 2, 3]))
+print(pivot_index([2, 1, -1]))
+print(pivot_index([0, 0, 0]))
+print(pivot_index([-1, -1, 0, 1, 1, 0]))
+
+# Status:Independent solve
+
+# Time complexity: O(n)
+
+# Space complexity:O(1)
+
+# Mistakes/confusions:
+
+# Pattern trigger:prefix sum / running left sum
+
+# LeetCode submission status: Accepted.
+
+#USING Brute Force 
+
+def pivot_index(nums):
+
+    left=0
+    totalsum=sum(nums)
+    
+
+    for i in range(len(nums)):
+        right=0
+
+        for j in range(i+1,len(nums)):
+            right+=nums[j]
+        
+        if left==right:
+            return i
+        left+=nums[i]
+    return -1
+print(pivot_index([1, 7, 3, 6, 5, 6]))
+print(pivot_index([1, 2, 3]))
+print(pivot_index([2, 1, -1]))
+print(pivot_index([0, 0, 0]))
+print(pivot_index([-1, -1, 0, 1, 1, 0]))
+
+# Status:Independent solve
+
+# Time complexity: O(n^2)
+
+# Space complexity:O(1)
+
+# Mistakes/confusions:
+
+# Pattern trigger:prefix sum / running left sum
+
+# LeetCode submission status: Accepted.
+
