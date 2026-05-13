@@ -1,7 +1,7 @@
 # DSA Progress Tracker
 
 Start date: 2026-05-01  
-Current review date: 2026-05-12  
+Current review date: 2026-05-13  
 Plan length: 4 months / 16 weeks  
 Daily study target: 3-5 focused hours  
 Daily problem target: max 5 new problems + mandatory revision  
@@ -19,8 +19,9 @@ Overall status:
 - Day 4 string/two-pointer work completed locally; `Reverse String`, `Two Sum`, and `First Unique Character` improved strongly.
 - Day 5 prefix/running-state work completed locally; `Running Sum`, `Pivot Index`, and `Best Time To Buy And Sell Stock` were solved without solution viewing, and optional `Product of Array Except Self` was attempted.
 - Day 6 hashing/grouping work completed locally: `Majority Element`, `Find Pivot Index`, and `Valid Palindrome` were marked independent; `Top K Frequent Elements` sorting version used syntax help; `Top K Frequent Elements` bucket version and `Group Anagrams` were marked solution viewed.
+- Day 7 work file was created as a consolidation plan, but the reflection/completion fields are blank. No completed solves, hints, solution views, or LeetCode acceptance can be verified from today's work file, so no mastery upgrades should be made from Day 7.
 - LeetCode-ready must-cover set: `Contains Duplicate` is mastered; `Two Sum`, `First Unique Character`, `Running Sum`, `Best Time To Buy And Sell Stock`, `Valid Palindrome`, and `Pivot Index` are close locally but still need LeetCode proof and spaced recall; `Valid Anagram`, `Group Anagrams`, `Top K Frequent Elements`, `Is Subsequence`, and `Product of Array Except Self` remain revisit.
-- Main risk: moving too fast before medium hashing, output-array prefix/suffix, no-pivot return values, optimized complexity claims, and LeetCode submission discipline become automatic.
+- Main risk: moving too fast before medium hashing, output-array prefix/suffix, no-pivot return values, optimized complexity claims, and LeetCode submission discipline become automatic. Day 8 should repeat the Day 7 consolidation at lower pressure instead of starting a heavy Week 2 load.
 
 ## Strengths
 
@@ -148,7 +149,7 @@ These are safe to treat as mastered, but still revise lightly once per week.
 
 | Week | Topic Focus | Attempted | Independent | Hint | Solution/AI | Accuracy | Decision |
 | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | Array basics, write pointer, hashing intro | 43 new + revision | 29 | 8 | 7 | 67% clean / 88% completed | Continue, but Day 7 must consolidate and submit on LeetCode |
+| 1 | Array basics, write pointer, hashing intro | 43 new + revision, Day 7 unverified | 29 verified | 8 verified | 7 verified | 67% clean / 88% completed verified; Day 7 not counted | Repeat consolidation before Week 2 acceleration |
 | 2 | Hash maps, strings, prefix/suffix, easy mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 3 | Arrays/hash/strings must-cover mediums | 0 | 0 | 0 | 0 | 0% | Pending |
 | 4 | Month 1 mixed revision + timed practice | 0 | 0 | 0 | 0 | 0% | Pending |
@@ -368,6 +369,52 @@ Complexity mistakes:
 
 Decision: Current pace is overloaded for medium hashing because solution viewing increased and LeetCode proof is still absent. Day 07 should not be a heavy weekly mock yet. It should be a controlled consolidation day with 3 new/easy-to-medium problems max, 2 revision problems, and one accepted LeetCode submission before any optional work.
 
+### 2026-05-13
+
+Week / Day: Week 1 / Day 7 review  
+Phase: Month 1 - Arrays + Hashing + Strings  
+Topic planned: Clean hash-map implementation, frequency sorting, dictionary grouping recall, and prefix-sum correctness
+
+Problems attempted: Not verifiable from the latest daily work file  
+Solved independently: 0 verified  
+Solved after hint: 0 verified  
+Solved after solution: 0 verified  
+Unsolved: Day 7 required set remains open because completion/reflection fields are blank
+
+Planned problem list:
+1. Valid Anagram clean hash version - no verified completion; keep revisit.
+2. Intersection of Two Arrays II - no verified completion; keep as next-day new/easy hashing practice.
+3. Sort Characters By Frequency - no verified completion; keep as next-day frequency sorting practice.
+4. Group Anagrams revision - no verified no-solution re-solve; keep high-priority revisit.
+5. Find Pivot Index revision - no verified no-pivot fix; keep high-priority revisit.
+
+Strong patterns visible from the plan:
+- The correct weak areas were identified: `dict.get`, sorted anagram keys, frequency sorting, and Pivot Index no-match returns.
+- The day plan was realistically capped at 3 new problems and 2 revision problems.
+- LeetCode proof was correctly placed before optional work.
+
+Weak patterns and repeated mistakes:
+- Completion tracking is missing; without the reflection, progress cannot be trusted.
+- LeetCode proof remains behind the roadmap.
+- Medium hashing and prefix no-answer edge cases still need repetition because Day 7 gives no evidence of repair.
+- Optional work should stay blocked until one accepted submission and the two required revisions are recorded.
+
+Edge-case weaknesses:
+- Pivot Index `[1, 2, 3] -> -1` remains the main correctness edge case to verify.
+- Empty string/list cases for `Valid Anagram`, `Sort Characters By Frequency`, and `Intersection II` must be included before submission.
+- Group Anagrams must return `list(groups.values())`, not a raw `dict_values` object.
+
+Implementation weaknesses:
+- Today's file did not record completed code, failed cases, or submission results.
+- Next work should use distinct function names and a small local test block per problem so review is possible.
+
+Complexity mistakes to guard against:
+- Frequency sorting should be written as `O(n + m log m)` where `m` is unique values.
+- Valid Anagram clean hash version should avoid `char in other_string` inside a loop.
+- Dictionary lookup should be described as average `O(1)`, not guaranteed worst-case `O(1)`.
+
+Decision: Day 7 cannot move any problem to mastered. Current pace is not sustainable if daily proof is skipped; there is overload risk from carrying unresolved medium hashing plus no LeetCode acceptance. Day 8 should repeat consolidation with a 70-80% target: 3 new problems maximum, 2 revision problems, one accepted LeetCode submission, and a filled reflection.
+
 ## Must-Cover Tracker
 
 ### Month 1: Arrays + Hashing + Strings
@@ -376,10 +423,10 @@ Decision: Current pace is overloaded for medium hashing because solution viewing
 | --- | --- | --- | --- |
 | Contains Duplicate | Mastered | 2026-05-08 | Weekly |
 | Two Sum | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
-| Valid Anagram | Revisit | 2026-05-10 | 24h; fix O(n) hash version and submit after clean solve |
+| Valid Anagram | Revisit | 2026-05-13 planned, no verified completion | Day 8; fix O(n) hash version and submit after clean solve |
 | First Unique Character in a String | Revisit | 2026-05-10 | 3d, 7d; submit after one more clean local solve |
-| Group Anagrams | Revisit | 2026-05-12 | Next study day; re-solve sorted-key version without solution |
-| Top K Frequent Elements | Revisit | 2026-05-12 | Next study day; re-solve sorting version without syntax help |
+| Group Anagrams | Revisit | 2026-05-13 planned, no verified completion | Day 8; re-solve sorted-key version without solution |
+| Top K Frequent Elements | Revisit | 2026-05-12 | After Day 8 required work; re-solve sorting version without syntax help |
 | Product of Array Except Self | Revisit | 2026-05-11 | 24h/3d; redo output-array + suffix version |
 | Longest Consecutive Sequence | Not started |  | Week 3 |
 | Subarray Sum Equals K | Not started |  | Week 3 |
@@ -387,7 +434,7 @@ Decision: Current pace is overloaded for medium hashing because solution viewing
 | Best Time To Buy And Sell Stock | Revisit | 2026-05-11 | 3d, 7d; submit after one clean local timed solve |
 | Plus One | Revisit | 2026-05-08 | 24h, 3d, 7d |
 | Running Sum of 1d Array | Near mastered | 2026-05-11 | 3d; submit or timed local proof |
-| Find Pivot Index | Revisit | 2026-05-12 | Next study day; fix no-pivot return to `-1` |
+| Find Pivot Index | Revisit | 2026-05-13 planned, no verified completion | Day 8; fix no-pivot return to `-1` |
 
 ### Month 2: Two Pointers + Sliding Window + Stack + Queue
 
@@ -461,6 +508,7 @@ Decision: Current pace is overloaded for medium hashing because solution viewing
 | Find Pivot Index | Prefix sum | Optimal solution worked, but check-before-update placement was confusing | 1 | Next study day | Compute `right_sum = total - left_sum - nums[i]`, compare, then add current. |
 | Group Anagrams | Hashing / Grouping | Solution viewed for sorted-key grouping | 1 | Next study day | Use `key = ''.join(sorted(word))`; append word to `groups[key]`; return `list(groups.values())`. |
 | Top K Frequent Elements | Hashing / Frequency ranking | Sorting syntax needed hint; bucket version solution viewed | 1 | Next study day | Count first, sort `freq.items()` by count for first clean version; bucket sort is optional later. |
+| Day 7 completion tracking | Process / Revision discipline | Latest daily work file has blank reflection and no solve evidence | 1 | Immediate | Fill completed/hint/solution/LC fields daily; otherwise do not mark mastery. |
 
 ## Revision Status
 
@@ -471,11 +519,12 @@ Decision: Current pace is overloaded for medium hashing because solution viewing
 | Day 3 revision | Improving | Two Sum and First Unique re-solved independently; Valid Anagram needs clean O(n) hash version |
 | Day 4 revision | Improving | Valid Palindrome improved on Day 06; Is Subsequence still needs spaced recall |
 | Day 5 revision | Improving but incomplete | Pivot and palindrome were re-solved on Day 06; Pivot needs no-answer bug fix; Product optimized form still pending |
-| Day 6 revision | Needed | Re-solve Group Anagrams, Top K sorting version, and Pivot no-answer case |
-| 24-hour spaced repetition | Active but uneven | Use Day 7 revision slots for Day 6 medium hashing and Day 5 Product optimized form |
+| Day 6 revision | Still needed | Day 7 has no verified completion; re-solve Group Anagrams and Pivot no-answer case on Day 8 |
+| Day 7 revision | Incomplete/unverified | Repeat core Day 7 work with filled reflection before moving to heavier Week 2 work |
+| 24-hour spaced repetition | Active but uneven | Use Day 8 revision slots for Day 6 medium hashing and Day 5/6 prefix correctness |
 | 3-day spaced repetition | Pending | Schedule after next successful re-solve |
 | 7-day spaced repetition | Pending | Use weekly review day |
-| LeetCode submission proof | Behind | Day 07 requires at least one accepted submission before optional work |
+| LeetCode submission proof | Behind | Day 8 requires at least one accepted submission before optional work |
 
 ## Pattern-Recognition Notes
 

@@ -245,6 +245,53 @@ Decision rule:
 - Continue to Week 2 if at least 4/5 required tasks are attempted, one LeetCode submission is accepted, and Group Anagrams is re-solved without solution help.
 - Repeat hashing/prefix revision for 1-2 days if Group Anagrams, Top K, or Pivot Index fail again.
 
+Completed:
+- No completed Day 7 work can be verified from the latest daily work file. The reflection fields are blank, and no independent solves, hint solves, solution-viewed solves, unsolved notes, or accepted LeetCode submissions are recorded.
+
+LeetCode:
+- No Day 7 accepted submission is recorded.
+
+Decision:
+- Do not move to a heavy Week 2 load yet. Repeat Day 7 consolidation on Day 8 with the same 70-80% success target, but require a filled reflection before any mastery update.
+
+## Day 8: Repeat Consolidation + Proof Before New Load
+
+Today's topic: clean hash maps, frequency sorting, dictionary grouping recall, and prefix-sum no-answer correctness.  
+Why this topic now: Day 7 was planned correctly but not verifiably completed; the roadmap needs evidence before increasing difficulty.
+
+Required prerequisite concepts:
+- `freq[x] = freq.get(x, 0) + 1`
+- `key = "".join(sorted(word))`
+- `sorted(freq.items(), key=lambda item: item[1], reverse=True)`
+- `right_sum = total_sum - left_sum - nums[i]`
+
+Problems:
+1. Valid Anagram clean hash version - 25 minutes, LeetCode required.
+2. Intersection of Two Arrays II - 25-30 minutes.
+3. Sort Characters By Frequency - 35-40 minutes, sorting version only.
+
+Revision:
+- Group Anagrams - 30-35 minutes, no notes, return `list(groups.values())`.
+- Find Pivot Index - 15-20 minutes, must pass `[1, 2, 3] -> -1`.
+
+Weak-pattern reinforcement:
+- Medium hashing: count/group first, then collect output.
+- Frequency sorting: use `m = unique count` in complexity.
+- Pivot Index: compare before updating `left_sum`; return `-1` after the loop.
+- Completion tracking: record independent / hint / solution / unsolved status immediately.
+
+LeetCode workflow:
+1. Solve locally.
+2. Submit `Valid Anagram` first if local tests pass.
+3. If not clean, submit `Find Pivot Index`.
+4. Stop after two rejected attempts and add the failed case to the revisit queue.
+
+Realistic completion target:
+- 70-80% success means 2 of 3 new problems solved or seriously attempted, both revisions attempted, Pivot Index no-answer case fixed, one LeetCode acceptance recorded, and daily reflection completed.
+
+Optional only if required work and LeetCode proof are clean:
+- Top K Frequent Elements sorting version - 25-30 minutes.
+
 ## LeetCode Practice Structure
 
 For each must-cover problem:

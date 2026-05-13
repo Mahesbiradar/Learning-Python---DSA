@@ -13,6 +13,11 @@ Use this queue before the full archive when the day plan asks for targeted revis
 | REV-LC-003 | Product Of Array Except Self | Prefix/suffix products | Day 05 used left/right arrays; target is output array + suffix variable | O(n), O(1) extra beyond output |
 | REV-LC-004 | Is Subsequence | Match pointer scan | Day 05 improved, but avoid membership/frequency thinking | One scan over `t` |
 | REV-LC-005 | Best Time To Buy And Sell Stock | One-pass min tracking | Day 05 improved from help-needed to independent | Timed 15-minute re-solve |
+| REV-LC-006 | Group Anagrams | Sorted-key dictionary grouping | Day 06 solution viewed; Day 07 has no verified completion | Re-solve without notes; return `list(groups.values())` |
+| REV-LC-007 | Valid Anagram | Character frequency comparison | Clean O(n) hash version still needs verified solve and LeetCode proof | Count/decrement; avoid string membership loop |
+| REV-LC-008 | Sort Characters By Frequency | Frequency sorting | Day 07 planned but no completion evidence | Count, sort by count, build repeated chars |
+| REV-LC-009 | Intersection of Two Arrays II | Frequency consume | Day 07 planned but no completion evidence | Count one list, consume from the other |
+| REV-LC-010 | Daily completion tracking | Process discipline | Day 07 reflection was blank, so progress could not be verified | Record independent/hint/solution/unsolved before ending day |
 
 ## Arrays / Lists
 
