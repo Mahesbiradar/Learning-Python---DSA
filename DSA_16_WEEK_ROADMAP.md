@@ -80,6 +80,9 @@ Week 2:
 - Hash map frequency, anagrams, first unique, Two Sum.
 - Begin grouping and Top K.
 - First weekly mock with 4 problems.
+- Current pacing adjustment from Week 1 review: start Week 2 with 2 consolidation days before adding new medium volume. Required repairs are clean O(n) Valid Anagram, Pivot Index no-match return, Group Anagrams without solution help, Top K sorting without syntax help, and Product Except Self output-array + suffix version.
+- LeetCode proof rule for Week 2: at least one accepted submission must be recorded before optional work on each study day.
+- Burnout guard: keep 3 new problems maximum and 2 revision problems maximum until clean independent rate stays at or above 70% for two consecutive study days.
 
 Week 3:
 - Prefix/suffix, running sums, Longest Consecutive, Subarray Sum Equals K.
@@ -102,6 +105,7 @@ Week 4:
 - Failed problems revisited after 24h, 3d, 7d.
 - Every must-cover problem re-solved without notes before Month 2.
 - Complexity notes corrected daily.
+- For the next week, revision is considered sufficient only if the daily reflection is filled, failed cases are added to the queue, and at least two near-mastered problems get LeetCode or timed local proof.
 
 ## Month 2: Two Pointers + Sliding Window + Stack + Queue
 
@@ -490,4 +494,3 @@ Slow down when:
 - You skip dry runs.
 - You cannot explain complexity.
 - Daily volume causes missed revision.
-

@@ -3407,3 +3407,22 @@ Day 06 review: optimal structure was recalled independently, but the no-pivot re
 | Is Subsequence | Strings / Two Pointers | Medium | Day 05 independent solve improved it, but avoid unnecessary membership/frequency checks. |
 | Group Anagrams | Hashing / Grouping | High | Day 06 implementation was marked solution viewed; re-solve sorted-key version from memory. |
 | Top K Frequent Elements | Hashing / Frequency | High | Day 06 sorting syntax needed hint and bucket version was solution viewed; re-solve sorting version first. |
+
+## Next Week Priority Queue
+
+Use this queue before adding fresh medium volume. A problem can leave this queue only after a no-notes re-solve, correct complexity, and either LeetCode acceptance or timed local proof.
+
+| Rank | Problem | Required Proof | Why It Matters |
+| ---: | --- | --- | --- |
+| 1 | Valid Anagram | Clean O(n) hash version; avoid `char in other_string` inside loops | Fixes hash comparison and complexity discipline. |
+| 2 | Find Pivot Index | Pass `[1, 2, 3] -> -1`; compare before updating `left_sum` | Repairs no-match return and prefix reasoning. |
+| 3 | Group Anagrams | Re-solve sorted-key grouping without solution; return `list(groups.values())` | Core medium hashing pattern. |
+| 4 | Top K Frequent Elements | Re-solve sorting version without syntax help | Core frequency ranking pattern; bucket version waits. |
+| 5 | Product Of Array Except Self | Use output array + one suffix variable | Required prefix/suffix must-cover optimization. |
+| 6 | Two Sum | Timed no-notes solve + LeetCode acceptance | Near-mastered but still lacks proof. |
+| 7 | First Unique Character | Timed no-notes solve + LeetCode acceptance | Confirms frequency + original-order second pass. |
+| 8 | Valid Palindrome | 3-day recall + LeetCode acceptance | Confirms skip-loop two-pointer pattern. |
+| 9 | Best Time To Buy And Sell Stock | 3-day recall + LeetCode acceptance | Confirms one-pass running minimum. |
+| 10 | Plus One | Re-solve carry from right without notes | Prevents old solution-viewed carry gap from lingering. |
+
+Next-week mock should pull from this queue: one easy proof problem, two medium hashing/prefix problems, and one old failed problem. Do not use hints during the mock.
