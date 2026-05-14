@@ -302,5 +302,77 @@ Adding nums[i] to left_sum BEFORE comparing is the bug from before. It counts th
 """
 #Brute Force approch
 
+def pivot_index(nums):
+
+    for i in range(len(nums)):
+        left=0
+
+        for j in range(0,i):
+            left+=nums[j]
+        right=0
+        for k in range(i+1,len(nums)):
+            right+=nums[k]
+        if left==right:
+            return i
+        
+    return -1
+
+# print(pivot_index([1, 7, 3, 6, 5, 6]))
+# print(pivot_index([1, 2, 3] ))
+# print(pivot_index([2, 1, -1]))
+# print(pivot_index([0, 0, 0] ))
+# print(pivot_index([-1, -1, -1, 0, 1, 1]))
+# print(pivot_index([1]))
+# print(pivot_index([]))  
+
+# Status:Independent solve
+
+# Time complexity: O(n^2)
+
+# Space complexity:O(1)
+
+# Mistakes/confusions:
+
+# Pattern trigger:left & right sum /Two pointers
+
+# LeetCode submission status: Time Limit Exceeded
+
+#Optimal Solution: Here ill use Total sum by traversing all the elements or using the sum method.
 
 
+def pivot_index(nums):
+
+    totalsum=0
+    for i in nums:
+        totalsum+=i
+    left=0
+
+    for j in range(len(nums)):
+
+        right=totalsum-left-nums[j]
+
+        if left==right:
+            return j
+        
+        left+=nums[j]
+    return -1
+
+print(pivot_index([1, 7, 3, 6, 5, 6]))
+print(pivot_index([1, 2, 3] ))
+print(pivot_index([2, 1, -1]))
+print(pivot_index([0, 0, 0] ))
+print(pivot_index([-1, -1, -1, 0, 1, 1]))
+print(pivot_index([1]))
+print(pivot_index([])) 
+
+# Status:Independent solve
+
+# Time complexity: O(n)
+
+# Space complexity:O(1)
+
+# Mistakes/confusions:
+
+# Pattern trigger:left & right sum /Two pointers
+
+# LeetCode submission status: Accepted
