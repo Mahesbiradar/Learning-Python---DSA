@@ -1,0 +1,306 @@
+# Day 08 Work
+
+Date: 2026-05-14
+Week / Day: Week 2 / Day 8
+Phase: Month 1 — Arrays + Hashing + Strings
+Day Type: Consolidation Day
+Pattern Family Focus: Frequency Hashing + Prefix Sum
+
+---
+
+## Today's Goals
+
+- Fix the Valid Anagram comparison bug — no `char not in string` inside any loop.
+- Fix the Find Pivot Index no-pivot return — `[1, 2, 3]` must return `-1`.
+- Get at least 1 LeetCode accepted submission before finishing.
+- Fill every reflection field the same day.
+
+No new problems today. This is a repair day.
+
+---
+
+## Concept Block Warm-Up
+
+Before touching any problem file, write both templates from memory below.
+If you cannot write them, open `DSA_DAILY_EXECUTION_SYSTEM.md`, read the relevant block, close it, then write here.
+
+### Frequency Hashing Template (write from memory)
+
+```python
+# Write here without reading old code
+
+
+
+```
+
+### Prefix Sum — Pivot Index Template (write from memory)
+
+```python
+# Write here without reading old code
+
+
+
+```
+
+Complexity check (fill before moving on):
+- Frequency Hashing: Time = `O(  )`, Space = `O(  )`
+- Prefix Sum (Pivot Index): Time = `O(  )`, Space = `O(  )`
+
+---
+
+## Problem 1: Valid Anagram
+
+Topic: Frequency Hashing
+Pattern: Build frequency maps, compare maps directly
+Difficulty: Easy
+LeetCode: [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+Status target: Independent (no hints, no old code)
+
+### Problem
+
+Given two strings `s` and `t`, return `True` if `t` is an anagram of `s`, and `False` otherwise.
+
+Two strings are anagrams if they contain the same characters with the same frequencies.
+
+### Examples
+
+```
+s = "anagram", t = "nagaram"  →  True
+s = "rat",     t = "car"      →  False
+```
+
+### Constraints
+
+- `1 <= len(s), len(t) <= 5 * 10^4`
+- `s` and `t` consist of lowercase English letters only.
+
+### Required Approach Today
+
+Build two frequency dictionaries. Compare them directly.
+
+Forbidden today:
+```python
+# DO NOT use this pattern — it is O(k) string scan, not O(1)
+if char not in t:
+    ...
+if char not in s:
+    ...
+```
+
+Required today:
+```python
+# Build freq_s and freq_t using .get(x, 0) + 1
+# Then compare: freq_s == freq_t
+```
+
+### Edge Cases to Test Before Submitting
+
+```python
+("anagram", "nagaram")  →  True
+("rat", "car")          →  False
+("", "")                →  True
+("a", "ab")             →  False   # length differs
+("aa", "a")             →  False   # same chars, different count
+("ab", "ba")            →  True
+```
+
+### Brute Force Idea (write before optimized)
+
+```
+Sort both strings and compare.
+Time: O(n log n)   Space: O(n)
+```
+
+### Optimized Idea (write before coding)
+
+```
+Build two frequency maps. Compare maps.
+Time: O(n)   Space: O(n)
+```
+
+### Dry Run (trace for "rat" vs "car")
+
+| Step | Action | freq_s | freq_t |
+| --- | --- | --- | --- |
+| Build freq_s | ... | | |
+| Build freq_t | ... | | |
+| Compare | ... | | |
+
+### Solution
+
+Write your solution in `DAY_08_SOLUTIONS.py`.
+
+### Status
+
+- [ ] Independent solve
+- [ ] Hint used
+- [ ] Solution viewed
+- [ ] Unsolved
+
+LeetCode result: `Accepted` / `Wrong Answer` / `Not submitted`
+LeetCode submission link or problem number: 242
+
+### Mistake Note
+
+```
+What went wrong (if anything):
+What the fix was:
+```
+
+---
+
+## Problem 2: Find Pivot Index
+
+Topic: Prefix Sum
+Pattern: Left sum equals right sum — compare before updating left_sum
+Difficulty: Easy
+LeetCode: [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+Status target: Independent (the logic is known — this is a correctness fix)
+
+### Problem
+
+Given an array `nums`, return the leftmost index where the sum of all elements strictly to the left equals the sum of all elements strictly to the right.
+
+If no such index exists, return `-1`.
+
+Elements directly at the index do not count toward either side.
+
+### Examples
+
+```
+[1, 7, 3, 6, 5, 6]  →  3
+  left of 3: 1+7+3 = 11
+  right of 3: 5+6 = 11  ✓
+
+[1, 2, 3]           →  -1
+  no index where left == right
+
+[2, 1, -1]          →  0
+  left of 0: (empty) = 0
+  right of 0: 1 + (-1) = 0  ✓
+```
+
+### Constraints
+
+- `1 <= len(nums) <= 10^4`
+- `-1000 <= nums[i] <= 1000`
+
+### Critical Ordering Rule
+
+```
+Step 1: right_sum = total_sum - left_sum - nums[i]
+Step 2: if left_sum == right_sum → return i
+Step 3: left_sum += nums[i]      ← update AFTER comparing
+```
+
+Adding nums[i] to left_sum BEFORE comparing is the bug from before. It counts the current element in the left side, which is wrong.
+
+### Edge Cases to Test Before Submitting
+
+```python
+[1, 7, 3, 6, 5, 6]   →   3
+[1, 2, 3]             →  -1     ← must return -1, not 0
+[2, 1, -1]            →   0
+[0, 0, 0]             →   0
+[-1, -1, -1, 0, 1, 1] →   0
+[1]                   →   0     ← single element: both sides are 0
+[]                    →  -1
+```
+
+### Brute Force Idea
+
+```
+For every index i, compute sum of left slice and sum of right slice.
+Time: O(n²)   Space: O(1)
+```
+
+### Optimized Idea
+
+```
+Compute total once. Track left_sum. Derive right_sum on demand.
+Time: O(n)   Space: O(1)
+```
+
+### Dry Run (trace for [1, 2, 3])
+
+| i | nums[i] | left_sum | right_sum | match? | left_sum after |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 1 | 0 | | | |
+| 1 | 2 | | | | |
+| 2 | 3 | | | | |
+
+Return: ___
+
+### Solution
+
+Write your solution in `DAY_08_SOLUTIONS.py`.
+
+### Status
+
+- [ ] Independent solve
+- [ ] Hint used
+- [ ] Solution viewed
+- [ ] Unsolved
+
+LeetCode result: `Accepted` / `Wrong Answer` / `Not submitted`
+LeetCode submission link or problem number: 724
+
+### Mistake Note
+
+```
+What went wrong (if anything):
+What the fix was:
+```
+
+---
+
+## LeetCode Submission Log
+
+| Problem | Status | Submission # | Notes |
+| --- | --- | --- | --- |
+| Valid Anagram (242) | | | |
+| Find Pivot Index (724) | | | |
+
+Minimum required before finishing: 1 accepted.
+
+---
+
+## Reflection
+
+Fill all fields before closing the file.
+
+```
+Day Type: Consolidation
+Family Focus: Frequency Hashing, Prefix Sum
+
+Concept Block template recalled from memory:
+  Frequency Hashing: yes / no
+  Prefix Sum (Pivot): yes / no
+
+Valid Anagram:
+  Status: Independent / Hint / Solution / Unsolved
+  char-not-in-string avoided completely: yes / no
+  LeetCode: Accepted / Wrong Answer / Not submitted
+
+Find Pivot Index:
+  Status: Independent / Hint / Solution / Unsolved
+  [1,2,3] → -1 passed: yes / no
+  LeetCode: Accepted / Wrong Answer / Not submitted
+
+Pattern trigger that fired correctly today:
+
+Pattern trigger that did NOT fire or fired wrong:
+
+Main implementation mistake:
+
+Complexity written for both problems: yes / no
+Edge cases tested locally before submission: yes / no
+Failed queue updated: yes / no
+
+Family stability update:
+  Frequency Hashing: stayed Building / improved toward Stable
+  Prefix Sum: stayed Building / improved toward Stable
+
+Continue / Repeat / Slow down:
+Reason:
+```
