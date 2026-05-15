@@ -81,6 +81,13 @@ LC tracking rules:
 - Only mark ✓ if output verified correct AND "LC status: Accepted" in comments
 - Output mismatch overrides any comment — never mark ✓ if test cases failed
 - No pipeline stages, no closed loop, no topic gates
+- Re-submissions: if a problem is already ✓ in the tracker → do NOT add another entry to LC Submission Log, skip it silently
+- Only log to LC Submission Log if it is the FIRST time that problem reaches Accepted
+
+OUTPUT FORMAT:
+- Do NOT print reasoning, tracing, or intermediate thoughts to chat
+- Only output: (1) one line confirming STATUS.md was saved, (2) the 8-line analysis
+- All thinking must stay internal — total chat output must be under 20 lines
 ```
 
 ---

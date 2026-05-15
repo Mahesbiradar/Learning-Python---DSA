@@ -9,13 +9,13 @@ Week 2 days remaining: 2 (Days 10, 11 then Recovery Day 12)
 
 | Family | Level | Primary Blocker | LC Accepted |
 |--------|-------|-----------------|-------------|
-| Frequency Hashing | Building | Top K lambda recall | 2 |
+| Frequency Hashing | Stable | — | 4 |
 | Grouping Hash Maps | Building | Group Anagrams 3d recall due May 17 | 1 |
-| Frequency Sorting | Shaky | Top K syntax help needed | 0 |
+| Frequency Sorting | Building | Top K lambda recalled D9, pending LC | 0 |
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
 | Prefix Sum | Building | Product output+suffix unsolved | 2 |
 | Two Pointers | Building | Subsequence membership instinct | 0 |
-| Running-State Tracking | Building | Best Stock no LC yet | 0 |
+| Running-State Tracking | Building | — | 1 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -31,18 +31,18 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Contains Duplicate | 217 | Freq Hashing | ✓ | |
 | Two Sum | 1 | Complement Lookup | ✓ | |
 | Valid Anagram | 242 | Freq Hashing | ✓ | |
-| First Unique Character | 387 | Freq Hashing | pending | solved D3, revise D9 |
+| First Unique Character | 387 | Freq Hashing | ✓ | |
 | Valid Palindrome | 125 | Two Pointers | pending | solved D4 |
 | Reverse String | 344 | Two Pointers | pending | solved D4 |
 | Is Subsequence | 392 | Two Pointers | pending | hint-dependent still |
-| Running Sum | 1480 | Prefix Sum | pending | solved D5 |
+| Running Sum | 1480 | Prefix Sum | pending | ready to submit |
 | Find Pivot Index | 724 | Prefix Sum | ✓ | |
-| Best Time Stock | 121 | Running State | pending | solved D5 |
+| Best Time Stock | 121 | Running State | ✓ | |
 | Group Anagrams | 49 | Grouping Hash Maps | ✓ | |
-| Top K Frequent | 347 | Freq Sorting | pending | lambda recall shaky |
+| Top K Frequent | 347 | Freq Sorting | pending | ready to submit |
 | Sort Chars by Freq | 451 | Freq Sorting | ✓ | |
 | Intersection Arrays II | 350 | Freq Hashing | ✓ | |
-| Majority Element | 169 | Freq Hashing | pending | solved D9 |
+| Majority Element | 169 | Freq Hashing | pending | ready to submit |
 
 ---
 
@@ -53,20 +53,20 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| First Unique Character | 387 | May 15 | overdue |
 | Valid Palindrome | 125 | May 15 | overdue |
 | Is Subsequence | 392 | May 15 | overdue |
-| Best Time Stock | 121 | May 15 | overdue |
-| Running Sum | 1480 | May 15 | overdue |
 | Reverse String | 344 | May 15 | overdue |
 | Top K Frequent | 347 | May 16 | |
-| Majority Element | 169 | May 16 | solved D9 |
-| Two Sum | 1 | May 17 | 3d recall |
-| Valid Anagram | 242 | May 17 | 3d recall |
+| Majority Element | 169 | May 16 | |
 | Group Anagrams | 49 | May 17 | 3d recall |
 | Find Pivot Index | 724 | May 17 | 3d recall |
 | Sort Chars by Freq | 451 | May 17 | 3d recall |
 | Intersection II | 350 | May 17 | 3d recall |
+| First Unique Character | 387 | May 18 | 3d recall |
+| Best Time Stock | 121 | May 18 | 3d recall |
+| Running Sum | 1480 | May 18 | 3d recall |
+| Two Sum | 1 | May 22 | 7d final recall |
+| Valid Anagram | 242 | May 22 | 7d final recall |
 
 ---
 
@@ -81,8 +81,12 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 13 | Find Pivot Index | 724 | Accepted |
 | May 14 | Valid Anagram | 242 | Accepted |
 | May 14 | Find Pivot Index | 724 | Accepted |
+| May 15 | Valid Anagram | 242 | Accepted |
+| May 15 | Two Sum | 1 | Accepted |
+| May 15 | First Unique Character | 387 | Accepted |
+| May 15 | Best Time to Buy and Sell Stock | 121 | Accepted |
 
-Unique problems LC accepted: 5
+Unique problems LC accepted: 7
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -92,7 +96,7 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 | Week | New Problems | Revisions | LC Accepted | Independent% |
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
-| 2 (partial) | 9 | 8 | 7 | 75% |
+| 2 (partial) | 11 | 13 | 11 | 78% |
 
 ---
 
