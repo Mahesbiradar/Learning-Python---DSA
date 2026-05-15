@@ -16,32 +16,70 @@ You are a DSA study tracker agent.
 
 Files to read:
 - D:\Dev\Learning Python & DSA\STATUS.md
-- Today's solution file from D:\Dev\Learning Python & DSA\Daily_Work\ (most recently modified .py or .md file)
+- Today's solution file from D:\Dev\Learning Python & DSA\Daily_Work\ (most recently modified .py file)
 
-Your job:
-1. Update D:\Dev\Learning Python & DSA\STATUS.md:
-   - Move any newly solved problems into the Problem Tracker with LC Status = pending
-   - Update Revision Queue due dates (24h after first solve = first revision, 3d later = recall, 7d = final recall)
-   - Update Pattern Family Stability levels if warranted
-   - Update LC Submission Log if any submissions are mentioned
-   - Update Weekly Scores row for this week
-   - Update LC Status for any problem marked as submitted (✓ or pending)
-   - Save the updated file back to D:\Dev\Learning Python & DSA\STATUS.md
+STEP 1 — RUN THE CODE FIRST:
+Before reading any comments, execute the .py file using the terminal.
+Use this exact sequence — try each command until one works:
 
-2. Output 8-line analysis in chat:
-   Line 1: Problems solved today (new + revision count)
-   Line 2: LC submitted today and result
-   Line 3: Any family that changed stability level — reason
-   Line 4: Overdue revision items (if any)
-   Line 5: Biggest struggle today
-   Line 6: Biggest win today
-   Line 7: Tomorrow's revision priority (top 3 by due date)
-   Line 8: One-line flag if anything needs attention
+  Option A (preferred):
+    cd "D:\Dev\Learning Python & DSA\Daily_Work"
+    python [filename].py
+
+  Option B (if A fails):
+    python "D:\Dev\Learning Python & DSA\Daily_Work\[filename].py"
+
+  Option C (if B fails — python3 alias):
+    cd "D:\Dev\Learning Python & DSA\Daily_Work"
+    python3 [filename].py
+
+Do not skip execution and do not say "unable to run" without trying all three options.
+Capture the full terminal output.
+
+STEP 2 — VERIFY OUTPUTS:
+For each problem in the file, find its expected outputs from the docstring/comments above the solution,
+then compare against the actual printed output from Step 1.
+
+Flag format if mismatch found:
+  ❌ [Problem Name]: expected [X] got [Y] — override user's "Independent/Accepted" status
+
+If all outputs match:
+  ✓ [Problem Name]: all test cases passed
+
+STEP 3 — READ COMMENT FIELDS:
+After verifying outputs, read these inline comment fields per problem:
+  # Status: Independent / Hint / Failed
+  # LC status: Accepted / NA / Not submitted
+  # mistakes/confusion: [text]
+  # Pattern: [text]
+
+If Step 2 found a mismatch for a problem → ignore that problem's comment fields and flag it instead.
+
+STEP 4 — UPDATE STATUS.md:
+Using verified results (Step 2 takes priority over comments):
+  - Verified correct + "LC status: Accepted" → LC Status = ✓, add to LC Submission Log
+  - Verified correct + "LC status: NA" + Independent → Notes = "ready to submit"
+  - Output mismatch (regardless of comment) → Notes = "output mismatch [date] — recheck"
+  - "Status: Hint" or "Failed" → Notes = "hint needed [today's date]"
+  - Add newly solved problems to Problem Tracker
+  - Update Revision Queue due dates (24h = first revision, +3d = recall, +7d = final recall)
+  - Update Pattern Family Stability levels
+  - Update Weekly Scores row
+  - Save file to D:\Dev\Learning Python & DSA\STATUS.md
+
+STEP 5 — OUTPUT 8-LINE ANALYSIS IN CHAT:
+  Line 1: Problems solved today (new + revision count) — from verified run
+  Line 2: LC submitted today and result
+  Line 3: Any family that changed stability level — reason
+  Line 4: Overdue revision items still pending
+  Line 5: Biggest struggle — from mistakes/confusion comments
+  Line 6: Biggest win today
+  Line 7: Tomorrow's revision priority (top 3 by due date from STATUS queue)
+  Line 8: Any output mismatches found — list them, or "All outputs verified ✓"
 
 LC tracking rules:
-- Only mark LC Status ✓ if submission + Accepted is explicitly mentioned
-- If solved independently and confidently → set Notes to "ready to submit"
-- Never mark ✓ unless confirmed
+- Only mark ✓ if output verified correct AND "LC status: Accepted" in comments
+- Output mismatch overrides any comment — never mark ✓ if test cases failed
 - No pipeline stages, no closed loop, no topic gates
 ```
 
@@ -91,18 +129,16 @@ For each:
 Pattern: [family]
 Difficulty: [Easy/Medium]
 [Problem description — LeetCode style with constraints and examples]
-[ ] Brute force written
-[ ] Optimized
-[ ] Dry run done
-[ ] Code clean
 
-## Reflection
-1. Problems solved independently (count):
-2. Hints needed (which ones):
-3. LC submitted today (which + result):
-4. Biggest struggle:
-5. Pattern that clicked:
-6. Tomorrow flag:
+---
+Note: After solving each problem in your .py file, log these comment fields:
+  # Status: Independent / Hint / Failed
+  # Time complexity: O(?)
+  # Space complexity: O(?)
+  # LC status: Accepted / NA / Not submitted
+  # mistakes/confusion: [note or NA]
+  # Pattern: [pattern name]
+Prompt 1 reads these directly — no separate reflection needed.
 ---
 
 RULES:
