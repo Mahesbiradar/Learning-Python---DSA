@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-05-15 (Day 9)
-Current: Month 1 | Week 2 | Day 9
-Week 2 days remaining: 2 (Days 10, 11 then Recovery Day 12)
+Last updated: 2026-05-16 (Day 10)
+Current: Month 1 | Week 2 | Day 10
+Week 2 days remaining: 1 (Day 11 then Recovery Day 12)
 
 ---
 
@@ -9,13 +9,13 @@ Week 2 days remaining: 2 (Days 10, 11 then Recovery Day 12)
 
 | Family | Level | Primary Blocker | LC Accepted |
 |--------|-------|-----------------|-------------|
-| Frequency Hashing | Stable | — | 4 |
+| Frequency Hashing | Stable | — | 5 |
 | Grouping Hash Maps | Building | Group Anagrams 3d recall due May 17 | 1 |
-| Frequency Sorting | Building | Top K lambda recalled D9, pending LC | 0 |
+| Frequency Sorting | Stable | ✓ upgraded D10 — 2 LC accepted + independent | 2 |
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
-| Prefix Sum | Building | Product output+suffix unsolved | 2 |
-| Two Pointers | Building | Subsequence membership instinct | 0 |
-| Running-State Tracking | Building | — | 1 |
+| Prefix Sum | Building | Subarray Sum hint-dependent, Product pending LC | 2 |
+| Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
+| Running-State Tracking | Building | Kadane's hint-dependent | 1 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -32,17 +32,20 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Two Sum | 1 | Complement Lookup | ✓ | |
 | Valid Anagram | 242 | Freq Hashing | ✓ | |
 | First Unique Character | 387 | Freq Hashing | ✓ | |
-| Valid Palindrome | 125 | Two Pointers | pending | solved D4 |
-| Reverse String | 344 | Two Pointers | pending | solved D4 |
-| Is Subsequence | 392 | Two Pointers | pending | hint-dependent still |
+| Valid Palindrome | 125 | Two Pointers | ✓ | hint: alphanumeric check syntax |
+| Reverse String | 344 | Two Pointers | ✓ | |
+| Is Subsequence | 392 | Two Pointers | ✓ | independent D10 (was hint-dependent) |
 | Running Sum | 1480 | Prefix Sum | pending | ready to submit |
 | Find Pivot Index | 724 | Prefix Sum | ✓ | |
 | Best Time Stock | 121 | Running State | ✓ | |
 | Group Anagrams | 49 | Grouping Hash Maps | ✓ | |
-| Top K Frequent | 347 | Freq Sorting | pending | ready to submit |
+| Top K Frequent | 347 | Freq Sorting | ✓ | |
 | Sort Chars by Freq | 451 | Freq Sorting | ✓ | |
 | Intersection Arrays II | 350 | Freq Hashing | ✓ | |
-| Majority Element | 169 | Freq Hashing | pending | ready to submit |
+| Majority Element | 169 | Freq Hashing | ✓ | brute: TLE; optimal: Accepted |
+| Product of Array Except Self | 238 | Prefix Sum | pending | ready to submit |
+| Subarray Sum Equals K | 560 | Prefix Sum | pending | hint needed 2026-05-16 |
+| Maximum Subarray | 53 | Running-State Tracking | pending | hint needed 2026-05-16 |
 
 ---
 
@@ -53,11 +56,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Valid Palindrome | 125 | May 15 | overdue |
-| Is Subsequence | 392 | May 15 | overdue |
-| Reverse String | 344 | May 15 | overdue |
-| Top K Frequent | 347 | May 16 | |
-| Majority Element | 169 | May 16 | |
+| Product of Array Except Self | 238 | May 17 | 24h recall |
+| Subarray Sum Equals K | 560 | May 17 | 24h recall |
+| Maximum Subarray | 53 | May 17 | 24h recall |
 | Group Anagrams | 49 | May 17 | 3d recall |
 | Find Pivot Index | 724 | May 17 | 3d recall |
 | Sort Chars by Freq | 451 | May 17 | 3d recall |
@@ -65,6 +66,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | First Unique Character | 387 | May 18 | 3d recall |
 | Best Time Stock | 121 | May 18 | 3d recall |
 | Running Sum | 1480 | May 18 | 3d recall |
+| Valid Palindrome | 125 | May 19 | 3d recall |
+| Reverse String | 344 | May 19 | 3d recall |
+| Is Subsequence | 392 | May 19 | 3d recall |
+| Top K Frequent | 347 | May 19 | 3d recall |
+| Majority Element | 169 | May 19 | 3d recall |
 | Two Sum | 1 | May 22 | 7d final recall |
 | Valid Anagram | 242 | May 22 | 7d final recall |
 
@@ -85,8 +91,13 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 15 | Two Sum | 1 | Accepted |
 | May 15 | First Unique Character | 387 | Accepted |
 | May 15 | Best Time to Buy and Sell Stock | 121 | Accepted |
+| May 16 | Valid Palindrome | 125 | Accepted |
+| May 16 | Reverse String | 344 | Accepted |
+| May 16 | Is Subsequence | 392 | Accepted |
+| May 16 | Top K Frequent | 347 | Accepted |
+| May 16 | Majority Element | 169 | Accepted |
 
-Unique problems LC accepted: 7
+Unique problems LC accepted: 12
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -96,7 +107,7 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 | Week | New Problems | Revisions | LC Accepted | Independent% |
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
-| 2 (partial) | 11 | 13 | 11 | 78% |
+| 2 (partial) | 14 | 18 | 16 | 75% |
 
 ---
 
