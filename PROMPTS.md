@@ -92,6 +92,7 @@ OUTPUT FORMAT:
 
 ---
 
+
 ## PROMPT 2 — NEXT DAY PLAN
 
 Paste only this prompt. Agent reads STATUS and writes the new day file.
