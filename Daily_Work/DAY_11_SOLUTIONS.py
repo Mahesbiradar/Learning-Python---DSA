@@ -184,5 +184,31 @@ Goal: Two running variables: current_sum and max_sum. Decision: extend or start 
 [ ] Submitted to LC — Result: ___
 
 """
+#Brute Force:
+
+def maxSubArray(nums):
+
+    max_sum=float('-inf')
+
+    for i in range(len(nums)):
+        prefix_sum=0
+        for j in range(i,len(nums)):
+            prefix_sum+=nums[j]
+            if prefix_sum>max_sum:
+                max_sum=prefix_sum
+    return max_sum
+
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+
+# Status: Solved independently
+# Time complexicity: O(n^2)
+# Space complaxicity: O(1)
+# LC status:NA
+# mistakes/confusion: Keep this concept in loop for one or two more days with simlar concept with diffrent Problems.
+
+def maxSubArray(nums):
+
+
+
 
 
