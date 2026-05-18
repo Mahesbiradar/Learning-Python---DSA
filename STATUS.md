@@ -114,7 +114,7 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 | Week | New Problems | Revisions | LC Accepted | Independent% |
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
-| 2 (partial) | 17 | 23 | 17 | 73% |
+| 2 | 17 | 23 | 13 | 73% |
 
 ---
 
@@ -126,6 +126,22 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 | Day 10 | May 16 | Reinforcement | Prefix Sum + Running State |
 | Day 11 | May 17 | Retrieval | 3d recall blitz — all May 17 items |
 | Day 12 | May 18 | Recovery | Week review + Week 3 plan |
+
+---
+
+## Week 3 Schedule (May 19–25)
+
+| Day | Date | Type | Focus |
+|-----|------|------|-------|
+| Day 13 | May 19 | Reinforcement | Prefix Sum deep dive — Subarray Sum no-hints attempt, Running Sum LC |
+| Day 14 | May 20 | Reinforcement | Running-State Tracking — Kadane's internalization, Max Product optimization |
+| Day 15 | May 21 | New Pattern | Sliding Window intro — fixed-window max sum, variable-window longest subarray |
+| Day 16 | May 22 | Reinforcement | Sliding Window + 7d recall blitz (Two Sum, Valid Anagram) |
+| Day 17 | May 23 | New Pattern | Binary Search intro — search in sorted array, first/last position |
+| Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
+| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
+
+Carry-over from Week 2: Subarray Sum (hint-dependent), Maximum Subarray (concept unclear), Max Product Subarray (brute only), Isomorphic Strings (hint needed), Sort Chars by Freq + Intersection II (overdue revisions)
 
 ---
 
