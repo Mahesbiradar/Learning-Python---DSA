@@ -187,6 +187,8 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 
 Carry-over from Week 2: Subarray Sum (hint-dependent), Maximum Subarray (concept unclear), Max Product Subarray (brute only), Sort Chars by Freq + Intersection II (recall due)
 
+Day 13 tracker note (2026-05-19): python, absolute python path, python3, py, and known local Python paths were unavailable in terminal; no LC/status promotions made because outputs were not terminal-verified.
+
 ---
 
 ## Mastered (light recall only)
