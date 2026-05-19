@@ -13,9 +13,9 @@ Week 2 complete
 | Grouping Hash Maps | Building | Group Anagrams hint-needed in recall | 2 |
 | Frequency Sorting | Stable | ✓ upgraded D10 — 2 LC accepted + independent | 2 |
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
-| Prefix Sum | Building | SHAKY 4d flag: Subarray Sum hint-dependent | 2 |
+| Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
-| Running-State Tracking | Building | SHAKY 4d flag: Kadane + Max Product optimization unclear | 1 |
+| Running-State Tracking | Building | SHAKY 4d flag: Kadane + Max Product still hint-dependent | 3 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -35,7 +35,7 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Valid Palindrome | 125 | Two Pointers | ✓ | hint: alphanumeric check syntax |
 | Reverse String | 344 | Two Pointers | ✓ | |
 | Is Subsequence | 392 | Two Pointers | ✓ | independent D10 (was hint-dependent) |
-| Running Sum | 1480 | Prefix Sum | pending | ready to submit |
+| Running Sum | 1480 | Prefix Sum | ✓ | independent D13 |
 | Find Pivot Index | 724 | Prefix Sum | ✓ | |
 | Best Time Stock | 121 | Running State | ✓ | |
 | Group Anagrams | 49 | Grouping Hash Maps | ✓ | |
@@ -44,10 +44,10 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Intersection Arrays II | 350 | Freq Hashing | ✓ | |
 | Majority Element | 169 | Freq Hashing | ✓ | brute: TLE; optimal: Accepted |
 | Product of Array Except Self | 238 | Prefix Sum | ✓ | |
-| Subarray Sum Equals K | 560 | Prefix Sum | pending | hint needed 2026-05-17 |
-| Maximum Subarray | 53 | Running-State Tracking | pending | hint needed 2026-05-17 |
+| Subarray Sum Equals K | 560 | Prefix Sum | ✓ | hint needed 2026-05-19 |
+| Maximum Subarray | 53 | Running-State Tracking | ✓ | hint needed 2026-05-19 |
 | Find Highest Altitude | 1732 | Prefix Sum | ✓ | |
-| Maximum Product Subarray | 152 | Running-State Tracking | pending | brute only, optimization pending |
+| Maximum Product Subarray | 152 | Running-State Tracking | ✓ | hint needed 2026-05-19 |
 | Isomorphic Strings | 205 | Grouping Hash Maps | ✓ | independent solve D12 |
 
 ---
@@ -59,19 +59,13 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| First Unique Character | 387 | May 18 | 3d recall (OVERDUE) |
-| Best Time Stock | 121 | May 18 | 3d recall (OVERDUE) |
-| Running Sum | 1480 | May 18 | 3d recall (OVERDUE) |
 | Valid Palindrome | 125 | May 19 | 3d recall |
 | Reverse String | 344 | May 19 | 3d recall |
 | Is Subsequence | 392 | May 19 | 3d recall |
 | Top K Frequent | 347 | May 19 | 3d recall |
 | Majority Element | 169 | May 19 | 3d recall |
 | Product of Array Except Self | 238 | May 20 | 3d recall |
-| Subarray Sum Equals K | 560 | May 20 | 3d recall |
-| Maximum Subarray | 53 | May 20 | 3d recall |
 | Find Highest Altitude | 1732 | May 21 | 3d recall |
-| Maximum Product Subarray | 152 | May 21 | 3d recall |
 | Isomorphic Strings | 205 | May 21 | 3d recall |
 | Two Sum | 1 | May 22 | 7d final recall |
 | Valid Anagram | 242 | May 22 | 7d final recall |
@@ -79,6 +73,12 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Find Pivot Index | 724 | May 24 | 7d final recall |
 | Sort Chars by Freq | 451 | May 24 | 7d final recall |
 | Intersection II | 350 | May 24 | 7d final recall |
+| First Unique Character | 387 | May 25 | 7d final recall |
+| Best Time Stock | 121 | May 25 | 7d final recall |
+| Running Sum | 1480 | May 25 | 7d final recall |
+| Subarray Sum Equals K | 560 | May 27 | 7d final recall |
+| Maximum Subarray | 53 | May 27 | 7d final recall |
+| Maximum Product Subarray | 152 | May 28 | 7d final recall |
 
 ---
 
@@ -105,8 +105,12 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 17 | Product of Array Except Self | 238 | Accepted |
 | May 18 | Find Highest Altitude | 1732 | Accepted |
 | May 18 | Isomorphic Strings | 205 | Accepted |
+| May 19 | Running Sum | 1480 | Accepted |
+| May 19 | Subarray Sum Equals K | 560 | Accepted |
+| May 19 | Maximum Subarray | 53 | Accepted |
+| May 19 | Maximum Product Subarray | 152 | Accepted |
 
-Unique problems LC accepted: 15
+Unique problems LC accepted: 19
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -159,6 +163,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
+| 3 | 0 | 6 | 4 | 50% |
 
 ---
 
@@ -185,9 +190,9 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 | Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
 | Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
 
-Carry-over from Week 2: Subarray Sum (hint-dependent), Maximum Subarray (concept unclear), Max Product Subarray (brute only), Sort Chars by Freq + Intersection II (recall due)
+Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
 
-Day 13 tracker note (2026-05-19): python, absolute python path, python3, py, and known local Python paths were unavailable in terminal; no LC/status promotions made because outputs were not terminal-verified.
+Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Python\bin\python.exe` outside sandbox after default Python commands failed; all visible test outputs matched expected values.
 
 ---
 
