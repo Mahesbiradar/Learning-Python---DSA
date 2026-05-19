@@ -1,6 +1,6 @@
 # DSA STATUS
-Last updated: 2026-05-18 (Day 12)
-Current: Month 1 | Week 2 | Day 12 (Recovery)
+Last updated: 2026-05-19 (Day 13)
+Current: Month 1 | Week 3 | Day 13 (Reinforcement)
 Week 2 complete
 
 ---
@@ -13,9 +13,9 @@ Week 2 complete
 | Grouping Hash Maps | Building | Group Anagrams hint-needed in recall | 2 |
 | Frequency Sorting | Stable | ✓ upgraded D10 — 2 LC accepted + independent | 2 |
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
-| Prefix Sum | Building | Subarray Sum hint-dependent | 2 |
+| Prefix Sum | Building | SHAKY 4d flag: Subarray Sum hint-dependent | 2 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
-| Running-State Tracking | Building | Kadane's concept still unclear after D11 | 1 |
+| Running-State Tracking | Building | SHAKY 4d flag: Kadane + Max Product optimization unclear | 1 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -111,6 +111,48 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
 
+## Week 2 Review
+
+### Week Summary
+
+- Total new problems solved: 17
+- Total revisions done: 28
+- LC accepted this week (unique): 15
+- Average independent solve rate: 73%
+- Families that reached Stable: Frequency Hashing, Frequency Sorting, Complement Lookup, Two Pointers
+- Families still Shaky: Prefix Sum, Running-State Tracking
+- Biggest pattern gap: running-state transitions/Kadane intuition, especially Max Product min/max tracking
+- Overall verdict: On Track
+
+### LC Pending Review
+
+| Problem | LC# | Family | Readiness |
+|---------|-----|--------|-----------|
+| Running Sum | 1480 | Prefix Sum | Ready to submit: solved independently / marked ready |
+| Subarray Sum Equals K | 560 | Prefix Sum | Needs more work: hint-dependent on May 17 |
+| Maximum Subarray | 53 | Running-State Tracking | Needs more work: hint-dependent and Kadane concept unclear |
+| Maximum Product Subarray | 152 | Running-State Tracking | Needs more work: brute force only; optimization pending |
+
+### Next Week Plan
+
+Week 3: May 19-25
+
+| Day | Date | Type | Focus |
+|-----|------|------|-------|
+| Day 13 | May 19 | Reinforcement | Prefix Sum deep dive - Subarray Sum no-hints attempt, Running Sum LC candidate |
+| Day 14 | May 20 | Reinforcement | Running-State Tracking - Kadane internalization, Max Product optimization |
+| Day 15 | May 21 | Conditional New Pattern | Sliding Window intro only if Prefix Sum + Running-State have 2+ recall-stage problems under control |
+| Day 16 | May 22 | Retrieval + Reinforcement | 7d final recall: Two Sum, Valid Anagram; Sliding Window reinforcement if introduced |
+| Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
+| Day 18 | May 24 | Retrieval + Reinforcement | 7d final recall: Group Anagrams, Find Pivot, Sort Chars by Freq, Intersection II |
+| Day 19 | May 25 | Retrieval | 3d/7d recall blitz and weekly LC pick list |
+
+New patterns to introduce: Sliding Window only if current shaky families have 2+ problems at recall stage; Binary Search only if Sliding Window does not overload the week.
+
+Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximum Product Subarray, Sort Chars by Freq recall, Intersection Arrays II recall.
+
+---
+
 ## Weekly Scores
 
 | Week | New Problems | Revisions | LC Accepted | Independent% |
@@ -137,13 +179,13 @@ Weekly LC slot: 45 min, clear pending problems you feel confident on
 |-----|------|------|-------|
 | Day 13 | May 19 | Reinforcement | Prefix Sum deep dive — Subarray Sum no-hints attempt, Running Sum LC |
 | Day 14 | May 20 | Reinforcement | Running-State Tracking — Kadane's internalization, Max Product optimization |
-| Day 15 | May 21 | New Pattern | Sliding Window intro — fixed-window max sum, variable-window longest subarray |
+| Day 15 | May 21 | Conditional New Pattern | Sliding Window intro only if Prefix Sum + Running-State have 2+ recall-stage problems under control |
 | Day 16 | May 22 | Reinforcement | Sliding Window + 7d recall blitz (Two Sum, Valid Anagram) |
-| Day 17 | May 23 | New Pattern | Binary Search intro — search in sorted array, first/last position |
+| Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
 | Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
 | Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
 
-Carry-over from Week 2: Subarray Sum (hint-dependent), Maximum Subarray (concept unclear), Max Product Subarray (brute only), Isomorphic Strings (hint needed), Sort Chars by Freq + Intersection II (overdue revisions)
+Carry-over from Week 2: Subarray Sum (hint-dependent), Maximum Subarray (concept unclear), Max Product Subarray (brute only), Sort Chars by Freq + Intersection II (recall due)
 
 ---
 
