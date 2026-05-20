@@ -573,6 +573,115 @@ print(subarraySum([1,1,1],2))
 print(subarraySum([1,2,3],3))
 
 
+# Status:solved independently
+# Time complexity:O(n^2)
+# Space complexity:O(1)
+# LC status:Na
+# mistakes/confusion:
+# Pattern:prefix sum + second pass.
+
+# Core invariant:
+# Optimization jump:since we are calculating prefix again and again we can store it in hasmap to optimize
+# Key decision:
+# Recognition trigger: Subarry sum and given the value of subarray
+# Wrong assumption:
+# One-line explanation:
 
 
+#optimal solution using the hashmap
 
+
+def subarraySum(nums,k):
+
+    seen={0:1}
+    count=0
+    prefix=0
+
+    for i in range(len(nums)):
+
+        prefix+=nums[i]
+        count+=seen.get(prefix-k,0)
+        seen[prefix]=seen.get(prefix,0)+1
+
+    return count
+
+print(subarraySum([1,1,1],2))
+print(subarraySum([1,2,3],3))
+
+# Status:solved independently
+# Time complexity:O(n)
+# Space complexity:O(n)
+# LC status:Accepted
+# mistakes/confusion:Na
+# Pattern:Prefix sum + Hash map
+
+# Core invariant: count+=seen.get(prefix-k,0)
+# Optimization jump: keeping prefix in dict
+# Key decision: count+=seen.get(prefix-k,0)
+# Recognition trigger: 
+# Wrong assumption:
+# One-line explanation: with each iteration checking the old prefix exist then incrementing the Count with frequeny of old prefix.
+
+"""
+121. Best Time to Buy and Sell Stock
+
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+
+Example 1:
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+Example 2:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+ 
+
+Constraints:
+
+1 <= prices.length <= 105
+0 <= prices[i] <= 104
+
+"""
+
+def maxProfit(nums):
+
+    min_price=nums[0]
+    max_profit=0
+
+    for i in range(1,len(nums)):
+
+
+        if nums[i]<min_price:
+            min_price=nums[i]
+        else:
+            profit=nums[i]-min_price
+
+            if profit>max_profit:
+                max_profit=profit
+    return max_profit
+
+print(maxProfit([7,1,5,3,6,4]))
+print(maxProfit([7,6,4,3,1]))
+
+# Status:Solved independent 
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:Na
+# Pattern:Running state tracking
+
+# Core invariant:min price(buy) before selling
+# Optimization jump:NA
+# Key decision:Buy stock before seeling
+# Recognition trigger:
+# Wrong assumption:
+# One-line explanation:
