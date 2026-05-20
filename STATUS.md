@@ -1,6 +1,6 @@
 # DSA STATUS
-Last updated: 2026-05-19 (Day 13)
-Current: Month 1 | Week 3 | Day 13 (Reinforcement)
+Last updated: 2026-05-20 (Day 14)
+Current: Month 1 | Week 3 | Day 14 (Reinforcement)
 Week 2 complete
 
 ---
@@ -15,7 +15,7 @@ Week 2 complete
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
 | Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
-| Running-State Tracking | Building | SHAKY 4d flag: Kadane + Max Product still hint-dependent | 3 |
+| Running-State Tracking | Stable | upgraded D14 - Kadane + Max Product min/max solved independently and verified | 3 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -32,22 +32,22 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Two Sum | 1 | Complement Lookup | ✓ | |
 | Valid Anagram | 242 | Freq Hashing | ✓ | |
 | First Unique Character | 387 | Freq Hashing | ✓ | |
-| Valid Palindrome | 125 | Two Pointers | ✓ | hint: alphanumeric check syntax |
-| Reverse String | 344 | Two Pointers | ✓ | |
-| Is Subsequence | 392 | Two Pointers | ✓ | independent D10 (was hint-dependent) |
+| Valid Palindrome | 125 | Two Pointers | ✓ | independent D14 recall; alphanumeric syntax fixed |
+| Reverse String | 344 | Two Pointers | ✓ | independent D14 recall |
+| Is Subsequence | 392 | Two Pointers | ✓ | independent D14 recall |
 | Running Sum | 1480 | Prefix Sum | ✓ | independent D13 |
 | Find Pivot Index | 724 | Prefix Sum | ✓ | |
-| Best Time Stock | 121 | Running State | ✓ | |
+| Best Time Stock | 121 | Running State | ✓ | independent D14 recall |
 | Group Anagrams | 49 | Grouping Hash Maps | ✓ | |
-| Top K Frequent | 347 | Freq Sorting | ✓ | |
+| Top K Frequent | 347 | Freq Sorting | ✓ | independent D14 recall |
 | Sort Chars by Freq | 451 | Freq Sorting | ✓ | |
 | Intersection Arrays II | 350 | Freq Hashing | ✓ | |
-| Majority Element | 169 | Freq Hashing | ✓ | brute: TLE; optimal: Accepted |
+| Majority Element | 169 | Freq Hashing | ✓ | independent D14 recall; optimal Accepted |
 | Product of Array Except Self | 238 | Prefix Sum | ✓ | |
-| Subarray Sum Equals K | 560 | Prefix Sum | ✓ | hint needed 2026-05-19 |
-| Maximum Subarray | 53 | Running-State Tracking | ✓ | hint needed 2026-05-19 |
+| Subarray Sum Equals K | 560 | Prefix Sum | ✓ | independent D14 recall |
+| Maximum Subarray | 53 | Running-State Tracking | ✓ | independent D14 Kadane recall |
 | Find Highest Altitude | 1732 | Prefix Sum | ✓ | |
-| Maximum Product Subarray | 152 | Running-State Tracking | ✓ | hint needed 2026-05-19 |
+| Maximum Product Subarray | 152 | Running-State Tracking | ✓ | independent D14 min/max recall |
 | Isomorphic Strings | 205 | Grouping Hash Maps | ✓ | independent solve D12 |
 
 ---
@@ -59,11 +59,6 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Valid Palindrome | 125 | May 19 | 3d recall |
-| Reverse String | 344 | May 19 | 3d recall |
-| Is Subsequence | 392 | May 19 | 3d recall |
-| Top K Frequent | 347 | May 19 | 3d recall |
-| Majority Element | 169 | May 19 | 3d recall |
 | Product of Array Except Self | 238 | May 20 | 3d recall |
 | Find Highest Altitude | 1732 | May 21 | 3d recall |
 | Isomorphic Strings | 205 | May 21 | 3d recall |
@@ -77,6 +72,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Best Time Stock | 121 | May 25 | 7d final recall |
 | Running Sum | 1480 | May 25 | 7d final recall |
 | Subarray Sum Equals K | 560 | May 27 | 7d final recall |
+| Valid Palindrome | 125 | May 27 | 7d final recall |
+| Reverse String | 344 | May 27 | 7d final recall |
+| Is Subsequence | 392 | May 27 | 7d final recall |
+| Top K Frequent | 347 | May 27 | 7d final recall |
+| Majority Element | 169 | May 27 | 7d final recall |
 | Maximum Subarray | 53 | May 27 | 7d final recall |
 | Maximum Product Subarray | 152 | May 28 | 7d final recall |
 
@@ -163,7 +163,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
-| 3 | 0 | 6 | 4 | 50% |
+| 3 | 0 | 15 | 4 | 80% |
 
 ---
 
@@ -193,6 +193,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
 
 Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Python\bin\python.exe` outside sandbox after default Python commands failed; all visible test outputs matched expected values.
+Day 14 tracker note (2026-05-20): default `python` / path `python` / `python3` commands failed; verified with `C:\Users\dell\AppData\Local\Python\pythoncore-3.14-64\python.exe`; all visible test outputs matched expected values.
 
 ---
 
