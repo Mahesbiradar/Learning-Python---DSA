@@ -451,3 +451,128 @@ The product of any subarray of nums is guaranteed to fit in a 32-bit integer.
 
 
 """
+#brute force:using nested loop
+
+def maxProduct(nums):
+
+    max_prod=float('-inf')
+
+    for i in range(len(nums)):
+
+        prefix_prod=1
+
+        for j in range(i,len(nums)):
+
+            prefix_prod*=nums[j]
+
+            if prefix_prod>max_prod:
+                max_prod=prefix_prod
+    return max_prod
+
+print(maxProduct([2,3,-2,4]))
+print(maxProduct([-2,0,-1]))
+
+# Status:solved independent
+# Time complexity:O(n^2)
+# Space complexity:O(1)
+# LC status:Na
+# mistakes/confusion:NA
+# Pattern:Running state tracking using Nested loop
+
+# Core invariant:
+# Optimization jump:since we are calculating prefix_prod again and again so we can optimize using min and max.
+# Key decision:running state
+# Recognition trigger:
+# Wrong assumption:
+# One-line explanation:Using nested loop we can calculate prefix of each subarray and will track max_prod of subrary in global variable.
+
+#Optimal solution using the min and max
+
+def maxProduct(nums):
+
+    current_max=nums[0]
+    current_min=nums[0]
+    max_prod=nums[0]
+
+    for i in range(1,len(nums)):
+        n=nums[i]
+
+        temp_max=current_max
+        temp_min=current_min
+
+
+        current_max=max(n,temp_max*n,temp_min*n)
+        current_min=min(n,temp_max*n,temp_min*n)
+        max_prod=max(max_prod,current_max)
+
+    return max_prod
+
+print(maxProduct([2,3,-2,4]))
+print(maxProduct([-2,0,-1]))
+
+# Status: solved independently
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:NA
+# Pattern:Running state Tracking/Min max
+
+# Core invariant:min and max
+# Optimization jump:
+# Key decision:Tracking both min and max
+# Recognition trigger:Product of subarray
+# Wrong assumption:
+# One-line explanation:While iteration we shoud use both min and max values bcz the negatives becomes max in next iteration.
+
+
+"""
+560. Subarray Sum Equals K
+
+Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+
+Example 1:
+
+Input: nums = [1,1,1], k = 2
+Output: 2
+Example 2:
+
+Input: nums = [1,2,3], k = 3
+Output: 2
+ 
+
+Constraints:
+
+1 <= nums.length <= 2 * 104
+-1000 <= nums[i] <= 1000
+-107 <= k <= 107
+
+"""
+
+#Brute Force:
+
+def subarraySum(nums,k):
+
+    count=0
+
+    for i in range(len(nums)):
+
+        prifix=0
+
+        for j in range(i,len(nums)):
+
+            prifix+=nums[j]
+
+            if prifix==k:
+                count+=1
+    return count
+
+print(subarraySum([1,1,1],2))
+print(subarraySum([1,2,3],3))
+
+
+
+
+
