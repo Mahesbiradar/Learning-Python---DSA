@@ -350,3 +350,104 @@ Constraints:
 
 
 """
+
+def maxSubArray(nums):
+
+    max_sum=float('-inf')
+   
+   
+    for i in range(len(nums)):
+
+        prefix=0
+
+        for j in range(i,len(nums)):
+
+            prefix+=nums[j]
+
+            if prefix>max_sum:
+                max_sum=prefix
+                
+    return max_sum
+
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+print(maxSubArray([5,4,-1,7,8]))
+print(maxSubArray([1]))
+
+# Status:Solved independently 
+# Time complexity:O(n^2)
+# Space complexity:O(1)
+# LC status:NA
+# mistakes/confusion:NA
+# Pattern:Running state Tracking
+
+# Core invariant:
+# Optimization jump:Repeating the prefix sum each time. so we can optimize By kadanes algo(restart/Continue Approch)
+# Key decision:Tracking running state
+# Recognition trigger:max_subarry
+# Wrong assumption:
+# One-line explanation:Here will calculate the prefix of each subarry exist and track max subarry using the nested loop.
+
+#optimal solution
+
+def maxsubarray(nums):
+
+    max_sum=nums[0]
+    current_max=nums[0]
+
+    for i in range(1,len(nums)):
+
+        current_max=max(nums[i],current_max+nums[i])
+
+        if current_max>max_sum:
+            max_sum=current_max
+    return max_sum
+
+print(maxsubarray([4,-1,2,1]))
+print(maxSubArray([5,4,-1,7,8]))
+print(maxSubArray([1]))
+
+# Status:solved independently
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:NA
+# Pattern:Tracking running state/Kadane
+
+# Core invariant: current_max=max(nums[i],current_max+nums[i])
+# Optimization jump:    
+# Key decision:Tracking the running state
+# Recognition trigger:
+# Wrong assumption:
+# One-line explanation:Here with each iteration using kadanes algo we can continue with subarry or restart with current element based on max value.
+
+"""
+152. Maximum Product Subarray
+
+Given an integer array nums, find a subarray that has the largest product, and return the product.
+
+The test cases are generated so that the answer will fit in a 32-bit integer.
+
+Note that the product of an array with a single element is the value of that element.
+
+ 
+
+Example 1:
+
+Input: nums = [2,3,-2,4]
+Output: 6
+Explanation: [2,3] has the largest product 6.
+Example 2:
+
+Input: nums = [-2,0,-1]
+Output: 0
+Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+ 
+
+Constraints:
+
+1 <= nums.length <= 2 * 104
+-10 <= nums[i] <= 10
+The product of any subarray of nums is guaranteed to fit in a 32-bit integer.
+
+
+"""
