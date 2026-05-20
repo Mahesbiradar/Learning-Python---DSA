@@ -2,6 +2,7 @@
 # Time complexity:
 # Space complexity:
 # LC status:
+# mistakes/confusion:
 # Pattern:
 
 # Core invariant:

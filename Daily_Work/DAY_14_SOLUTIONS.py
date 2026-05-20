@@ -207,6 +207,146 @@ Goal: Solve independently. If confident → submit to LC after.
 [ ] Submitted to LC — Result: ___
 
 """
+def topKFrequent(nums,k):
+
+    seen={}
+
+    for num in nums:
+        seen[num]=seen.get(num,0)+1
+    sorted_seen=sorted(seen.items(),key=lambda x:x[1],reverse=True)
+
+    result=[]
+
+    for key,value in sorted_seen:
+        result.append(key)
+
+        if len(result)==k:
+            return result
+print(topKFrequent([1,1,1,2,2,3],2))
+print(topKFrequent([1],1))
+print(topKFrequent([1,2,1,2,1,2,3,1,3,2],2))
+
+# Status:solved independently
+# Time complexity:O(n+m log m)
+# Space complexity:O(n)
+# LC status:Accepted
+# Pattern:Frequncy Hashing/Second Pass
+
+# Core invariant:sorted(seen.items(),key=lambda x:x[1],reverse=True) and len(result)==k
+# Optimization jump:NA
+# Key decision:Frequncy Hashing/Sorting and then Second pass to append till k elements.
+# Recognition trigger:Frequent Elements
+# Wrong assumption:
+# One-line explanation:Map Frequency of all element then sort in decring order then append required elements in result list.
+
+"""
+### Majority Element (LC 169)
+Pattern: Frequency Hashing
+Due: 3d recall
+Constraint: 1 <= nums.length <= 5 * 10^4; majority element always exists and appears more than n // 2 times.
+Goal: Solve independently. If confident → submit to LC after.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+"""
+#Brute Force:
+
+def majorityElement(nums):
+
+    major_element=None
+    max_count=0
+
+    for i in nums:
+        count=0
+
+        for j in nums:
+
+            if i==j:
+                count+=1
+        
+        if count>max_count:
+            max_count=count
+            major_element=i
+    return major_element
+print(majorityElement([3,2,3]))
+print(majorityElement([2,2,1,1,1,2,2]))
+
+# Status:solved independently
+# Time complexity:O(n^2)
+# Space complexity:O(1)
+# LC status:Na
+# Pattern:Running state Tracking
+
+# Core invariant:
+# Optimization jump:since iterating over nums again and again for counting the Frquency we can optimize using hashing 
+# Key decision:Capturing the max frequncy elements.
+# Recognition trigger: Majority elements
+# Wrong assumption:Na
+# One-line explanation:will use two Global varible to store Max_count and element and will run a nested loop to capture the Frequncy of each element.
 
 
+#optimize solution:
 
+def majorityElement(nums):
+
+    seen={}
+    
+    for num in nums:
+        seen[num]=seen.get(num,0)+1
+    
+    major_element=None
+    max_count=0
+
+    for key, value in seen.items():
+
+        if value>max_count:
+            max_count=value
+            major_element=key
+    return major_element
+
+print(majorityElement([3,2,3]))
+print(majorityElement([2,2,1,1,1,2,2]))
+
+# Status:solved independently
+# Time complexity:O(n)
+# Space complexity:O(n)
+# LC status:Accepted
+# Pattern:Frequncy Hashing + running state Tracking
+
+# Core invariant:
+# Optimization jump:
+# Key decision:Frequncy of all elements and then Tracking the Running state.
+# Recognition trigger:Majority element.
+# Wrong assumption:Na
+# One-line explanation:map all elemets frequncy using hashing the run a loop over dict and then Track max_frequncy and element associated with.
+
+"""
+53. Maximum Subarray
+
+Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+
+Example 1:
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+Example 2:
+
+Input: nums = [1]
+Output: 1
+Explanation: The subarray [1] has the largest sum 1.
+Example 3:
+
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+-104 <= nums[i] <= 104
+
+
+"""
