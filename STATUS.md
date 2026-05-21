@@ -1,6 +1,6 @@
 # DSA STATUS
-Last updated: 2026-05-20 (Day 14)
-Current: Month 1 | Week 3 | Day 14 (Reinforcement)
+Last updated: 2026-05-21 (Day 15)
+Current: Month 1 | Week 3 | Day 15 (Sliding Window intro + Revision)
 Week 2 complete
 
 ---
@@ -16,6 +16,7 @@ Week 2 complete
 | Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
 | Running-State Tracking | Stable | upgraded D14 - Kadane + Max Product min/max solved independently and verified | 3 |
+| Sliding Window | Building | All 3 intro problems hint-dependent D15 — needs independent recall before upgrade | 0 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -49,6 +50,9 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Find Highest Altitude | 1732 | Prefix Sum | ✓ | |
 | Maximum Product Subarray | 152 | Running-State Tracking | ✓ | independent D14 min/max recall |
 | Isomorphic Strings | 205 | Grouping Hash Maps | ✓ | independent solve D12 |
+| Maximum Average Subarray I | 643 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
+| Longest Substring Without Repeating | 3 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
+| Minimum Size Subarray Sum | 209 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
 
 ---
 
@@ -59,9 +63,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Product of Array Except Self | 238 | May 20 | 3d recall |
-| Find Highest Altitude | 1732 | May 21 | 3d recall |
-| Isomorphic Strings | 205 | May 21 | 3d recall |
+| Maximum Average Subarray I | 643 | May 22 | 24h revision — hint-needed D15 |
+| Longest Substring Without Repeating | 3 | May 22 | 24h revision — hint-needed D15 |
+| Minimum Size Subarray Sum | 209 | May 22 | 24h revision — hint-needed D15 |
 | Two Sum | 1 | May 22 | 7d final recall |
 | Valid Anagram | 242 | May 22 | 7d final recall |
 | Group Anagrams | 49 | May 24 | 7d final recall |
@@ -71,6 +75,12 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | First Unique Character | 387 | May 25 | 7d final recall |
 | Best Time Stock | 121 | May 25 | 7d final recall |
 | Running Sum | 1480 | May 25 | 7d final recall |
+| Find Highest Altitude | 1732 | May 25 | 7d final recall |
+| Isomorphic Strings | 205 | May 25 | 7d final recall |
+| Product of Array Except Self | 238 | May 24 | 7d final recall |
+| Maximum Average Subarray I | 643 | May 25 | 3d recall |
+| Longest Substring Without Repeating | 3 | May 25 | 3d recall |
+| Minimum Size Subarray Sum | 209 | May 25 | 3d recall |
 | Subarray Sum Equals K | 560 | May 27 | 7d final recall |
 | Valid Palindrome | 125 | May 27 | 7d final recall |
 | Reverse String | 344 | May 27 | 7d final recall |
@@ -144,12 +154,12 @@ Week 3: May 19-25
 | Day | Date | Type | Focus |
 |-----|------|------|-------|
 | Day 13 | May 19 | Reinforcement | Prefix Sum deep dive - Subarray Sum no-hints attempt, Running Sum LC candidate |
-| Day 14 | May 20 | Reinforcement | Running-State Tracking - Kadane internalization, Max Product optimization |
+| Day 14 | May 20 | Reinforcement | Running-State Tracking - Kadane's internalization, Max Product optimization |
 | Day 15 | May 21 | Conditional New Pattern | Sliding Window intro only if Prefix Sum + Running-State have 2+ recall-stage problems under control |
-| Day 16 | May 22 | Retrieval + Reinforcement | 7d final recall: Two Sum, Valid Anagram; Sliding Window reinforcement if introduced |
+| Day 16 | May 22 | Reinforcement | Sliding Window + 7d recall blitz (Two Sum, Valid Anagram) |
 | Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
-| Day 18 | May 24 | Retrieval + Reinforcement | 7d final recall: Group Anagrams, Find Pivot, Sort Chars by Freq, Intersection II |
-| Day 19 | May 25 | Retrieval | 3d/7d recall blitz and weekly LC pick list |
+| Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
+| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
 
 New patterns to introduce: Sliding Window only if current shaky families have 2+ problems at recall stage; Binary Search only if Sliding Window does not overload the week.
 
@@ -163,7 +173,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
-| 3 | 0 | 15 | 4 | 80% |
+| 3 | 3 | 20 | 4 | 75% |
 
 ---
 
@@ -184,16 +194,17 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |-----|------|------|-------|
 | Day 13 | May 19 | Reinforcement | Prefix Sum deep dive — Subarray Sum no-hints attempt, Running Sum LC |
 | Day 14 | May 20 | Reinforcement | Running-State Tracking — Kadane's internalization, Max Product optimization |
-| Day 15 | May 21 | Conditional New Pattern | Sliding Window intro only if Prefix Sum + Running-State have 2+ recall-stage problems under control |
-| Day 16 | May 22 | Reinforcement | Sliding Window + 7d recall blitz (Two Sum, Valid Anagram) |
+| Day 15 | May 21 | New Pattern | Sliding Window intro — 3 problems (all hint-dependent); 5 revision problems all independent |
+| Day 16 | May 22 | Reinforcement | Sliding Window 24h recall + 7d final recall (Two Sum, Valid Anagram) |
 | Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
-| Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
-| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
+| Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot, Product of Array, Intersection II) |
+| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items (heavy day: 8 problems) |
 
 Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
 
 Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Python\bin\python.exe` outside sandbox after default Python commands failed; all visible test outputs matched expected values.
 Day 14 tracker note (2026-05-20): default `python` / path `python` / `python3` commands failed; verified with `C:\Users\dell\AppData\Local\Python\pythoncore-3.14-64\python.exe`; all visible test outputs matched expected values.
+Day 15 tracker note (2026-05-21): verified in Claude sandbox (python3); all 9 test case outputs matched expected values.
 
 ---
 
