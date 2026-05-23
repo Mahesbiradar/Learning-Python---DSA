@@ -1,6 +1,6 @@
 # DSA STATUS
-Last updated: 2026-05-22 (Day 16)
-Current: Month 1 | Week 3 | Day 16 (Reinforcement — Sliding Window + 7d Recall)
+Last updated: 2026-05-23 (Day 17)
+Current: Month 1 | Week 3 | Day 17 (Reinforcement — Sliding Window 24h recall + depth)
 Week 2 complete
 
 ---
@@ -16,7 +16,7 @@ Week 2 complete
 | Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
 | Running-State Tracking | Stable | upgraded D14 — Kadane + Max Product min/max solved independently and verified | 3 |
-| Sliding Window | Building | 6/6 problems hint-dependent D15–D16; 3 LC accepted but 0% independent — needs recall independence before upgrade | 3 |
+| Sliding Window | Building | 6 LC accepted; 5/9 independent (~56%) — needs 70%+ independent; upgrade target D19 | 6 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -53,9 +53,12 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Maximum Average Subarray I | 643 | Sliding Window | ✓ | hint-needed D15; 24h recall D16 — Accepted |
 | Longest Substring Without Repeating | 3 | Sliding Window | ✓ | hint-needed D15–D16 — Accepted |
 | Minimum Size Subarray Sum | 209 | Sliding Window | ✓ | hint-needed D15–D16 — Accepted |
-| Longest Repeating Char Replacement | 424 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
-| Permutation in String | 567 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
-| Fruits Into Baskets | 904 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
+| Longest Repeating Char Replacement | 424 | Sliding Window | ✓ | hint D16; quasi-independent D17 (peeked) — Accepted |
+| Permutation in String | 567 | Sliding Window | ✓ | hint D16; independent D17 — Accepted |
+| Fruits Into Baskets | 904 | Sliding Window | ✓ | hint D16; independent D17 — Accepted |
+| Max Consecutive Ones III | 1004 | Sliding Window | pending | independent D17 — ready to submit |
+| Find All Anagrams in a String | 438 | Sliding Window | pending | hint-needed D17 — submit after independent recall |
+| Contains Duplicate II | 219 | Sliding Window | pending | independent D17 — ready to submit |
 
 ---
 
@@ -66,9 +69,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Longest Repeating Char Replacement | 424 | May 23 | 24h revision — hint-needed D16 |
-| Permutation in String | 567 | May 23 | 24h revision — hint-needed D16 |
-| Fruits Into Baskets | 904 | May 23 | 24h revision — hint-needed D16 |
+| Max Consecutive Ones III | 1004 | May 24 | 24h revision — independent D17 — ready to submit |
+| Find All Anagrams in a String | 438 | May 24 | 24h revision — hint-needed D17 |
+| Contains Duplicate II | 219 | May 24 | 24h revision — independent D17 — ready to submit |
 | Group Anagrams | 49 | May 24 | 7d final recall |
 | Find Pivot Index | 724 | May 24 | 7d final recall |
 | Sort Chars by Freq | 451 | May 24 | 7d final recall |
@@ -85,6 +88,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Longest Repeating Char Replacement | 424 | May 26 | 3d recall |
 | Permutation in String | 567 | May 26 | 3d recall |
 | Fruits Into Baskets | 904 | May 26 | 3d recall |
+| Max Consecutive Ones III | 1004 | May 27 | 3d recall |
+| Find All Anagrams in a String | 438 | May 27 | 3d recall |
+| Contains Duplicate II | 219 | May 27 | 3d recall |
 | Subarray Sum Equals K | 560 | May 27 | 7d final recall |
 | Valid Palindrome | 125 | May 27 | 7d final recall |
 | Reverse String | 344 | May 27 | 7d final recall |
@@ -96,6 +102,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Longest Repeating Char Replacement | 424 | May 29 | 7d final recall |
 | Permutation in String | 567 | May 29 | 7d final recall |
 | Fruits Into Baskets | 904 | May 29 | 7d final recall |
+| Max Consecutive Ones III | 1004 | May 30 | 7d final recall |
+| Find All Anagrams in a String | 438 | May 30 | 7d final recall |
+| Contains Duplicate II | 219 | May 30 | 7d final recall |
 
 ---
 
@@ -129,8 +138,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 22 | Maximum Average Subarray I | 643 | Accepted |
 | May 22 | Longest Substring Without Repeating | 3 | Accepted |
 | May 22 | Minimum Size Subarray Sum | 209 | Accepted |
+| May 23 | Longest Repeating Char Replacement | 424 | Accepted |
+| May 23 | Permutation in String | 567 | Accepted |
+| May 23 | Fruits Into Baskets | 904 | Accepted |
 
-Unique problems LC accepted: 22
+Unique problems LC accepted: 25
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -183,7 +195,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
-| 3 | 6 | 25 | 7 | 50% |
+| 3 | 9 | 30 | 10 | 60% |
 
 ---
 
@@ -206,8 +218,8 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 | Day 14 | May 20 | Reinforcement | Running-State Tracking — Kadane's internalization, Max Product optimization |
 | Day 15 | May 21 | New Pattern | Sliding Window intro — 3 problems (all hint-dependent); 5 revision problems all independent |
 | Day 16 | May 22 | Reinforcement | Sliding Window depth (424, 567, 904) + 7d final recall (Two Sum, Valid Anagram); 643/3/209 LC Accepted |
-| Day 17 | May 23 | Reinforcement | Sliding Window 24h recall (424, 567, 904) — Binary Search deferred; carry-over Sliding Window not independent yet |
-| Day 18 | May 24 | Reinforcement | 7d recall blitz (Group Anagrams, Find Pivot, Sort Chars, Intersection II, Product of Array) |
+| Day 17 | May 23 | Reinforcement | Sliding Window 24h recall — 424/567/904 independent + Accepted; 3 new (1004 ind, 438 hint, 219 ind); Binary Search deferred |
+| Day 18 | May 24 | Reinforcement | 7d recall blitz (Group Anagrams, Find Pivot, Sort Chars, Intersection II, Product of Array) + Sliding Window 24h (1004, 438, 219) |
 | Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items (heavy day: 8+ problems) |
 
 Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
@@ -216,6 +228,7 @@ Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Pyt
 Day 14 tracker note (2026-05-20): default `python` / path `python` / `python3` commands failed; verified with `C:\Users\dell\AppData\Local\Python\pythoncore-3.14-64\python.exe`; all visible test outputs matched expected values.
 Day 15 tracker note (2026-05-21): verified in Claude sandbox (python3); all 9 test case outputs matched expected values.
 Day 16 tracker note (2026-05-22): verified in Claude sandbox (python3); all graded test case outputs matched expected values; warm-up variable window had a stale variable bug (non-graded).
+Day 17 tracker note (2026-05-23): verified in Claude sandbox (python3); all graded test case outputs matched expected values; debug prints in checkInclusion (567) are non-graded noise — final True/False correct.
 
 ---
 
