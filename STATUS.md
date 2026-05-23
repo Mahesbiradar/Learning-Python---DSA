@@ -1,6 +1,6 @@
 # DSA STATUS
-Last updated: 2026-05-21 (Day 15)
-Current: Month 1 | Week 3 | Day 15 (Sliding Window intro + Revision)
+Last updated: 2026-05-22 (Day 16)
+Current: Month 1 | Week 3 | Day 16 (Reinforcement — Sliding Window + 7d Recall)
 Week 2 complete
 
 ---
@@ -15,8 +15,8 @@ Week 2 complete
 | Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
 | Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
-| Running-State Tracking | Stable | upgraded D14 - Kadane + Max Product min/max solved independently and verified | 3 |
-| Sliding Window | Building | All 3 intro problems hint-dependent D15 — needs independent recall before upgrade | 0 |
+| Running-State Tracking | Stable | upgraded D14 — Kadane + Max Product min/max solved independently and verified | 3 |
+| Sliding Window | Building | 6/6 problems hint-dependent D15–D16; 3 LC accepted but 0% independent — needs recall independence before upgrade | 3 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -50,9 +50,12 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Find Highest Altitude | 1732 | Prefix Sum | ✓ | |
 | Maximum Product Subarray | 152 | Running-State Tracking | ✓ | independent D14 min/max recall |
 | Isomorphic Strings | 205 | Grouping Hash Maps | ✓ | independent solve D12 |
-| Maximum Average Subarray I | 643 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
-| Longest Substring Without Repeating | 3 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
-| Minimum Size Subarray Sum | 209 | Sliding Window | pending | hint-needed D15 — submit after independent recall |
+| Maximum Average Subarray I | 643 | Sliding Window | ✓ | hint-needed D15; 24h recall D16 — Accepted |
+| Longest Substring Without Repeating | 3 | Sliding Window | ✓ | hint-needed D15–D16 — Accepted |
+| Minimum Size Subarray Sum | 209 | Sliding Window | ✓ | hint-needed D15–D16 — Accepted |
+| Longest Repeating Char Replacement | 424 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
+| Permutation in String | 567 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
+| Fruits Into Baskets | 904 | Sliding Window | pending | hint-needed D16 — submit after independent recall |
 
 ---
 
@@ -63,24 +66,25 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Maximum Average Subarray I | 643 | May 22 | 24h revision — hint-needed D15 |
-| Longest Substring Without Repeating | 3 | May 22 | 24h revision — hint-needed D15 |
-| Minimum Size Subarray Sum | 209 | May 22 | 24h revision — hint-needed D15 |
-| Two Sum | 1 | May 22 | 7d final recall |
-| Valid Anagram | 242 | May 22 | 7d final recall |
+| Longest Repeating Char Replacement | 424 | May 23 | 24h revision — hint-needed D16 |
+| Permutation in String | 567 | May 23 | 24h revision — hint-needed D16 |
+| Fruits Into Baskets | 904 | May 23 | 24h revision — hint-needed D16 |
 | Group Anagrams | 49 | May 24 | 7d final recall |
 | Find Pivot Index | 724 | May 24 | 7d final recall |
 | Sort Chars by Freq | 451 | May 24 | 7d final recall |
 | Intersection II | 350 | May 24 | 7d final recall |
+| Product of Array Except Self | 238 | May 24 | 7d final recall |
 | First Unique Character | 387 | May 25 | 7d final recall |
 | Best Time Stock | 121 | May 25 | 7d final recall |
 | Running Sum | 1480 | May 25 | 7d final recall |
 | Find Highest Altitude | 1732 | May 25 | 7d final recall |
 | Isomorphic Strings | 205 | May 25 | 7d final recall |
-| Product of Array Except Self | 238 | May 24 | 7d final recall |
 | Maximum Average Subarray I | 643 | May 25 | 3d recall |
 | Longest Substring Without Repeating | 3 | May 25 | 3d recall |
 | Minimum Size Subarray Sum | 209 | May 25 | 3d recall |
+| Longest Repeating Char Replacement | 424 | May 26 | 3d recall |
+| Permutation in String | 567 | May 26 | 3d recall |
+| Fruits Into Baskets | 904 | May 26 | 3d recall |
 | Subarray Sum Equals K | 560 | May 27 | 7d final recall |
 | Valid Palindrome | 125 | May 27 | 7d final recall |
 | Reverse String | 344 | May 27 | 7d final recall |
@@ -89,6 +93,9 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Majority Element | 169 | May 27 | 7d final recall |
 | Maximum Subarray | 53 | May 27 | 7d final recall |
 | Maximum Product Subarray | 152 | May 28 | 7d final recall |
+| Longest Repeating Char Replacement | 424 | May 29 | 7d final recall |
+| Permutation in String | 567 | May 29 | 7d final recall |
+| Fruits Into Baskets | 904 | May 29 | 7d final recall |
 
 ---
 
@@ -119,8 +126,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 19 | Subarray Sum Equals K | 560 | Accepted |
 | May 19 | Maximum Subarray | 53 | Accepted |
 | May 19 | Maximum Product Subarray | 152 | Accepted |
+| May 22 | Maximum Average Subarray I | 643 | Accepted |
+| May 22 | Longest Substring Without Repeating | 3 | Accepted |
+| May 22 | Minimum Size Subarray Sum | 209 | Accepted |
 
-Unique problems LC accepted: 19
+Unique problems LC accepted: 22
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -173,7 +183,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
-| 3 | 3 | 20 | 4 | 75% |
+| 3 | 6 | 25 | 7 | 50% |
 
 ---
 
@@ -195,16 +205,17 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 | Day 13 | May 19 | Reinforcement | Prefix Sum deep dive — Subarray Sum no-hints attempt, Running Sum LC |
 | Day 14 | May 20 | Reinforcement | Running-State Tracking — Kadane's internalization, Max Product optimization |
 | Day 15 | May 21 | New Pattern | Sliding Window intro — 3 problems (all hint-dependent); 5 revision problems all independent |
-| Day 16 | May 22 | Reinforcement | Sliding Window 24h recall + 7d final recall (Two Sum, Valid Anagram) |
-| Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
-| Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot, Product of Array, Intersection II) |
-| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items (heavy day: 8 problems) |
+| Day 16 | May 22 | Reinforcement | Sliding Window depth (424, 567, 904) + 7d final recall (Two Sum, Valid Anagram); 643/3/209 LC Accepted |
+| Day 17 | May 23 | Reinforcement | Sliding Window 24h recall (424, 567, 904) — Binary Search deferred; carry-over Sliding Window not independent yet |
+| Day 18 | May 24 | Reinforcement | 7d recall blitz (Group Anagrams, Find Pivot, Sort Chars, Intersection II, Product of Array) |
+| Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items (heavy day: 8+ problems) |
 
 Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
 
 Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Python\bin\python.exe` outside sandbox after default Python commands failed; all visible test outputs matched expected values.
 Day 14 tracker note (2026-05-20): default `python` / path `python` / `python3` commands failed; verified with `C:\Users\dell\AppData\Local\Python\pythoncore-3.14-64\python.exe`; all visible test outputs matched expected values.
 Day 15 tracker note (2026-05-21): verified in Claude sandbox (python3); all 9 test case outputs matched expected values.
+Day 16 tracker note (2026-05-22): verified in Claude sandbox (python3); all graded test case outputs matched expected values; warm-up variable window had a stale variable bug (non-graded).
 
 ---
 
