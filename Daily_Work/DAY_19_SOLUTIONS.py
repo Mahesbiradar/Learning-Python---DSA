@@ -366,7 +366,7 @@ def binaryserach(nums,target):
                left=mid+1
           else:
                right=mid-1
-     return mid+1
+     return left
 
 
 print(binaryserach([-1,0,3,5,9,12],9))
@@ -445,3 +445,4 @@ print(firstBadVersion(5))
 # LC status:NA
 # mistakes/confusion:NA
 # Pattern:Binary search
+
