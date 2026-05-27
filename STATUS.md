@@ -1,5 +1,5 @@
 # DSA STATUS
-Last updated: 2026-05-23 (Day 17)
+Last updated: 2026-05-25 (Day 18 verified)
 Current: Month 1 | Week 3 | Day 17 (Reinforcement — Sliding Window 24h recall + depth)
 Week 2 complete
 
@@ -16,7 +16,7 @@ Week 2 complete
 | Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent; keep Subarray Sum on recall | 5 |
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
 | Running-State Tracking | Stable | upgraded D14 — Kadane + Max Product min/max solved independently and verified | 3 |
-| Sliding Window | Building | 6 LC accepted; 5/9 independent (~56%) — needs 70%+ independent; upgrade target D19 | 6 |
+| Sliding Window | Building | 9 LC accepted; 8/12 independent (~67%) — needs 70%+ independent; upgrade target deferred | 9 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -56,9 +56,9 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Longest Repeating Char Replacement | 424 | Sliding Window | ✓ | hint D16; quasi-independent D17 (peeked) — Accepted |
 | Permutation in String | 567 | Sliding Window | ✓ | hint D16; independent D17 — Accepted |
 | Fruits Into Baskets | 904 | Sliding Window | ✓ | hint D16; independent D17 — Accepted |
-| Max Consecutive Ones III | 1004 | Sliding Window | pending | independent D17 — ready to submit |
-| Find All Anagrams in a String | 438 | Sliding Window | pending | hint-needed D17 — submit after independent recall |
-| Contains Duplicate II | 219 | Sliding Window | pending | independent D17 — ready to submit |
+| Max Consecutive Ones III | 1004 | Sliding Window | ✓ | independent D17 recall; LC Accepted May 24 |
+| Find All Anagrams in a String | 438 | Sliding Window | ✓ | hint-needed D17; independent D18 recall; LC Accepted May 24 |
+| Contains Duplicate II | 219 | Sliding Window | ✓ | independent D17; LC Accepted May 24 |
 
 ---
 
@@ -141,8 +141,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 23 | Longest Repeating Char Replacement | 424 | Accepted |
 | May 23 | Permutation in String | 567 | Accepted |
 | May 23 | Fruits Into Baskets | 904 | Accepted |
+| May 24 | Max Consecutive Ones III | 1004 | Accepted |
+| May 24 | Find All Anagrams in a String | 438 | Accepted |
+| May 24 | Contains Duplicate II | 219 | Accepted |
 
-Unique problems LC accepted: 25
+Unique problems LC accepted: 28
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -195,7 +198,7 @@ Carry-over problems from Week 2: Subarray Sum Equals K, Maximum Subarray, Maximu
 |------|-------------|-----------|-------------|--------------|
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
-| 3 | 9 | 30 | 10 | 60% |
+| 3 | 9 | 38 | 13 | 67% |
 
 ---
 
@@ -237,3 +240,5 @@ Day 17 tracker note (2026-05-23): verified in Claude sandbox (python3); all grad
 Contains Duplicate, Reverse String (in-place), Move Zeroes,
 Majority Element (dict version), Intersection of Two Arrays (unique),
 Print/Sum/Count/Max/Min basics, Check Sorted Array
+
+Day 18 tracker note (2026-05-25): verified in sandbox (python); all 8 graded test case outputs matched expected values; 1004/438/219 promoted to LC Accepted.
