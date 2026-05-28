@@ -339,7 +339,39 @@ Constraints:
 
 """
 
+def smallest_letter(letters,target):
+     
+     left=0
+     right=len(letters)-1
+     best=None
 
+     while left<=right:
+          
+          mid=(right+left)//2
+
+          if letters[mid]>target:
+               best=letters[mid]
+               right=mid-1
+          else:
+               left=mid+1
+     if best==None:
+          return letters[0]
+     else:
+          return best
+
+print(smallest_letter(["c","f","j"],'a'))
+print(smallest_letter(["c","f","j"],'c'))
+print(smallest_letter(["x","x","y","y"],'z'))
+
+
+# Status:solved with hints
+# Time complexity:O(log n)
+# Space complexity:O(1)
+# LC status:NA
+# mistakes/confusion:NA
+# Pattern:binary search
+      
+               
 
          
     
