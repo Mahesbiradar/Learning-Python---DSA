@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-05-25 (Week 3 review complete)
-Current: Month 1 | Week 3 | Day 19 (Binary Search intro + 3d/7d recall blitz)
-Week 3 complete
+Last updated: 2026-05-26 (Day 20 complete)
+Current: Month 1 | Week 4 | Day 20 (Binary Search 24h recall + overdue blitz)
+Week 4 in progress
 
 ---
 
@@ -17,7 +17,7 @@ Week 3 complete
 | Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
 | Running-State Tracking | Stable | upgraded D14 — Kadane + Max Product min/max solved independently and verified | 3 |
 | Sliding Window | Building | 9 LC accepted; 8/12 independent (~67%) — needs 70%+ independent; **FLAGGED: Shaky 6+ consecutive days** | 9 |
-| Binary Search | Building | First Bad Version hint-needed D19; 0 LC accepted | 0 |
+| Binary Search | Building | 3 LC accepted; 4/6 independent (~67%) — needs 70%+; lower-bound template still shaky on new problems | 3 |
 
 Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
 LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
@@ -60,9 +60,12 @@ LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
 | Max Consecutive Ones III | 1004 | Sliding Window | ✓ | independent D17 recall; LC Accepted May 24 |
 | Find All Anagrams in a String | 438 | Sliding Window | ✓ | hint-needed D17; independent D18 recall; LC Accepted May 24 |
 | Contains Duplicate II | 219 | Sliding Window | ✓ | independent D17; LC Accepted May 24 |
-| Binary Search | 704 | Binary Search | NA | ready to submit |
-| Search Insert Position | 35 | Binary Search | NA | ready to submit |
-| First Bad Version | 278 | Binary Search | NA | hint needed May 25 |
+| Binary Search | 704 | Binary Search | ✓ | independent D19; 24h recall D20 — LC Accepted May 26 |
+| Search Insert Position | 35 | Binary Search | ✓ | independent D19; 24h recall D20 — LC Accepted May 26 |
+| First Bad Version | 278 | Binary Search | ✓ | hint-needed D19; independent D20 recall — LC Accepted May 26 |
+| Sqrt(x) | 69 | Binary Search | NA | hint needed May 26 |
+| Find Smallest Letter Greater Than Target | 744 | Binary Search | NA | hint needed May 26 |
+| Find Peak Element | 162 | Binary Search | NA | hint needed May 26 |
 
 ---
 
@@ -73,19 +76,17 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Product of Array Except Self | 238 | May 24 | 7d final recall — **OVERDUE 1 day** |
-| Group Anagrams | 49 | May 24 | 14d recall — **OVERDUE 1 day** |
-| Find Pivot Index | 724 | May 24 | 14d recall — **OVERDUE 1 day** |
-| Sort Chars by Freq | 451 | May 24 | 14d recall — **OVERDUE 1 day** |
-| Intersection Arrays II | 350 | May 24 | 14d recall — **OVERDUE 1 day** |
-| Find Highest Altitude | 1732 | May 25 | 7d final recall — **DUE TODAY** |
-| Isomorphic Strings | 205 | May 25 | 7d final recall — **DUE TODAY** |
-| Maximum Average Subarray I | 643 | May 25 | 3d recall — **DUE TODAY** |
-| Longest Substring Without Repeating | 3 | May 25 | 3d recall — **DUE TODAY** |
-| Minimum Size Subarray Sum | 209 | May 25 | 3d recall — **DUE TODAY** |
-| Fruits Into Baskets | 904 | May 26 | 3d recall |
-| Subarray Sum Equals K | 560 | May 26 | 7d final recall |
-| Maximum Subarray | 53 | May 26 | 7d final recall |
+| Group Anagrams | 49 | May 26 | 14d recall — **OVERDUE 2 days** |
+| Find Pivot Index | 724 | May 26 | 14d recall — **OVERDUE 2 days** |
+| Sort Chars by Freq | 451 | May 26 | 14d recall — **OVERDUE 2 days** |
+| Intersection Arrays II | 350 | May 26 | 14d recall — **OVERDUE 2 days** |
+| Find Highest Altitude | 1732 | May 26 | 7d final recall — **OVERDUE 1 day** |
+| Isomorphic Strings | 205 | May 26 | 7d final recall — **OVERDUE 1 day** |
+| Longest Substring Without Repeating | 3 | May 26 | 3d recall — **OVERDUE 1 day** |
+| Minimum Size Subarray Sum | 209 | May 26 | 3d recall — **OVERDUE 1 day** |
+| Fruits Into Baskets | 904 | May 26 | 3d recall — **DUE TODAY** |
+| Subarray Sum Equals K | 560 | May 26 | 7d final recall — **DUE TODAY** |
+| Maximum Subarray | 53 | May 26 | 7d final recall — **DUE TODAY** |
 | Valid Palindrome | 125 | May 27 | 14d recall |
 | Reverse String | 344 | May 27 | 14d recall |
 | Is Subsequence | 392 | May 27 | 14d recall |
@@ -95,11 +96,15 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Find All Anagrams in a String | 438 | May 27 | 3d recall |
 | Contains Duplicate II | 219 | May 27 | 3d recall |
 | Maximum Product Subarray | 152 | May 28 | 7d final recall |
-| Binary Search | 704 | May 26 | 24h revision |
-| Search Insert Position | 35 | May 26 | 24h revision |
-| First Bad Version | 278 | May 26 | 24h revision |
+| Maximum Average Subarray I | 643 | May 29 | 7d final recall — 3d recall passed D20 |
+| Binary Search | 704 | May 29 | 3d recall — 24h revision passed D20 |
+| Search Insert Position | 35 | May 29 | 3d recall — 24h revision passed D20 |
+| First Bad Version | 278 | May 29 | 3d recall — 24h revision passed D20 |
 | Longest Repeating Char Replacement | 424 | Jun 1 | 7d final recall |
 | Permutation in String | 567 | Jun 1 | 7d final recall |
+| Sqrt(x) | 69 | May 27 | 24h revision |
+| Find Smallest Letter Greater Than Target | 744 | May 27 | 24h revision |
+| Find Peak Element | 162 | May 27 | 24h revision |
 
 ---
 
@@ -139,8 +144,11 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | May 24 | Max Consecutive Ones III | 1004 | Accepted |
 | May 24 | Find All Anagrams in a String | 438 | Accepted |
 | May 24 | Contains Duplicate II | 219 | Accepted |
+| May 26 | Binary Search | 704 | Accepted |
+| May 26 | Search Insert Position | 35 | Accepted |
+| May 26 | First Bad Version | 278 | Accepted |
 
-Unique problems LC accepted: 28
+Unique problems LC accepted: 31
 Weekly LC slot: 45 min, clear pending problems you feel confident on
 
 ---
@@ -176,7 +184,7 @@ Week 3: May 19-25
 | Day 13 | May 19 | Reinforcement | Prefix Sum deep dive - Subarray Sum no-hints attempt, Running Sum LC candidate |
 | Day 14 | May 20 | Reinforcement | Running-State Tracking - Kadane's internalization, Max Product optimization |
 | Day 15 | May 21 | Conditional New Pattern | Sliding Window intro only if Prefix Sum + Running-State have 2+ recall-stage problems under control |
-| Day 16 | May 22 | Reinforcement | Sliding Window + 7d recall blitz (Two Sum, Valid Anagram) |
+| Day 16 | May 22 | Reinforcement | Sliding Window + 7d final recall (Two Sum, Valid Anagram) |
 | Day 17 | May 23 | Conditional New Pattern | Binary Search intro only if Sliding Window is not crowding carry-over work |
 | Day 18 | May 24 | Reinforcement | Binary Search + 7d recall (Group Anagrams, Find Pivot) |
 | Day 19 | May 25 | Retrieval | 3d/7d recall blitz — all May 25 due items |
@@ -228,6 +236,47 @@ Carry-over problems from Week 3: First Bad Version (278), 5 overdue revision ite
 
 ---
 
+## Week 4 Review
+
+### Week Summary
+
+- Total new problems solved: 3
+- Total revisions done: 5
+- LC accepted this week (unique): 3
+- Average independent solve rate: 63%
+- Families that reached Stable: None
+- Families still Shaky: Sliding Window (Building), Binary Search (Building, 67% independent)
+- Biggest pattern gap: Binary Search lower-bound template (left < right) still shaky — 3/3 new problems needed hints
+- Overall verdict: On Track
+
+### LC Pending Review
+
+| Problem | LC# | Family | Readiness |
+|---------|-----|--------|-----------|
+| Sqrt(x) | 69 | Binary Search | Needs more work: hint-dependent May 26 |
+| Find Smallest Letter Greater Than Target | 744 | Binary Search | Needs more work: hint-dependent May 26 |
+| Find Peak Element | 162 | Binary Search | Needs more work: hint-dependent May 26 |
+
+### Next Week Plan
+
+Week 5: June 2 - June 8
+
+| Day | Date | Type | Focus |
+|-----|------|------|-------|
+| Day 27 | Jun 2 | Reinforcement | Binary Search 24h recall (69, 744, 162) + overdue clear |
+| Day 28 | Jun 3 | Reinforcement | Sliding Window 7d final recall (424, 567, 904) + Binary Search depth |
+| Day 29 | Jun 4 | Reinforcement | Sliding Window 7d final recall (1004, 438, 219) + overdue clear |
+| Day 30 | Jun 5 | Recovery | Week 5 review + Week 6 plan |
+| Day 31 | Jun 6 | Conditional New Pattern | Linked List intro only if Binary Search reaches Stable |
+| Day 32 | Jun 7 | Reinforcement | Linked List or Binary Search depth + recall |
+| Day 33 | Jun 8 | Reinforcement | Recall blitz + family consolidation |
+
+New patterns to introduce: Linked List only if Binary Search reaches Stable and all backlog cleared.
+
+Carry-over problems from Week 4: 8 overdue revision items (49, 724, 451, 350, 1732, 205, 3, 209), 3 Binary Search new problems (69, 744, 162).
+
+---
+
 ## Weekly Scores
 
 | Week | New Problems | Revisions | LC Accepted | Independent% |
@@ -235,6 +284,7 @@ Carry-over problems from Week 3: First Bad Version (278), 5 overdue revision ite
 | 1 | 29 | 14 | 0 | 67% |
 | 2 | 17 | 28 | 15 | 73% |
 | 3 | 12 | 43 | 13 | 67% |
+| 4 | 3 | 5 | 3 | 63% |
 
 ---
 
@@ -261,7 +311,7 @@ Carry-over problems from Week 3: First Bad Version (278), 5 overdue revision ite
 | Day 18 | May 24 | Reinforcement | 7d recall blitz (Group Anagrams, Find Pivot, Sort Chars, Intersection II, Product of Array) + Sliding Window 24h (1004, 438, 219) |
 | Day 19 | May 25 | New Pattern + Retrieval | Binary Search intro (704, 35, 278) + 3d/7d recall blitz — 387/121/1480/424/567 |
 
-Carry-over from Week 2: Subarray Sum, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
+Carry-over from Week 2: Subarray Sum Equals K, Maximum Subarray, Max Product Subarray (all accepted D13 but hint-dependent), Sort Chars by Freq + Intersection II (recall due)
 
 ---
 
@@ -297,3 +347,4 @@ Day 16 tracker note (2026-05-22): verified in Claude sandbox (python3); all grad
 Day 17 tracker note (2026-05-23): verified in Claude sandbox (python3); all graded test case outputs matched expected values; debug prints in checkInclusion (567) are non-graded noise — final True/False correct.
 Day 18 tracker note (2026-05-24): verified in sandbox (python); all 8 graded test case outputs matched expected values; 1004/438/219 promoted to LC Accepted.
 Day 19 tracker note (2026-05-25): verified in sandbox (python3); all 24 test case outputs matched expected values; 704/35 ready to submit; 278 hint-needed (lower-bound template not internalized); 387/121/1480 final recall passed → Mastered.
+Day 20 tracker note (2026-05-26): verified in sandbox (python3); all 14 graded test case outputs matched expected values; 704/35/278 promoted to LC Accepted; 69/744/162 hint-needed (lower-bound template not internalized on new variants); 8 overdue items remain unaddressed.
