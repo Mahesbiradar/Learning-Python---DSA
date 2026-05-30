@@ -380,7 +380,44 @@ Constraints:
 
 """
 
+pick=101
 
+def guess(num):
+     
+     if num>pick:
+          return -1
+     elif num<pick:
+          return 1
+     else:
+          return 0
+
+def guessnumber(n):
+     
+     left=1
+     right=n
+
+     while left<=right:
+          
+          mid=(right+left)//2
+          print(mid,"mid")
+
+          if guess(mid)==-1:
+               right=mid-1
+          elif guess(mid)==0:
+               return mid
+          elif guess(mid)==1:
+               left=mid+1
+
+
+print(guessnumber(1000))
+
+
+# Status:Solved with hints.
+# Time complexity:O(log n)
+# Space complexity:O(1)
+# LC status:NA
+# mistakes/confusion:Na
+# Pattern:binary search.
 
 
 
