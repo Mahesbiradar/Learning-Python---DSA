@@ -613,6 +613,26 @@ Goal: Frequency map + heap/sort to get top k. Reproduce independently.
 
 """
 
+def topkelements(nums,k):
+     
+     seen={}
+
+     for i in nums:
+          seen[i]=seen.get(i,0)+1
+    
+     sorted_seen=sorted(seen.items(),key=lambda x:x[1],reverse=True)
+
+     result=[]
+
+     for key,values in sorted_seen:
+          result.append(key)
+
+          if len(result)==k:
+               return result
+
+print(topkelements([1,1,1,2,2,3,4,],2))
+          
+
 
 
         
