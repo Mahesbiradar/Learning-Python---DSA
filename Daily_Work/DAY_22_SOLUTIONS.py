@@ -631,16 +631,155 @@ def topkelements(nums,k):
                return result
 
 print(topkelements([1,1,1,2,2,3,4,],2))
+
+
+# Status:solved independent
+# Time complexity:O(n+m log m)
+# Space complexity:O(n)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:Frequency Hashing
+
+
+"""
+### Majority Element (LC 169)
+Pattern: Frequency Hashing
+Due: 14d recall — May 28
+Constraint: n == nums.length; 1 <= n <= 5 * 10^4; -10^9 <= nums[i] <= 10^9
+Goal: Boyer-Moore voting or hash map. Majority appears > n/2 times. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+"""
+
+def majorityElement(nums):
+
+        seen={}
+        count=0
+        major=None
+
+        for i in nums:
+            seen[i]=seen.get(i,0)+1
+        
+        for key,value in seen.items():
+
+            if value>count:
+                count=value
+                major=key
+        return major
+
+print(majorityElement([3,2,3]))
+print(majorityElement([2,2,1,1,1,2,2]))
           
 
-
+# Status:solved independent
+# Time complexity:O(n)
+# Space complexity:O(n)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:Frequency Hashing
 
         
+"""
+### Max Consecutive Ones III (LC 1004)
+Pattern: Sliding Window
+Due: 3d recall — May 28
+Constraint: 1 <= nums.length <= 10^5; nums[i] is either 0 or 1; 0 <= k <= nums.length
+Goal: Variable window — at most k zeros flipped. Track max window length. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
 
+"""
 
+def longestOnes(nums,k):
+     
+    count_ones=0
+    best=0
+    left=0
 
+    for right in range(len(nums)):
+          
+        if nums[right]==1:
+            count_ones+=1
+        
+        while (right-left+1)-count_ones>k:
+             
+            if nums[left]==1:
+                count_ones-=1
+            
+            left+=1
+            
 
+        best=max(best,right-left+1)
+        print("best :-",best,"right :-",right)
+    
+    return best
 
+print("longestOnes")
+
+print(longestOnes([1,1,1,0,0,0,1,1,1,1,0],2))
+print(longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1],3))
+
+# Status:solved independent
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:sliding window.
+
+"""
+### Find All Anagrams in a String (LC 438)
+Pattern: Sliding Window
+Due: 3d recall — May 28
+Constraint: 1 <= s.length, p.length <= 3 * 10^4; s and p consist of lowercase English letters
+Goal: Fixed window of len(p). Hash map frequency match for anagram. Slide and update counts. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+"""
+
+def findAnagrams(s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        seen_p={}
+
+        for i in p:
+            seen_p[i]=seen_p.get(i,0)+1
+        
+        result=[]
+        left=0
+        seen={}
+
+        for right in range(len(s)):
+
+            seen[s[right]]=seen.get(s[right],0)+1
+
+            while right-left+1>len(p):
+                seen[s[left]]-=1
+
+                if seen[s[left]]==0:
+                    del seen[s[left]]
+                left+=1
+            
+            if seen_p==seen:
+                result.append(left)
+        return result 
+
+print(findAnagrams(s = "cbaebabacd", p = "abc"))
+print(findAnagrams(s = "abab", p = "ab"))
+
+# Status:solved independent
+# Time complexity:O(n)
+# Space complexity:O(n)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:sliding window.
 
 
 
