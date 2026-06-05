@@ -781,7 +781,42 @@ print(findAnagrams(s = "abab", p = "ab"))
 # mistakes/confusion:
 # Pattern:sliding window.
 
+"""
+### Contains Duplicate II (LC 219)
+Pattern: Sliding Window
+Due: 3d recall — May 28
+Constraint: 1 <= nums.length <= 10^5; -10^9 <= nums[i] <= 10^9; 0 <= k <= 10^5
+Goal: Hash set of last k elements. Check if current element exists in set. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
 
+
+"""
+
+def containsNearbyDuplicate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        seen=set()
+        left=0
+
+        for right in range(len(nums)):
+
+            if nums[right] in seen:
+                return True
+            seen.add(nums[right])
+            
+            if right-left+1>k:
+
+                seen.remove(nums[left])
+                left+=1
+
+   
+            
+        return False
 
         
 
