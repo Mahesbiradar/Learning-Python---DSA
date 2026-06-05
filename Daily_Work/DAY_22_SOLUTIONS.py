@@ -820,3 +820,17 @@ def containsNearbyDuplicate(self, nums, k):
 
         
 
+
+
+
+"""
+### Maximum Product Subarray (LC 152)
+Pattern: Running-State Tracking
+Due: 7d final recall — May 28
+Constraint: 1 <= nums.length <= 2 * 10^4; -10 <= nums[i] <= 10
+Goal: Track both max and min ending at each position (negative flips). Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+"""
