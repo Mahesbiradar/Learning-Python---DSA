@@ -818,9 +818,13 @@ def containsNearbyDuplicate(self, nums, k):
             
         return False
 
-        
 
-
+# Status:solved independent
+# Time complexity:O(n)
+# Space complexity:O(n)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:sliding window.
 
 
 """
@@ -833,4 +837,118 @@ Goal: Track both max and min ending at each position (negative flips). Reproduce
 [ ] Needed hint (note what)
 [ ] Submitted to LC — Result: ___
 
+
 """
+
+#Not SoLVED.
+
+"""
+### Valid Perfect Square (LC 367)
+Pattern: Binary Search
+Due: 24h revision — May 28
+Constraint: 1 <= num <= 2^31 - 1
+Goal: Binary search — mid*mid == num. Use `left <= right` loop. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+"""
+
+def isPerfectSquare(num):
+     
+    left=0
+    right=num
+    counter=0
+
+    while left<=right:
+         
+        mid=(left+right)//2
+
+        ans=mid*mid
+        counter+=1
+        print(counter)
+        print(ans)
+
+        if ans==num:
+            return True
+        elif ans>num:
+            right=mid-1
+        else:
+            left=mid+1
+    return False
+
+print("isPerfectSquare")
+
+print(isPerfectSquare(16))
+print(isPerfectSquare(14))
+
+# Status:solved with hints.
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:Binary Search.
+
+
+"""
+### Arranging Coins (LC 441)
+Pattern: Binary Search
+Due: 24h revision — May 28
+Constraint: 1 <= n <= 2^31 - 1
+Goal: Binary search on k — sum of 1..k = k(k+1)/2 <= n. Find max k. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+"""
+
+def arrangeCoins(n):
+     
+    left=0
+    right=n
+    best=0
+
+    while left<=right:
+         
+        mid=(left+right)//2
+
+        c=mid*(mid+1)//2
+
+        if c==n:
+            return mid
+        elif c>n:
+            right=mid-1
+        else:
+            best=mid
+            left=mid+1
+    return best
+
+print("arrangeCoins")
+
+print(arrangeCoins(5))
+print(arrangeCoins(8))
+print(arrangeCoins(1))
+print(arrangeCoins(1804289383))
+
+# Status:solved with hints.
+# Time complexity:O(n)
+# Space complexity:O(1)
+# LC status:Accepted
+# mistakes/confusion:
+# Pattern:Binary Search.
+
+
+"""
+### Guess Number Higher or Lower (LC 374)
+Pattern: Binary Search
+Due: 24h revision — May 28
+Constraint: 1 <= n <= 2^31 - 1; 1 <= pick <= n
+Goal: Standard binary search using guess() API. `left <= right`, adjust based on -1/1/0. Reproduce independently.
+[ ] Solved independently
+[ ] Needed hint (note what)
+[ ] Submitted to LC — Result: ___
+
+
+"""
+
+#Not Solved.
