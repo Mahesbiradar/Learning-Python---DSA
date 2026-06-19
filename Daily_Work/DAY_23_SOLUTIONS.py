@@ -300,25 +300,173 @@ print(uniqueOccurrences([1,2]))
 
 
 
-## New Problem
+# Revision Problems — Frequency Sorting
 
-### Unique Number of Occurrences (LC 1207)
 """
-Pattern: Frequency Hashing
+#  Top K Frequent Elements (LC 347)
 
-Edge Case 1:
-arr = [1,2]
-Expected: False
+Pattern: Frequency Sorting
 
-Edge Case 2:
-arr = [-3,0,1,-3,1,1,1,-3,10,0]
-Expected: True
+[ ] Solved independently
+[ ] Needed hint
+[ ] Submitted to LC
+
+---
+"""
+
+def topKFrequent(nums,k):
+     
+     seen={}
+
+     for i in nums:
+          seen[i]=seen.get(i,0)+1
+     
+     sorted_seen=sorted(seen.items(),key=lambda x:x[1],reverse=True)
+
+     result=[]
+
+     for key,value in sorted_seen:
+        
+        result.append(key)
+
+        if len(result)==k:
+             return result
+    
+
+          
+
+print(topKFrequent([1,2,1,2,1,2,3,1,3,2],2))
+print(topKFrequent([1],1))
+print(topKFrequent([1,2,1,2,1,2,3,1,3,2],2))
+
+# Status: Independent 
+
+# Time complexity: O(n+mlogm)
+
+# Space complexity: O(n)
+
+# LC status: Accepted
+
+# mistakes/confusion:No
+
+# Pattern: Frequncy sorting 
+
+"""
+### Sort Characters By Frequency (LC 451)
+
+Pattern: Frequency Sorting
 
 [ ] Solved independently
 [ ] Needed hint
 [ ] Submitted to LC
 
 """
+
+def frequencySort(s):
+     
+     seen={}
+
+     for i in s:
+          seen[i]=seen.get(i,0)+1
+        
+     sorted_seen=sorted(seen.items(),key=lambda x:x[1],reverse=True)
+
+     output_str=""
+
+
+     for key ,value in sorted_seen:
+          
+          output_str+=key*value
+     
+     return output_str
+
+print(frequencySort("Aabb"))
+print(frequencySort("tree"))
+print(frequencySort("cccaaa"))
+
+
+# Status: Independent 
+
+# Time complexity: O(n+mlogm)
+
+# Space complexity: O(n)
+
+# LC status: Accepted
+
+# mistakes/confusion:No
+
+# Pattern: Frequncy sorting 
+
+## New Problem
+
+""" Top K Frequent Words (LC 692)
+
+Pattern: Frequency Sorting
+
+Edge Case 1:
+words = ["i","love","leetcode","i","love","coding"]
+k = 2
+
+Expected:
+["i","love"]
+
+Edge Case 2:
+words = ["aaa","aa","a"]
+k = 1
+
+Expected:
+["a"]
+
+[ ] Solved independently
+[ ] Needed hint
+[ ] Submitted to LC
+
+"""
+
+def topKFrequent(words, k):
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[str]
+        """
+        seen={}
+
+        for i in words:
+            seen[i]=seen.get(i,0)+1
+        
+        sorted_seen=sorted(seen.items(),key=lambda x:(-x[1],x[0]))
+
+        result=[]
+
+
+        for key,value in sorted_seen:
+            result.append(key)
+
+            if len(result)==k:
+                return result
+
+print(topKFrequent(["i","love","leetcode","i","love","coding"],2))
+print(topKFrequent(["aaa","aa","a"],1))
+
+
+# Status: solved with Hints
+
+# Time complexity: O(n+mlogm)
+
+# Space complexity: O(n)
+
+# LC status: Accepted
+
+# mistakes/confusion:No
+
+# Pattern: Frequncy sorting 
+
+
+
+     
+     
+
+
 
 
 
