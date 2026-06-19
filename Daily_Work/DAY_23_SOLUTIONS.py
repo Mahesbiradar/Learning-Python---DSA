@@ -461,6 +461,22 @@ print(topKFrequent(["aaa","aa","a"],1))
 
 # Pattern: Frequncy sorting 
 
+"""
+# Revision Problems — Complement Lookup
+
+### Two Sum (LC 1)
+
+Pattern: Complement Lookup
+
+[ ] Solved independently
+[ ] Needed hint
+[ ] Submitted to LC
+
+
+"""
+
+
+
 
 
      
