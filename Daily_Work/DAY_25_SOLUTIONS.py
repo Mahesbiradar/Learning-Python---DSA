@@ -580,4 +580,425 @@ print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))  # 6
 print(maxSubArray([1]))                       # 1
 print(maxSubArray([-3,-2,-5]))                # -2
 
+"""
+### 11. Longest Substring Without Repeating Characters — LC 3
+
+**Pattern:** Variable-Size Sliding Window + Set
+
+Tests:
+
+```python
+"abcabcbb"                  # 3
+"bbbbb"                     # 1
+"pwwkew"                    # 3
+"baca"                      # 3
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def longsubstring(s):
+
+    left=0
+    seen=set()
+    best=0
+
+    for i in range(len(s)):
+
+        while s[i] in seen:
+            seen.remove(s[left])
+            left+=1
+        seen.add(s[i])
+
+        best=max(best,i-left+1)
+    return best    
+
+print(longsubstring("abcabcbb"))
+print(longsubstring("bbbbb"))
+print(longsubstring("pwwkew"))
+print(longsubstring("baca"))
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 12. Minimum Size Subarray Sum — LC 209
+
+**Pattern:** Variable-Size Sliding Window
+**Subarray problem — mandatory.**
+
+Mental trigger:
+
+```text
+Expand until sum >= target.
+While valid, update answer and shrink.
+```
+
+Tests:
+
+```python
+7, [2,3,1,2,4,3]            # 2
+4, [1,4,4]                  # 1
+11, [1,1,1,1,1]             # 0
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def minSubArrayLen(target, nums):
+        """
+        :type target: int
+        :type nums: List[int]
+        :rtype: int
+        """
+        left=0
+        minarray=float('inf')
+        prefix=0
+
+        for right in range(len(nums)):
+
+            prefix+=nums[right]
+
+            while prefix>=target:
+                minarray=min(minarray,right-left+1)
+                prefix-=nums[left]
+                left+=1
+        if minarray==float('inf'):
+            return 0
+        else:
+            return minarray
+
+#Status : Independent
+#LC: Accepted
+
+
+"""
+### 13. Longest Repeating Character Replacement — LC 424
+
+**Pattern:** Sliding Window + Frequency Map
+**Priority:** Previously hint-needed.
+
+Mental trigger:
+
+```text
+window_length - max_frequency <= k
+```
+
+Tests:
+
+```python
+"ABAB", 2                   # 4
+"AABABBA", 1                # 4
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def characterReplacement(s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        seen={}
+        max_freq=0
+        left=0
+        best=0
+
+        for right in range(len(s)):
+
+            seen[s[right]]=seen.get(s[right],0)+1
+
+            max_freq=max(seen.values())
+
+            while (right-left+1)-max_freq > k:
+
+                seen[s[left]]-=1
+                left+=1
+            best=max(best,right-left+1)
+        return best
+
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 14. Permutation in String — LC 567
+
+**Pattern:** Fixed-Size Sliding Window + Frequency Map
+
+Tests:
+
+```python
+"ab", "eidbaooo"            # True
+"ab", "eidboaoo"            # False
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def checkInclusion(s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: bool
+        """
+        seen_s1={}
+        for i in s1:
+            seen_s1[i]=seen_s1.get(i,0)+1
+        
+        left=0
+        seen2={}
+
+        for right in range(len(s2)):
+
+            seen2[s2[right]]=seen2.get(s2[right],0)+1
+
+            while right-left+1 > len(s1):
+                seen2[s2[left]]-=1
+                if seen2[s2[left]]==0:
+                    del seen2[s2[left]]
+                left+=1
+            if seen_s1==seen2:
+                return True
+        return False
+
+#Status : Independent
+#LC: Accepted
+
+
+"""
+### 15. Find All Anagrams in a String — LC 438
+
+**Pattern:** Fixed-Size Sliding Window + Frequency Map
+
+Tests:
+
+```python
+"cbaebabacd", "abc"         # [0,6]
+"abab", "ab"                # [0,1,2]
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def findAnagrams(s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        seen1={}
+        for i in p:
+            seen1[i]=seen1.get(i,0)+1
+        
+        seen2={}
+        out=[]
+        left=0
+
+        for right in range(len(s)):
+
+            seen2[s[right]]=seen2.get(s[right],0)+1
+
+            while right-left+1 > len(p):
+                seen2[s[left]]-=1
+
+                if seen2[s[left]]==0:
+                    del seen2[s[left]]
+                left+=1
+            
+            if seen1==seen2:
+                out.append(left)
+        return out
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 16. Fruits Into Baskets — LC 904
+
+**Pattern:** Variable-Size Sliding Window + Frequency Map
+**Subarray problem — mandatory.**
+
+Tests:
+
+```python
+[1,2,1]                     # 3
+[0,1,2,2]                   # 3
+[1,2,3,2,2]                 # 4
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def totalFruit(fruits):
+        """
+        :type fruits: List[int]
+        :rtype: int
+        """
+        seen={}
+        left=0
+        fruit=0
+
+        for right in range(len(fruits)):
+
+            seen[fruits[right]]=seen.get(fruits[right],0)+1
+
+            while len(seen)>2:
+                seen[fruits[left]]-=1
+
+                if seen[fruits[left]]==0:
+                    del seen[fruits[left]]
+                left+=1
+
+            fruit=max(fruit,right-left+1)
+            
+        return fruit
+
+#Status : Independent
+#LC: Accepted
+
+"""
+
+### 17. Max Consecutive Ones III — LC 1004
+
+**Pattern:** Variable-Size Sliding Window
+**Subarray problem — mandatory.**
+
+Tests:
+
+```python
+[1,1,1,0,0,0,1,1,1,1,0], 2     # 6
+[0,0,1,1,1,0,0], 0             # 3
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def longestOnes(nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        left=0
+        best=0
+        zeros=0
+
+
+        for right in range(len(nums)):
+
+            if nums[right]==0:
+                zeros+=1
+
+            while zeros>k:
+
+                if nums[left]==0:
+                    zeros-=1
+                left+=1
+            
+            best=max(best,right-left+1)
+        return best
+
+#Status : solved by seen old solution
+#LC: Accepted
+
+"""
+### 18. Contains Duplicate II — LC 219
+
+**Pattern:** Sliding Window + Set
+**Important order:** Check → add → shrink.
+
+Tests:
+
+```python
+[1,2,3,1], 3                # True
+[1,0,1,1], 1                # True
+[1,2,3,1,2,3], 2            # False
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def containsNearbyDuplicate(nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        left=0
+        seen=set()
+
+        for right in range(len(nums)):
+
+            if nums[right] in seen:
+                return True
+            else:
+                seen.add(nums[right])
+            
+            while right-left+1>k:
+                seen.remove(nums[left])
+                left+=1
+        return False
+
+
+#Status : Independent
+#LC: Accepted
+
+
+
+"""
+## Session 3 — Hash Maps, Sorting, Two Pointers, Strings
+
+### 19. Top K Frequent Words — LC 692
+
+**Pattern:** Frequency Sorting
+**Priority:** Previously hint-needed.
+
+Required sort order:
+
+```text
+frequency descending
+word ascending
+```
+
+Tests:
+
+```python
+["i","love","leetcode","i","love","coding"], 2
+# ["i","love"]
+
+["aaa","aa","a"], 1
+# ["a"]
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
 
