@@ -1,119 +1,278 @@
 # DSA STATUS
-Last updated: 2026-06-20 (Day 23 — Restart Day 1 after 3-week gap)
-Current: Month 2 | Week 1 | Day 23 (Stable Family Recall + Stress Testing)
-Restart Phase: 3-day revision blitz before new topics
+Last updated: 2026-06-24 (Day 25 — System Restructure)
+Current: Month 2 | Week 6 | Gap-Fill Phase
+Next focus: Two Pointers (maximize variant) → Prefix Sum Modulo → Binary Search Applied
+Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
 
-## Pattern Family Stability
+## SYSTEM RULES (agent must read before generating any plan)
 
-| Family | Level | Primary Blocker | LC Accepted |
-|--------|-------|-----------------|-------------|
-| Frequency Hashing | Stable | — | 5 |
-| Grouping Hash Maps | Stable | ✓ upgraded Week 3 — 7d recall passed | 2 |
-| Frequency Sorting | Stable | ✓ upgraded D10 — 2 LC accepted + independent | 2 |
-| Complement Lookup | Stable | ✓ Two Sum independent + LC | 2 |
-| Prefix Sum | Stable | ✓ upgraded D13 — 5 LC accepted + 70%+ independent | 5 |
-| Two Pointers | Stable | ✓ upgraded D10 — 3 LC accepted + independent | 3 |
-| Running-State Tracking | Stable | upgraded D14 — Kadane + Max Product min/max solved independently and verified | 3 |
-| Sliding Window | Stable | upgraded D22 — 11/15 independent (73%), 9 LC accepted | 9 |
-| Binary Search | Building | 6 LC accepted; 6/10 independent (~60%) — needs 70%+; lower-bound template still shaky (744, 441, 374 hint-needed) | 6 |
+Daily target: 10-12 problems total (new + revision combined)
+Weekly assessment: Every Friday — 4 unseen problems, no hints, 30 min each
+Problem total target: 200-250 solved | LC accepted target: 115-120
 
-Upgrade rule: 70%+ independent solve rate + 2 LC accepted in family → Stable
-LC batch session: when a family reaches Stable, do one LC session for remaining pending in that family
+Tier definitions:
+  TIER 1 (SHAKY): hint-needed OR wrong approach OR >40 min OR failed → revisit next day
+  TIER 2 (BUILDING): independent but >25 min OR first time solving variant → revisit in 3 days
+  TIER 3 (STABLE): independent + <25 min + LC accepted → revisit in 7 days
+  TIER 4 (MASTERED): stable + 14-day recall passed + <10 min → revisit in 30 days (template only)
 
----
+Tier movement:
+  Independent + fast → move UP one tier
+  Hint needed or failed → drop to TIER 1 (restart clock)
+  New unseen problem → start at TIER 2
+  TIER 4 fails 30-day recall → drop to TIER 2
 
-## Problem Tracker
+Pattern stability upgrade rule: 70%+ independent on variant + 5 LC accepted in family → Stable
+Pattern assessment trigger: all variants of a DS complete → Friday assessment with 4 unseen problems
 
-LC Status: ✓ = accepted | pending = not submitted yet | skipped = won't submit
+Daily revision slots:
+  TIER 1: all due today (priority, no cap)
+  TIER 2: 3 problems
+  TIER 3: 2 problems
+  TIER 4: 2 template recalls (write template from memory, no full solve)
+  New problems: 3-4
 
-| Problem | LC# | Family | LC Status | Notes |
-|---------|-----|--------|-----------|-------|
-| Contains Duplicate | 217 | Freq Hashing | ✓ | independent D23 recall — passed |
-| Two Sum | 1 | Complement Lookup | ✓ | hint-needed D23 (initial mapping error), then corrected — passed |
-| Valid Anagram | 242 | Freq Hashing | ✓ | independent D23 recall — passed |
-| First Unique Character | 387 | Freq Hashing | ✓ | independent D23 recall — passed |
-| Valid Palindrome | 125 | Two Pointers | ✓ | independent D22 recall; 14d recall passed |
-| Reverse String | 344 | Two Pointers | ✓ | independent D22 recall; 14d recall passed |
-| Is Subsequence | 392 | Two Pointers | ✓ | independent D22 recall; 14d recall passed |
-| Running Sum | 1480 | Prefix Sum | ✓ | independent D23 recall — passed |
-| Find Pivot Index | 724 | Prefix Sum | ✓ | independent D23 recall — passed |
-| Best Time Stock | 121 | Running State | ✓ | independent D14 recall |
-| Group Anagrams | 49 | Grouping Hash Maps | ✓ | independent D21 recall; 14d recall passed |
-| Top K Frequent | 347 | Freq Sorting | ✓ | independent D23 recall — passed |
-| Sort Chars by Freq | 451 | Freq Sorting | ✓ | independent D23 recall — passed |
-| Intersection Arrays II | 350 | Freq Hashing | ✓ | independent D23 recall — passed |
-| Majority Element | 169 | Freq Hashing | ✓ | independent D23 recall — passed |
-| Product of Array Except Self | 238 | Prefix Sum | ✓ | independent D23 recall — passed |
-| Subarray Sum Equals K | 560 | Prefix Sum | ✓ | hint-needed D22 recall; 7d final recall passed — FLAGGED shaky |
-| Maximum Subarray | 53 | Running-State Tracking | ✓ | independent D22 recall; 7d final recall passed |
-| Find Highest Altitude | 1732 | Prefix Sum | ✓ | independent D23 recall — passed |
-| Maximum Product Subarray | 152 | Running-State Tracking | ✓ | independent D22 recall; 7d final recall passed |
-| Isomorphic Strings | 205 | Grouping Hash Maps | ✓ | hint-needed D22 recall (peeked old solution); 7d final recall passed |
-| Maximum Average Subarray I | 643 | Sliding Window | ✓ | hint-needed D15; 24h recall D16 — Accepted |
-| Longest Substring Without Repeating | 3 | Sliding Window | ✓ | independent D22 recall; 3d recall passed |
-| Minimum Size Subarray Sum | 209 | Sliding Window | ✓ | independent D22 recall; 3d recall passed |
-| Longest Repeating Char Replacement | 424 | Sliding Window | ✓ | hint D16; quasi-independent D17 (peeked) — Accepted |
-| Permutation in String | 567 | Sliding Window | ✓ | hint D16; independent D17 — Accepted |
-| Fruits Into Baskets | 904 | Sliding Window | ✓ | independent D22 recall; 3d recall passed |
-| Max Consecutive Ones III | 1004 | Sliding Window | ✓ | independent D22 recall; 3d recall passed |
-| Find All Anagrams in a String | 438 | Sliding Window | ✓ | independent D22 recall; 3d recall passed |
-| Contains Duplicate II | 219 | Sliding Window | ✓ | independent D23 recall — passed |
-| Binary Search | 704 | Binary Search | ✓ | independent D19; 24h recall D20 — LC Accepted May 26 |
-| Search Insert Position | 35 | Binary Search | ✓ | independent D19; 24h recall D20 — LC Accepted May 26 |
-| First Bad Version | 278 | Binary Search | ✓ | hint-needed D19; independent D20 recall — LC Accepted May 26 |
-| Sqrt(x) | 69 | Binary Search | ✓ | independent D20; 24h recall D21 — LC Accepted May 27 |
-| Find Smallest Letter Greater Than Target | 744 | Binary Search | ✓ | hint-needed D20; 24h recall D21 still hint-needed — LC Accepted May 27 |
-| Find Peak Element | 162 | Binary Search | ✓ | hint-needed D20; 24h recall D21 still hint-needed — LC Accepted May 27 |
-| Valid Perfect Square | 367 | Binary Search | ✓ | hint-needed D22; LC Accepted May 28 |
-| Arranging Coins | 441 | Binary Search | ✓ | hint-needed D22; LC Accepted May 28 |
-| Guess Number Higher or Lower | 374 | Binary Search | NA | Failed D22 — not solved; retry pending |
-| Unique Number of Occurrences | 1207 | Freq Hashing | ✓ | independent D23 — new problem, LC Accepted Jun 20 |
-| Top K Frequent Words | 692 | Freq Sorting | ✓ | hint-needed D23 — new problem, LC Accepted Jun 20 |
-| Two Sum II | 167 | Complement Lookup | ✓ | independent D23 — new problem, LC Accepted Jun 20 |
-| Remove Duplicates | 26 | Two Pointers | ✓ | hint-needed D23 — new problem, LC Accepted Jun 20 |
-| Remove Element | 27 | Two Pointers | ✓ | independent D23 — new problem, LC Accepted Jun 20 |
-| Range Sum Query | 303 | Prefix Sum | NA | Not understood D23 — needs retry |
-| Contiguous Array | 525 | Prefix Sum | NA | Not solved D23 — needs retry |
-| Length of Last Word | 58 | String | NA | Not solved D23 — needs retry |
+SOP reference: problem_solving.md
+Solution comment fields required: Status / Time taken / Tier / Time complexity / Space complexity / LC status / Pattern / Variant / mistakes
 
 ---
 
-## Revision Queue
+## PATTERN COVERAGE MAP
 
-Agent: pull top 4-5 into daily revision slots by due date.
-Rule: 24h after first solve → first revision. 3d after that → recall check. 7d → final recall.
+Format: Pattern | Variant | Solved | Target | Status | Next problems needed
+
+### DS 1: Arrays + Hash Maps + Strings (Phase: Gap-Fill)
+
+| Pattern | Variant | Solved | Target | Status | Pending problems |
+|---------|---------|--------|--------|--------|-----------------|
+| Frequency Hashing | Count + query | 7 | 12 | Stable | LC 290, 1512, 884, 748, 771 |
+| Grouping Hash Map | Canonical key grouping | 2 | 8 | Stable | LC 249, 1002, 2273, 1657, 2135, 49-v2 |
+| Frequency Sorting | Sort by count | 3 | 8 | Stable | LC 1636, 2206, 1051, 791, 2418 |
+| Complement Lookup | Two Sum style | 3 | 8 | Stable | LC 653, 2006, 1010, 2351, 1512 |
+| Prefix Sum | Running prefix | 3 | 8 | Stable | LC 2485, 1413, 2574, 1854 |
+| Prefix Sum | Pivot / equilibrium | 2 | 6 | Stable | LC 2270, 1991, 1744 |
+| Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Shaky | LC 930, 1124, 974, 1477 |
+| Prefix Sum | Modulo variant (523 style) | 0 | 8 | NOT STARTED | LC 523, 974, 1590, 2575, 2261 |
+| Two Pointers | Opposite ends — palindrome/reverse | 3 | 8 | Stable | LC 680, 977, 283, 1768 |
+| Two Pointers | Write pointer — compact/remove | 2 | 8 | Stable | LC 283, 905, 2460, 75, 1089 |
+| Two Pointers | Maximize/minimize between ends | 0 | 10 | NOT STARTED | LC 11, 42, 1679, 1877, 633 |
+| Sliding Window | Fixed size | 5 | 10 | Stable | LC 2090, 1343, 1052, 2269 |
+| Sliding Window | Variable size | 5 | 12 | Stable | LC 159, 340, 487, 1493, 2024 |
+| Running State | Kadane / min-max tracking | 3 | 8 | Stable | LC 918, 2401, 1749, 1186 |
+| Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
+| Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
+| Binary Search | Applied — non-obvious structure | 2 | 10 | Shaky | LC 33, 153, 1095, 875, 1011 |
+
+### DS 2: Linked Lists (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| Traversal + basic ops | Reverse a list | 0 | 6 | NOT STARTED | LC 206, 92, 2130 |
+| Dummy node | Remove Nth / merge | 0 | 6 | NOT STARTED | LC 21, 19, 23 |
+| Fast + slow pointer | Middle / cycle detection | 0 | 6 | NOT STARTED | LC 876, 141, 142 |
+| In-place manipulation | Reorder / reverse groups | 0 | 6 | NOT STARTED | LC 143, 25, 2095 |
+
+### DS 3: Stack + Queue (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| Basic Stack | Valid parens / min stack | 0 | 6 | NOT STARTED | LC 20, 155, 1047, 2390 |
+| Monotonic Stack | Next greater element | 0 | 6 | NOT STARTED | LC 739, 496, 503, 901 |
+| Deque / Sliding Window Max | Window max | 0 | 6 | NOT STARTED | LC 239, 1438, 862 |
+
+### DS 4: Trees (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| Tree DFS | Depth / height | 0 | 6 | NOT STARTED | LC 104, 111, 543, 1026 |
+| Tree DFS | Path sum / structure | 0 | 6 | NOT STARTED | LC 112, 113, 226, 100 |
+| Tree DFS | Traversal (pre/in/post) | 0 | 6 | NOT STARTED | LC 144, 94, 145, 105 |
+| Tree BFS | Level order | 0 | 6 | NOT STARTED | LC 102, 107, 103, 637 |
+| BST | Search / validate | 0 | 6 | NOT STARTED | LC 700, 98, 530, 701 |
+| BST | LCA / operations | 0 | 6 | NOT STARTED | LC 235, 236, 450 |
+
+### DS 5: Graphs (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| Graph DFS | Components / flood fill | 0 | 6 | NOT STARTED | LC 200, 695, 547, 1020 |
+| Graph BFS | Shortest path | 0 | 6 | NOT STARTED | LC 542, 994, 1162, 1926 |
+| Grid traversal | Islands / surrounded | 0 | 6 | NOT STARTED | LC 130, 417, 286, 1254 |
+
+### DS 6: Heap (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| Min/Max Heap | Top K / Kth largest | 0 | 6 | NOT STARTED | LC 215, 703, 347-heap, 1046 |
+| Two Heaps | Median stream | 0 | 4 | NOT STARTED | LC 295, 480 |
+
+### DS 7: Dynamic Programming 1D (Phase: NOT STARTED)
+
+| Pattern | Variant | Solved | Target | Status | Problems |
+|---------|---------|--------|--------|--------|---------|
+| 1D DP | Fibonacci style | 0 | 6 | NOT STARTED | LC 70, 198, 213, 746 |
+| 1D DP | Subsequence style | 0 | 6 | NOT STARTED | LC 300, 322, 139, 416 |
+
+---
+
+## PROBLEM TRACKER
+
+| Problem | LC# | Pattern | Variant | Tier | Last Solved | Next Due | LC | Notes |
+|---------|-----|---------|---------|------|------------|----------|-----|-------|
+| Contains Duplicate | 217 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
+| Valid Anagram | 242 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
+| First Unique Character | 387 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
+| Intersection Arrays II | 350 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
+| Majority Element | 169 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
+| Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jun 20 | Jun 27 | ✓ | new D23, independent |
+| Ransom Note | 383 | Freq Hashing | Count+query | 3 | Jun 24 | Jul 1 | ✓ | 2 attempts locally, accepted |
+| Group Anagrams | 49 | Grouping Hash Map | Canonical key | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 2 | Jun 24 | Jun 27 | ✓ | hint-needed D22, D25 independent |
+| Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 2 | Jun 24 | Jun 27 | ✓ | hint D23, independent D25 |
+| Two Sum | 1 | Complement Lookup | Two Sum style | 2 | Jun 24 | Jun 27 | ✓ | hint D23 (mapping error), independent D25 |
+| Two Sum II | 167 | Complement Lookup | Two Sum style | 3 | Jun 20 | Jun 27 | ✓ | independent D23 |
+| Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 1 | Jun 25 | Jun 26 | ✓ | shaky - hint D22+D25, needs daily retry |
+| Range Sum Query | 303 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | NA | hint-needed D25 |
+| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | ✓ | hint-needed D25 |
+| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 1 | Jun 24 | Jun 25 | ✗ | failed - concept not known |
+| Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
+| Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
+| Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
+| Remove Duplicates | 26 | Two Pointers | Write pointer | 2 | Jun 20 | Jun 27 | ✓ | hint D23, independent D25 |
+| Remove Element | 27 | Two Pointers | Write pointer | 3 | Jun 20 | Jun 27 | ✓ | independent D23 |
+| Container With Most Water | 11 | Two Pointers | Maximize/minimize | 1 | Jun 24 | Jun 25 | — | not attempted - concept gap |
+| Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 2 | Jun 24 | Jun 27 | ✓ | 45 min - too slow |
+| Longest Substring Without Repeating | 3 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Minimum Size Subarray Sum | 209 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Fruits Into Baskets | 904 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Max Consecutive Ones III | 1004 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Longest Repeating Char Replacement | 424 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Best Time to Buy and Sell Stock | 121 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
+| Maximum Subarray | 53 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
+| Maximum Product Subarray | 152 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
+| Binary Search | 704 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| First Bad Version | 278 | Binary Search | Standard | 3 | Jun 20 | Jun 27 | ✓ | hint D19, independent D20 |
+| Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
+| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D20+D21 |
+| Find Peak Element | 162 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D20+D21 |
+| Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
+| Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 1 | Jun 20 | Jun 25 | — | failed D22, not retried |
+| Peak Index in Mountain Array | 852 | Binary Search | Applied | 2 | Jun 24 | Jun 27 | ✓ | solved O(n) not O(log n) |
+| Length of Last Word | 58 | String Traversal | — | 3 | Jun 25 | Jul 2 | ✓ | independent D25 |
+
+---
+
+## REVISION POOL — CURRENT
+
+### TIER 1 — Due ASAP (solve before anything else)
+
+| Problem | LC# | Due | Why TIER 1 |
+|---------|-----|-----|-----------|
+| Continuous Subarray Sum | 523 | Jun 25 | Failed — concept not known (Prefix Sum Modulo) |
+| Container With Most Water | 11 | Jun 25 | Not attempted — concept gap (Two Pointers maximize) |
+| Guess Number Higher or Lower | 374 | Jun 25 | Failed D22 — lower bound template shaky |
+| Subarray Sum Equals K | 560 | Jun 26 | Shaky — hint needed multiple times |
+
+Note: LC 11 and LC 523 need concept block first. Do NOT attempt without reading PATTERNS.md block.
+
+### TIER 2 — Due in 3 days
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Longest Repeating Char Replacement | 424 | Jun 1 (passed) | 7d final recall — passed D22 |
-| Permutation in String | 567 | Jun 1 (passed) | 7d final recall — passed D22 |
-| Sqrt(x) | 69 | May 30 (passed) | 3d recall — passed D21 |
-| Find Smallest Letter Greater Than Target | 744 | May 30 (passed) | 3d recall — hint-needed D21 |
-| Find Peak Element | 162 | May 30 (passed) | 3d recall — hint-needed D21 |
-| Maximum Average Subarray I | 643 | May 29 (passed) | 7d final recall — passed D20 |
-| Binary Search | 704 | May 29 (passed) | 3d recall — passed D20 |
-| Search Insert Position | 35 | May 29 (passed) | 3d recall — passed D20 |
-| First Bad Version | 278 | May 29 (passed) | 3d recall — passed D20 |
-| Valid Perfect Square | 367 | May 29 (passed) | 3d recall — hint-needed D22 |
-| Arranging Coins | 441 | May 29 (passed) | 3d recall — hint-needed D22 |
-| Guess Number Higher or Lower | 374 | Jun 21 | Retry — Failed D22, not addressed in D23 |
-| Range Sum Query | 303 | Jun 21 | Retry — Not understood D23 |
-| Contiguous Array | 525 | Jun 21 | Retry — Not solved D23 |
-| Length of Last Word | 58 | Jun 21 | Retry — Not solved D23 |
-| Subarray Sum Equals K | 560 | Jun 21 | 3d recall — hint-needed D22, FLAGGED shaky |
-| Isomorphic Strings | 205 | Jun 21 | 3d recall — hint-needed D22 (peeked old solution) |
-| Sliding Window warm-up | — | Jun 21 | warm-up had stale variable bug D22 (non-graded) |
-| Unique Number of Occurrences | 1207 | Jun 21 | 24h revision — new problem D23 |
-| Top K Frequent Words | 692 | Jun 21 | 24h revision — hint-needed D23 |
-| Two Sum II | 167 | Jun 21 | 24h revision — independent D23 |
-| Remove Duplicates | 26 | Jun 21 | 24h revision — hint-needed D23 |
-| Remove Element | 27 | Jun 21 | 24h revision — independent D23 |
+| Isomorphic Strings | 205 | Jun 27 | hint D22, independent D25 |
+| Top K Frequent Words | 692 | Jun 27 | hint D23, independent D25 |
+| Two Sum | 1 | Jun 27 | hint D23, independent D25 |
+| Remove Duplicates | 26 | Jun 27 | hint D23, independent D25 |
+| Two Sum II | 167 | Jun 27 | independent D23 (first time) |
+| Remove Element | 27 | Jun 27 | independent D23 (first time) |
+| Maximum Number of Vowels | 1456 | Jun 27 | 45 min - too slow |
+| Find Smallest Letter Greater | 744 | Jun 27 | hint D21 |
+| Find Peak Element | 162 | Jun 27 | hint D21 |
+| Valid Perfect Square | 367 | Jun 27 | hint D22 |
+| Arranging Coins | 441 | Jun 27 | hint D22 |
+| Range Sum Query | 303 | Jun 28 | hint-needed D25 |
+| Contiguous Array | 525 | Jun 28 | hint-needed D25 |
+| Peak Index in Mountain Array | 852 | Jun 27 | O(n) only, O(log n) needed |
+| Unique Number of Occurrences | 1207 | Jun 27 | new D23, first 7-day recall |
+| Ransom Note | 383 | Jul 1 | new Jun 24, first 7-day recall |
+| First Bad Version | 278 | Jun 27 | hint D19 |
+
+### TIER 3 — Due in 7 days
+
+| Problem | LC# | Due |
+|---------|-----|-----|
+| Length of Last Word | 58 | Jul 2 |
+
+### TIER 4 — Due in 30 days (template recall only)
+
+All problems in Mastered section below. Next due: Jul 20 for most.
+Template recall = write the pattern template from memory in 3 min. No full solve needed.
 
 ---
 
-## LC Submission Log
+## PATTERN FAMILY STABILITY
+
+| Family | Status | Independent% | LC Accepted | Blocker |
+|--------|--------|-------------|-------------|---------|
+| Frequency Hashing | Stable | 90%+ | 7 | — |
+| Grouping Hash Maps | Stable | 85% | 2 | Isomorphic strings shaky |
+| Frequency Sorting | Stable | 80% | 3 | Top K Words hint-needed once |
+| Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
+| Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
+| Prefix Sum (Hash Map combo) | Shaky | 60% | 3 | 560 hint D22+D25, 525 hint D25 |
+| Prefix Sum (Modulo) | Not started | — | 0 | Concept not learned |
+| Two Pointers (opposite/write) | Stable | 85% | 5 | — |
+| Two Pointers (maximize) | Not started | — | 0 | Concept not learned |
+| Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
+| Running State | Stable | 90% | 3 | — |
+| Binary Search (standard) | Stable | 90% | 3 | 374 failed |
+| Binary Search (lower bound) | Building | 60% | 4 | 744/162/367/441 hint-needed |
+| Binary Search (applied) | Shaky | 50% | 1 | 852 O(n) not O(log n), 11 not attempted |
+
+---
+
+## PATTERN ASSESSMENT LOG
+
+| Pattern/DS | Date | Score | Result | Notes |
+|-----------|------|-------|--------|-------|
+| Arrays+Hashing (partial) | Jun 24 | 3/5 | See notes | 383✓ 11✗ 523✗ 1456✓ 852✓(wrong complexity) |
+
+Full pattern assessment pending: complete gap fills first (Two Pointers maximize, Prefix Modulo, Binary Search Applied).
+
+---
+
+## LEARNING PHASE TRACKER
+
+| Phase | Focus | Status | Start | Target End |
+|-------|-------|--------|-------|-----------|
+| Gap Fill | Two Pointers maximize (LC 11, 42) | In Progress | Jun 25 | Jun 28 |
+| Gap Fill | Prefix Sum Modulo (LC 523, 974) | Up next | Jun 27 | Jun 30 |
+| Gap Fill | Binary Search Applied (LC 33, 153) | Queued | Jun 30 | Jul 3 |
+| Gap Fill | Binary Search Lower bound (close out) | Queued | Jul 3 | Jul 5 |
+| New DS | Linked Lists | Not started | Jul 7 | Jul 21 |
+| New DS | Stack + Queue | Not started | Jul 21 | Aug 4 |
+| New DS | Trees | Not started | Aug 4 | Aug 25 |
+| New DS | Graphs | Not started | Aug 25 | Sep 8 |
+| New DS | Heap + 1D DP | Not started | Sep 8 | Sep 22 |
+| Mock Phase | Mixed assessments only | Not started | Sep 22 | Oct 15 |
+
+---
+
+## LC SUBMISSION LOG
 
 | Date | Problem | LC# | Result |
 |------|---------|-----|--------|
@@ -162,63 +321,15 @@ Rule: 24h after first solve → first revision. 3d after that → recall check. 
 | Jun 20 | Two Sum II | 167 | Accepted |
 | Jun 20 | Remove Duplicates | 26 | Accepted |
 | Jun 20 | Remove Element | 27 | Accepted |
+| Jun 24 | Maximum Number of Vowels | 1456 | Accepted |
+| Jun 24 | Peak Index in Mountain Array | 852 | Accepted |
+| Jun 24 | Ransom Note | 383 | Accepted |
 
-Unique problems LC accepted: 41
-Weekly LC slot: 45 min, clear pending problems you feel confident on
-
----
-
-## Restart Phase Tracker (3-day blitz)
-
-### Day 23 — Jun 20 (Yesterday) — Stable Family Recall
-
-Focus: All Stable families (Freq Hashing, Freq Sorting, Complement Lookup, Prefix Sum, Two Pointers, Running-State, Sliding Window)
-
-Results:
-- Total problems attempted: 20
-- Solved independently: 14/20 (70%)
-- Solved with hints: 3/20 (Two Sum initial mapping error, Top K Frequent Words sorting tuple, Remove Duplicates write pointer logic)
-- Not solved: 3/20 (Range Sum Query 303 — not understood, Contiguous Array 525 — not solved, Length of Last Word 58 — not solved)
-- LC submitted: 5 new problems (1207, 692, 167, 26, 27) — all Accepted
-- Family stability after recall: All Stable families confirmed intact after 3-week gap
-
-Verdict: **Good Restart** (17/20 = 85% solved, 70% independent)
-
-### Day 24 — Jun 21 (Today) — Recovery + Retry
-
-Focus: Retry failed/unsolved problems from D23 + Binary Search depth
-- Guess Number Higher or Lower (374) — retry
-- Range Sum Query (303) — retry after understanding
-- Contiguous Array (525) — retry
-- Length of Last Word (58) — retry
-- Subarray Sum Equals K (560) — 3d recall, shaky
-- Isomorphic Strings (205) — 3d recall
-- Binary Search new problems: 3 easy variants to push family to Stable
-
-### Day 25 — Jun 22 (Tomorrow) — Final Confirmation
-
-Focus: 24h recall of D24 problems + any remaining gaps
-- If 70%+ independent on D24 → confirm restart complete, introduce Linked List
-- If <70% independent → one more consolidation day before new topics
+Unique problems LC accepted: 48
 
 ---
 
-## Week 4 Review (Historical — May 26-28)
-
-### Week Summary
-
-- Total new problems solved: 6
-- Total revisions done: 31 (D20: 5, D21: 5, D22: 21)
-- LC accepted this week (unique): 8 (D20: 3, D21: 3, D22: 2)
-- Average independent solve rate: 73% (D22 boost: 16/18 independent on backlog blitz)
-- Families that reached Stable: Sliding Window — upgraded to Stable (11/15 independent = 73%, 9 LC accepted)
-- Families still Shaky: Binary Search (Building, 60% independent)
-- Biggest pattern gap: Binary Search lower-bound template (`left < right`) still shaky — 4/10 problems hint-needed (744, 162, 441, 374); Subarray Sum Equals K and Isomorphic Strings needed hints on recall
-- Overall verdict: On Track — major backlog clearance achieved
-
----
-
-## Weekly Scores
+## WEEKLY SCORES
 
 | Week | New Problems | Revisions | LC Accepted | Independent% |
 |------|-------------|-----------|-------------|--------------|
@@ -227,33 +338,24 @@ Focus: 24h recall of D24 problems + any remaining gaps
 | 3 | 12 | 43 | 13 | 67% |
 | 4 | 6 | 31 | 8 | 73% |
 | 5 (Restart) | 5 | 15 | 5 | 70% |
+| 6 (Gap Fill) | 5 | 0 | 3 | 60% |
 
 ---
 
-## Mastered (light recall only)
+## MASTERED (Tier 4 — 30-day template recall only)
 
-Contains Duplicate, Reverse String (in-place), Move Zeroes,
-Majority Element (dict version), Intersection of Two Arrays (unique),
-Print/Sum/Count/Max/Min basics, Check Sorted Array,
-First Unique Character (387), Best Time to Buy and Sell Stock (121), Running Sum of 1d Array (1480),
-Group Anagrams (49), Find Pivot Index (724), Sort Chars by Freq (451),
-Intersection Arrays II (350), Product of Array Except Self (238),
-Valid Palindrome (125), Is Subsequence (392), Top K Frequent (347),
+Contains Duplicate (217), Valid Anagram (242), First Unique Character (387),
+Intersection Arrays II (350), Majority Element (169), Group Anagrams (49),
+Find Pivot Index (724), Sort Chars by Freq (451), Running Sum (1480),
+Find Highest Altitude (1732), Product of Array Except Self (238),
+Best Time to Buy and Sell Stock (121), Maximum Subarray (53),
+Maximum Product Subarray (152), Valid Palindrome (125), Reverse String (344),
+Is Subsequence (392), Top K Frequent Elements (347),
+Maximum Average Subarray I (643), Permutation in String (567),
+Find All Anagrams (438), Contains Duplicate II (219),
 Longest Substring Without Repeating (3), Minimum Size Subarray Sum (209),
 Fruits Into Baskets (904), Max Consecutive Ones III (1004),
-Find All Anagrams in a String (438), Contains Duplicate II (219),
-Maximum Subarray (53), Maximum Product Subarray (152),
-Valid Anagram (242), Contains Duplicate (217), First Unique Character (387),
-Unique Number of Occurrences (1207), Two Sum II (167), Remove Element (27)
+Longest Repeating Char Replacement (424), Binary Search (704),
+Search Insert Position (35), Sqrt(x) (69)
 
-Day 13 tracker note (2026-05-19): verified with `C:\Users\dell\AppData\Local\Python\bin\python.exe` outside sandbox after default Python commands failed; all visible test outputs matched expected values.
-Day 14 tracker note (2026-05-20): default `python` / path `python` / `python3` commands failed; verified with `C:\Users\dell\AppData\Local\Python\pythoncore-3.14-64\python.exe`; all visible test outputs matched expected values.
-Day 15 tracker note (2026-05-21): verified in Claude sandbox (python3); all 9 test case outputs matched expected values.
-Day 16 tracker note (2026-05-22): verified in Claude sandbox (python3); all graded test case outputs matched expected values; warm-up variable window had a stale variable bug (non-graded).
-Day 17 tracker note (2026-05-23): verified in Claude sandbox (python3); all graded test case outputs matched expected values; debug prints in checkInclusion (567) are non-graded noise — final True/False correct.
-Day 18 tracker note (2026-05-24): verified in sandbox (python); all 8 graded test case outputs matched expected values; 1004/438/219 promoted to LC Accepted.
-Day 19 tracker note (2026-05-25): verified in sandbox (python3); all 24 test case outputs matched expected values; 704/35 ready to submit; 278 hint-needed (lower-bound template not internalized); 387/121/1480 final recall passed → Mastered.
-Day 20 tracker note (2026-05-26): verified in sandbox (python3); all 14 graded test case outputs matched expected values; 704/35/278 promoted to LC Accepted; 69/744/162 hint-needed (lower-bound template not internalized on new variants); 8 overdue items remain unaddressed.
-Day 21 tracker note (2026-05-27): verified in sandbox (python3); all 19 graded test case outputs matched expected values; 69/744/162 promoted to LC Accepted; 367 independent (ready to submit); 441/374 hint-needed; 9 overdue items remain unaddressed; Group Anagrams + Find Highest Altitude 7d/14d recall passed independently.
-Day 22 tracker note (2026-05-28): verified in sandbox (python3); 18/20 graded test case outputs matched expected values; Valid Perfect Square + Arranging Coins promoted to LC Accepted; Guess Number Higher or Lower Failed (not solved); Subarray Sum Equals K hint-needed (peeked old solution); Isomorphic Strings hint-needed (peeked old solution); Sliding Window backlog CLEARED — 11/15 independent (73%) → upgraded to Stable; Binary Search backlog: 6/10 independent (60%) still Building; ALL May 24-28 overdue items addressed.
-Day 23 tracker note (2026-06-20): verified in sandbox (python3); 17/20 problems solved (14 independent, 3 hint-needed); 5 new problems LC Accepted (1207, 692, 167, 26, 27); 3 not solved (303, 525, 58); All Stable families confirmed intact after 3-week gap; Two Sum had initial mapping error (seen[needed]=i instead of seen[nums[i]]=i) — corrected; Restart verdict: Good (85% solved, 70% independent).
+Next Tier 4 recall due: Jul 20, 2026

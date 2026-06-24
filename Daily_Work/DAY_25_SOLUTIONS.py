@@ -344,7 +344,7 @@ def maxsubarray(nums):
     max_array=nums[0]
     prefix=nums[0]
 
-    for i in range(len(nums)):
+    for i in range(1,   len(nums)):
 
         prefix=max(nums[i],prefix+nums[i])
 
@@ -1002,3 +1002,274 @@ Tests:
 
 """
 
+def topKFrequent(self, words, k):
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[str]
+        """
+        seen={}
+
+        for i in words:
+            seen[i]=seen.get(i,0)+1
+        
+        sorted_seen=sorted(seen.items(),key=lambda x:(-x[1],x[0]))
+        out=[]
+
+        for key,value in sorted_seen:
+
+            out.append(key)
+
+            if len(out)==k:
+                return out
+        
+
+#Status : Independent
+#LC: Accepted
+
+
+"""
+### 20. Two Sum — LC 1
+
+**Pattern:** Complement Lookup
+**Recall trigger:** Store `number -> index`, not `needed -> index`.
+
+Tests:
+
+```python
+[2,7,11,15], 9             # [0,1]
+[3,2,4], 6                 # [1,2]
+[3,3], 6                   # [0,1]
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def twosum(nums,target):
+
+    seen={}
+
+    for i in range(len(nums)):
+        needed=target-nums[i]
+
+        if needed in seen:
+            return [seen[needed],i]
+        
+        seen[nums[i]]=i
+print(twosum([2,7,11,15], 9    ))
+print(twosum([3,2,4], 6    ))
+print(twosum([3,3], 6    ))
+
+
+#Status : Independent
+#LC: Accepted
+
+
+"""
+### 21. Two Sum II — Input Array Is Sorted — LC 167
+
+**Pattern:** Two Pointers
+**Use sorted property; do not use a dictionary.**
+
+Tests:
+
+```python
+[2,7,11,15], 9             # [1,2]
+[2,3,4], 6                 # [1,3]
+[-1,0], -1                 # [1,2]
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+"""
+def twosum2(nums,target):
+
+    left=0
+    right=len(nums)-1
+
+    while left<right:
+
+        sum_of=nums[right]+nums[left]
+
+        if sum_of==target:
+            return [left+1,right+1]
+        elif sum_of>target:
+            right-=1
+        else:
+            left+=1
+    
+print(twosum2([2,7,11,15], 9  ))
+print(twosum2([2,3,4], 6  ))
+print(twosum2([-1,0], -1    ))
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 22. Isomorphic Strings — LC 205
+
+**Pattern:** Two-Way Hash Map
+**Priority:** Old solution was peeked during recall.
+
+Tests:
+
+```python
+"egg", "add"               # True
+"foo", "bar"               # False
+"badc", "baba"             # False
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+def isomorphicstring(s,t):
+
+    if len(s)!=len(t):
+        return False
+
+    seen_s={}
+    seen_t={}
+
+    for i in range(len(s)):
+
+        if s[i] in seen_s and seen_s[s[i]]!=t[i]:
+            return False
+        else:
+            seen_s[s[i]]=t[i]
+        
+        if t[i] in seen_t and seen_t[t[i]]!=s[i]:
+            return False
+        else:
+            seen_t[t[i]]=s[i]
+    return True
+
+print(isomorphicstring("egg", "add"  ))
+print(isomorphicstring("foo", "bar"   ))
+print(isomorphicstring("badc", "baba"  ))
+
+#Status : Independent
+#LC: Accepted
+
+
+"""
+### 23. Remove Duplicates from Sorted Array — LC 26
+
+**Pattern:** Two Pointers + In-Place Overwrite
+**Priority:** Write-pointer initialization was confusing earlier.
+
+Tests:
+
+```python
+[1,1,2]                    # return 2; first values [1,2]
+[0,0,1,1,1,2,2,3,3,4]     # return 5; first values [0,1,2,3,4]
+[]                          # return 0
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+"""
+def removeduplicate(nums):
+
+    if not nums:
+        return 0
+
+    write=1
+    
+    for i in range(1,len(nums)):
+
+        if nums[i]!=nums[write-1]:
+            nums[write]=nums[i]
+            write+=1
+    return write
+
+print(removeduplicate([1,1,2] ))
+print(removeduplicate([0,0,1,1,1,2,2,3,3,4]))
+print(removeduplicate([]))
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 24. Remove Element — LC 27
+
+**Pattern:** Two Pointers + In-Place Overwrite
+
+Tests:
+
+```python
+[3,2,2,3], 3               # return 2
+[0,1,2,2,3,0,4,2], 2      # return 5
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+def removeelement(nums,val):
+
+    write=0
+
+    for i in range(len(nums)):
+
+        if nums[i]!=val:
+            nums[write]=nums[i]
+            write+=1
+    return write
+
+print(removeelement([3,2,2,3], 3)  )
+print(removeelement([0,1,2,2,3,0,4,2], 2  )  )
+
+
+#Status : Independent
+#LC: Accepted
+
+"""
+### 25. Length of Last Word — LC 58
+
+**Pattern:** String Traversal
+**Priority:** Earlier marked as not solved.
+
+Tests:
+
+```python
+"Hello World"                      # 5
+"   fly me   to   the moon  "      # 4
+"a"                                # 1
+```
+
+[ ] Independent  [ ] Hint  [ ] Old code seen
+
+---
+
+"""
+
+def lenoflastword(s):
+
+    lastwordlen=0
+    count=0
+
+    for i in s:
+
+        if i==" ":
+            count=0
+        else:
+            count+=1
+        
+        if count!=0:
+            lastwordlen=count
+    return lastwordlen
+
+print(lenoflastword("Hello World"  ))
+print(lenoflastword("   fly me   to   the moon  "   ))
+print(lenoflastword("a"  ))
+
+#Status : Independent
+#LC: Accepted
