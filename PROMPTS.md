@@ -68,7 +68,9 @@ Output mismatch from Step 2 overrides any comment field — always.
 STEP 4 — ASSIGN TIERS (use these rules, override user's tier if wrong):
   TIER 1: hint-needed OR wrong approach OR time >40 min OR failed OR output mismatch
   TIER 2: independent BUT time >25 min OR first time solving this variant
-  TIER 3: independent + time <=25 min + LC Accepted
+  TIER 3: independent + time <=25 min + (LC already ✓ in STATUS.md OR LC Accepted today)
+           For revision problems: check STATUS.md LC column first — if already ✓, no re-submission needed
+           For new problems (not yet in tracker): must submit and get Accepted to reach Tier 3
   TIER 4: only if user explicitly marked Tier 4 AND passed 14-day recall independently
 
   Next due dates from tier:

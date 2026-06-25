@@ -98,7 +98,9 @@ TIER 2 — BUILDING
   Revision: 3 days
 
 TIER 3 — STABLE
-  Independent + under 25 min + LC Accepted
+  Independent + under 25 min + (LC already ✓ in STATUS.md OR LC Accepted today)
+  For revision problems: if LC is already ✓ in STATUS.md → no re-submission needed
+  For new problems: must submit and get Accepted to reach Tier 3
   Revision: 7 days
 
 TIER 4 — MASTERED

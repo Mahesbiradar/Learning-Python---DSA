@@ -129,7 +129,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jun 20 | Jun 27 | ✓ | new D23, independent |
 | Ransom Note | 383 | Freq Hashing | Count+query | 3 | Jun 24 | Jul 1 | ✓ | 2 attempts locally, accepted |
 | Group Anagrams | 49 | Grouping Hash Map | Canonical key | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 2 | Jun 24 | Jun 27 | ✓ | hint-needed D22, D25 independent |
+| Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jun 25 | Jul 2 | ✓ | independent D26, 20 min, LC already ✓ → Tier 3 |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Top K Frequent Words | 692 | Freq Sorting | Sort by count | 2 | Jun 24 | Jun 27 | ✓ | hint D23, independent D25 |
@@ -139,16 +139,16 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 1 | Jun 25 | Jun 26 | ✓ | shaky - hint D22+D25, needs daily retry |
+| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 25 | Jul 2 | ✓ | independent D26, 20 min, outputs verified — SHAKY RESOLVED |
 | Range Sum Query | 303 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | NA | hint-needed D25 |
 | Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | ✓ | hint-needed D25 |
-| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 1 | Jun 24 | Jun 25 | ✗ | failed - concept not known |
+| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 2 | Jun 25 | Jun 28 | NA | independent optimal D26, first time, not submitted |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Remove Duplicates | 26 | Two Pointers | Write pointer | 2 | Jun 20 | Jun 27 | ✓ | hint D23, independent D25 |
-| Remove Element | 27 | Two Pointers | Write pointer | 3 | Jun 20 | Jun 27 | ✓ | independent D23 |
-| Container With Most Water | 11 | Two Pointers | Maximize/minimize | 1 | Jun 24 | Jun 25 | — | not attempted - concept gap |
+| Remove Element | 27 | Two Pointers | Write pointer | 2 | Jun 25 | Jun 28 | ✓ | D26: 25 min + edge case confusion → Tier 2 (LC already ✓, no resubmit needed) |
+| Container With Most Water | 11 | Two Pointers | Maximize/minimize | 2 | Jun 25 | Jun 28 | NA | independent D26 (brute+optimal), not submitted |
 | Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -170,9 +170,10 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Peak Element | 162 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D20+D21 |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
-| Guess Number Higher or Lower | 374 | Binary Search | Standard | 1 | Jun 20 | Jun 25 | — | failed D22, not retried |
-| Peak Index in Mountain Array | 852 | Binary Search | Applied | 2 | Jun 24 | Jun 27 | ✓ | solved O(n) not O(log n) |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 1 | Jun 25 | Jun 26 | ✓ | hint D26, LC Accepted (output unverified - no print in file) |
+| Peak Index in Mountain Array | 852 | Binary Search | Applied | 1 | Jun 25 | Jun 26 | NA | hint D26, 40 min, returned mid not left — drops to Tier 1 |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 25 | Jul 2 | ✓ | independent D25 |
+| Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 1 | Jun 25 | Jun 26 | NA | hint D26 (template given in problem) |
 
 ---
 
@@ -182,12 +183,9 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Continuous Subarray Sum | 523 | Jun 25 | Failed — concept not known (Prefix Sum Modulo) |
-| Container With Most Water | 11 | Jun 25 | Not attempted — concept gap (Two Pointers maximize) |
-| Guess Number Higher or Lower | 374 | Jun 25 | Failed D22 — lower bound template shaky |
-| Subarray Sum Equals K | 560 | Jun 26 | Shaky — hint needed multiple times |
-
-Note: LC 11 and LC 523 need concept block first. Do NOT attempt without reading PATTERNS.md block.
+| Guess Number Higher or Lower | 374 | Jun 26 | Hint D26 — retry clean tomorrow |
+| Peak Index in Mountain Array | 852 | Jun 26 | Hint D26, 40 min, returned mid not left |
+| Subarray Sums Divisible by K | 974 | Jun 26 | Hint D26 (template was given) — retry blind |
 
 ### TIER 2 — Due in 3 days
 
@@ -210,6 +208,8 @@ Note: LC 11 and LC 523 need concept block first. Do NOT attempt without reading 
 | Unique Number of Occurrences | 1207 | Jun 27 | new D23, first 7-day recall |
 | Ransom Note | 383 | Jul 1 | new Jun 24, first 7-day recall |
 | First Bad Version | 278 | Jun 27 | hint D19 |
+| Container With Most Water | 11 | Jun 28 | independent D26 (first time), not submitted |
+| Continuous Subarray Sum | 523 | Jun 28 | independent optimal D26 (first time), not submitted |
 
 ### TIER 3 — Due in 7 days
 
@@ -339,6 +339,7 @@ Unique problems LC accepted: 48
 | 4 | 6 | 31 | 8 | 73% |
 | 5 (Restart) | 5 | 15 | 5 | 70% |
 | 6 (Gap Fill) | 5 | 0 | 3 | 60% |
+| 7 (Gap Fill D26) | 3 | 7 | 0 | 72% (8/11 independent) |
 
 ---
 
