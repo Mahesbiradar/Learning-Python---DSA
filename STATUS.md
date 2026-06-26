@@ -142,7 +142,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 25 | Jul 2 | ✓ | independent D26, 20 min, outputs verified — SHAKY RESOLVED |
 | Range Sum Query | 303 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | NA | hint-needed D25 |
 | Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | ✓ | hint-needed D25 |
-| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 2 | Jun 25 | Jun 28 | NA | independent optimal D26, first time, not submitted |
+| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 2 | Jun 25 | Jun 28 | ✗ | independent optimal D26, first time, WA on LC — resubmit after fix |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
@@ -171,7 +171,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Guess Number Higher or Lower | 374 | Binary Search | Standard | 1 | Jun 25 | Jun 26 | ✓ | hint D26, LC Accepted (output unverified - no print in file) |
-| Peak Index in Mountain Array | 852 | Binary Search | Applied | 1 | Jun 25 | Jun 26 | NA | hint D26, 40 min, returned mid not left — drops to Tier 1 |
+| Peak Index in Mountain Array | 852 | Binary Search | Applied | 1 | Jun 25 | Jun 26 | ✓ | hint D26, 40 min, returned mid not left — drops to Tier 1 (LC Accepted Jun 25) |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 25 | Jul 2 | ✓ | independent D25 |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 1 | Jun 25 | Jun 26 | NA | hint D26 (template given in problem) |
 
@@ -324,8 +324,9 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jun 24 | Maximum Number of Vowels | 1456 | Accepted |
 | Jun 24 | Peak Index in Mountain Array | 852 | Accepted |
 | Jun 24 | Ransom Note | 383 | Accepted |
+| Jun 25 | Guess Number Higher or Lower | 374 | Accepted |
 
-Unique problems LC accepted: 48
+Unique problems LC accepted: 49
 
 ---
 
