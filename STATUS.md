@@ -1,5 +1,5 @@
 # DSA STATUS
-Last updated: 2026-06-24 (Day 25 — System Restructure)
+Last updated: 2026-06-27 (Day 27 — Gap Fill Reinforcement)
 Current: Month 2 | Week 6 | Gap-Fill Phase
 Next focus: Two Pointers (maximize variant) → Prefix Sum Modulo → Binary Search Applied
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
@@ -54,10 +54,10 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Prefix Sum | Running prefix | 3 | 8 | Stable | LC 2485, 1413, 2574, 1854 |
 | Prefix Sum | Pivot / equilibrium | 2 | 6 | Stable | LC 2270, 1991, 1744 |
 | Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Shaky | LC 930, 1124, 974, 1477 |
-| Prefix Sum | Modulo variant (523 style) | 0 | 8 | NOT STARTED | LC 523, 974, 1590, 2575, 2261 |
+| Prefix Sum | Modulo variant (523 style) | 2 | 8 | Building | LC 1590, 2575, 2261, 2262 |
 | Two Pointers | Opposite ends — palindrome/reverse | 3 | 8 | Stable | LC 680, 977, 283, 1768 |
 | Two Pointers | Write pointer — compact/remove | 2 | 8 | Stable | LC 283, 905, 2460, 75, 1089 |
-| Two Pointers | Maximize/minimize between ends | 0 | 10 | NOT STARTED | LC 11, 42, 1679, 1877, 633 |
+| Two Pointers | Maximize/minimize between ends | 3 | 10 | Building | LC 42, 633, 11584, 2824 |
 | Sliding Window | Fixed size | 5 | 10 | Stable | LC 2090, 1343, 1052, 2269 |
 | Sliding Window | Variable size | 5 | 12 | Stable | LC 159, 340, 487, 1493, 2024 |
 | Running State | Kadane / min-max tracking | 3 | 8 | Stable | LC 918, 2401, 1749, 1186 |
@@ -126,7 +126,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | First Unique Character | 387 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
 | Intersection Arrays II | 350 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
 | Majority Element | 169 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
-| Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jun 20 | Jun 27 | ✓ | new D23, independent |
+| Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 10 min, clean |
 | Ransom Note | 383 | Freq Hashing | Count+query | 3 | Jun 24 | Jul 1 | ✓ | 2 attempts locally, accepted |
 | Group Anagrams | 49 | Grouping Hash Map | Canonical key | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jun 25 | Jul 2 | ✓ | independent D26, 20 min, LC already ✓ → Tier 3 |
@@ -134,7 +134,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Top K Frequent Words | 692 | Freq Sorting | Sort by count | 2 | Jun 24 | Jun 27 | ✓ | hint D23, independent D25 |
 | Two Sum | 1 | Complement Lookup | Two Sum style | 2 | Jun 24 | Jun 27 | ✓ | hint D23 (mapping error), independent D25 |
-| Two Sum II | 167 | Complement Lookup | Two Sum style | 3 | Jun 20 | Jun 27 | ✓ | independent D23 |
+| Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 10 min, clean |
 | Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
@@ -146,7 +146,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
-| Remove Duplicates | 26 | Two Pointers | Write pointer | 2 | Jun 20 | Jun 27 | ✓ | hint D23, independent D25 |
+| Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 15 min, LC ✓ → Tier 3 |
 | Remove Element | 27 | Two Pointers | Write pointer | 2 | Jun 25 | Jun 28 | ✓ | D26: 25 min + edge case confusion → Tier 2 (LC already ✓, no resubmit needed) |
 | Container With Most Water | 11 | Two Pointers | Maximize/minimize | 2 | Jun 25 | Jun 28 | NA | independent D26 (brute+optimal), not submitted |
 | Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -164,16 +164,18 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Maximum Product Subarray | 152 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Binary Search | 704 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| First Bad Version | 278 | Binary Search | Standard | 3 | Jun 20 | Jun 27 | ✓ | hint D19, independent D20 |
+| First Bad Version | 278 | Binary Search | Standard | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 15 min, loop condition fixed in dry run |
 | Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
 | Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D20+D21 |
-| Find Peak Element | 162 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D20+D21 |
+| Find Peak Element | 162 | Binary Search | Lower bound | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 20 min, fixed return mid→left |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
-| Guess Number Higher or Lower | 374 | Binary Search | Standard | 1 | Jun 25 | Jun 26 | ✓ | hint D26, LC Accepted (output unverified - no print in file) |
-| Peak Index in Mountain Array | 852 | Binary Search | Applied | 1 | Jun 25 | Jun 26 | ✓ | hint D26, 40 min, returned mid not left — drops to Tier 1 (LC Accepted Jun 25) |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 25 min, fixed loop — pattern misidentified in file (wrote Two Pointers, correct: Binary Search) |
+| Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jun 27 | Jul 4 | ✓ | O(log n) clean D27, 15 min, return left fixed — promoted Tier 1→3 |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 25 | Jul 2 | ✓ | independent D25 |
-| Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 1 | Jun 25 | Jun 26 | NA | hint D26 (template given in problem) |
+| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 30 min, first time |
+| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 20 min, first time |
+| Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 1 | Jun 27 | Jun 28 | ✓ | hint D27 (video), 40 min, confused seen[prefix] vs seen[remainder] → Tier 1 |
 
 ---
 
@@ -183,39 +185,41 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Guess Number Higher or Lower | 374 | Jun 26 | Hint D26 — retry clean tomorrow |
-| Peak Index in Mountain Array | 852 | Jun 26 | Hint D26, 40 min, returned mid not left |
-| Subarray Sums Divisible by K | 974 | Jun 26 | Hint D26 (template was given) — retry blind |
+| Subarray Sums Divisible by K | 974 | Jun 28 | Hint D27 (video), 40 min — confused seen[prefix] vs seen[remainder] |
 
 ### TIER 2 — Due in 3 days
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Isomorphic Strings | 205 | Jun 27 | hint D22, independent D25 |
 | Top K Frequent Words | 692 | Jun 27 | hint D23, independent D25 |
 | Two Sum | 1 | Jun 27 | hint D23, independent D25 |
-| Remove Duplicates | 26 | Jun 27 | hint D23, independent D25 |
-| Two Sum II | 167 | Jun 27 | independent D23 (first time) |
-| Remove Element | 27 | Jun 27 | independent D23 (first time) |
+| Remove Element | 27 | Jun 28 | D26: 25 min + edge case confusion |
 | Maximum Number of Vowels | 1456 | Jun 27 | 45 min - too slow |
 | Find Smallest Letter Greater | 744 | Jun 27 | hint D21 |
-| Find Peak Element | 162 | Jun 27 | hint D21 |
 | Valid Perfect Square | 367 | Jun 27 | hint D22 |
 | Arranging Coins | 441 | Jun 27 | hint D22 |
 | Range Sum Query | 303 | Jun 28 | hint-needed D25 |
 | Contiguous Array | 525 | Jun 28 | hint-needed D25 |
-| Peak Index in Mountain Array | 852 | Jun 27 | O(n) only, O(log n) needed |
-| Unique Number of Occurrences | 1207 | Jun 27 | new D23, first 7-day recall |
-| Ransom Note | 383 | Jul 1 | new Jun 24, first 7-day recall |
-| First Bad Version | 278 | Jun 27 | hint D19 |
+| Ransom Note | 383 | Jul 1 | new Jun 24, 7-day recall |
 | Container With Most Water | 11 | Jun 28 | independent D26 (first time), not submitted |
-| Continuous Subarray Sum | 523 | Jun 28 | independent optimal D26 (first time), not submitted |
+| Continuous Subarray Sum | 523 | Jun 28 | independent D26 (first time), WA on LC |
+| Max Number of K-Sum Pairs | 1679 | Jun 30 | new D27, first time, 30 min |
+| Minimize Maximum Pair Sum | 1877 | Jun 30 | new D27, first time, 20 min |
 
 ### TIER 3 — Due in 7 days
 
 | Problem | LC# | Due |
 |---------|-----|-----|
 | Length of Last Word | 58 | Jul 2 |
+| Subarray Sum Equals K | 560 | Jul 2 |
+| Isomorphic Strings | 205 | Jul 2 |
+| Guess Number Higher or Lower | 374 | Jul 4 |
+| Peak Index in Mountain Array | 852 | Jul 4 |
+| Remove Duplicates | 26 | Jul 4 |
+| First Bad Version | 278 | Jul 4 |
+| Find Peak Element | 162 | Jul 4 |
+| Two Sum II | 167 | Jul 4 |
+| Unique Number of Occurrences | 1207 | Jul 4 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -234,14 +238,14 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
 | Prefix Sum (Hash Map combo) | Shaky | 60% | 3 | 560 hint D22+D25, 525 hint D25 |
-| Prefix Sum (Modulo) | Not started | — | 0 | Concept not learned |
+| Prefix Sum (Modulo) | Shaky | 30% | 1 | 974 hint twice, 523 WA on LC — intuition not locked |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
-| Two Pointers (maximize) | Not started | — | 0 | Concept not learned |
+| Two Pointers (maximize) | Building | 100% | 2 | 3 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
 | Running State | Stable | 90% | 3 | — |
 | Binary Search (standard) | Stable | 90% | 3 | 374 failed |
 | Binary Search (lower bound) | Building | 60% | 4 | 744/162/367/441 hint-needed |
-| Binary Search (applied) | Shaky | 50% | 1 | 852 O(n) not O(log n), 11 not attempted |
+| Binary Search (applied) | Building | 70% | 2 | 852 O(log n) clean D27, 374 independent D27 |
 
 ---
 
@@ -325,8 +329,11 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jun 24 | Peak Index in Mountain Array | 852 | Accepted |
 | Jun 24 | Ransom Note | 383 | Accepted |
 | Jun 25 | Guess Number Higher or Lower | 374 | Accepted |
+| Jun 27 | Subarray Sums Divisible by K | 974 | Accepted |
+| Jun 27 | Max Number of K-Sum Pairs | 1679 | Accepted |
+| Jun 27 | Minimize Maximum Pair Sum | 1877 | Accepted |
 
-Unique problems LC accepted: 49
+Unique problems LC accepted: 52
 
 ---
 
@@ -340,7 +347,7 @@ Unique problems LC accepted: 49
 | 4 | 6 | 31 | 8 | 73% |
 | 5 (Restart) | 5 | 15 | 5 | 70% |
 | 6 (Gap Fill) | 5 | 0 | 3 | 60% |
-| 7 (Gap Fill D26) | 3 | 7 | 0 | 72% (8/11 independent) |
+| 7 (Gap Fill D26-27) | 5 | 15 | 3 | 81% (17/21 independent) |
 
 ---
 
