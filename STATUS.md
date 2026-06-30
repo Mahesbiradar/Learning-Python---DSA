@@ -1,5 +1,5 @@
 # DSA STATUS
-Last updated: 2026-06-28 (Day 28 — Gap Fill Reinforcement Day 3)
+Last updated: 2026-06-29 (Day 29 — Reinforcement Day, Prefix Sum Modulo Session 2)
 Current: Month 2 | Week 6 | Gap-Fill Phase
 Next focus: Two Pointers (maximize variant) → Prefix Sum Modulo → Binary Search Applied
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
@@ -54,7 +54,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Prefix Sum | Running prefix | 3 | 8 | Stable | LC 2485, 1413, 2574, 1854 |
 | Prefix Sum | Pivot / equilibrium | 2 | 6 | Stable | LC 2270, 1991, 1744 |
 | Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Shaky | LC 930, 1124, 974, 1477 |
-| Prefix Sum | Modulo variant (523 style) | 2 | 8 | Building | LC 1590, 2575, 2261, 2262 |
+| Prefix Sum | Modulo variant (523 style) | 4 | 8 | Building | LC 2262 (not submitted), 2261 (pattern uncertain) |
 | Two Pointers | Opposite ends — palindrome/reverse | 3 | 8 | Stable | LC 680, 977, 283, 1768 |
 | Two Pointers | Write pointer — compact/remove | 2 | 8 | Stable | LC 283, 905, 2460, 75, 1089 |
 | Two Pointers | Maximize/minimize between ends | 3 | 10 | Building | LC 42, 633, 11584, 2824 |
@@ -140,8 +140,8 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, caught prefix=nums[i] bug in test — stays Tier 3 |
-| Range Sum Query | 303 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | NA | hint-needed D25 |
-| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 2 | Jun 25 | Jun 28 | ✓ | hint-needed D25 |
+| Range Sum Query | 303 | Prefix Sum | Prefix array | 1 | Jun 29 | Jun 30 | ✓ | hint D29, 35 min, Accepted — class variable access was confusion |
+| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 1 | Jun 29 | Jun 30 | ✓ | optimal hint D29 (video), brute force independent — Tier 2→1 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, WA fixed (else block: only update seen if NOT already in seen) |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
@@ -153,7 +153,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 2 | Jun 24 | Jun 27 | ✓ | 45 min - too slow |
+| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 25 min, Tier 2→3 |
 | Longest Substring Without Repeating | 3 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Minimum Size Subarray Sum | 209 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Fruits Into Baskets | 904 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -166,18 +166,21 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | First Bad Version | 278 | Binary Search | Standard | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 15 min, loop condition fixed in dry run |
 | Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
-| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 1 | Jun 28 | Jun 29 | ✓ | hint D28 — wrong approach (right=mid without saving ans), first attempt failed 1 case |
+| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 22 min, Tier 1→3 recovered |
 | Find Peak Element | 162 | Binary Search | Lower bound | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 20 min, fixed return mid→left |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
-| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 25 min, fixed loop — pattern misidentified in file (wrote Two Pointers, correct: Binary Search) |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
 | Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jun 27 | Jul 4 | ✓ | O(log n) clean D27, 15 min, return left fixed — promoted Tier 1→3 |
-| Length of Last Word | 58 | String Traversal | — | 3 | Jun 25 | Jul 2 | ✓ | independent D25 |
+| Length of Last Word | 58 | String Traversal | — | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | new D28, independent, 15 min — same as LC 560, recognized immediately |
-| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 1 | Jun 28 | Jun 29 | — | new D28, hint, brute force O(n²) only, optimal not understood yet |
+| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 1 | Jun 29 | Jun 30 | ✓ | hint+ChatGPT D29, 45+ min, optimal understood — still Tier 1 |
 | Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 30 min, first time |
 | Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 20 min, first time |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 12 min — CLOSED. Note: wrote `if prefix<0: prefix+=k` (should be remainder, but harmless in Python) |
+| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 1 | Jun 29 | Jun 30 | ✓ | new D29, hint (math model via ChatGPT), 35 min |
+| K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 1 | Jun 29 | Jun 30 | ✓ | new D29, hint (question misunderstood initially), 40 min |
+| Total Appeal of A String | 2262 | Brute Force | Subarray enum | 2 | Jun 29 | Jul 2 | — | new D29, independent brute force O(n²), 25 min, not submitted |
 
 ---
 
@@ -187,8 +190,11 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Find Smallest Letter Greater | 744 | Jun 29 | Hint D28 — wrong first attempt, saving ans pattern not recalled |
-| Make Sum Divisible by P | 1590 | Jun 29 | Hint D28 — brute force only, optimal (prefix+modulo) not understood |
+| Make Sum Divisible by P | 1590 | Jun 30 | Hint D29 — 45+ min, ChatGPT session, optimal now known but not independent |
+| Contiguous Array | 525 | Jun 30 | Hint D29 — optimal via video, brute force was independent |
+| Range Sum Query | 303 | Jun 30 | Hint D29 — 35 min, class variable access confusion |
+| Find the Divisibility Array | 2575 | Jun 30 | New D29, hint — math model (remainder*10+digit) not recalled |
+| K Divisible Elements Subarrays | 2261 | Jun 30 | New D29, hint — question misunderstood, unique subarray trick |
 
 ### TIER 2 — Due in 3 days
 
@@ -197,22 +203,21 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Top K Frequent Words | 692 | Jun 27 | hint D23, independent D25 |
 | Two Sum | 1 | Jun 27 | hint D23, independent D25 |
 | Remove Element | 27 | Jun 28 | D26: 25 min + edge case confusion |
-| Maximum Number of Vowels | 1456 | Jun 27 | 45 min - too slow |
-| Find Smallest Letter Greater | 744 | Jun 27 | hint D21 |
 | Valid Perfect Square | 367 | Jun 27 | hint D22 |
 | Arranging Coins | 441 | Jun 27 | hint D22 |
-| Range Sum Query | 303 | Jun 28 | hint-needed D25 |
-| Contiguous Array | 525 | Jun 28 | hint-needed D25 |
 | Ransom Note | 383 | Jul 1 | new Jun 24, 7-day recall |
 | Max Number of K-Sum Pairs | 1679 | Jun 30 | new D27, first time, 30 min |
 | Minimize Maximum Pair Sum | 1877 | Jun 30 | new D27, first time, 20 min |
+| Total Appeal of A String | 2262 | Jul 2 | new D29, independent brute force, not submitted |
 
 ### TIER 3 — Due in 7 days
 
 | Problem | LC# | Due |
 |---------|-----|-----|
-| Length of Last Word | 58 | Jul 2 |
-| Guess Number Higher or Lower | 374 | Jul 4 |
+| Find Smallest Letter Greater | 744 | Jul 6 |
+| Maximum Number of Vowels | 1456 | Jul 6 |
+| Length of Last Word | 58 | Jul 6 |
+| Guess Number Higher or Lower | 374 | Jul 6 |
 | Peak Index in Mountain Array | 852 | Jul 4 |
 | Remove Duplicates | 26 | Jul 4 |
 | First Bad Version | 278 | Jul 4 |
@@ -243,7 +248,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
 | Prefix Sum (Hash Map combo) | Shaky | 60% | 3 | 560 hint D22+D25, 525 hint D25 |
-| Prefix Sum (Modulo) | Building | 70% | 3 | 974 Tier 3 D28, 523 Tier 3 D28 — intuition locking |
+| Prefix Sum (Modulo) | Building | 50% | 5 | 1590/2575 hint-needed D29 — independent% dropped; needs dedicated session |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
@@ -340,8 +345,12 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jun 28 | Container With Most Water | 11 | Accepted |
 | Jun 28 | Continuous Subarray Sum | 523 | Accepted |
 | Jun 28 | Binary Subarrays With Sum | 930 | Accepted |
+| Jun 29 | Range Sum Query - Immutable | 303 | Accepted |
+| Jun 29 | Make Sum Divisible by P | 1590 | Accepted |
+| Jun 29 | Find the Divisibility Array of a String | 2575 | Accepted |
+| Jun 29 | K Divisible Elements Subarrays | 2261 | Accepted |
 
-Unique problems LC accepted: 55
+Unique problems LC accepted: 59
 
 ---
 
@@ -356,6 +365,7 @@ Unique problems LC accepted: 55
 | 5 (Restart) | 5 | 15 | 5 | 70% |
 | 6 (Gap Fill) | 5 | 0 | 3 | 60% |
 | 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) |
+| 8 (Gap Fill D29) | 3 | 7 | 4 | 50% |
 
 ---
 
