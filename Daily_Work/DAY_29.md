@@ -116,7 +116,8 @@ find the shortest such subarray in O(n).
 
 ## TIER 2 — Revision (3 problems)
 
-### 3. Contiguous Array (LC 525) — Medium
+### 3. 
+ — Medium
 Given a binary array `nums`, return the maximum length of a contiguous subarray with an equal
 number of `0` and `1`.
 
