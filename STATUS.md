@@ -1,5 +1,5 @@
 # DSA STATUS
-Last updated: 2026-06-29 (Day 29 — Reinforcement Day, Prefix Sum Modulo Session 2)
+Last updated: 2026-07-01 (Day 30 — Tier 1 Recovery + Revision Day, Prefix Sum + Two Pointers Cleanup)
 Current: Month 2 | Week 6 | Gap-Fill Phase
 Next focus: Two Pointers (maximize variant) → Prefix Sum Modulo → Binary Search Applied
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
@@ -53,8 +53,8 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Complement Lookup | Two Sum style | 3 | 8 | Stable | LC 653, 2006, 1010, 2351, 1512 |
 | Prefix Sum | Running prefix | 3 | 8 | Stable | LC 2485, 1413, 2574, 1854 |
 | Prefix Sum | Pivot / equilibrium | 2 | 6 | Stable | LC 2270, 1991, 1744 |
-| Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Shaky | LC 930, 1124, 974, 1477 |
-| Prefix Sum | Modulo variant (523 style) | 4 | 8 | Building | LC 2262 (not submitted), 2261 (pattern uncertain) |
+| Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Building | LC 930, 1124, 974, 1477 |
+| Prefix Sum | Modulo variant (523 style) | 4 | 8 | Building | LC 2262 (not submitted) |
 | Two Pointers | Opposite ends — palindrome/reverse | 3 | 8 | Stable | LC 680, 977, 283, 1768 |
 | Two Pointers | Write pointer — compact/remove | 2 | 8 | Stable | LC 283, 905, 2460, 75, 1089 |
 | Two Pointers | Maximize/minimize between ends | 3 | 10 | Building | LC 42, 633, 11584, 2824 |
@@ -132,7 +132,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 15 min, dual-map approach clean |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 2 | Jun 24 | Jun 27 | ✓ | hint D23, independent D25 |
+| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 20 min, sort key corrected from memory |
 | Two Sum | 1 | Complement Lookup | Two Sum style | 2 | Jun 24 | Jun 27 | ✓ | hint D23 (mapping error), independent D25 |
 | Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 10 min, clean |
 | Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
@@ -140,13 +140,13 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, caught prefix=nums[i] bug in test — stays Tier 3 |
-| Range Sum Query | 303 | Prefix Sum | Prefix array | 1 | Jun 29 | Jun 30 | ✓ | hint D29, 35 min, Accepted — class variable access was confusion |
-| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 1 | Jun 29 | Jun 30 | ✓ | optimal hint D29 (video), brute force independent — Tier 2→1 |
+| Range Sum Query | 303 | Prefix Sum | Prefix array | 1 | Jul 1 | Jul 2 | ✓ | D30 code written (brute+optimal), no comment fields — unverified |
+| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, both brute+optimal written clean — Tier 1→3 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, WA fixed (else block: only update seen if NOT already in seen) |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
-| Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 15 min, LC ✓ → Tier 3 |
+| Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 10 min, clean |
 | Remove Element | 27 | Two Pointers | Write pointer | 2 | Jun 25 | Jun 28 | ✓ | D26: 25 min + edge case confusion → Tier 2 (LC already ✓, no resubmit needed) |
 | Container With Most Water | 11 | Two Pointers | Maximize/minimize | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 12 min, clean — LC Accepted |
 | Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -171,15 +171,17 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
 | Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
-| Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jun 27 | Jul 4 | ✓ | O(log n) clean D27, 15 min, return left fixed — promoted Tier 1→3 |
+| Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, O(log n) clean |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | new D28, independent, 15 min — same as LC 560, recognized immediately |
-| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 1 | Jun 29 | Jun 30 | ✓ | hint+ChatGPT D29, 45+ min, optimal understood — still Tier 1 |
-| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 30 min, first time |
-| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 2 | Jun 27 | Jun 30 | ✓ | new D27, independent, 20 min, first time |
+| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 1 | Jul 1 | Jul 2 | ✓ | Hint D30, 35 min, memory-based no intuition — still Tier 1 |
+| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, clean — Tier 2→3 |
+| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, clean — Tier 2→3 |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 12 min — CLOSED. Note: wrote `if prefix<0: prefix+=k` (should be remainder, but harmless in Python) |
-| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 1 | Jun 29 | Jun 30 | ✓ | new D29, hint (math model via ChatGPT), 35 min |
-| K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 1 | Jun 29 | Jun 30 | ✓ | new D29, hint (question misunderstood initially), 40 min |
+| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, formula recalled from recovery note — Tier 1→3 |
+| K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 1 | Jun 29 | Jun 30 | ✓ | 
+new D29, hint (question misunderstood initially), 40 min. Brute force solved independently; 
+optimal approach (sliding window + set-based uniqueness) attempted with hints, not yet solved cold. | 
 | Total Appeal of A String | 2262 | Brute Force | Subarray enum | 2 | Jun 29 | Jul 2 | — | new D29, independent brute force O(n²), 25 min, not submitted |
 
 ---
@@ -190,36 +192,25 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Make Sum Divisible by P | 1590 | Jun 30 | Hint D29 — 45+ min, ChatGPT session, optimal now known but not independent |
-| Contiguous Array | 525 | Jun 30 | Hint D29 — optimal via video, brute force was independent |
-| Range Sum Query | 303 | Jun 30 | Hint D29 — 35 min, class variable access confusion |
-| Find the Divisibility Array | 2575 | Jun 30 | New D29, hint — math model (remainder*10+digit) not recalled |
-| K Divisible Elements Subarrays | 2261 | Jun 30 | New D29, hint — question misunderstood, unique subarray trick |
+| Make Sum Divisible by P | 1590 | Jul 2 | Hint D30 — 35 min, memory-based, no intuition for derivation |
+| Range Sum Query | 303 | Jul 2 | D30 code written but no comment fields — unverified, must redo |
+| K Divisible Elements Subarrays | 2261 | Jul 2 | NOT solved D30 — overdue from Jun 30, hint D29 |
 
 ### TIER 2 — Due in 3 days
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Top K Frequent Words | 692 | Jun 27 | hint D23, independent D25 |
-| Two Sum | 1 | Jun 27 | hint D23, independent D25 |
-| Remove Element | 27 | Jun 28 | D26: 25 min + edge case confusion |
-| Valid Perfect Square | 367 | Jun 27 | hint D22 |
-| Arranging Coins | 441 | Jun 27 | hint D22 |
-| Ransom Note | 383 | Jul 1 | new Jun 24, 7-day recall |
-| Max Number of K-Sum Pairs | 1679 | Jun 30 | new D27, first time, 30 min |
-| Minimize Maximum Pair Sum | 1877 | Jun 30 | new D27, first time, 20 min |
+| Two Sum | 1 | Jun 27 | hint D23, independent D25 — OVERDUE |
+| Valid Perfect Square | 367 | Jun 27 | hint D22 — OVERDUE |
+| Arranging Coins | 441 | Jun 27 | hint D22 — OVERDUE |
+| Remove Element | 27 | Jun 28 | D26: 25 min + edge case confusion — OVERDUE |
+| Ransom Note | 383 | Jul 1 | new Jun 24, 7-day recall — OVERDUE |
 | Total Appeal of A String | 2262 | Jul 2 | new D29, independent brute force, not submitted |
 
 ### TIER 3 — Due in 7 days
 
 | Problem | LC# | Due |
 |---------|-----|-----|
-| Find Smallest Letter Greater | 744 | Jul 6 |
-| Maximum Number of Vowels | 1456 | Jul 6 |
-| Length of Last Word | 58 | Jul 6 |
-| Guess Number Higher or Lower | 374 | Jul 6 |
-| Peak Index in Mountain Array | 852 | Jul 4 |
-| Remove Duplicates | 26 | Jul 4 |
 | First Bad Version | 278 | Jul 4 |
 | Find Peak Element | 162 | Jul 4 |
 | Two Sum II | 167 | Jul 4 |
@@ -230,6 +221,17 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Subarray Sum Equals K | 560 | Jul 5 |
 | Isomorphic Strings | 205 | Jul 5 |
 | Binary Subarrays With Sum | 930 | Jul 5 |
+| Find Smallest Letter Greater | 744 | Jul 6 |
+| Maximum Number of Vowels | 1456 | Jul 6 |
+| Length of Last Word | 58 | Jul 6 |
+| Guess Number Higher or Lower | 374 | Jul 6 |
+| Contiguous Array | 525 | Jul 8 |
+| Find the Divisibility Array | 2575 | Jul 8 |
+| Top K Frequent Words | 692 | Jul 8 |
+| Max Number of K-Sum Pairs | 1679 | Jul 8 |
+| Minimize Maximum Pair Sum | 1877 | Jul 8 |
+| Peak Index in Mountain Array | 852 | Jul 8 |
+| Remove Duplicates | 26 | Jul 8 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -247,8 +249,8 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Frequency Sorting | Stable | 80% | 3 | Top K Words hint-needed once |
 | Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
-| Prefix Sum (Hash Map combo) | Shaky | 60% | 3 | 560 hint D22+D25, 525 hint D25 |
-| Prefix Sum (Modulo) | Building | 50% | 5 | 1590/2575 hint-needed D29 — independent% dropped; needs dedicated session |
+| Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 recovered D30 — all 3 independent; need 5 LC ✓ for Stable (2 more) |
+| Prefix Sum (Modulo) | Building | 75% | 4 | 2575 recovered D30; 1590 still hint-based; 2261 reclassified Brute Force (not Modulo) — removed from count |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
@@ -349,8 +351,9 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jun 29 | Make Sum Divisible by P | 1590 | Accepted |
 | Jun 29 | Find the Divisibility Array of a String | 2575 | Accepted |
 | Jun 29 | K Divisible Elements Subarrays | 2261 | Accepted |
+| Jul 1 | Contiguous Array | 525 | Accepted |
 
-Unique problems LC accepted: 59
+Unique problems LC accepted: 60
 
 ---
 
@@ -366,6 +369,40 @@ Unique problems LC accepted: 59
 | 6 (Gap Fill) | 5 | 0 | 3 | 60% |
 | 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) |
 | 8 (Gap Fill D29) | 3 | 7 | 4 | 50% |
+| 9 (D30 — T1 Recovery) | 0 | 9 | 0 | 78% |
+
+---
+
+## REGRESSION LOG
+
+Tracks problems that were solved independently, then regressed. Use this to identify unstable memory patterns.
+Source: Cross-referenced from Day 08–30 solution files.
+
+| Problem | LC# | First Independent | Regression | Cause | Recovered |
+|---------|-----|------------------|------------|-------|-----------|
+| Subarray Sum Equals K | 560 | Day 14 | Day 22 | Seen old solution — high-volume session fatigue | Day 25 |
+| Isomorphic Strings | 205 | Day 12 | Days 22–25 (multiple) | Template recalled without understanding dual-map constraint | Day 25 |
+| Max Product Subarray | 152 | Day 14 | Day 24 | Not attempted in full; hint needed on high-volume day | Day 25+ |
+| Contains Duplicate II | 219 | Days 16–18 | Days 22–23 | Wrong update order: check → add → shrink confused | Day 25 |
+
+Rule: if any problem appears in this log twice, it requires a dedicated first-principles session, not another revision cycle.
+
+---
+
+## UNRESOLVED-SINCE-ORIGIN — Standalone Session Required
+
+These concepts have been flagged (by comment fields or explicit notes in solution files) as needing a dedicated session separate from the normal Tier 1 revision queue. They must NOT be folded back into daily revision until the standalone session is complete and the concept is understood from first principles.
+
+| Concept | First Flagged | Evidence | Standalone Session Done? | Date |
+|---------|--------------|----------|--------------------------|------|
+| Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 30 comment: "still the entire solution is no intuition just with memory" | No | — |
+| OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 29 comment: "initially not able to access the class variable or objects in sumRange" | No | — |
+
+Protocol for Standalone Session:
+1. Do NOT time-box to 25/40 min targets — give it 60–90 min
+2. Write the algebraic derivation or conceptual model by hand before touching code
+3. Solve 2–3 problems of the same concept back-to-back in the same session
+4. Only mark "Done" if you can solve the hardest variant cold, with no hint, on the NEXT day
 
 ---
 

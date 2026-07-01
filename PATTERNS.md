@@ -1,7 +1,10 @@
 # PATTERNS — Concept Blocks
 
 Agent: when introducing any pattern below for the first time, include the FULL block in the daily file.
-For reinforcement days, include only the Code Template section as the warm-up.
+For reinforcement days, use the following 3-step warm-up protocol. A warm-up is only complete when all three steps are answered:
+  1. Write the template from memory.
+  2. Answer in one sentence: "The invariant this template maintains is: ___"
+  3. Answer in one sentence: "If I changed [specific line] to [wrong version], it would fail because: ___"
 
 ---
 
@@ -275,3 +278,118 @@ for read in range(len(nums)):
 return write
 ```
 Time: O(n) | Space: O(1)
+
+---
+
+## PATTERN: Prefix Sum + Hash Map (Subarray Sum Equals K style)
+**Trigger words:** count subarrays with sum equal to k, number of subarrays, how many contiguous subarrays sum to, binary subarrays with sum
+**Mental model:** Store prefix sums in a hash map with counts. For each position j, check if (prefix[j] − k) was seen before — if yes, every earlier occurrence gives a valid subarray ending at j.
+
+**Why it exists:**
+Brute force checks all O(n²) subarrays. By storing prefix sums, any subarray sum [i+1..j] = prefix[j] − prefix[i] is checkable in O(1) → O(n) total.
+
+**State:** `seen = {prefix_sum: count_of_occurrences}`
+**Initialization:** `seen = {0: 1}` — one empty prefix before index 0 with sum 0.
+
+**Critical ordering rule:**
+  Step 1: Add nums[i] to prefix
+  Step 2: Check if (prefix − k) is in seen → add to count
+  Step 3: THEN store prefix in seen
+Never store before checking — that would allow counting the element against itself.
+
+**Common mistakes:**
+1. `seen = {}` instead of `seen = {0: 1}` — misses subarrays starting from index 0
+2. Storing BEFORE checking — double-counts zero-length prefixes
+3. `seen[prefix] = i` (index like Two Sum) instead of `seen[prefix] = count` — wrong for counting problems
+
+**Template:**
+```python
+seen = {0: 1}
+prefix = 0
+count = 0
+for x in nums:
+    prefix += x
+    needed = prefix - k
+    if needed in seen:
+        count += seen[needed]
+    seen[prefix] = seen.get(prefix, 0) + 1
+return count
+```
+Time: O(n) | Space: O(n)
+
+---
+
+## PATTERN: Prefix Sum + Modulo
+**Trigger words:** divisible by k, sum divisible, remainder, modulo, multiple of k, make sum divisible by p, subarray sum divisible
+**Mental model:** Track prefix remainders mod k. When two prefix sums share the same remainder, the subarray between them is divisible by k.
+
+**DERIVATION — read this, cover it, then reproduce it before every modulo problem:**
+```
+If prefix[j] % k = prefix[i] % k
+Then (prefix[j] - prefix[i]) % k = 0
+And  prefix[j] - prefix[i] = sum(nums[i+1..j])
+Therefore sum(nums[i+1..j]) is divisible by k.
+Conclusion: same remainder at two positions → subarray between them is divisible by k.
+```
+PROOF TEST: Before each modulo problem attempt, write the 4-line proof above from memory. Log result: (Y/N, date)
+
+**Extension — LC 1590 (remove smallest subarray so total % p = 0):**
+```
+total_sum % p = target        (remainder we need the removed subarray to cancel)
+We need: subarray_sum % p = target
+prefix[j] - prefix[i] = subarray_sum
+(prefix[j] - prefix[i]) % p = target
+→ prefix[i] % p = (prefix[j] % p - target) % p = needed
+At each j: compute needed = (current - target) % p. Look for needed in seen.
+```
+CRITICAL: seen stores {remainder: index} (not count) because you need length = i − seen[needed].
+Initialization: `seen = {0: -1}` (empty prefix at position before index 0).
+
+**Two sub-variants — know the difference:**
+
+| | Count subarrays (LC 523, 974) | Shortest removal (LC 1590) |
+|--|--|--|
+| seen stores | remainder → count | remainder → last index |
+| seen init | {0: 1} | {0: -1} |
+| needed | current_remainder (same as a previous) | (current − target) % p |
+| answer update | count += seen[needed] | best = min(best, i − seen[needed]) |
+| return | count | best if best < len(nums) else -1 |
+
+**Common mistakes:**
+1. Using count storage when you need index storage (mixing up the two sub-variants)
+2. Forgetting `% p` on `(current - target)` — Python mod is always non-negative, but still required
+3. LC 1590: initializing `seen = {0: 0}` instead of `{0: -1}` — off-by-one on first subarray length
+4. LC 523/974: not handling `length >= 2` constraint (a single zero-length subarray is invalid for LC 523)
+
+**Template — Count subarrays divisible by k (LC 974):**
+```python
+seen = {0: 1}
+prefix = 0
+count = 0
+for x in nums:
+    prefix = (prefix + x) % k
+    if prefix in seen:
+        count += seen[prefix]
+    seen[prefix] = seen.get(prefix, 0) + 1
+return count
+```
+Time: O(n) | Space: O(k)
+
+**Template — Shortest removal (LC 1590):**
+```python
+total = sum(nums)
+target = total % p
+if target == 0:
+    return 0
+seen = {0: -1}
+prefix = 0
+best = len(nums)
+for i, x in enumerate(nums):
+    prefix = (prefix + x) % p
+    needed = (prefix - target) % p
+    if needed in seen:
+        best = min(best, i - seen[needed])
+    seen[prefix] = i
+return best if best < len(nums) else -1
+```
+Time: O(n) | Space: O(n)

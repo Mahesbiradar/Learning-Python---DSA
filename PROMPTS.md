@@ -110,6 +110,23 @@ STEP 5 — UPDATE STATUS.md:
 
   Save STATUS.md.
 
+STEP 5b — REGRESSION LOG & UNRESOLVED-SINCE-ORIGIN CHECK:
+  Regression Log:
+    - If any problem solved today was previously Tier 3 or Tier 4 and is now 
+      being solved with a hint, seen-solution, or failed status → add/update 
+      a row in the Regression Log with today's date and cause (from mistakes/
+      confusion field).
+    - If a problem appears in the Regression Log for the 2nd time → flag it 
+      in the chat output as "requires standalone session, not more revision."
+
+  Unresolved-Since-Origin:
+    - If today's solution file includes a dedicated derivation/primer session 
+      for a flagged concept (Prefix Sum + Modulo or OOP/Class Mechanics), and 
+      the following problem was solved cold and independently the next day 
+      → mark that concept RESOLVED with today's date.
+    - Do not mark resolved based on today's session alone — resolution 
+      requires one additional cold, independent solve on a later day.
+
 STEP 6 — OUTPUT 10-LINE ANALYSIS IN CHAT:
   Line 1: Problems solved today — new: X, revision: X, total: X
   Line 2: Independent: X/total | Hint: X | Failed: X | Time violations (>25/40 min): list them
@@ -121,6 +138,7 @@ STEP 6 — OUTPUT 10-LINE ANALYSIS IN CHAT:
   Line 8: Pattern Coverage Map updates — any variant status changed
   Line 9: Tomorrow's revision priority — top 5 by due date from Revision Pool
   Line 10: Output verification — all passed OR list mismatches
+  Line 11: Regression Log / Unresolved-Since-Origin updates (if any)
 
 Rules:
 - Output mismatch overrides ALL comment fields

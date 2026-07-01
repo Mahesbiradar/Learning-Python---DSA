@@ -22,6 +22,11 @@ Scan trigger words. Which pattern fires?
 Write the pattern name before touching code.
 If no pattern fires → write brute force first, then think.
 
+RULE: Before writing any code, write this line at the top of your solution:
+  # Pattern: [pattern name] | Variant: [variant name]
+If you cannot write this line, the Pattern Check step is not complete.
+Stop and re-restate the problem before proceeding. Do not start coding without it.
+
 Trigger word cheat sheet:
   frequency / count / appears k times → Frequency Hashing
   group together / same chars / anagram → Grouping Hash Map
@@ -83,6 +88,11 @@ Only after local tests pass.
 # Variant: [variant name]
 # mistakes/confusion: [note or NA]
 
+RULE: Never leave a time or space complexity field as O(?). Always write the real answer with a one-sentence justification.
+  Example: "O(n) — one pass through the array" or "O(log n) — search space halves each iteration"
+RULE: An incorrect complexity annotation triggers a Tier 1 override, regardless of whether the solution output is correct.
+  Writing O(n) for binary search or O(n*m) for a single-loop algorithm are disqualifying errors.
+
 ---
 
 ## TIER ASSIGNMENT RULES
@@ -122,3 +132,15 @@ Medium problems: 25-35 min
 Hard problems: not in scope for now
 
 If you exceed the target → that problem is TIER 1 regardless of correctness.
+
+---
+
+## MANDATORY CLOSING CHECK (every solution file, every day)
+
+A solution file is not considered complete until both lines below are marked "Yes":
+
+  # Prompt 1 (End of Day agent) run: Yes / No
+  # STATUS.md updated: Yes / No
+
+Do not close the file, start a new session, or move to the next day's plan without completing this check.
+If Prompt 1 is skipped: tier assignments are stale, the revision pool is wrong, and the next day's plan is built on bad data.
