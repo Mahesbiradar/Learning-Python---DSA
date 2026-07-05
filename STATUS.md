@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-07-02 (Day 31 — Tier 1/2/3 Revision Sweep + New Problem LC 128)
-Current: Month 2 | Week 6 | Gap-Fill Phase
-Next focus: Two Pointers (maximize variant) → Prefix Sum Modulo → Binary Search Applied
+Last updated: 2026-07-05 (Day 32 — Recovery Day: Prefix Sum Modulo Standalone Session + Backlog Clearance)
+Current: Month 2 | Week 10 | Gap-Fill Phase transitioning to Linked Lists
+Next focus: Clear Tier 1 (128, 441) → Linked Lists (Jul 7) → Binary Search Applied/Lower-bound close-out via revision pool
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -63,7 +63,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Running State | Kadane / min-max tracking | 3 | 8 | Stable | LC 918, 2401, 1749, 1186 |
 | Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
 | Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
-| Binary Search | Applied — non-obvious structure | 2 | 10 | Shaky | LC 33, 153, 1095, 875, 1011 |
+| Binary Search | Applied — non-obvious structure | 2 | 10 | Building (flagged for dedicated consolidation — under-practiced 2/10, deferred since Jun 30) | LC 33, 153, 1095, 875, 1011 |
 | Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 hint-based D31 — need 4-5 more, verify independence |
 
 ### DS 2: Linked Lists (Phase: NOT STARTED)
@@ -127,29 +127,29 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | First Unique Character | 387 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
 | Intersection Arrays II | 350 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
 | Majority Element | 169 | Freq Hashing | Count+query | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed D23 |
-| Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 10 min, clean |
+| Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 10 min, clean — reconfirmed Tier 3 |
 | Ransom Note | 383 | Freq Hashing | Count+query | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, clean — reconfirmed Tier 3 |
 | Group Anagrams | 49 | Grouping Hash Map | Canonical key | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 15 min, dual-map approach clean |
+| Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 15 min, clean — regression risk cleared, no hint needed |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 20 min, sort key corrected from memory |
 | Two Sum | 1 | Complement Lookup | Two Sum style | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, clean — Tier 2→3 |
-| Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jun 27 | Jul 4 | ✓ | independent D27, 10 min, clean |
+| Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 10 min, clean — reconfirmed Tier 3 |
 | Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, caught prefix=nums[i] bug in test — stays Tier 3 |
+| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, caught prefix=nums[i] bug in test — stays Tier 3 — NOT attempted D32, due date overdue |
 | Range Sum Query | 303 | Prefix Sum | Prefix array | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 20 min, output verified — Tier 1→3. Still hasn't internalized why prefix list starts with 0 |
 | Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, both brute+optimal written clean — Tier 1→3 |
-| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 25 min, WA fixed (else block: only update seen if NOT already in seen) |
+| Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 20 min, solved cold as part of Modulo standalone session — clean |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 10 min, clean |
-| Remove Element | 27 | Two Pointers | Write pointer | 2 | Jun 25 | Jun 28 | ✓ | D26: 25 min + edge case confusion → Tier 2 (LC already ✓, no resubmit needed) |
-| Container With Most Water | 11 | Two Pointers | Maximize/minimize | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 12 min, clean — LC Accepted |
+| Remove Element | 27 | Two Pointers | Write pointer | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 10 min, clean — Tier 2→3, overdue since Jun 28 cleared |
+| Container With Most Water | 11 | Two Pointers | Maximize/minimize | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 15 min, clean — reconfirmed Tier 3 |
 | Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -170,19 +170,19 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 22 min, Tier 1→3 recovered |
 | Find Peak Element | 162 | Binary Search | Lower bound | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, reconfirmed Tier 3 |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, clean — Tier 2→3 |
-| Arranging Coins | 441 | Binary Search | Lower bound | 2 | Jun 20 | Jun 27 | ✓ | hint D22 |
+| Arranging Coins | 441 | Binary Search | Lower bound | 1 | Jul 5 | Jul 6 | ✓ | Hint D32 (formula for coins needed) — dropped Tier2→1, restart clock. 2nd hint overall (also D22) |
 | Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
 | Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, O(log n) clean |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | new D28, independent, 15 min — same as LC 560, recognized immediately |
-| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 1 | Jul 2 | Jul 3 | ✓ | Hint D31, 40 min — understood derivation usage, still can't derive it from scratch — USO unresolved |
 | Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, clean — Tier 2→3 |
 | Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, clean — Tier 2→3 |
-| Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jun 28 | Jul 5 | ✓ | independent D28, 12 min — CLOSED. Note: wrote `if prefix<0: prefix+=k` (should be remainder, but harmless in Python) |
+| Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 20 min, solved cold as part of Modulo standalone session — clean |
 | Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, formula recalled from recovery note — Tier 1→3 |
 | K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 2 | Jul 9 | ✓ | independent D31 (brute only), 20 min, output verified correct — optimal still not recalled cold |
-| Total Appeal of A String | 2262 | Brute Force | Subarray enum | 2 | Jun 29 | Jul 2 | — | new D29, independent brute force O(n²), 25 min, not submitted |
-| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 1 | Jul 2 | Jul 3 | ✓ | new D31, hint — pattern/variant seen in video solution, not self-derived, 40 min |
+| Total Appeal of A String | 2262 | Brute Force | Subarray enum | 2 | Jul 5 | Jul 8 | — | D32: independent, 20 min, still brute force O(n²) only — optimal explicitly requested again and not attempted, not submitted |
+| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 1 | Jul 5 | Jul 6 | ✓ | D32: Hint again (2nd hint in a row, was told to solve cold with no video/notes) — stays Tier 1, chronic-hint pattern, candidate for standalone session |
+| Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 2 | Jul 5 | Jul 8 | ✓ | D32: independent (30 min) after dedicated Modulo standalone session — Tier 1→2, first independent solve ever on this problem; needs one more cold independent solve on a later day to close USO |
 
 ---
 
@@ -192,29 +192,22 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Make Sum Divisible by P | 1590 | Jul 3 | Hint D31 — 40 min, derivation still not internalized |
-| Longest Consecutive Sequence | 128 | Jul 3 | new D31, hint — pattern seen in video solution, not self-derived |
+| Longest Consecutive Sequence | 128 | Jul 6 | Hint again D32 (2nd hint in a row, told to solve cold) — chronic-hint pattern |
+| Arranging Coins | 441 | Jul 6 | Hint D32 (formula for coins needed) — dropped from Tier 2, restart clock |
 
 ### TIER 2 — Due in 3 days
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Arranging Coins | 441 | Jun 27 | hint D22 — OVERDUE |
-| Remove Element | 27 | Jun 28 | D26: 25 min + edge case confusion — OVERDUE |
-| Total Appeal of A String | 2262 | Jul 2 | new D29, independent brute force, not submitted |
+| Total Appeal of A String | 2262 | Jul 8 | D32: independent brute force again, optimal still not attempted despite explicit instruction |
+| Make Sum Divisible by P | 1590 | Jul 8 | D32: independent (30 min) after standalone Modulo session — Tier 1→2, first independent solve; needs 1 more cold solve to close USO |
 
 ### TIER 3 — Due in 7 days
 
 | Problem | LC# | Due |
 |---------|-----|-----|
-| Two Sum II | 167 | Jul 4 |
-| Unique Number of Occurrences | 1207 | Jul 4 |
-| Subarray Sums Divisible by K | 974 | Jul 5 |
-| Continuous Subarray Sum | 523 | Jul 5 |
-| Container With Most Water | 11 | Jul 5 |
-| Subarray Sum Equals K | 560 | Jul 5 |
-| Isomorphic Strings | 205 | Jul 5 |
-| Binary Subarrays With Sum | 930 | Jul 5 |
+| Subarray Sum Equals K | 560 | Jul 5 (overdue) |
+| Binary Subarrays With Sum | 930 | Jul 5 (overdue) |
 | Find Smallest Letter Greater | 744 | Jul 6 |
 | Maximum Number of Vowels | 1456 | Jul 6 |
 | Length of Last Word | 58 | Jul 6 |
@@ -233,6 +226,13 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Two Sum | 1 | Jul 9 |
 | Valid Perfect Square | 367 | Jul 9 |
 | Ransom Note | 383 | Jul 9 |
+| Two Sum II | 167 | Jul 12 |
+| Unique Number of Occurrences | 1207 | Jul 12 |
+| Subarray Sums Divisible by K | 974 | Jul 12 |
+| Continuous Subarray Sum | 523 | Jul 12 |
+| Container With Most Water | 11 | Jul 12 |
+| Isomorphic Strings | 205 | Jul 12 |
+| Remove Element | 27 | Jul 12 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -251,7 +251,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
 | Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 recovered D30 — all 3 independent; need 5 LC ✓ for Stable (2 more) |
-| Prefix Sum (Modulo) | Building | 75% | 4 | 2575 recovered D30; 1590 hint-based again D31 (derivation not internalized — USO); 2261 reclassified Brute Force (not Modulo) — removed from count |
+| Prefix Sum (Modulo) | Building | 85% | 4 | 523/974 solved cold+independent D32 (Modulo standalone session); 1590 independent D32 for first time (30 min, still >25min target) — needs 1 more cold solve to close USO; 2261 reclassified Brute Force (not Modulo) — removed from count |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
@@ -259,7 +259,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Binary Search (standard) | Stable | 90% | 3 | 374 failed |
 | Binary Search (lower bound) | Building | 60% | 4 | 744/162/367/441 hint-needed |
 | Binary Search (applied) | Building | 70% | 2 | 852 O(log n) clean D27, 374 independent D27 |
-| Hash Set (Sequence Expansion) | Building | 0% | 1 | LC 128 D31 — hint-based, saw video solution, not self-derived |
+| Hash Set (Sequence Expansion) | Building | 0% | 1 | LC 128 hint-based D31 AND D32 (told to solve cold, no video — still hint-needed) — chronic hint, candidate for standalone session |
 
 ---
 
@@ -277,10 +277,10 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 
 | Phase | Focus | Status | Start | Target End |
 |-------|-------|--------|-------|-----------|
-| Gap Fill | Two Pointers maximize (LC 11, 42) | In Progress | Jun 25 | Jun 28 |
-| Gap Fill | Prefix Sum Modulo (LC 523, 974) | Up next | Jun 27 | Jun 30 |
-| Gap Fill | Binary Search Applied (LC 33, 153) | Queued | Jun 30 | Jul 3 |
-| Gap Fill | Binary Search Lower bound (close out) | Queued | Jul 3 | Jul 5 |
+| Gap Fill | Two Pointers maximize (LC 11, 42) | Done — 100% independent, needs volume (4/10) | Jun 25 | Jun 28 |
+| Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
+| Gap Fill | Binary Search Applied (LC 33, 153) | Deferred — folded into revision pool, dedicated session still needed | Jun 30 | Jul 3 (missed) |
+| Gap Fill | Binary Search Lower bound (close out) | Deferred — regressed (441 hint again D32), needs dedicated session before close-out | Jul 3 | Jul 5 (missed) |
 | New DS | Linked Lists | Not started | Jul 7 | Jul 21 |
 | New DS | Stack + Queue | Not started | Jul 21 | Aug 4 |
 | New DS | Trees | Not started | Aug 4 | Aug 25 |
@@ -362,17 +362,16 @@ Unique problems LC accepted: 61
 
 ## WEEKLY SCORES
 
-| Week | New Problems | Revisions | LC Accepted | Independent% |
-|------|-------------|-----------|-------------|--------------|
-| 1 | 29 | 14 | 0 | 67% |
-| 2 | 17 | 28 | 15 | 73% |
-| 3 | 12 | 43 | 13 | 67% |
-| 4 | 6 | 31 | 8 | 73% |
-| 5 (Restart) | 5 | 15 | 5 | 70% |
-| 6 (Gap Fill) | 5 | 0 | 3 | 60% |
-| 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) |
-| 8 (Gap Fill D29) | 3 | 7 | 4 | 50% |
-| 9 (D30-31 — T1 Recovery) | 1 | 17 | 1 | ~78% |
+| Week | New Problems | Revisions | LC Accepted | Independent% | Notes |
+|------|-------------|-----------|-------------|--------------|-------|
+| 1 | 29 | 14 | 0 | 67% | |
+| 2 | 17 | 28 | 15 | 73% | |
+| 3 | 12 | 43 | 13 | 67% | |
+| 4 | 6 | 31 | 8 | 73% | |
+| 5 (Restart) | 5 | 15 | 5 | 70% | |
+| 6 (Gap Fill) | 5 | 0 | 3 | 60% | |
+| 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) | |
+| 8 (Jun 29 - Jul 5, D29-D32) | 4 | 35 | 6 | ~72% | avg 20 min/problem — Fri Jul 3 assessment missed, Recovery Day used Jul 5 |
 
 ---
 
@@ -398,7 +397,7 @@ These concepts have been flagged (by comment fields or explicit notes in solutio
 
 | Concept | First Flagged | Evidence | Standalone Session Done? | Date |
 |---------|--------------|----------|--------------------------|------|
-| Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 31: pre-session recall attempted, still needed Hint on LC 1590 (40 min) — comment: "understood why we used but how it came still need to internalize" | No | — |
+| Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 32: ran dedicated 60-90 min standalone session (derivation written by hand, self-reported ~5-6 hrs total study). Solved 523, 974 cold+independent, and LC 1590 independently for the first time (30 min, Tier 1→2). Protocol requires one more cold, independent solve on a LATER day before marking Done. | No — pending Day 33+ cold retest | — |
 | OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 31: solved independently (20 min) but comment: "still not internalized why we initialized the list with 0" | No | — |
 
 Protocol for Standalone Session:
