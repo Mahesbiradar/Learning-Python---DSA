@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-07-05 (Day 32 — Recovery Day: Prefix Sum Modulo Standalone Session + Backlog Clearance)
+Last updated: 2026-07-06 (Day 33 — Reinforcement Day: 128/441 recovered to Tier 3, Binary Search Applied chronic-hint confirmed on 33/153/875)
 Current: Month 2 | Week 10 | Gap-Fill Phase transitioning to Linked Lists
-Next focus: Clear Tier 1 (128, 441) → Linked Lists (Jul 7) → Binary Search Applied/Lower-bound close-out via revision pool
+Next focus: Linked Lists starts Jul 7 → Binary Search Applied (33, 153, 875) needs standalone session — chronic hint even with template given directly
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -63,8 +63,8 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Running State | Kadane / min-max tracking | 3 | 8 | Stable | LC 918, 2401, 1749, 1186 |
 | Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
 | Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
-| Binary Search | Applied — non-obvious structure | 2 | 10 | Building (flagged for dedicated consolidation — under-practiced 2/10, deferred since Jun 30) | LC 33, 153, 1095, 875, 1011 |
-| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 hint-based D31 — need 4-5 more, verify independence |
+| Binary Search | Applied — non-obvious structure | 5 | 10 | Building (D33: 33, 153, 875 attempted — all hint-needed despite template given directly in warm-up — escalate to standalone session) | LC 1095, 1011 |
+| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 independent D33 (first time, after 2 consecutive hints) — needs 1 more cold solve to confirm |
 
 ### DS 2: Linked Lists (Phase: NOT STARTED)
 
@@ -154,7 +154,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 25 min, Tier 2→3 |
+| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 20 min, reconfirmed Tier 3 |
 | Longest Substring Without Repeating | 3 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Minimum Size Subarray Sum | 209 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Fruits Into Baskets | 904 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -167,13 +167,16 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | First Bad Version | 278 | Binary Search | Standard | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 20 min, reconfirmed Tier 3 |
 | Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
-| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 22 min, Tier 1→3 recovered |
+| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 20 min, reconfirmed Tier 3 |
 | Find Peak Element | 162 | Binary Search | Lower bound | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, reconfirmed Tier 3 |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, clean — Tier 2→3 |
-| Arranging Coins | 441 | Binary Search | Lower bound | 1 | Jul 5 | Jul 6 | ✓ | Hint D32 (formula for coins needed) — dropped Tier2→1, restart clock. 2nd hint overall (also D22) |
-| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
+| Arranging Coins | 441 | Binary Search | Lower bound | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 15 min — recovered after hint D32, Tier1→3 |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 10 min, reconfirmed Tier 3 |
 | Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, O(log n) clean |
 | Length of Last Word | 58 | String Traversal | — | 3 | Jun 29 | Jul 6 | ✓ | independent D29, 20 min |
+| Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 1 | Jul 6 | Jul 7 | ✓ | new D33, hint (30 min) — despite feasibility template given directly in warm-up |
+| Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 1 | Jul 6 | Jul 7 | ✓ | new D33, hint (25 min) |
+| Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 1 | Jul 6 | Jul 7 | ✓ | new D33, hint (30 min) — 3rd Applied problem today, 3rd hint |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jun 28 | Jul 5 | ✓ | new D28, independent, 15 min — same as LC 560, recognized immediately |
 | Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, clean — Tier 2→3 |
 | Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, clean — Tier 2→3 |
@@ -181,7 +184,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, formula recalled from recovery note — Tier 1→3 |
 | K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 2 | Jul 9 | ✓ | independent D31 (brute only), 20 min, output verified correct — optimal still not recalled cold |
 | Total Appeal of A String | 2262 | Brute Force | Subarray enum | 2 | Jul 5 | Jul 8 | — | D32: independent, 20 min, still brute force O(n²) only — optimal explicitly requested again and not attempted, not submitted |
-| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 1 | Jul 5 | Jul 6 | ✓ | D32: Hint again (2nd hint in a row, was told to solve cold with no video/notes) — stays Tier 1, chronic-hint pattern, candidate for standalone session |
+| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 15 min — recovered after 2 consecutive hints, Tier1→3, needs 1 more cold confirm |
 | Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 2 | Jul 5 | Jul 8 | ✓ | D32: independent (30 min) after dedicated Modulo standalone session — Tier 1→2, first independent solve ever on this problem; needs one more cold independent solve on a later day to close USO |
 
 ---
@@ -192,8 +195,9 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Longest Consecutive Sequence | 128 | Jul 6 | Hint again D32 (2nd hint in a row, told to solve cold) — chronic-hint pattern |
-| Arranging Coins | 441 | Jul 6 | Hint D32 (formula for coins needed) — dropped from Tier 2, restart clock |
+| Search in Rotated Sorted Array | 33 | Jul 7 | Hint D33 (new) — despite feasibility template given directly in warm-up |
+| Find Minimum in Rotated Sorted Array | 153 | Jul 7 | Hint D33 (new) |
+| Koko Eating Bananas | 875 | Jul 7 | Hint D33 (new) — 3rd Binary Search Applied hint today, escalate to standalone session |
 
 ### TIER 2 — Due in 3 days
 
@@ -208,10 +212,12 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 |---------|-----|-----|
 | Subarray Sum Equals K | 560 | Jul 5 (overdue) |
 | Binary Subarrays With Sum | 930 | Jul 5 (overdue) |
-| Find Smallest Letter Greater | 744 | Jul 6 |
-| Maximum Number of Vowels | 1456 | Jul 6 |
 | Length of Last Word | 58 | Jul 6 |
-| Guess Number Higher or Lower | 374 | Jul 6 |
+| Longest Consecutive Sequence | 128 | Jul 13 |
+| Arranging Coins | 441 | Jul 13 |
+| Find Smallest Letter Greater | 744 | Jul 13 |
+| Maximum Number of Vowels | 1456 | Jul 13 |
+| Guess Number Higher or Lower | 374 | Jul 13 |
 | Contiguous Array | 525 | Jul 8 |
 | Find the Divisibility Array | 2575 | Jul 8 |
 | Top K Frequent Words | 692 | Jul 8 |
@@ -257,9 +263,9 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
 | Running State | Stable | 90% | 3 | — |
 | Binary Search (standard) | Stable | 90% | 3 | 374 failed |
-| Binary Search (lower bound) | Building | 60% | 4 | 744/162/367/441 hint-needed |
-| Binary Search (applied) | Building | 70% | 2 | 852 O(log n) clean D27, 374 independent D27 |
-| Hash Set (Sequence Expansion) | Building | 0% | 1 | LC 128 hint-based D31 AND D32 (told to solve cold, no video — still hint-needed) — chronic hint, candidate for standalone session |
+| Binary Search (lower bound) | Building | 70% | 5 | 441 recovered independent D33 (was hint D32) — improving, monitor next cycle |
+| Binary Search (applied) | Building | 40% | 5 | 852 clean D27; 33/153/875 ALL hint-needed D33 despite feasibility template given directly in warm-up — chronic, escalate to standalone session before Linked Lists |
+| Hash Set (Sequence Expansion) | Building | 50% | 1 | LC 128 independent D33 (first time, after hints D31+D32) — needs 1 more cold solve to confirm before Stable |
 
 ---
 
@@ -279,8 +285,8 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 |-------|-------|--------|-------|-----------|
 | Gap Fill | Two Pointers maximize (LC 11, 42) | Done — 100% independent, needs volume (4/10) | Jun 25 | Jun 28 |
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
-| Gap Fill | Binary Search Applied (LC 33, 153) | Deferred — folded into revision pool, dedicated session still needed | Jun 30 | Jul 3 (missed) |
-| Gap Fill | Binary Search Lower bound (close out) | Deferred — regressed (441 hint again D32), needs dedicated session before close-out | Jul 3 | Jul 5 (missed) |
+| Gap Fill | Binary Search Applied (LC 33, 153, 875) | D33: all 3 attempted, all hint-needed despite direct template — standalone session now mandatory, carries into Linked Lists phase as open backlog | Jun 30 | Jul 3 (missed) |
+| Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
 | New DS | Linked Lists | Not started | Jul 7 | Jul 21 |
 | New DS | Stack + Queue | Not started | Jul 21 | Aug 4 |
 | New DS | Trees | Not started | Aug 4 | Aug 25 |
@@ -355,8 +361,11 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jun 29 | K Divisible Elements Subarrays | 2261 | Accepted |
 | Jul 1 | Contiguous Array | 525 | Accepted |
 | Jul 2 | Longest Consecutive Sequence | 128 | Accepted |
+| Jul 6 | Search in Rotated Sorted Array | 33 | Accepted |
+| Jul 6 | Find Minimum in Rotated Sorted Array | 153 | Accepted |
+| Jul 6 | Koko Eating Bananas | 875 | Accepted |
 
-Unique problems LC accepted: 61
+Unique problems LC accepted: 64
 
 ---
 
@@ -372,6 +381,7 @@ Unique problems LC accepted: 61
 | 6 (Gap Fill) | 5 | 0 | 3 | 60% | |
 | 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) | |
 | 8 (Jun 29 - Jul 5, D29-D32) | 4 | 35 | 6 | ~72% | avg 20 min/problem — Fri Jul 3 assessment missed, Recovery Day used Jul 5 |
+| 9 (Jul 6, D33) | 3 | 5 | 3 | 63% (5/8) | Reinforcement Day — 128/441 recovered to Tier 3; Binary Search Applied (33,153,875) all hint-needed despite template given directly; Tier 4 recalls skipped |
 
 ---
 
@@ -399,6 +409,7 @@ These concepts have been flagged (by comment fields or explicit notes in solutio
 |---------|--------------|----------|--------------------------|------|
 | Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 32: ran dedicated 60-90 min standalone session (derivation written by hand, self-reported ~5-6 hrs total study). Solved 523, 974 cold+independent, and LC 1590 independently for the first time (30 min, Tier 1→2). Protocol requires one more cold, independent solve on a LATER day before marking Done. | No — pending Day 33+ cold retest | — |
 | OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 31: solved independently (20 min) but comment: "still not internalized why we initialized the list with 0" | No | — |
+| Binary Search Applied (feasibility/monotonic predicate on answer space) | Jun 24 assessment (523✗, later flagged Jun 30) | Day 33: warm-up gave the feasibility template directly ("lo,hi=range; while lo<hi; feasible(mid)"), yet all 3 problems (33, 153, 875) still needed hints — template recall alone is not sufficient, deeper gap in applying predicate to each problem's specifics | No | — |
 
 Protocol for Standalone Session:
 1. Do NOT time-box to 25/40 min targets — give it 60–90 min
