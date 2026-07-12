@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-07-12 (processed Day 35 / 2026-07-09 backlog — all example outputs passed; LC 21, 19, 2130 newly Accepted; Linked Lists still hint-heavy except LC 206 recovered; Total Appeal (2262) remains brute force only)
-Current: Month 2 | Week 10 | Linked Lists (Dummy Node + In-place Reversal) in progress
-Next focus: Clear Tier 1 queue tomorrow: Total Appeal O(n) derivation session, Reverse Between, Merge Two Lists, Remove Nth From End, Twin Sum. Jul 10-11 backlog to patch next week with additional session if required.
+Last updated: 2026-07-12 (Week 10 review complete — 5 new, 12 revisions, 5 unique new LC accepted; avg ~25 min/problem; verdict Slightly Behind due to Jul 10-11 backlog + 5 Tier 1 carry-over)
+Current: Month 2 | Week 11 prep | Linked Lists catch-up + Tier 1 cleanup
+Next focus: Week 11 starts with Total Appeal O(n) derivation session, Reverse Between, Merge Two Lists, Remove Nth From End, Twin Sum. Patch Jul 10-11 backlog with additional session if required.
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -268,6 +268,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
 | Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 recovered D30 — all 3 independent; need 5 LC ✓ for Stable (2 more) |
 | Prefix Sum (Modulo) | Building | 85% | 4 | 523/974 solved cold+independent D32 (Modulo standalone session); 1590 independent D32 for first time (30 min, still >25min target) — needs 1 more cold solve to close USO; 2261 reclassified Brute Force (not Modulo) — removed from count |
+| Contribution Counting / Substring Appeal | Shaky — dedicated consolidation required | 0% optimal on LC 2262 | 0 | 4 consecutive attempts stayed brute force; run standalone O(n) derivation before more revision |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
@@ -298,12 +299,12 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D33: all 3 hint-needed. D34: all 3 independent — chronic pattern broken, formal standalone session no longer blocking but recommended to lock in the gain | Jun 30 | Jul 3 (missed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
-| New DS | Linked Lists | In progress — D35: LC206 recovered independent; LC92, LC21, LC19, LC2130 hint-needed and remain Tier 1 | Jul 7 | Jul 21 |
-| New DS | Stack + Queue | Not started | Jul 21 | Aug 4 |
-| New DS | Trees | Not started | Aug 4 | Aug 25 |
-| New DS | Graphs | Not started | Aug 25 | Sep 8 |
-| New DS | Heap + 1D DP | Not started | Sep 8 | Sep 22 |
-| Mock Phase | Mixed assessments only | Not started | Sep 22 | Oct 15 |
+| New DS | Linked Lists | In progress — Week 10 closed slightly behind: LC206 recovered independent; LC92, LC21, LC19, LC2130 hint-needed and remain Tier 1. Target can recover to Jul 21 only with extra catch-up sessions. | Jul 7 | Jul 23 |
+| New DS | Stack + Queue | Not started | Jul 23 | Aug 6 |
+| New DS | Trees | Not started | Aug 6 | Aug 27 |
+| New DS | Graphs | Not started | Aug 27 | Sep 10 |
+| New DS | Heap + 1D DP | Not started | Sep 10 | Sep 24 |
+| Mock Phase | Mixed assessments only | Not started | Sep 24 | Oct 15 |
 
 ---
 
@@ -398,7 +399,7 @@ Unique problems LC accepted: 69
 | 7 (Gap Fill D26-28) | 7 | 21 | 6 | ~79% (independent) | |
 | 8 (Jun 29 - Jul 5, D29-D32) | 4 | 35 | 6 | ~72% | avg 20 min/problem — Fri Jul 3 assessment missed, Recovery Day used Jul 5 |
 | 9 (Jul 6, D33) | 3 | 5 | 3 | 63% (5/8) | Reinforcement Day — 128/441 recovered to Tier 3; Binary Search Applied (33,153,875) all hint-needed despite template given directly; Tier 4 recalls skipped |
-| 10 (Jul 7-12, D34-D35 processed; Jul 10-11 backlog) | 5 | 12 | 15 | ~59% (10/17) | D35 examples all passed; LC 21/19/2130 newly accepted; LC206 recovered to Tier 3; LC92/21/19/2130 hint-needed, Total Appeal still brute force only; backlog to patch next week |
+| 10 (Jul 7-12, D34-D35 processed; Jul 10-11 backlog) | 5 | 12 | 5 unique new (15 accepted attempts) | ~59% (10/17), avg ~25 min | Verdict: Slightly Behind — 2-day backlog + 5 Tier 1 carry-over; no variants moved Stable; LC206 recovered but Linked List dummy/in-place variants remain shaky |
 
 ---
 
@@ -427,6 +428,7 @@ These concepts have been flagged (by comment fields or explicit notes in solutio
 | Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 32: ran dedicated 60-90 min standalone session. Solved 523, 974 cold+independent, LC 1590 independent first time (30 min, Tier 1→2). Day 34: LC 1590 solved independently AGAIN, cold, no notes (25 min, Accepted) — 2nd consecutive cold independent solve confirms derivation stuck. | Yes | Jul 8 |
 | OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 31: solved independently (20 min) but comment: "still not internalized why we initialized the list with 0" | No | — |
 | Binary Search Applied (feasibility/monotonic predicate on answer space) | Jun 24 assessment (523✗, later flagged Jun 30) | Day 33: all 3 (33, 153, 875) needed hints despite template given directly. Day 34: all 3 re-attempted and solved INDEPENDENTLY, no hints, mistakes/confusion "Na" on all — major reversal. A formal 60-90 min dedicated derivation session (per protocol steps 1-3) was still never run; this was a same/next-day retry, not a post-session cold test. Keeping open one more cycle before marking Done. | No — but pattern no longer chronic, re-evaluate next cycle | — |
+| Contribution counting / Total Appeal O(n) derivation | Day 34 (LC 2262 3rd brute-force-only attempt) | Day 35 processed Jul 12: 4th consecutive attempt still O(n^2) brute force; examples pass but constraints require O(n). Flagged for dedicated consolidation before more normal revision. | No | — |
 
 Protocol for Standalone Session:
 1. Do NOT time-box to 25/40 min targets — give it 60–90 min
