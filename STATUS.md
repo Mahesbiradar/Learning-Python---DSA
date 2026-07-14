@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-07-12 (Week 10 review complete — 5 new, 12 revisions, 5 unique new LC accepted; avg ~25 min/problem; verdict Slightly Behind due to Jul 10-11 backlog + 5 Tier 1 carry-over)
-Current: Month 2 | Week 11 prep | Linked Lists catch-up + Tier 1 cleanup
-Next focus: Week 11 starts with Total Appeal O(n) derivation session, Reverse Between, Merge Two Lists, Remove Nth From End, Twin Sum. Patch Jul 10-11 backlog with additional session if required.
+Last updated: 2026-07-13 (D36 processed — 0 new, 8 revisions, 0 unique new LC accepted; independent 6/8; LC21 recovered to Tier 3, LC92 to Tier 2; LC19/2130/2262 remain Tier 1)
+Current: Month 2 | Week 11 active | Linked Lists catch-up + Total Appeal O(n) consolidation
+Next focus: Jul 14 priority: Total Appeal O(n) derivation, Remove Nth From End, Twin Sum, then Koko/Reverse Between timed follow-up and overdue Tier 3 items.
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -64,16 +64,16 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
 | Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
 | Binary Search | Applied — non-obvious structure | 5 | 10 | Building (D34: 33, 153, 875 ALL solved independently — reversal of D33 all-hint pattern. Dedicated standalone session still not formally run; monitor 1 more cold cycle before calling resolved) | LC 1095, 1011 |
-| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 independent D33 (first time, after 2 consecutive hints) — needs 1 more cold solve to confirm |
+| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 independent D36 cold confirm after earlier hints; still needs volume before Stable |
 
 ### DS 2: Linked Lists (Phase: In progress)
 
 | Pattern | Variant | Solved | Target | Status | Problems |
 |---------|---------|--------|--------|--------|---------|
 | Traversal + basic ops | Reverse a list | 1 | 6 | Building | LC 206 recovered independent D35 (15 min) after hint D34 — needs one more cold solve |
-| Dummy node | Remove Nth / merge | 2 | 6 | Building | LC 21 hint D35, LC 19 hint D35; LC 23 pending |
+| Dummy node | Remove Nth / merge | 2 | 6 | Building | LC 21 recovered independent D36; LC 19 hint D36 remains Tier 1; LC 23 pending |
 | Fast + slow pointer | Middle / cycle detection | 0 | 6 | NOT STARTED | LC 876, 141, 142 |
-| In-place manipulation | Reorder / reverse groups | 2 | 6 | Building | LC 92 hint D34+D35; LC 2130 hint D35 — both need cold retry |
+| In-place manipulation | Reorder / reverse groups | 2 | 6 | Building | LC 92 independent but slow D36; LC 2130 hint D36 remains Tier 1 |
 
 ### DS 3: Stack + Queue (Phase: NOT STARTED)
 
@@ -154,7 +154,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 20 min, reconfirmed Tier 3 |
+| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jul 13 | Jul 20 | ✓ | independent D36, 15 min, accepted — reconfirmed Tier 3 |
 | Longest Substring Without Repeating | 3 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Minimum Size Subarray Sum | 209 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Fruits Into Baskets | 904 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -176,21 +176,21 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Length of Last Word | 58 | String Traversal | — | 3 | Jul 12 | Jul 19 | ✓ | independent D35, 10 min, output verified — reconfirmed Tier 3 |
 | Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 3 | Jul 8 | Jul 15 | ✓ | independent D34, 25 min, clean — Tier1→3, chronic-hint pattern broken |
 | Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 3 | Jul 8 | Jul 15 | ✓ | independent D34, 20 min, clean — Tier1→3 |
-| Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 2 | Jul 8 | Jul 11 | ✓ | independent D34, 30 min — Tier1→2, first independent solve on this problem, chronic-hint pattern broken but still slow |
+| Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 2 | Jul 13 | Jul 16 | ✓ | independent D36, accepted, but Time taken field missing — held Tier 2 until a timed fast solve confirms Tier 3 |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jul 8 | Jul 15 | ✓ | reconfirmed independent D34, 20 min, clean — overdue since Jul5 cleared |
 | Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, clean — Tier 2→3 |
 | Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, clean — Tier 2→3 |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 20 min, solved cold as part of Modulo standalone session — clean |
 | Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, formula recalled from recovery note — Tier 1→3 |
 | K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 2 | Jul 9 | ✓ | independent D31 (brute only), 20 min, output verified correct — optimal still not recalled cold |
-| Total Appeal of A String | 2262 | Brute Force | Subarray enum | 1 | Jul 12 | Jul 13 | — | independent brute-force D35 (15 min), examples pass but O(n²) wrong approach for constraints and LC not submitted — standalone O(n) derivation still required |
-| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 6 | Jul 13 | ✓ | independent D33, 15 min — recovered after 2 consecutive hints, Tier1→3, needs 1 more cold confirm |
+| Total Appeal of A String | 2262 | Brute Force | Subarray enum | 1 | Jul 13 | Jul 14 | — | independent brute-force D36 (15 min), printed 28/20 matches examples but O(n²) wrong for constraints and LC not submitted — standalone O(n) derivation still required |
+| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 13 | Jul 20 | ✓ | independent D36, 25 min, accepted — cold confirm after prior hints; Tier 3 held, needs more volume for family stability |
 | Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 3 | Jul 8 | Jul 15 | ✓ | independent D34, 25 min, cold, no notes — 2nd consecutive independent solve confirms Modulo derivation stuck — Tier2→3, USO CLOSED |
 | Reverse Linked List | 206 | Traversal + basic ops | Reverse a list | 3 | Jul 12 | Jul 19 | ✓ | independent D35, 15 min, output verified — Tier1→3 after D34 hint |
-| Reverse Linked List II | 92 | In-place manipulation | Reverse between positions | 1 | Jul 12 | Jul 13 | ✓ | hint D35, 30 min, output verified — reconnection with before_left/left_node still shaky |
-| Merge Two Sorted Lists | 21 | Dummy node | Merge sorted lists | 1 | Jul 12 | Jul 13 | ✓ | new D35, hint, 35 min, output verified, accepted — dummy/merge retry needed |
-| Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 1 | Jul 12 | Jul 13 | ✓ | new D35, hint, 35 min, output verified, accepted — fast pointer n+1 anchor needs retry |
-| Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 1 | Jul 12 | Jul 13 | ✓ | new D35, hint, 35 min, output verified, accepted — slow/fast + reversal needs cold retry |
+| Reverse Linked List II | 92 | In-place manipulation | Reverse between positions | 2 | Jul 13 | Jul 16 | ✓ | independent D36, 30 min, accepted — moved Tier1→2 but still slow; reconnection pointers need timed cleanup |
+| Merge Two Sorted Lists | 21 | Dummy node | Merge sorted lists | 3 | Jul 13 | Jul 20 | ✓ | independent D36, 20 min, accepted — moved Tier1→3; dummy merge recovered |
+| Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 1 | Jul 13 | Jul 14 | ✓ | hint D36, 25 min, accepted — remains Tier 1; fast pointer n+1 anchor needs cold solve |
+| Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 1 | Jul 13 | Jul 14 | ✓ | hint D36, 25 min, accepted — remains Tier 1; first loop should be while fast and fast.next |
 
 ---
 
@@ -200,17 +200,16 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Total Appeal of A String | 2262 | Jul 13 | D35 independent brute force only — examples pass but optimal O(n) not derived, LC not submitted |
-| Reverse Linked List II | 92 | Jul 13 | Hint D35 (30 min) — reconnection pointers still shaky |
-| Merge Two Sorted Lists | 21 | Jul 13 | Hint D35 (35 min) — first dummy-node merge attempt |
-| Remove Nth Node From End | 19 | Jul 13 | Hint D35 (35 min) — dummy + fast/slow offset needs retry |
-| Maximum Twin Sum of a Linked List | 2130 | Jul 13 | Hint D35 (35 min) — slow/fast + reverse second half needs retry |
+| Total Appeal of A String | 2262 | Jul 14 | D36 still brute force only — examples pass but optimal O(n) not derived, LC not submitted |
+| Remove Nth Node From End | 19 | Jul 14 | Hint D36 (25 min) — dummy + fast/slow offset needs cold retry |
+| Maximum Twin Sum of a Linked List | 2130 | Jul 14 | Hint D36 (25 min) — slow/fast loop condition needs cold retry |
 
 ### TIER 2 — Due in 3 days
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Koko Eating Bananas | 875 | Jul 11 | Independent D34 (30 min) — Tier1→2, first independent solve, still over 25 min target |
+| Koko Eating Bananas | 875 | Jul 16 | Independent D36, accepted, but missing Time taken field — held Tier 2 |
+| Reverse Linked List II | 92 | Jul 16 | Independent D36 (30 min) — Tier1→2, slow but recovered from hint |
 
 ### TIER 3 — Due in 7 days
 
@@ -221,10 +220,10 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Make Sum Divisible by P | 1590 | Jul 15 |
 | Subarray Sum Equals K | 560 | Jul 15 |
 | Binary Subarrays With Sum | 930 | Jul 15 |
-| Longest Consecutive Sequence | 128 | Jul 13 |
+| Longest Consecutive Sequence | 128 | Jul 20 |
 | Arranging Coins | 441 | Jul 13 |
 | Find Smallest Letter Greater | 744 | Jul 13 |
-| Maximum Number of Vowels | 1456 | Jul 13 |
+| Maximum Number of Vowels | 1456 | Jul 20 |
 | Guess Number Higher or Lower | 374 | Jul 13 |
 | Contiguous Array | 525 | Jul 8 |
 | Find the Divisibility Array | 2575 | Jul 8 |
@@ -249,6 +248,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Reverse Linked List | 206 | Jul 19 |
 | Length of Last Word | 58 | Jul 19 |
 | First Bad Version | 278 | Jul 19 |
+| Merge Two Sorted Lists | 21 | Jul 20 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -268,7 +268,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
 | Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 recovered D30 — all 3 independent; need 5 LC ✓ for Stable (2 more) |
 | Prefix Sum (Modulo) | Building | 85% | 4 | 523/974 solved cold+independent D32 (Modulo standalone session); 1590 independent D32 for first time (30 min, still >25min target) — needs 1 more cold solve to close USO; 2261 reclassified Brute Force (not Modulo) — removed from count |
-| Contribution Counting / Substring Appeal | Shaky — dedicated consolidation required | 0% optimal on LC 2262 | 0 | 4 consecutive attempts stayed brute force; run standalone O(n) derivation before more revision |
+| Contribution Counting / Substring Appeal | Shaky — dedicated consolidation required | 0% optimal on LC 2262 | 0 | 5 consecutive attempts stayed brute force through D36; run standalone O(n) derivation before more revision |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
 | Sliding Window | Stable | 85% | 9 | 1456 too slow (45 min) |
@@ -276,8 +276,8 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Binary Search (standard) | Stable | 90% | 3 | 374 failed |
 | Binary Search (lower bound) | Building | 70% | 5 | 441 recovered independent D33 (was hint D32) — improving, monitor next cycle |
 | Binary Search (applied) | Building | ~57% (4/7 attempts) | 5 | 852 clean D27; 33/153/875 all hint D33 → all 3 independent D34 (chronic pattern broken); Koko (875) still >25min. Standalone derivation session still not formally run — monitor 1 more cycle |
-| Hash Set (Sequence Expansion) | Building | 50% | 1 | LC 128 independent D33 (first time, after hints D31+D32) — needs 1 more cold solve to confirm before Stable |
-| Linked Lists | Building | ~17% (1/6 recent attempts) | 5 | LC 206 recovered; LC 92/21/19/2130 all hint-needed, so dummy-node and in-place variants remain Tier 1 |
+| Hash Set (Sequence Expansion) | Building | improving | 1 | LC 128 independent D36 cold confirm complete; needs more accepted problems before Stable |
+| Linked Lists | Building | ~33% recent | 5 | LC21 recovered to Tier 3; LC92 slow Tier 2; LC19/2130 remain Tier 1 after hints |
 
 ---
 
@@ -299,7 +299,7 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D33: all 3 hint-needed. D34: all 3 independent — chronic pattern broken, formal standalone session no longer blocking but recommended to lock in the gain | Jun 30 | Jul 3 (missed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
-| New DS | Linked Lists | In progress — Week 10 closed slightly behind: LC206 recovered independent; LC92, LC21, LC19, LC2130 hint-needed and remain Tier 1. Target can recover to Jul 21 only with extra catch-up sessions. | Jul 7 | Jul 23 |
+| New DS | Linked Lists | In progress — D36 improved: LC21 recovered to Tier 3 and LC92 to Tier 2, but LC19/LC2130 remain Tier 1. Target can recover to Jul 21 only with extra catch-up sessions. | Jul 7 | Jul 23 |
 | New DS | Stack + Queue | Not started | Jul 23 | Aug 6 |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
@@ -400,6 +400,7 @@ Unique problems LC accepted: 69
 | 8 (Jun 29 - Jul 5, D29-D32) | 4 | 35 | 6 | ~72% | avg 20 min/problem — Fri Jul 3 assessment missed, Recovery Day used Jul 5 |
 | 9 (Jul 6, D33) | 3 | 5 | 3 | 63% (5/8) | Reinforcement Day — 128/441 recovered to Tier 3; Binary Search Applied (33,153,875) all hint-needed despite template given directly; Tier 4 recalls skipped |
 | 10 (Jul 7-12, D34-D35 processed; Jul 10-11 backlog) | 5 | 12 | 5 unique new (15 accepted attempts) | ~59% (10/17), avg ~25 min | Verdict: Slightly Behind — 2-day backlog + 5 Tier 1 carry-over; no variants moved Stable; LC206 recovered but Linked List dummy/in-place variants remain shaky |
+| 11 (Jul 13, D36) | 0 | 8 | 0 unique new (7 accepted attempts) | 75% (6/8) | LC21 recovered to Tier 3; LC92 moved to Tier 2; LC19/2130/2262 remain Tier 1; Koko missing Time taken field held Tier 2 |
 
 ---
 
@@ -428,7 +429,7 @@ These concepts have been flagged (by comment fields or explicit notes in solutio
 | Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 32: ran dedicated 60-90 min standalone session. Solved 523, 974 cold+independent, LC 1590 independent first time (30 min, Tier 1→2). Day 34: LC 1590 solved independently AGAIN, cold, no notes (25 min, Accepted) — 2nd consecutive cold independent solve confirms derivation stuck. | Yes | Jul 8 |
 | OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 31: solved independently (20 min) but comment: "still not internalized why we initialized the list with 0" | No | — |
 | Binary Search Applied (feasibility/monotonic predicate on answer space) | Jun 24 assessment (523✗, later flagged Jun 30) | Day 33: all 3 (33, 153, 875) needed hints despite template given directly. Day 34: all 3 re-attempted and solved INDEPENDENTLY, no hints, mistakes/confusion "Na" on all — major reversal. A formal 60-90 min dedicated derivation session (per protocol steps 1-3) was still never run; this was a same/next-day retry, not a post-session cold test. Keeping open one more cycle before marking Done. | No — but pattern no longer chronic, re-evaluate next cycle | — |
-| Contribution counting / Total Appeal O(n) derivation | Day 34 (LC 2262 3rd brute-force-only attempt) | Day 35 processed Jul 12: 4th consecutive attempt still O(n^2) brute force; examples pass but constraints require O(n). Flagged for dedicated consolidation before more normal revision. | No | — |
+| Contribution counting / Total Appeal O(n) derivation | Day 34 (LC 2262 3rd brute-force-only attempt) | Day 36 processed Jul 13: 5th consecutive attempt still O(n^2) brute force; printed examples pass but constraints require O(n). Flagged for dedicated consolidation before more normal revision. | No | — |
 
 Protocol for Standalone Session:
 1. Do NOT time-box to 25/40 min targets — give it 60–90 min
