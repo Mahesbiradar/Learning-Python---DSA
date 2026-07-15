@@ -1,0 +1,587 @@
+## TIER 4 Recalls (5 min each, no full solve)
+
+# Write the pattern template from memory. If you can't in 3 min → flag as Tier 2.
+
+# 1. Prefix Sum
+
+def prefixsum(nums):
+
+    totalsum = sum(nums)
+    left = 0
+
+    for i in range(len(nums)):
+
+        right = totalsum - left - nums[i]
+
+        if right == left:
+            return i
+        left +=nums[i]
+    return -1
+
+# 2. Binary Search
+
+def binarysearch(nums,target):
+
+    left = 0
+    right = len(nums)-1
+
+    while left < right:
+
+        mid = (right+left)//2
+
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] > target:
+            right = mid -1
+        else:
+            left = mid +1
+
+# Pattern 1 recalled correctly (Y/N): Yes
+# Pattern 2 recalled correctly (Y/N): Yes
+
+## TIER 1 — Priority Revision (solve these first, all of them)
+
+"""
+### 1. Linked List Cycle — Easy
+Given the head of a linked list, determine whether the linked list contains a cycle. A cycle exists if following `next` pointers can bring you back to a previously visited node.
+
+Return `true` if there is a cycle, otherwise return `false`.
+
+Example 1:
+- Input: `head = [3,2,0,-4], pos = 1`
+- Output: `true`
+- Explanation: the tail connects back to the node at index `1`.
+
+Example 2:
+- Input: `head = [1,2], pos = 0`
+- Output: `true`
+
+Example 3:
+- Input: `head = [1], pos = -1`
+- Output: `false`
+
+Constraints:
+- The number of nodes is in the range `[0, 10^4]`
+- `-10^4 <= Node.val <= 10^4`
+- `pos` is `-1` or a valid index in the linked list
+
+"""
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+
+        current = head 
+
+        seen = set()
+
+        while current:
+
+            if current in seen:
+                return True
+            seen.add(current)
+
+            current = current.next
+        return False
+    
+# Status: Independent
+# Time taken: 15 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(n)
+# LC status: Accepted
+# Pattern: Traversal and membership Check
+# Variant: 
+# mistakes/confusion: Na
+
+"""
+## TIER 2 — Revision (0 problems due)
+
+No active Tier 2 problems are due today. Use the extra slot for overdue Tier 3 cleanup below.
+
+"""
+
+## TIER 3 — Revision (3 problems)
+
+
+"""
+### 1. Contiguous Array — Medium
+Given a binary array `nums`, return the maximum length of a contiguous subarray with an equal number of `0`s and `1`s.
+
+Example 1:
+- Input: `nums = [0,1]`
+- Output: `2`
+
+Example 2:
+- Input: `nums = [0,1,0]`
+- Output: `2`
+
+Constraints:
+- `1 <= nums.length <= 10^5`
+- `nums[i]` is either `0` or `1`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+"""
+
+class Solution(object):
+    def findMaxLength(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        seen = {0:-1}
+
+        prefix = 0
+
+        best = 0
+
+        for i in range(len(nums)):
+
+            if nums[i] == 1:
+                prefix += 1
+            else:
+                prefix -= 1
+            
+            if prefix in seen:
+                best = max(best,i-seen[prefix])
+            else:
+                seen[prefix]=i
+        return best
+
+# Status: Independent
+# Time taken: 15 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(n)
+# LC status: Accepted.
+# Pattern: Prefix sum + Hash map
+# Variant: ___
+# mistakes/confusion: Na
+
+"""
+### 2. Find the Divisibility Array of a String — Medium
+Given a numeric string `word` and an integer `m`, build an array `div` where `div[i] = 1` if the integer represented by `word[0..i]` is divisible by `m`; otherwise `div[i] = 0`.
+
+Example 1:
+- Input: `word = "998244353", m = 3`
+- Output: `[1,1,0,0,0,1,1,0,0]`
+
+Example 2:
+- Input: `word = "1010", m = 10`
+- Output: `[0,1,0,1]`
+
+Constraints:
+- `1 <= word.length <= 10^5`
+- `word` contains digits only and does not start with `0`
+- `1 <= m <= 10^9`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+"""
+
+class Solution(object):
+    def divisibilityArray(self, word, m):
+        """
+        :type word: str
+        :type m: int
+        :rtype: List[int]
+        """
+        remainder=0
+
+        out=[]
+
+        for i in range(len(word)):
+
+            remainder=(remainder * 10 + int(word[i])) % m
+
+            if remainder == 0:
+                out.append(1)
+            else:
+                out.append(0)
+        return out
+    
+# Status:Hint
+# Time taken: 15 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(1)
+# LC status: Accepted
+# Pattern: Running Modulo (Rolling Remainder)
+# Variant: 
+# mistakes/confusion: Na
+
+"""
+### 3. Top K Frequent Words — Medium
+Given a list of strings `words` and an integer `k`, return the `k` most frequent words. Sort by frequency from highest to lowest. If two words have the same frequency, sort them lexicographically.
+
+Example 1:
+- Input: `words = ["i","love","leetcode","i","love","coding"], k = 2`
+- Output: `["i","love"]`
+
+Example 2:
+- Input: `words = ["the","day","is","sunny","the","the","the","sunny","is","is"], k = 4`
+- Output: `["the","is","sunny","day"]`
+
+Constraints:
+- `1 <= words.length <= 500`
+- `1 <= words[i].length <= 10`
+- `words[i]` contains lowercase English letters
+- `1 <= k <= number of unique words`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+```
+"""
+
+class Solution(object):
+    def topKFrequent(self, words, k):
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[str]
+        """
+        seen = {}
+
+        for i in words:
+            seen[i] = seen.get(i,0)+1
+        
+        sorted_seen = sorted(seen.items(),key = lambda x:(-x[1],x[0]))
+
+        out = []
+
+        for key,value in sorted_seen :
+
+            out.append(key)
+
+            if len(out) == k:
+                return out
+
+# Status: Independent
+# Time taken: 20 min
+# Tier: ___
+# Time complexity: O(n+mlogm)
+# Space complexity: O(n)
+# LC status: Accepted
+# Pattern: Frequency hashing + Sorting
+# Variant: ___
+# mistakes/confusion: Na
+
+## New Problems (4 problems)
+
+"""
+### 1. Middle of the Linked List — Easy
+Given the head of a singly linked list, return the middle node. If there are two middle nodes, return the second middle node.
+
+Example 1:
+- Input: `head = [1,2,3,4,5]`
+- Output: `[3,4,5]`
+
+Example 2:
+- Input: `head = [1,2,3,4,5,6]`
+- Output: `[4,5,6]`
+
+Constraints:
+- The number of nodes is in the range `[1, 100]`
+- `1 <= Node.val <= 100`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+"""
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def middleNode(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: Optional[ListNode]
+        """
+        slow = head
+        fast = head
+
+        while fast and fast.next:
+
+            fast = fast.next.next
+            slow = slow.next
+        return slow
+
+# Status: Independent
+# Time taken: 20 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(1)
+# LC status: Accepted
+# Pattern: Slow and fast pointers
+# Variant: ___
+# mistakes/confusion:Na 
+
+"""
+### 2. Linked List Cycle II — Medium
+Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return `None`.
+
+The input uses `pos` to describe where the tail connects, but `pos` is not passed to your function.
+
+Example 1:
+- Input: `head = [3,2,0,-4], pos = 1`
+- Output: node with value `2`
+
+Example 2:
+- Input: `head = [1,2], pos = 0`
+- Output: node with value `1`
+
+Example 3:
+- Input: `head = [1], pos = -1`
+- Output: `None`
+
+Constraints:
+- The number of nodes is in the range `[0, 10^4]`
+- `-10^5 <= Node.val <= 10^5`
+- `pos` is `-1` or a valid index in the linked list
+
+"""
+
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        current = head
+
+        seen = set()
+
+        while current:
+
+            if current in seen:
+                return current
+            seen.add(current)
+
+            current = current.next
+        return None
+
+# Status: Independent
+# Time taken: 10 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(n)
+# LC status: Accepted
+# Pattern: Node traversal and Membership Check.
+# Variant: ___
+# mistakes/confusion: Na
+
+"""
+### 3. Palindrome Linked List — Easy
+Given the head of a singly linked list, return `true` if the node values form a palindrome; otherwise return `false`.
+
+Example 1:
+- Input: `head = [1,2,2,1]`
+- Output: `true`
+
+Example 2:
+- Input: `head = [1,2]`
+- Output: `false`
+
+Constraints:
+- The number of nodes is in the range `[1, 10^5]`
+- `0 <= Node.val <= 9`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+"""
+
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def isPalindrome(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: bool
+        """
+        slow = head
+        fast = head 
+
+        while fast and fast.next:
+
+            slow = slow.next
+            fast = fast.next.next
+
+        current = slow
+        prev = None
+
+        while current:
+
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        
+        right = prev
+        left = head
+
+        while right:
+
+            if left.val != right.val:
+                return False
+            right = right.next
+            left = left.next
+        return True 
+
+# Status: Independent
+# Time taken: 15 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(1)
+# LC status: Accepted
+# Pattern: Slow and Fast pointers + Reversal.
+# Variant: Na
+# mistakes/confusion: Na
+
+"""
+### 4. Reorder List — Medium
+Given the head of a singly linked list ordered as `L0 → L1 → ... → Ln`, reorder it in-place to `L0 → Ln → L1 → Ln-1 → L2 → Ln-2 ...`.
+
+Do not change node values; only rearrange node links.
+
+Example 1:
+- Input: `head = [1,2,3,4]`
+- Output: `[1,4,2,3]`
+
+Example 2:
+- Input: `head = [1,2,3,4,5]`
+- Output: `[1,5,2,4,3]`
+
+Constraints:
+- The number of nodes is in the range `[1, 5 * 10^4]`
+- `1 <= Node.val <= 1000`
+
+```python
+# Status: Independent / Hint / Failed
+# Time taken: ___ min
+# Tier: ___
+# Time complexity: O(?)
+# Space complexity: O(?)
+# LC status: Accepted / NA / Not submitted
+# Pattern: ___
+# Variant: ___
+# mistakes/confusion: ___
+
+"""
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def reorderList(self, head):
+        """
+        :type head: Optional[ListNode]
+        :rtype: None Do not return anything, modify head in-place instead.
+        """
+
+        slow = head
+        fast = head
+        
+        while fast.next and fast.next.next:
+            before_left = slow
+            fast = fast.next.next
+            slow = slow.next
+        
+        
+        current = slow.next
+        slow.next = None
+        prev = None
+
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        
+        left = head
+        right = prev
+
+        while right:
+            left_next = left.next
+            right_next = right.next
+            left.next = right
+            right.next = left_next
+            left = left_next
+            right = right_next
+        return head
+
+# Status: Hint
+# Time taken: 45 min
+# Tier: ___
+# Time complexity: O(n)
+# Space complexity: O(1)
+# LC status: Accepted 
+# Pattern: Slow and fast pointers + Revarsal + reorder
+# Variant: ___
+# mistakes/confusion: Na
+
+
+
+
+
+
+
