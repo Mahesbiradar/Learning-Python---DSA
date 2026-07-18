@@ -1,7 +1,7 @@
 # DSA STATUS
-Last updated: 2026-07-14 (D37 processed — 1 new, 9 revisions, 1 unique new LC accepted; independent 9/10; LC19/2130/875/92/128 confirmed Tier 3; LC141 starts Tier 1; LC2262 deferred until Aug 11)
+Last updated: 2026-07-18 (D39 processed - 2 new, 8 revisions; independent 7/10; local output unverified because python/python3/py unavailable; LC2575/143/876/234 moved Tier 3; LC141/142/1679/1877/328/24 require Tier 1)
 Current: Month 2 | Week 11 active | Linked Lists catch-up + key pattern cleanup
-Next focus: Jul 15 priority: Linked List Cycle Floyd retry, then overdue Tier 3 cleanup. Do not schedule Total Appeal O(n) before Aug 11.
+Next focus: Jul 19 priority: Linked List Cycle Floyd O(1), Linked List Cycle II cold Floyd entry, Odd Even Linked List, Swap Nodes in Pairs, and complexity-correct pair-sum revisions. Do not schedule Total Appeal O(n) before Aug 11.
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -72,8 +72,8 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 |---------|---------|--------|--------|--------|---------|
 | Traversal + basic ops | Reverse a list | 1 | 6 | Building | LC 206 independent again D37 (15 min) after D35 recovery; needs volume beyond one variant |
 | Dummy node | Remove Nth / merge | 2 | 6 | Building | LC 21 reconfirmed; LC 19 recovered independent D37; LC 23 pending |
-| Fast + slow pointer | Middle / cycle detection | 1 | 6 | Building | LC 141 accepted D37 with hint + hash-set membership; redo Floyd O(1); LC 876/142 pending |
-| In-place manipulation | Reorder / reverse groups | 2 | 6 | Building | LC 92 and LC 2130 both recovered independent D37; needs volume beyond current variants |
+| Fast + slow pointer | Middle / cycle detection | 3 | 6 | Building | LC876 independent D38; LC141/142 accepted with hash-set membership, so Floyd O(1) still needs cold solve |
+| In-place manipulation | Reorder / reverse groups | 6 | 6 | Building | LC92/2130/234 independent; LC143 recovered independent D39; LC328/24 added D39 but both hint-needed, so local rewiring remains shaky |
 
 ### DS 3: Stack + Queue (Phase: NOT STARTED)
 
@@ -133,7 +133,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 15 min, clean — regression risk cleared, no hint needed |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 20 min, sort key corrected from memory |
+| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Jul 16 | Jul 23 | ✓ | independent D38, 20 min, accepted — reconfirmed Tier 3 |
 | Two Sum | 1 | Complement Lookup | Two Sum style | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 15 min, clean — Tier 2→3 |
 | Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 10 min, clean — reconfirmed Tier 3 |
 | Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
@@ -142,7 +142,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jul 8 | Jul 15 | ✓ | reconfirmed independent D34, 20 min, clean — overdue since Jul5 cleared |
 | Range Sum Query | 303 | Prefix Sum | Prefix array | 3 | Jul 2 | Jul 9 | ✓ | independent D31, 20 min, output verified — Tier 1→3. Still hasn't internalized why prefix list starts with 0 |
-| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, both brute+optimal written clean — Tier 1→3 |
+| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 16 | Jul 23 | ✓ | independent D38, 15 min, accepted — reconfirmed Tier 3 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 20 min, solved cold as part of Modulo standalone session — clean |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
@@ -178,10 +178,10 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 3 | Jul 8 | Jul 15 | ✓ | independent D34, 20 min, clean — Tier1→3 |
 | Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 3 | Jul 14 | Jul 21 | ✓ | independent D37, 25 min, accepted — timed solve confirms Tier 3 |
 | Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jul 8 | Jul 15 | ✓ | reconfirmed independent D34, 20 min, clean — overdue since Jul5 cleared |
-| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, clean — Tier 2→3 |
-| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 15 min, clean — Tier 2→3 |
+| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 1 | Jul 18 | Jul 19 | ✓ | D39 independent 15 min, accepted, but complexity annotations incorrect for Python sorted copy; redo with O(n log n) time and O(n) space |
+| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 1 | Jul 18 | Jul 19 | ✓ | D39 independent 10 min, accepted, but complexity annotations incorrect for Python sorted copy; redo with O(n log n) time and O(n) space |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jul 5 | Jul 12 | ✓ | independent D32, 20 min, solved cold as part of Modulo standalone session — clean |
-| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 1 | Jul 8 | ✓ | independent D30, 25 min, formula recalled from recovery note — Tier 1→3 |
+| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 18 | Jul 25 | ✓ | independent D39, 20 min, accepted; local output unverified because no Python launcher, but prior LC already accepted |
 | K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 2 | Jul 9 | ✓ | independent D31 (brute only), 20 min, output verified correct — optimal still not recalled cold |
 | Total Appeal of A String | 2262 | Brute Force | Subarray enum | 1 | Jul 14 | Aug 11 | — | independent brute-force D37 (15 min), printed 28/20 matches examples but O(n²) wrong for constraints and LC not submitted — USER HOLD until Aug 11 / after key patterns finish |
 | Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 14 | Jul 21 | ✓ | independent D37, 20 min, accepted — corrected to Tier 3; note: set-based solution uses O(n) space |
@@ -191,7 +191,13 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Merge Two Sorted Lists | 21 | Dummy node | Merge sorted lists | 3 | Jul 14 | Jul 21 | ✓ | independent D37, 15 min, accepted — dummy merge reconfirmed |
 | Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 3 | Jul 14 | Jul 21 | ✓ | independent D37, 15 min, accepted — recovered from D36 hint |
 | Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 3 | Jul 14 | Jul 21 | ✓ | independent D37, 15 min, accepted — recovered from D36 hint |
-| Linked List Cycle | 141 | Fast + slow pointer | Cycle detection | 1 | Jul 14 | Jul 15 | ✓ | hint D37, 25 min, accepted with hash-set membership — redo Floyd O(1) cold |
+| Linked List Cycle | 141 | Fast + slow pointer | Cycle detection | 1 | Jul 18 | Jul 19 | ✓ | D39 independent 15 min, accepted, but still hash-set membership with O(n) space; Floyd O(1) not solved cold |
+| Middle of the Linked List | 876 | Fast + slow pointer | Middle node | 3 | Jul 18 | Jul 25 | ✓ | independent D39, 10 min, accepted; local output unverified because no Python launcher |
+| Linked List Cycle II | 142 | Fast + slow pointer | Cycle entry | 1 | Jul 18 | Jul 19 | ✓ | hint D39, 30 min, accepted; Floyd entry still not cold |
+| Palindrome Linked List | 234 | In-place manipulation | Palindrome check / reverse second half | 3 | Jul 18 | Jul 25 | ✓ | independent D39, 15 min, accepted; local output unverified because no Python launcher |
+| Reorder List | 143 | In-place manipulation | Reorder by reversing second half | 3 | Jul 18 | Jul 25 | ✓ | independent D39, 25 min, accepted; local output unverified because no Python launcher |
+| Odd Even Linked List | 328 | In-place manipulation | Odd-even index partition | 1 | Jul 18 | Jul 19 | — | new D39, hint, 35 min, accepted in comments but local output unverified because no Python launcher |
+| Swap Nodes in Pairs | 24 | In-place manipulation | Local pointer rewiring | 1 | Jul 18 | Jul 19 | — | new D39, hint, 35 min, accepted in comments but local output unverified because no Python launcher |
 
 ---
 
@@ -201,7 +207,12 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Linked List Cycle | 141 | Jul 15 | Hint D37; accepted with hash-set membership but Floyd O(1) not solved cold |
+| Linked List Cycle | 141 | Jul 19 | D39 independent and accepted, but still hash-set membership; Floyd O(1) not solved cold |
+| Linked List Cycle II | 142 | Jul 19 | Hint D39 on Floyd entry; needs cold O(1) cycle-entry solve |
+| Max Number of K-Sum Pairs | 1679 | Jul 19 | D39 complexity annotation wrong; Python sorted copy is O(n log n) time and O(n) space |
+| Minimize Maximum Pair Sum | 1877 | Jul 19 | D39 complexity annotation wrong; Python sorted copy is O(n log n) time and O(n) space |
+| Odd Even Linked List | 328 | Jul 19 | New D39, hint, 35 min; pointer partition not cold |
+| Swap Nodes in Pairs | 24 | Jul 19 | New D39, hint, 35 min; local pointer rewiring not cold |
 
 ### ON HOLD — Do not schedule before Aug 11
 
@@ -213,6 +224,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
+| No active Tier 2 problems due | — | — | — |
 
 ### TIER 3 — Due in 7 days
 
@@ -228,11 +240,8 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Smallest Letter Greater | 744 | Jul 13 |
 | Maximum Number of Vowels | 1456 | Jul 21 |
 | Guess Number Higher or Lower | 374 | Jul 13 |
-| Contiguous Array | 525 | Jul 8 |
-| Find the Divisibility Array | 2575 | Jul 8 |
-| Top K Frequent Words | 692 | Jul 8 |
-| Max Number of K-Sum Pairs | 1679 | Jul 8 |
-| Minimize Maximum Pair Sum | 1877 | Jul 8 |
+| Contiguous Array | 525 | Jul 23 |
+| Top K Frequent Words | 692 | Jul 23 |
 | Peak Index in Mountain Array | 852 | Jul 8 |
 | Remove Duplicates | 26 | Jul 8 |
 | Find Peak Element | 162 | Jul 9 |
@@ -256,6 +265,10 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Reverse Linked List II | 92 | Jul 21 |
 | Remove Nth Node From End | 19 | Jul 21 |
 | Maximum Twin Sum of a Linked List | 2130 | Jul 21 |
+| Find the Divisibility Array | 2575 | Jul 25 |
+| Middle of the Linked List | 876 | Jul 25 |
+| Palindrome Linked List | 234 | Jul 25 |
+| Reorder List | 143 | Jul 25 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -270,11 +283,11 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 |--------|--------|-------------|-------------|---------|
 | Frequency Hashing | Stable | 90%+ | 7 | — |
 | Grouping Hash Maps | Stable | 85% | 2 | Isomorphic strings shaky |
-| Frequency Sorting | Stable | 80% | 3 | Top K Words hint-needed once |
+| Frequency Sorting | Stable | 80% | 3 | Top K Words reconfirmed D38 in 20 min |
 | Complement Lookup | Stable | 85% | 3 | Two Sum had mapping error D23 |
 | Prefix Sum (running/pivot) | Stable | 90% | 8 | — |
-| Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 recovered D30 — all 3 independent; need 5 LC ✓ for Stable (2 more) |
-| Prefix Sum (Modulo) | Building | 85% | 4 | 523/974 solved cold+independent D32 (Modulo standalone session); 1590 independent D32 for first time (30 min, still >25min target) — needs 1 more cold solve to close USO; 2261 reclassified Brute Force (not Modulo) — removed from count |
+| Prefix Sum (Hash Map combo) | Building | 100% | 3 | 525 reconfirmed D38; need 5 LC ✓ for Stable (2 more) |
+| Prefix Sum (Modulo) | Building | improving after regression | 4 | LC2575 recovered independent D39 in 20 min; keep one more cold cycle before calling stable |
 | Contribution Counting / Substring Appeal | On hold until Aug 11 | 0% optimal on LC 2262 | 0 | 6 consecutive attempts stayed brute force through D37; user-deferred until key patterns are finished |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | — |
 | Two Pointers (maximize) | Building | 100% | 3 | 4 problems, all independent, LC ✓ — needs 4+ more |
@@ -284,7 +297,7 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Binary Search (lower bound) | Building | 70% | 5 | 441 recovered independent D33 (was hint D32) — improving, monitor next cycle |
 | Binary Search (applied) | Building | ~63% (5/8 attempts) | 5 | Koko (875) independent D37 at 25 min and moved Tier 3; standalone derivation still not formally run |
 | Hash Set (Sequence Expansion) | Building | improving | 1 | LC128 accepted D37 independent in 20 min; keep Tier 3, but remember set solution is O(n) space |
-| Linked Lists | Building | ~73% recent | 6 | LC19/2130 recovered to Tier 3; LC141 accepted with hint + hash-set, so cycle detection still Tier 1 |
+| Linked Lists | Building | ~70% recent | 10 | D39: LC143/876/234 recovered, but LC141 still hash-set, LC142 hint, LC328/24 hint; pointer rewiring and Floyd cycle remain blockers |
 
 ---
 
@@ -306,7 +319,7 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D33: all 3 hint-needed. D34: all 3 independent — chronic pattern broken, formal standalone session no longer blocking but recommended to lock in the gain | Jun 30 | Jul 3 (missed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
-| New DS | Linked Lists | In progress — D37 improved: LC19/LC2130/LC92/LC21/LC206 solved independently, but LC141 cycle detection used hint + hash-set; target can recover with Floyd retry. | Jul 7 | Jul 23 |
+| New DS | Linked Lists | In progress — D38 added LC876/142/234/143; LC876/234 were independent, but LC141/142 still used hash-set and LC143 needed hint+45 min. Floyd cycle and reorder cleanup remain active. | Jul 7 | Jul 23 |
 | New DS | Stack + Queue | Not started | Jul 23 | Aug 6 |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
@@ -389,8 +402,12 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jul 12 | Remove Nth Node From End | 19 | Accepted |
 | Jul 12 | Maximum Twin Sum of a Linked List | 2130 | Accepted |
 | Jul 14 | Linked List Cycle | 141 | Accepted |
+| Jul 16 | Middle of the Linked List | 876 | Accepted |
+| Jul 16 | Linked List Cycle II | 142 | Accepted |
+| Jul 16 | Palindrome Linked List | 234 | Accepted |
+| Jul 16 | Reorder List | 143 | Accepted |
 
-Unique problems LC accepted: 70
+Unique problems LC accepted: 74
 
 ---
 
@@ -408,7 +425,7 @@ Unique problems LC accepted: 70
 | 8 (Jun 29 - Jul 5, D29-D32) | 4 | 35 | 6 | ~72% | avg 20 min/problem — Fri Jul 3 assessment missed, Recovery Day used Jul 5 |
 | 9 (Jul 6, D33) | 3 | 5 | 3 | 63% (5/8) | Reinforcement Day — 128/441 recovered to Tier 3; Binary Search Applied (33,153,875) all hint-needed despite template given directly; Tier 4 recalls skipped |
 | 10 (Jul 7-12, D34-D35 processed; Jul 10-11 backlog) | 5 | 12 | 5 unique new (15 accepted attempts) | ~59% (10/17), avg ~25 min | Verdict: Slightly Behind — 2-day backlog + 5 Tier 1 carry-over; no variants moved Stable; LC206 recovered but Linked List dummy/in-place variants remain shaky |
-| 11 (Jul 13-14, D36-D37) | 1 | 17 | 1 unique new (16 accepted attempts) | ~83% (15/18) | D37: LC19/2130/875/92/128 confirmed Tier 3; LC141 new Tier 1 after hint; LC2262 deferred until Aug 11 |
+| 11 (Jul 13-18, D36-D39) | 7 | 29 | 5 unique new (24 accepted attempts) | ~78% (28/36) | D39: LC2575/143/876/234 moved Tier 3; LC141/142/1679/1877/328/24 require Tier 1; no new LC credit because local output was unverified |
 
 ---
 
@@ -423,6 +440,7 @@ Source: Cross-referenced from Day 08–30 solution files.
 | Isomorphic Strings | 205 | Day 12 | Days 22–25 (multiple) | Template recalled without understanding dual-map constraint | Day 25 |
 | Max Product Subarray | 152 | Day 14 | Day 24 | Not attempted in full; hint needed on high-volume day | Day 25+ |
 | Contains Duplicate II | 219 | Days 16–18 | Days 22–23 | Wrong update order: check → add → shrink confused | Day 25 |
+| Find the Divisibility Array | 2575 | Day 30 | Day 38 | Hint needed on rolling modulo despite prior Tier 3 | D39 |
 
 Rule: if any problem appears in this log twice, it requires a dedicated first-principles session, not another revision cycle.
 
