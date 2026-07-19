@@ -42,12 +42,32 @@ Files to read:
 - Today's solution file: most recently modified .py file in D:\Dev\DSA-System\Daily_Work\
 - D:\Dev\DSA-System\problem_solving.md (for tier assignment rules)
 
-STEP 1 — RUN THE CODE:
-Execute the .py file. Try each until one works:
-  python "D:\Dev\DSA-System\Daily_Work\[filename].py"
-  python3 "D:\Dev\DSA-System\Daily_Work\[filename].py"
-  py "D:\Dev\DSA-System\Daily_Work\[filename].py"
-Capture full terminal output. Do not skip.
+STEP 1 — STATIC CODE VALIDATION
+
+Do NOT execute the solution file.
+
+Instead validate every solution by reviewing the source code.
+
+For every problem verify:
+
+✓ Correct algorithm for the problem
+✓ Syntax is valid
+✓ Pointer logic / loop logic is correct
+✓ No obvious runtime errors
+✓ Time complexity matches implementation
+✓ Space complexity matches implementation
+✓ Pattern and Variant are appropriate
+✓ Edge cases are handled
+
+Classify as:
+
+Verified Correct
+Likely Correct
+Incorrect
+
+Only mark Incorrect when there is a genuine algorithmic or logical error.
+
+Treat "Likely Correct" as acceptable if the implementation matches the standard accepted solution.
 
 STEP 2 — VERIFY OUTPUTS:
 For each problem, compare actual printed output vs expected output in docstring/comments.
