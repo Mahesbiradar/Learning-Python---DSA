@@ -93,7 +93,7 @@ class Solution:
 
 ## Tier 2 — Revision
 
-### Search in Rotated Sorted Array (LC 33) — Standalone Confirmation
+"### Search in Rotated Sorted Array (LC 33) — Standalone Confirmation
 
 There is an integer array `nums` sorted in ascending order (with distinct values).
 
@@ -120,7 +120,7 @@ Output: -1
 - `-10^4 <= nums[i] <= 10^4`
 - All values of `nums` are unique.
 - `nums` is guaranteed to be rotated at some pivot.
-- `-10^4 <= target <= 10^4`
+- `-10^4 <= target <= 10^4`"
 
 ```python
 class Solution:

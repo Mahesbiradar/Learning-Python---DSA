@@ -1,8 +1,8 @@
 # DSA STATUS
-Current Study Day: 42
-Last updated: 2026-07-21 (D42 Catch-up completed)
-Current: Month 2 | Week 12 | 12 overdue Tier 3 problems cleared. 4 overdue Tier 3 remain.
-Next focus: Jul 22 — LC23 (Tier 1) + remaining 4 overdue Tier 3 Arrays (LC560, LC930, LC58, LC278). Binary Search Applied standalone confirmation pending Day 43.
+Current Study Day: 43
+Last updated: 2026-07-22 (D43 completed)
+Current: Month 2 | Week 12 | All 4 overdue Tier 3 cleared. Binary Search Applied chronic pattern BROKEN.
+Next focus: Jul 23 — LC23 (Tier 1) + Linked List volume building continues.
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -51,10 +51,10 @@ Weekly assessment: Every Friday — 4 unseen problems, no hints, 30 min each
 Problem total target: 200-250 solved | LC accepted target: 115-120
 
 Tier definitions:
-  TIER 1 (SHAKY): hint-needed OR wrong approach OR &gt;40 min OR failed → revisit next day
-  TIER 2 (BUILDING): independent but &gt;25 min OR first time solving variant → revisit in 3 days
-  TIER 3 (STABLE): independent + &lt;25 min + LC accepted → revisit in 7 days
-  TIER 4 (MASTERED): stable + 14-day recall passed + &lt;10 min → revisit in 30 days (template only)
+  TIER 1 (SHAKY): hint-needed OR wrong approach OR >40 min OR failed → revisit next day
+  TIER 2 (BUILDING): independent but >25 min OR first time solving variant → revisit in 3 days
+  TIER 3 (STABLE): independent + <=25 min + LC accepted → revisit in 7 days
+  TIER 4 (MASTERED): stable + 14-day recall passed + <10 min → revisit in 30 days (template only)
 
 Tier movement:
   Independent + fast → move UP one tier
@@ -91,7 +91,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Complement Lookup | Two Sum style | 3 | 8 | Stable | LC 653, 2006, 1010, 2351, 1512 |
 | Prefix Sum | Running prefix | 3 | 8 | Stable | LC 2485, 1413, 2574, 1854 |
 | Prefix Sum | Pivot / equilibrium | 2 | 6 | Stable | LC 2270, 1991, 1744 |
-| Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Building | LC 930, 1124, 974, 1477 |
+| Prefix Sum | Prefix + Hash Map (560 style) | 3 | 8 | Building | LC 1124, 1477 |
 | Prefix Sum | Modulo variant (523 style) | 4 | 8 | Building | LC 2262 (not submitted) |
 | Two Pointers | Opposite ends — palindrome/reverse | 3 | 8 | Stable | LC 680, 977, 283, 1768 |
 | Two Pointers | Write pointer — compact/remove | 2 | 8 | Stable | LC 283, 905, 2460, 75, 1089 |
@@ -101,7 +101,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Running State | Kadane / min-max tracking | 3 | 8 | Stable | LC 918, 2401, 1749, 1186 |
 | Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
 | Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
-| Binary Search | Applied — non-obvious structure | 5 | 10 | Building (D42 standalone Day 1: LC33 independent 30min, LC153 independent 15min, LC875 independent 25min. All Accepted. Awaiting Day 43 cold confirmation before marking chronic pattern broken.) | LC 1095, 1011 |
+| Binary Search | Applied — non-obvious structure | 5 | 10 | Stable (D43: LC33 15min cold, LC153 20min cold, LC875 15min cold. All independent Accepted. 2 consecutive cold days confirms chronic pattern BROKEN.) | LC 1095, 1011 |
 | Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 accepted D37 independent in 20 min; space-complexity comment was a minor metadata miss, held Tier 3 |
 
 ### DS 2: Linked Lists (Phase: Volume Building)
@@ -109,7 +109,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Pattern | Variant | Solved | Target | Status | Problems |
 |---------|---------|--------|--------|--------|---------|
 | Traversal + basic ops | Reverse a list | 1 | 6 | Building | LC 206 independent again D37 (15 min) after D35 recovery; needs volume beyond one variant |
-| Dummy node | Remove Nth / merge | 3 | 6 | Building | LC 21 reconfirmed; LC 19 recovered independent D37; LC 23 attempted D42 (hints, 45min, Tier 1) |
+| Dummy node | Remove Nth / merge | 3 | 6 | Building | LC 21 reconfirmed; LC 19 recovered independent D37; LC 23 attempted D42 (hints, 45min, Tier 1), D43 (hint, 25min, Tier 1) |
 | Fast + slow pointer | Middle / cycle detection | 3 | 6 | Building | LC876 independent D38; LC141 Floyd O(1) solved cold D41; LC142 Floyd entry Tier 3 |
 | In-place manipulation | Reorder / reverse groups | 6 | 6 | Building | LC92/2130/234 independent; LC143 recovered independent D39; LC328 cold Tier 3; LC24 cold Tier 3 D41 |
 
@@ -178,7 +178,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jul 8 | Jul 15 | ✓ | reconfirmed independent D34, 20 min, clean — STILL OVERDUE |
+| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jul 22 | Jul 30 | ✓ | D43 independent 15 min, accepted — overdue cleared, reconfirmed Tier 3 |
 | Range Sum Query | 303 | Prefix Sum | Prefix array | 3 | Jul 21 | Jul 28 | ✓ | D42 independent 20 min, accepted — reconfirmed Tier 3 |
 | Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 16 | Jul 23 | ✓ | independent D38, 15 min, accepted — reconfirmed Tier 3 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 25 min, accepted — reconfirmed Tier 3 |
@@ -203,7 +203,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Maximum Product Subarray | 152 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Binary Search | 704 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| First Bad Version | 278 | Binary Search | Standard | 3 | Jul 12 | Jul 19 | ✓ | independent D35, 15 min, output verified — STILL OVERDUE |
+| First Bad Version | 278 | Binary Search | Standard | 3 | Jul 22 | Jul 30 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3 |
 | Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
 | Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 10 min, accepted — reconfirmed Tier 3 |
 | Find Peak Element | 162 | Binary Search | Lower bound | 3 | Jul 21 | Jul 28 | ✓ | D42 independent 20 min, accepted — reconfirmed Tier 3 |
@@ -211,11 +211,11 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Arranging Coins | 441 | Binary Search | Lower bound | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 20 min, accepted — reconfirmed Tier 3 |
 | Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 15 min, accepted — reconfirmed Tier 3 |
 | Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Jul 19 | Jul 26 | ✓ | independent D40, 15 min, accepted — reconfirmed Tier 3 |
-| Length of Last Word | 58 | String Traversal | — | 3 | Jul 12 | Jul 19 | ✓ | independent D35, 10 min, output verified — STILL OVERDUE |
-| Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 2 | Jul 21 | Jul 24 | ✓ | D42 standalone session, independent 30 min, accepted — recovered from Tier 1 regression |
-| Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 3 | Jul 21 | Jul 28 | ✓ | D42 standalone session, independent 15 min, accepted — recovered from Tier 1 regression |
-| Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 3 | Jul 21 | Jul 29 | ✓ | D42 standalone session, independent 25 min, accepted — reconfirmed Tier 3 |
-| Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jul 8 | Jul 15 | ✓ | reconfirmed independent D34, 20 min, clean — STILL OVERDUE |
+| Length of Last Word | 58 | String Traversal | — | 3 | Jul 22 | Jul 30 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3 |
+| Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 3 | Jul 22 | Jul 30 | ✓ | D43 standalone confirmation: 15 min independent cold, Accepted — PROMOTED Tier 3. Chronic pattern broken. |
+| Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 3 | Jul 22 | Jul 30 | ✓ | D43 standalone confirmation: 20 min independent cold, Accepted — reconfirmed Tier 3. Chronic pattern broken. |
+| Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 3 | Jul 22 | Jul 30 | ✓ | D43 standalone confirmation: 15 min independent cold, Accepted — reconfirmed Tier 3. Chronic pattern broken. |
+| Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jul 22 | Jul 30 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3 |
 | Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 19 | Jul 26 | ✓ | D40 independent 25 min, accepted; complexity corrected to O(n log n) time, O(n) space — promoted Tier 3 |
 | Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 19 | Jul 26 | ✓ | D40 independent 20 min, accepted; complexity corrected to O(n log n) time, O(n) space — promoted Tier 3 |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 25 min, accepted — reconfirmed Tier 3 |
@@ -236,7 +236,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 | Reorder List | 143 | In-place manipulation | Reorder by reversing second half | 3 | Jul 16 | Jul 23 | ✓ | independent D39, 25 min, accepted; recovered from D38 hint |
 | Odd Even Linked List | 328 | In-place manipulation | Odd-even index partition | 3 | Jul 19 | Jul 26 | ✓ | D40 independent 20 min, accepted; pointer partition solved cold — promoted Tier 3 |
 | Swap Nodes in Pairs | 24 | In-place manipulation | Local pointer rewiring | 3 | Jul 20 | Jul 27 | ✓ | D41 independent 20 min, accepted; local rewiring solved COLD — promoted Tier 3 |
-| Merge k Sorted Lists | 23 | Linked List | Dummy node — merge k sorted lists | 1 | Jul 21 | Jul 23 | ✓ | D42 new problem, hints needed, 45 min, accepted — Tier 1 |
+| Merge k Sorted Lists | 23 | Linked List | Dummy node — merge k sorted lists | 1 | Jul 22 | Jul 24 | ✓ | D43 hint needed, 25 min, accepted — Tier 1. Divide-and-conquer approach correct but needed hint to start. |
 
 ---
 
@@ -246,7 +246,7 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Merge k Sorted Lists | 23 | Jul 23 | D42 new problem, hints needed, 45 min |
+| Merge k Sorted Lists | 23 | Jul 24 | D43 hint needed, 25 min — still Tier 1 |
 
 ### ON HOLD — Do not schedule before Aug 11
 
@@ -258,31 +258,36 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
-| Search in Rotated Sorted Array | 33 | Jul 24 | D42 standalone session, independent 30 min — monitor for Tier 3 promotion on next cycle |
+| — | — | — | None currently due |
 
 ### TIER 3 — Due in 7 days
 
 | Problem | LC# | Due |
 |---------|-----|-----|
-| Find Minimum in Rotated Sorted Array | 153 | Jul 28 |
-| Find Peak Element | 162 | Jul 28 |
-| Range Sum Query | 303 | Jul 28 |
-| Two Sum | 1 | Jul 28 |
-| Valid Perfect Square | 367 | Jul 28 |
-| Ransom Note | 383 | Jul 28 |
-| Koko Eating Bananas | 875 | Jul 29 |
-| Unique Number of Occurrences | 1207 | Jul 28 |
-| Two Sum II | 167 | Jul 28 |
-| Subarray Sums Divisible by K | 974 | Jul 28 |
-| Continuous Subarray Sum | 523 | Jul 28 |
-| Container With Most Water | 11 | Jul 28 |
-| Isomorphic Strings | 205 | Jul 28 |
-| Remove Element | 27 | Jul 28 |
-| Arranging Coins | 441 | Jul 28 |
-| Find Smallest Letter Greater | 744 | Jul 28 |
-| Guess Number Higher or Lower | 374 | Jul 28 |
-| Make Sum Divisible by P | 1590 | Jul 28 |
-| K Divisible Elements Subarrays | 2261 | Jul 28 |
+| Find Minimum in Rotated Sorted Array | 153 | Jul 30 |
+| Find Peak Element | 162 | Jul 30 |
+| Range Sum Query | 303 | Jul 30 |
+| Two Sum | 1 | Jul 30 |
+| Valid Perfect Square | 367 | Jul 30 |
+| Ransom Note | 383 | Jul 30 |
+| Koko Eating Bananas | 875 | Jul 30 |
+| Unique Number of Occurrences | 1207 | Jul 30 |
+| Two Sum II | 167 | Jul 30 |
+| Subarray Sums Divisible by K | 974 | Jul 30 |
+| Continuous Subarray Sum | 523 | Jul 30 |
+| Container With Most Water | 11 | Jul 30 |
+| Isomorphic Strings | 205 | Jul 30 |
+| Remove Element | 27 | Jul 30 |
+| Arranging Coins | 441 | Jul 30 |
+| Find Smallest Letter Greater | 744 | Jul 30 |
+| Guess Number Higher or Lower | 374 | Jul 30 |
+| Make Sum Divisible by P | 1590 | Jul 30 |
+| K Divisible Elements Subarrays | 2261 | Jul 30 |
+| Search in Rotated Sorted Array | 33 | Jul 30 |
+| Subarray Sum Equals K | 560 | Jul 30 |
+| Binary Subarrays With Sum | 930 | Jul 30 |
+| Length of Last Word | 58 | Jul 30 |
+| First Bad Version | 278 | Jul 30 |
 | Longest Consecutive Sequence | 128 | Jul 22 |
 | Maximum Number of Vowels | 1456 | Jul 22 |
 | Contiguous Array | 525 | Jul 23 |
@@ -309,16 +314,15 @@ Format: Pattern | Variant | Solved | Target | Status | Next problems needed
 
 | Problem | LC# | Original Due |
 |---------|-----|-------------|
-| Subarray Sum Equals K | 560 | Jul 15 |
-| Binary Subarrays With Sum | 930 | Jul 15 |
-| Length of Last Word | 58 | Jul 19 |
-| First Bad Version | 278 | Jul 19 |
+| — | — | — | All overdue Tier 3 problems cleared on D43 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
 All problems in Mastered section below. 
 - Frequency Hashing recall completed D42 → next due Aug 20
 - Prefix Sum Pivot recall completed D42 → next due Aug 20
+- Grouping Hash Maps recall completed D43 → next due Aug 22
+- Frequency Sorting recall completed D43 → next due Aug 22
 - Remainder overdue since Jul 20
 
 Template recall = write the pattern template from memory in 3 min. No full solve needed.
@@ -343,9 +347,9 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Running State | Stable | 90% | 3 | — |
 | Binary Search (standard) | Stable | 90% | 3 | 374 failed |
 | Binary Search (lower bound) | Building | 70% | 5 | 441 recovered independent D33 (was hint D32) — improving, monitor next cycle |
-| Binary Search (applied) | Building | ~55% (7/12 recent) | 5 | D42 standalone Day 1: all 3 independent. Awaiting Day 43 cold confirmation before marking chronic pattern broken. LC33 still slow at 30 min. |
+| Binary Search (applied) | Stable | 100% (8/8 recent) | 5 | D43: LC33 15min cold, LC153 20min cold, LC875 15min cold. All independent Accepted. 2 consecutive cold days — CHRONIC PATTERN BROKEN. |
 | Hash Set (Sequence Expansion) | Building | improving | 1 | LC128 accepted D37 independent in 20 min; keep Tier 3, but remember set solution is O(n) space |
-| Linked Lists | Building — Volume Phase | ~82% recent | 11 | D42: LC23 (Merge k) required hints + 45 min. All other linked list revisions independent. Dummy node variant now at 3/6. |
+| Linked Lists | Building — Volume Phase | ~82% recent | 11 | D43: LC23 still Tier 1 (hint needed). All other linked list revisions independent. Dummy node variant now at 3/6. |
 
 ---
 
@@ -365,9 +369,9 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 |-------|-------|--------|-------|-----------|
 | Gap Fill | Two Pointers maximize (LC 11, 42) | Done — 100% independent, needs volume (4/10) | Jun 25 | Jun 28 |
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
-| Gap Fill | Binary Search Applied (LC 33, 153, 875) | D42 standalone Day 1 completed: LC33 independent 30min, LC153 independent 15min, LC875 independent 25min. All Accepted. Awaiting Day 43 cold confirmation before marking chronic pattern broken. | Jun 30 | Jul 3 (missed) → Jul 21–22 |
+| Gap Fill | Binary Search Applied (LC 33, 153, 875) | D42 standalone Day 1 + D43 Day 2 cold confirmation: ALL 3 independent cold both days. LC33: 30min→15min, LC153: 15min→20min, LC875: 25min→15min. CHRONIC PATTERN BROKEN. Closed. | Jun 30 | Jul 22 (closed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
-| New DS | Linked Lists | Volume Building — D42: LC23 (Merge k) added but Tier 1. Dummy node 3/6. ALL prior blockers cleared D41. | Jul 7 | Jul 23 |
+| New DS | Linked Lists | Volume Building — D43: LC23 still Tier 1 (hint needed, 25min). Dummy node 3/6. Need 3 more dummy node variants for Stable. | Jul 7 | Jul 23 |
 | New DS | Stack + Queue | Not started | Jul 23 | Aug 6 |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
@@ -454,6 +458,14 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jul 16 | Palindrome Linked List | 234 | Accepted |
 | Jul 16 | Reorder List | 143 | Accepted |
 | Jul 21 | Merge k Sorted Lists | 23 | Accepted |
+| Jul 22 | Merge k Sorted Lists | 23 | Accepted |
+| Jul 22 | Search in Rotated Sorted Array | 33 | Accepted |
+| Jul 22 | Find Minimum in Rotated Sorted Array | 153 | Accepted |
+| Jul 22 | Koko Eating Bananas | 875 | Accepted |
+| Jul 22 | Subarray Sum Equals K | 560 | Accepted |
+| Jul 22 | Binary Subarrays With Sum | 930 | Accepted |
+| Jul 22 | Length of Last Word | 58 | Accepted |
+| Jul 22 | First Bad Version | 278 | Accepted |
 
 Unique problems LC accepted: 75
 
@@ -475,6 +487,7 @@ Unique problems LC accepted: 75
 | 10 (Jul 7-12, D34-D35 processed; Jul 10-11 backlog) | 5 | 12 | 5 unique new (15 accepted attempts) | ~59% (10/17), avg ~25 min | Verdict: Slightly Behind — 2-day backlog + 5 Tier 1 carry-over; no variants moved Stable; LC206 recovered but Linked List dummy/in-place variants remain shaky |
 | 11 (Jul 14-20, D36-D41) | 8 | 52 | 5 unique new | ~77% (37/48), avg ~21 min | Linked Lists surged — 8 new variants, all blockers cleared D41. Binary Search Applied collapsed — LC33/153 regressed to hint-needed. 12 overdue Tier 3 problems from Arrays phase need immediate cleanup. |
 | 12 (Jul 21, D42+D42-Catch-up) | 1 | 20 | 21 | 95% (20/21) | Standalone session Day 1 + catch-up: 20 revisions total, 100% independent on catch-up block. 4 overdue Tier 3 remain. |
+| 12 (Jul 22, D43) | 0 | 8 | 8 | 88% (7/8) | Standalone Day 2 + 4 overdue Tier 3 cleared. Binary Search Applied chronic pattern BROKEN. LC23 still Tier 1 (hint needed). All overdue cleared. |
 
 ---
 
@@ -505,7 +518,7 @@ These concepts have been flagged (by comment fields or explicit notes in solutio
 |---------|--------------|----------|--------------------------|------|
 | Prefix Sum + Modulo derivation | Day 26 (LC 1590 first failure) | Day 32: ran dedicated 60-90 min standalone session. Solved 523, 974 cold+independent, LC 1590 independent first time (30 min, Tier 1→2). Day 34: LC 1590 solved independently AGAIN, cold, no notes (25 min, Accepted) — 2nd consecutive cold independent solve confirms derivation stuck. | Yes | Jul 8 |
 | OOP / Class Mechanics (self.prefix in Python) | Day 23 (LC 303 first failure) | Day 31: solved independently (20 min) but comment: "still not internalized why we initialized the list with 0". D42: solved again independent 20 min. | No — monitor next cycle | — |
-| Binary Search Applied (feasibility/monotonic predicate on answer space) | Jun 24 assessment (523✗, later flagged Jun 30) | D33: all 3 hint-needed. D34: all 3 independent — chronic pattern broken. D41: LC33/153 BOTH regressed to hint-needed after 12 days. Chronic pattern NOT broken. D42: Standalone Day 1 completed — all 3 independent (LC33 30min, LC153 15min, LC875 25min). Awaiting Day 43 cold confirmation. | In Progress | Jul 21–22 |
+| Binary Search Applied (feasibility/monotonic predicate on answer space) | Jun 24 assessment (523✗, later flagged Jun 30) | D33: all 3 hint-needed. D34: all 3 independent — chronic pattern broken. D41: LC33/153 BOTH regressed to hint-needed after 12 days. Chronic pattern NOT broken. D42: Standalone Day 1 completed — all 3 independent (LC33 30min, LC153 15min, LC875 25min). D43: Standalone Day 2 cold confirmation — all 3 independent AGAIN (LC33 15min, LC153 20min, LC875 15min). 2 consecutive cold days = CHRONIC PATTERN BROKEN. | Yes | Jul 22 |
 | Contribution counting / Total Appeal O(n) derivation | Day 34 (LC 2262 3rd brute-force-only attempt) | Day 37 processed Jul 14: 6th consecutive attempt still O(n²) brute force; user explicitly deferred optimized derivation for 4 weeks to finish key patterns first. Do not schedule before Aug 11. | Deferred | Aug 11 |
 
 Protocol for Standalone Session:
@@ -532,4 +545,4 @@ Fruits Into Baskets (904), Max Consecutive Ones III (1004),
 Longest Repeating Char Replacement (424), Binary Search (704),
 Search Insert Position (35), Sqrt(x) (69)
 
-Next Tier 4 recall due: Jul 20, 2026 (overdue — 2 recalls completed D42: Frequency Hashing, Prefix Sum Pivot; remainder pending)
+Next Tier 4 recall due: Jul 20, 2026 (overdue — 4 recalls completed: Frequency Hashing D42, Prefix Sum Pivot D42, Grouping Hash Maps D43, Frequency Sorting D43; remainder pending)
