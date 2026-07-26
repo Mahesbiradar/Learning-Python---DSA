@@ -240,7 +240,12 @@ Compute today's workload in this order:
 3 Count total scheduled items.
 
 4 If total <10,
-append Tier 3 problems in Revision Pool order until total reaches 10–12.
+Tier 3 fillers are allowed ONLY AFTER
+
+- every overdue revision
+- every due revision
+
+has already been scheduled.
 
 Never remove or replace mandatory items.
 
@@ -328,11 +333,20 @@ Do not repeat it on Reinforcement Days.
 
 When selecting revision problems:
 
-- Tier 1: Schedule every due problem.
-- Tier 2: Preserve the exact order listed in the Revision Pool.
-- Tier 3: Preserve the exact order listed in the Revision Pool.
-- Never reorder problems by date or difficulty.
-- Never skip an earlier problem in the Revision Pool.
+Revision scheduling priority:
+
+1. Tier 1 overdue
+2. Tier 1 due today
+3. Tier 2 overdue
+4. Tier 2 due today
+5. Tier 3 overdue
+6. Tier 3 due today
+7. Tier 4 due today
+8. Tier 3 fillers (if workload <10)
+
+Within the same priority group,
+
+preserve the order in the Revision Pool.
 
 
 If a standalone session problem is also due for revision:
