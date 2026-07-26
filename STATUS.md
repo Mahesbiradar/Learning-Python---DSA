@@ -1,8 +1,8 @@
 # DSA STATUS
-Current Study Day: 46
-Last updated: 2026-07-24 (D46 completed)
-Current: Month 2 | Week 12 | Stack + Queue — Monotonic Stack introduced.
-Next focus: Jul 25 — Tier 1 revision (LC739) + overdue Tier 3 cleanup.
+Current Study Day: 47
+Last updated: 2026-07-25 (D47 completed)
+Current: Month 2 | Week 12 | Stack + Queue — Monotonic Stack reinforcement.
+Next focus: Jul 26 — Tier 2 revision (LC1047) + 6 Tier 3 due + overdue Tier 4 recalls.
 Target: Junior SDE 6-8 LPA | Timeline: Oct 2026
 
 ---
@@ -50,10 +50,10 @@ Weekly assessment: Every Friday — 4 unseen problems, no hints, 30 min each
 Problem total target: 200-250 solved | LC accepted target: 115-120
 
 Tier definitions:
-  TIER 1 (SHAKY): hint-needed OR wrong approach OR &gt;40 min OR failed → revisit next day
-  TIER 2 (BUILDING): independent but &gt;25 min OR first time solving variant → revisit in 3 days
-  TIER 3 (STABLE): independent + &lt;=25 min + LC accepted → revisit in 7 days
-  TIER 4 (MASTERED): stable + 14-day recall passed + &lt;10 min → revisit in 30 days (template only)
+  TIER 1 (SHAKY): hint-needed OR wrong approach OR >40 min OR failed → revisit next day
+  TIER 2 (BUILDING): independent but >25 min OR first time solving variant → revisit in 3 days
+  TIER 3 (STABLE): independent + <=25 min + LC accepted → revisit in 7 days
+  TIER 4 (MASTERED): stable + 14-day recall passed + <10 min → revisit in 30 days (template only)
 
 Tier movement:
   Independent + fast → move UP one tier
@@ -101,23 +101,23 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Binary Search | Standard — find target | 3 | 8 | Stable | LC 374, 540, 1346, 2300 |
 | Binary Search | Lower bound — first position | 4 | 10 | Building | LC 34, 2529, 1385, 1064 |
 | Binary Search | Applied — non-obvious structure | 5 | 10 | Stable (D43: LC33 15min cold, LC153 20min cold, LC875 15min cold. All independent Accepted. 2 consecutive cold days confirms chronic pattern BROKEN.) | LC 1095, 1011 |
-| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 accepted D37 independent in 20 min; space-complexity comment was a minor metadata miss, held Tier 3 |
+| Hash Set | Sequence expansion | 1 | 6 | Building | LC 128 reconfirmed D47 independent 20 min, Accepted |
 
 ### DS 2: Linked Lists (Phase: Volume Building)
 
 | Pattern | Variant | Solved | Target | Status | Problems |
 |---------|---------|--------|--------|--------|---------|
-| Traversal + basic ops | Reverse a list | 1 | 6 | Building | LC 206 independent again D37 (15 min) after D35 recovery; needs volume beyond one variant |
-| Dummy node | Remove Nth / merge | 3 | 6 | Building | LC 21 reconfirmed; LC 19 recovered independent D37; LC 23 independent D44 (20 min, Accepted, Tier 3) — divide-and-conquer merge with dummy node |
+| Traversal + basic ops | Reverse a list | 1 | 6 | Building | LC 206 reconfirmed D47 independent 10 min, Accepted |
+| Dummy node | Remove Nth / merge | 3 | 6 | Building | LC 21 reconfirmed D47 independent 15 min; LC 19 reconfirmed D47 independent 20 min; LC 23 independent D44 (20 min, Accepted, Tier 3) |
 | Fast + slow pointer | Middle / cycle detection | 3 | 6 | Building | LC876 independent D38; LC141 Floyd O(1) solved cold D41; LC142 Floyd entry Tier 3 |
-| In-place manipulation | Reorder / reverse groups | 6 | 6 | Building | LC92/2130/234 independent; LC143 recovered independent D39; LC328 cold Tier 3; LC24 cold Tier 3 D41 |
+| In-place manipulation | Reorder / reverse groups | 6 | 6 | Building | LC92 reconfirmed D47 independent 15 min; LC2130 reconfirmed D47 independent 15 min; LC234 independent D38; LC143 recovered independent D39; LC328 cold Tier 3; LC24 cold Tier 3 D41 |
 
-### DS 3: Stack + Queue (Phase: Volume Building — Day 2)
+### DS 3: Stack + Queue (Phase: Volume Building — Day 3)
 
 | Pattern | Variant | Solved | Target | Status | Problems |
 |---------|---------|--------|--------|--------|---------|
 | Basic Stack | Valid parens / min stack | 3 | 6 | Building | LC 20 hint-needed D45 (25 min, Tier 1) → independent D46 (20 min, Tier 3); LC 155 hint-needed D45 (30 min, Tier 1) → independent D46 (20 min, Tier 3); LC 1047 independent D45 (10 min, Tier 2) |
-| Monotonic Stack | Next greater element | 1 | 6 | Building | LC 739 hint-needed D46 (45 min, Tier 1). First monotonic stack exposure. |
+| Monotonic Stack | Next greater element | 1 | 6 | Building | LC 739 promoted Tier 1→2 D47 (30 min, independent, Accepted). Monotonic stack improving but not yet sub-25 min. |
 | Deque / Sliding Window Max | Window max | 0 | 6 | NOT STARTED | LC 239, 1438, 862 |
 
 ### DS 4: Trees (Phase: NOT STARTED)
@@ -191,7 +191,7 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 10 min, accepted — reconfirmed Tier 3 |
+| Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3 |
 | Longest Substring Without Repeating | 3 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Minimum Size Subarray Sum | 209 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Fruits Into Baskets | 904 | Sliding Window | Variable size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
@@ -221,13 +221,13 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 23 | Jul 30 | ✓ | D45 independent 15 min, accepted — reconfirmed Tier 3 |
 | K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 25 min, accepted — brute force reconfirmed, optimal still not recalled cold |
 | Total Appeal of A String | 2262 | Brute Force | Subarray enum | 1 | Jul 14 | Aug 11 | — | independent brute-force D37 (15 min), printed 28/20 matches examples but O(n²) wrong for constraints and LC not submitted — USER HOLD until Aug 11 / after key patterns finish |
-| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 20 min, accepted — corrected to Tier 3; note: set-based solution uses O(n) space |
+| Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 20 min, accepted — reconfirmed Tier 3 |
 | Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 3 | Jul 21 | Jul 28 | ✓ | D42 catch-up independent 25 min, accepted — reconfirmed Tier 3, USO remains closed |
-| Reverse Linked List | 206 | Traversal + basic ops | Reverse a list | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 15 min, accepted — second cold solve after D34 hint |
-| Reverse Linked List II | 92 | In-place manipulation | Reverse between positions | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 20 min, accepted — timed cleanup confirms Tier 3 |
-| Merge Two Sorted Lists | 21 | Dummy node | Merge sorted lists | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 15 min, accepted — dummy merge reconfirmed |
-| Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 15 min, accepted — recovered from D36 hint |
-| Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 3 | Jul 15 | Jul 22 | ✓ | independent D37, 15 min, accepted — recovered from D36 hint |
+| Reverse Linked List | 206 | Traversal + basic ops | Reverse a list | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 10 min, accepted — reconfirmed Tier 3 |
+| Reverse Linked List II | 92 | In-place manipulation | Reverse between positions | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3 |
+| Merge Two Sorted Lists | 21 | Dummy node | Merge sorted lists | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3 |
+| Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 20 min, accepted — reconfirmed Tier 3 |
+| Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 3 | Jul 25 | Aug 1 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3 |
 | Linked List Cycle | 141 | Fast + slow pointer | Cycle detection | 3 | Jul 20 | Jul 27 | ✓ | D41 independent 15 min, accepted; Floyd O(1) solved COLD — major breakthrough, promoted Tier 3 |
 | Middle of the Linked List | 876 | Fast + slow pointer | Middle node | 3 | Jul 23 | Jul 30 | ✓ | D45 independent 20 min, accepted — reconfirmed Tier 3 |
 | Linked List Cycle II | 142 | Fast + slow pointer | Cycle entry | 3 | Jul 19 | Jul 26 | ✓ | D40 independent 20 min, accepted; Floyd entry solved COLD — major recovery, promoted Tier 3 |
@@ -239,7 +239,7 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Valid Parentheses | 20 | Stack | Valid parens | 3 | Jul 24 | Jul 31 | ✓ | D46 independent 20 min, Accepted — PROMOTED Tier 1→3. Stack push/pop logic fully internalized. |
 | Min Stack | 155 | Stack | Min stack | 3 | Jul 24 | Jul 31 | ✓ | D46 independent 20 min, Accepted — PROMOTED Tier 1→3. Dual-stack approach fully internalized. |
 | Remove All Adjacent Duplicates | 1047 | Stack | Remove adjacent duplicates | 2 | Jul 23 | Jul 26 | ✓ | D45 independent 10 min, Accepted — Tier 2. First time solving this variant. |
-| Daily Temperatures | 739 | Monotonic Stack | Next greater element | 1 | Jul 24 | Jul 25 | ✓ | D46 hint needed, 45 min, Accepted — Tier 1. First monotonic stack exposure; template understood but not recalled cold. |
+| Daily Temperatures | 739 | Monotonic Stack | Next greater element | 2 | Jul 25 | Jul 28 | ✓ | D47 independent 30 min, Accepted — PROMOTED Tier 1→2. Monotonic stack improving; needs one more sub-25 min cycle for Tier 3. |
 
 ---
 
@@ -249,7 +249,7 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 
 | Problem | LC# | Due | Why TIER 1 |
 |---------|-----|-----|-----------|
-| Daily Temperatures | 739 | Jul 25 | D46 hint needed, 45 min — Tier 1 |
+| — | — | — | None. All Tier 1 cleared D47. |
 
 ### ON HOLD — Do not schedule before Aug 11
 
@@ -262,6 +262,7 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Problem | LC# | Due | Notes |
 |---------|-----|-----|-------|
 | Remove All Adjacent Duplicates | 1047 | Jul 26 | D45 first-time solve, independent 10 min, Accepted — Tier 2 |
+| Daily Temperatures | 739 | Jul 28 | D47 independent 30 min, Accepted — Tier 2. Needs sub-25 min for Tier 3. |
 
 ### TIER 3 — Due in 7 days
 
@@ -307,19 +308,14 @@ Format: Pattern | Variant | Solved | Target | Status | Pending problems
 | Odd Even Linked List | 328 | Jul 26 |
 | Linked List Cycle | 141 | Jul 27 |
 | Swap Nodes in Pairs | 24 | Jul 27 |
-| Longest Consecutive Sequence | 128 | Jul 22 |
-| Maximum Number of Vowels | 1456 | Jul 22 |
-| Reverse Linked List | 206 | Jul 22 |
-| Merge Two Sorted Lists | 21 | Jul 22 |
-| Reverse Linked List II | 92 | Jul 22 |
-| Remove Nth Node From End | 19 | Jul 22 |
-| Maximum Twin Sum of a Linked List | 2130 | Jul 22 |
+| Longest Consecutive Sequence | 128 | Aug 1 |
+| Maximum Number of Vowels | 1456 | Aug 1 |
+| Reverse Linked List | 206 | Aug 1 |
+| Merge Two Sorted Lists | 21 | Aug 1 |
+| Reverse Linked List II | 92 | Aug 1 |
+| Remove Nth Node From End | 19 | Aug 1 |
+| Maximum Twin Sum of a Linked List | 2130 | Aug 1 |
 
-### TIER 3 — OVERDUE (must schedule immediately)
-
-| Problem | LC# | Original Due |
-|---------|-----|-------------|
-| — | — | — | All overdue Tier 3 problems cleared on D43 |
 
 ### TIER 4 — Due in 30 days (template recall only)
 
@@ -330,6 +326,7 @@ All problems in Mastered section below.
 - Frequency Sorting recall completed D43 → next due Aug 22
 - Running State (121, 53) recall completed D44 → next due Aug 21
 - Two Pointers Opposite Ends (125, 344) recall completed D45 → next due Aug 22
+- Valid Anagram + Frequency Hashing recall completed D47 → next due Aug 24
 - Remainder overdue since Jul 20
 
 Template recall = write the pattern template from memory in 3 min. No full solve needed.
@@ -350,14 +347,14 @@ Template recall = write the pattern template from memory in 3 min. No full solve
 | Contribution Counting / Substring Appeal | On hold until Aug 11 | 0% optimal on LC 2262 | 0 | 6 consecutive attempts stayed brute force through D37; user-deferred until key patterns are finished |
 | Two Pointers (opposite/write) | Stable | 85% | 5 | D45: Tier 4 recalls for 125/344 both correct from memory |
 | Two Pointers (maximize) | Building | 100% | 5 | 4 problems, all independent, LC ✓ — needs 4+ more |
-| Sliding Window | Stable | 85% | 9 | LC1456 reconfirmed D37 in 10 min |
+| Sliding Window | Stable | 85% | 9 | LC1456 reconfirmed D47 in 15 min |
 | Running State | Stable | 90% | 3 | D44: Tier 4 templates for 121 and 53 both correct from memory |
 | Binary Search (standard) | Stable | 90% | 3 | 374 reconfirmed D42 |
 | Binary Search (lower bound) | Building | 70% | 5 | 441 recovered independent D33 (was hint D32) — improving, monitor next cycle |
 | Binary Search (applied) | Stable | 100% (8/8 recent) | 5 | D43-D46: LC33/153/875 all independent cold. CHRONIC PATTERN BROKEN. |
-| Hash Set (Sequence Expansion) | Building | improving | 1 | LC128 accepted D37 independent in 20 min; keep Tier 3, but remember set solution is O(n) space |
-| Linked Lists | Building — Volume Phase | ~82% recent | 12 | D44: LC23 promoted Tier 1→3. Dummy node 3/6. Need 3 more for Stable. |
-| Stack + Queue | Building — Day 2 | 75% (3/4 independent today) | 4 | LC20/155 promoted Tier 1→3 D46. LC739 (monotonic) hint-needed Tier 1. Basic stack solid; monotonic stack needs reinforcement. |
+| Hash Set (Sequence Expansion) | Building | improving | 1 | LC128 reconfirmed D47 independent 20 min, Accepted; keep Tier 3 |
+| Linked Lists | Building — Volume Phase | ~85% recent | 12 | D47: 6 overdue Tier 3 problems all reconfirmed independent. Dummy node 3/6. In-place 6/6. Need 2-3 more cold cycles before Stable. |
+| Stack + Queue | Building — Day 3 | 80% (4/5 independent) | 5 | LC20/155 promoted Tier 1→3 D46. LC739 promoted Tier 1→2 D47. LC1047 Tier 2. Basic stack solid; monotonic stack needs one more sub-25 min cycle. |
 
 ---
 
@@ -379,8 +376,8 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Gap Fill | Prefix Sum Modulo (LC 523, 974, 1590) | Standalone session done D32 — 523/974 solved cold, 1590 independent first time, USO pending 1 more cold confirm | Jun 27 | Jul 5 |
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D42 standalone Day 1 + D43 Day 2 cold confirmation: ALL 3 independent cold both days. LC33: 30min→15min, LC153: 15min→20min, LC875: 25min→15min. CHRONIC PATTERN BROKEN. Closed. | Jun 30 | Jul 22 (closed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
-| New DS | Linked Lists | Volume Building — D44: LC23 promoted Tier 1→3 (20 min, independent, Accepted). Dummy node 3/6. Need 3 more for Stable. | Jul 7 | Jul 23 |
-| New DS | Stack + Queue | Volume Building — Day 2. LC20/155 promoted Tier 1→3 D46 (both independent, 20 min). LC1047 Tier 2. LC739 (monotonic stack) introduced — hint-needed Tier 1. Need 2-3 more monotonic stack variants before Stable. | Jul 23 | Aug 6 |
+| New DS | Linked Lists | Volume Building — D47: 6 overdue Tier 3 all reconfirmed independent. Dummy node 3/6. In-place 6/6. Need 2-3 more cold cycles before Stable. | Jul 7 | Jul 23 |
+| New DS | Stack + Queue | Volume Building — Day 3. LC20/155 promoted Tier 1→3 D46. LC739 promoted Tier 1→2 D47 (30 min). LC1047 Tier 2. Need 1-2 more monotonic stack variants before Stable. | Jul 23 | Aug 6 |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
 | New DS | Heap + 1D DP | Not started | Sep 10 | Sep 24 |
@@ -495,8 +492,16 @@ Full pattern assessment pending: complete gap fills first (Two Pointers maximize
 | Jul 24 | Valid Perfect Square | 367 | Accepted |
 | Jul 24 | Ransom Note | 383 | Accepted |
 | Jul 24 | Daily Temperatures | 739 | Accepted |
+| Jul 25 | Longest Consecutive Sequence | 128 | Accepted |
+| Jul 25 | Maximum Number of Vowels | 1456 | Accepted |
+| Jul 25 | Reverse Linked List | 206 | Accepted |
+| Jul 25 | Merge Two Sorted Lists | 21 | Accepted |
+| Jul 25 | Reverse Linked List II | 92 | Accepted |
+| Jul 25 | Remove Nth Node From End | 19 | Accepted |
+| Jul 25 | Maximum Twin Sum of a Linked List | 2130 | Accepted |
+| Jul 25 | Daily Temperatures | 739 | Accepted |
 
-Unique problems LC accepted: 79
+Unique problems LC accepted: 80
 
 ---
 
@@ -520,6 +525,7 @@ Unique problems LC accepted: 79
 | 12 (Jul 22, D44) | 0 | 8 | 8 | 100% (8/8) | LC23 promoted Tier 1→3 (20 min, independent, Accepted). All 8 problems independent Accepted. Avg 14.4 min. Zero Tier 1 backlog. |
 | 12 (Jul 23, D45) | 3 | 5 | 8 | 60% (3/5) | Stack + Queue Day 1. LC20/155 hint-needed (Tier 1). LC1047 independent (Tier 2). 5 revisions all independent. New DS pattern shaky on first exposure. |
 | 12 (Jul 24, D46) | 1 | 8 | 9 | 88.9% (8/9) | Stack + Queue Day 2. LC20/155 promoted Tier 1→3 (both independent, 20 min). 6 Tier 3 revisions all independent. LC739 (monotonic stack) hint-needed, 45 min, Tier 1. Tier 4 recalls: Kadane + Two Pointers templates correct. |
+| 12 (Jul 25, D47) | 0 | 8 | 8 | 100% (8/8) | Reinforcement Day. LC739 promoted Tier 1→2 (30 min, independent, Accepted). 7 overdue Tier 3 linked list problems all reconfirmed independent + Accepted. Tier 4 recalls: Freq Hashing + Valid Anagram templates correct. |
 
 ---
 
@@ -577,4 +583,6 @@ Fruits Into Baskets (904), Max Consecutive Ones III (1004),
 Longest Repeating Char Replacement (424), Binary Search (704),
 Search Insert Position (35), Sqrt(x) (69)
 
-Next Tier 4 recall due: Jul 20, 2026 (overdue — 6 recalls completed: Frequency Hashing D42, Prefix Sum Pivot D42, Grouping Hash Maps D43, Frequency Sorting D43, Running State 121/53 D44, Two Pointers 125/344 D45; remainder pending)
+Next Tier 4 recall due: Jul 20, 2026 (overdue — 8 recalls completed: Frequency Hashing D42, Prefix Sum Pivot D42, Grouping Hash Maps D43, Frequency Sorting D43, Running State 121/53 D44, Two Pointers 125/344 D45, Valid Anagram + Frequency Hashing D47; remainder pending)
+
+
