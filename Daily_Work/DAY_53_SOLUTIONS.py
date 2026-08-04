@@ -730,3 +730,169 @@ class Solution(object):
 # Pattern: stack
 # Variant: Monotonic stack
 # Mistakes / Confusion:Na
+
+
+### New Problems
+
+# 3. **LC 85 — Maximal Rectangle** (Monotonic Stack — last pending problem in variant)
+
+class Solution(object):
+    
+    def largestRectangleArea(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        nse = [len(heights)]*len(heights)
+
+        stack=[]
+
+        for i in range(len(heights)):
+
+            while stack and heights[i] <=  heights[stack[-1]]:
+
+                nse[stack[-1]] = i
+                stack.pop()
+            
+            stack.append(i)
+        
+        pse = [-1]*len(heights)
+
+        stack = []
+
+        for j in range(len(heights)):
+
+            while stack and heights[stack[-1]] >= heights[j] :
+
+                # pse[stack[-1]] = j
+
+                stack.pop()
+            if stack:
+                pse[j] = stack[-1]
+                
+            stack.append(j)
+
+        output = 0
+
+        for k in range(len(heights)):
+
+            width = nse[k]-pse[k]-1
+          
+            area = width * heights[k]
+            
+            output = max(output,area)
+        return output
+
+    def maximalRectangle(self, matrix):
+            """
+            :type matrix: List[List[str]]
+            :rtype: int
+            """
+            if not matrix and not matrix[0]:
+                return 0
+
+            heights = [0]*len(matrix[0])
+
+            max_rectangle = 0
+
+            for raw in matrix:
+
+                for col in range(len(raw)):
+
+                    if raw[col] == "1":
+                        heights[col] += 1
+                    else:
+                        heights[col] = 0
+            
+                area = self.largestRectangleArea(heights)
+
+                max_rectangle = max(max_rectangle,area)
+        
+            return max_rectangle
+
+# Status: hint
+# Time Taken: 25
+# Time Complexity: O(n*m) n=row m = columns
+# Space Complexity:O(m)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: Monotonic stack
+# Mistakes / Confusion:Na
+
+# 4. **LC 239 — Sliding Window Maximum** (Deque / Sliding Window Max — first problem in next variant)
+
+
+#Brute Force:
+
+class Solution(object):
+    def maxSlidingWindow(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        answer = []
+        n = len(nums)
+
+        for i in range(len(nums)):
+
+            max_varibale = float('-inf')
+            window = n-i
+
+            if window >= k :
+
+                for j in range(i,i+k):
+
+                    max_varibale = max(max_varibale,nums[j])
+            
+                if (len(nums)-i)-k >= 0:
+
+                    answer.append(max_varibale)
+            else:
+                break
+        
+        return answer
+
+#optimal:
+
+from collections import deque
+class Solution(object):
+    def maxSlidingWindow(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+
+        answer = []
+
+        dq = deque()
+
+
+        for i in range(len(nums)):
+
+            left = i - k + 1
+
+            while dq and dq[0] < left:
+                dq.popleft() 
+            
+            while dq and nums[i] >= nums[dq[-1]]:
+                dq.pop()
+            
+            dq.append(i)
+
+            if i >= k-1:
+                answer.append(nums[dq[0]])
+        
+        return answer
+
+# Status: hint
+# Time Taken: 30
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: queue
+# Variant: Deque
+# Mistakes / Confusion:Na
