@@ -1,12 +1,12 @@
-# Status:
+# Status:independent
 # Time Taken:
 # Time Complexity:
 # Space Complexity:
-# Submitted to LC:
-# Result:
+# Submitted to LC: Yes
+# Result:Accepted
 # Pattern:
 # Variant:
-# Mistakes / Confusion:
+# Mistakes / Confusion:Na
 
 ---
 
