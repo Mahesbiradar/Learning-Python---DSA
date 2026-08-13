@@ -1,8 +1,8 @@
 # STATUS
 
-Current Study Day: 54
-Last Study Date: 2026-08-05 (D54 processed)
-Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reached, Deque building (2/4).
+Current Study Day: 55
+Last Study Date: 2026-08-06 (D55 processed)
+Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reached, Deque target reached 4/4 (stability pending).
 
 ---
 
@@ -21,25 +21,25 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reac
 | Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 3 | Aug 3 | Aug 10 | ✓ | D49 independent 10 min, Accepted — reconfirmed Tier 3; D53 independent 4 min, accepted — reconfirmed Tier 3 |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D23 passed |
-| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Jul 30 | Aug 6 | ✓ | D45 independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min |
+| Top K Frequent Words | 692 | Freq Sorting | Sort by count | 3 | Aug 6 | Aug 13 | ✓ | D45 independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Two Sum | 1 | Complement Lookup | Two Sum style | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 10 min, accepted — reconfirmed Tier 3; D53 independent 3 min, accepted — reconfirmed Tier 3 |
-| Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Jul 30 | Aug 6 | ✓ | D42 catch-up independent 10 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min |
+| Two Sum II | 167 | Two Pointers | Opposite ends | 3 | Aug 6 | Aug 13 | ✓ | D42 catch-up independent 10 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Running Sum | 1480 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find Highest Altitude | 1732 | Prefix Sum | Running prefix | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Find Pivot Index | 724 | Prefix Sum | Pivot | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Product of Array Except Self | 238 | Prefix Sum | Pivot | 4 | Aug 3 | Sep 2 | ✓ | 14d recall passed D22; D44 Tier 4 recall template correct; D53 Tier 4 template recall 10 min, correct |
-| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Jul 30 | Aug 6 | ✓ | D43 independent 15 min, accepted — overdue cleared, reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min |
+| Subarray Sum Equals K | 560 | Prefix Sum | Prefix+Hash Map | 3 | Aug 6 | Aug 13 | ✓ | D43 independent 15 min, accepted — overdue cleared, reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Range Sum Query | 303 | Prefix Sum | Prefix array | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 20 min, accepted — reconfirmed Tier 3; D53 independent 8 min, accepted — reconfirmed Tier 3 |
-| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Jul 30 | Aug 6 | ✓ | D45 independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min |
+| Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | Aug 6 | Aug 13 | ✓ | D45 independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | Aug 3 | Aug 10 | ✓ | D49 independent 15 min, Accepted — reconfirmed Tier 3, USO remains closed; D53 independent 5 min, accepted — reconfirmed Tier 3 |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | Jul 28 | Aug 27 | ✓ | D49 Tier 4 template recall 10 min, correct |
 | Reverse String | 344 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed; D45 Tier 4 recall template correct |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
-| Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Jul 28 | Aug 4 | ✓ | D48 accepted in 10 min; source correct, but Status field missing in comments |
-| Remove Element | 27 | Two Pointers | Write pointer | 3 | Jul 28 | Aug 4 | ✓ | D49 independent 10 min, Accepted — reconfirmed Tier 3 |
+| Remove Duplicates | 26 | Two Pointers | Write pointer | 3 | Aug 6 | Aug 13 | ✓ | D48 accepted in 10 min; source correct, but Status field missing in comments; D55 independent 5 min, accepted — reconfirmed Tier 3 |
+| Remove Element | 27 | Two Pointers | Write pointer | 3 | Aug 6 | Aug 13 | ✓ | D49 independent 10 min, Accepted — reconfirmed Tier 3; D55 independent 5 min, accepted — reconfirmed Tier 3 |
 | Container With Most Water | 11 | Two Pointers | Maximize/minimize | 3 | Aug 5 | Aug 12 | ✓ | D49 independent 10 min, Accepted — reconfirmed Tier 3; D54 independent 8m, accepted — reconfirmed Tier 3 |
-| Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
-| Permutation in String | 567 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
+| Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | Aug 6 | Sep 5 | ✓ | 14d recall passed; D55 Tier 4 template recall 10 min, correct |
+| Permutation in String | 567 | Sliding Window | Fixed size | 4 | Aug 6 | Sep 5 | ✓ | 14d recall passed; D55 Tier 4 template recall 8 min, correct |
 | Find All Anagrams | 438 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Contains Duplicate II | 219 | Sliding Window | Fixed size | 4 | Jun 20 | Jul 20 | ✓ | 14d recall passed |
 | Maximum Number of Vowels | 1456 | Sliding Window | Fixed size | 3 | Aug 3 | Aug 10 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3; D53 independent 5 min, accepted — reconfirmed Tier 3 |
@@ -53,24 +53,24 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reac
 | Maximum Product Subarray | 152 | Running State | Kadane/min-max | 4 | Jun 20 | Jul 20 | ✓ | 14d recall D22 passed |
 | Binary Search | 704 | Binary Search | Standard | 4 | Jul 30 | Aug 29 | ✓ | 14d recall passed D23; D51 Tier 4 template recall 10 min, correct |
 | Search Insert Position | 35 | Binary Search | Standard | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
-| First Bad Version | 278 | Binary Search | Standard | 3 | Jul 30 | Aug 6 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3 |
+| First Bad Version | 278 | Binary Search | Standard | 3 | Aug 6 | Aug 13 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Sqrt(x) | 69 | Binary Search | Lower bound | 4 | Jun 20 | Jul 20 | ✓ | independent, accepted |
-| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Jul 30 | Aug 6 | ✓ | D42 catch-up independent 10 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min |
+| Find Smallest Letter Greater | 744 | Binary Search | Lower bound | 3 | Aug 6 | Aug 13 | ✓ | D42 catch-up independent 10 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Find Peak Element | 162 | Binary Search | Lower bound | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 15 min, accepted — reconfirmed Tier 3; D52 independent 15 min, accepted — reconfirmed Tier 3 |
 | Valid Perfect Square | 367 | Binary Search | Lower bound | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 10 min, accepted — reconfirmed Tier 3; D52 independent 10 min, accepted — reconfirmed Tier 3 |
-| Arranging Coins | 441 | Binary Search | Lower bound | 3 | Jul 30 | Aug 6 | ✓ | D42 catch-up independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 20 min |
-| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Jul 30 | Aug 6 | ✓ | D42 catch-up independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min |
+| Arranging Coins | 441 | Binary Search | Lower bound | 3 | Aug 6 | Aug 13 | ✓ | D42 catch-up independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 20 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| Guess Number Higher or Lower | 374 | Binary Search | Standard | 3 | Aug 6 | Aug 13 | ✓ | D42 catch-up independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Peak Index in Mountain Array | 852 | Binary Search | Applied | 3 | Aug 5 | Aug 12 | ✓ | D48 independent 7 min, accepted — reconfirmed Tier 3; D54 independent 3m, accepted — reconfirmed Tier 3 |
-| Length of Last Word | 58 | String Traversal | — | 3 | Jul 30 | Aug 6 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3 |
-| Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 3 | Jul 30 | Aug 6 | ✓ | D43 standalone confirmation: 15 min independent cold, Accepted — PROMOTED Tier 3. Chronic pattern broken.; D51 independent 15 min, accepted — reconfirmed Tier 3 |
+| Length of Last Word | 58 | String Traversal | — | 3 | Aug 6 | Aug 13 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3; D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| Search in Rotated Sorted Array | 33 | Binary Search | Applied — exact search | 3 | Aug 6 | Aug 13 | ✓ | D43 standalone confirmation: 15 min independent cold, Accepted — PROMOTED Tier 3. Chronic pattern broken.; D51 independent 15 min, accepted — reconfirmed Tier 3; D55 independent 15 min, accepted — reconfirmed Tier 3 |
 | Find Minimum in Rotated Sorted Array | 153 | Binary Search | Applied — boundary search | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 10 min, accepted — reconfirmed Tier 3. Chronic pattern broken.; D51 independent 10 min, accepted — reconfirmed Tier 3; D52 independent 10 min, accepted — reconfirmed Tier 3 |
 | Koko Eating Bananas | 875 | Binary Search | Applied — boundary/feasibility | 3 | Aug 5 | Aug 12 | ✓ | D49 independent 15 min, Accepted — reconfirmed Tier 3; D54 independent 15m, accepted — reconfirmed Tier 3 |
-| Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Jul 30 | Aug 6 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3 |
-| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Jul 28 | Aug 4 | ✓ | D48 independent 20 min, Accepted — reconfirmed Tier 3; written space complexity corrected to O(n) for sorted(nums) |
-| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Jul 28 | Aug 4 | ✓ | D48 independent 7 min, Accepted — reconfirmed Tier 3; written space complexity corrected to O(n) for sorted(nums) |
+| Binary Subarrays With Sum | 930 | Prefix Sum | Prefix+Hash Map | 3 | Aug 6 | Aug 13 | ✓ | D43 independent 10 min, accepted — overdue cleared, reconfirmed Tier 3; D51 independent 10 min, accepted — reconfirmed Tier 3; D55 independent 15 min, accepted — reconfirmed Tier 3 |
+| Max Number of K-Sum Pairs | 1679 | Two Pointers | Maximize sorted | 3 | Aug 6 | Aug 13 | ✓ | D48 independent 20 min, Accepted — reconfirmed Tier 3; written space complexity corrected to O(n) for sorted(nums); D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| Minimize Maximum Pair Sum | 1877 | Two Pointers | Maximize sorted | 3 | Aug 6 | Aug 13 | ✓ | D48 independent 7 min, Accepted — reconfirmed Tier 3; written space complexity corrected to O(n) for sorted(nums); D55 independent 5 min, accepted — reconfirmed Tier 3 |
 | Subarray Sums Divisible by K | 974 | Prefix Sum | Modulo | 3 | Aug 5 | Aug 12 | ✓ | D49 independent 10 min, Accepted — reconfirmed Tier 3; D54 independent 6m, accepted — reconfirmed Tier 3 |
-| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Jul 30 | Aug 6 | ✓ | D45 independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min |
-| K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Jul 30 | Aug 6 | ✓ | D42 catch-up independent 25 min, accepted — brute force reconfirmed, optimal still not recalled cold; D51 independent 10 min, accepted — reconfirmed Tier 3 |
+| Find the Divisibility Array | 2575 | Prefix Sum | Running modulo | 3 | Aug 6 | Aug 13 | ✓ | D45 independent 15 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min; D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| K Divisible Elements Subarrays | 2261 | Brute Force | Subarray enum | 3 | Aug 6 | Aug 13 | ✓ | D42 catch-up independent 25 min, accepted — brute force reconfirmed, optimal still not recalled cold; D51 independent 10 min, accepted — reconfirmed Tier 3; D55 independent 10 min, accepted — reconfirmed Tier 3 |
 | Total Appeal of A String | 2262 | Brute Force | Subarray enum | 1 | Jul 14 | Aug 11 | — | independent brute-force D37 (15 min), printed 28/20 matches examples but O(n²) wrong for constraints and LC not submitted — USER HOLD until Aug 11 / after key patterns finish |
 | Longest Consecutive Sequence | 128 | Hash Set | Sequence expansion | 3 | Aug 3 | Aug 10 | ✓ | D47 independent 20 min, accepted — reconfirmed Tier 3; D53 independent 10 min, accepted — reconfirmed Tier 3 |
 | Make Sum Divisible by P | 1590 | Prefix Sum | Modulo | 3 | Aug 5 | Aug 12 | ✓ | D49 independent 15 min, Accepted — reconfirmed Tier 3, USO remains closed; D53 independent 5 min, accepted — reconfirmed Tier 3; D54 code present, metadata missing — assumed independent accepted, reconfirmed Tier 3 |
@@ -80,13 +80,13 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reac
 | Remove Nth Node From End | 19 | Dummy node | Remove nth from end | 3 | Aug 3 | Aug 10 | ✓ | D47 independent 20 min, accepted — reconfirmed Tier 3; D53 independent 20 min, accepted — reconfirmed Tier 3 |
 | Maximum Twin Sum of a Linked List | 2130 | In-place manipulation | Twin sum / reverse second half | 3 | Aug 3 | Aug 10 | ✓ | D47 independent 15 min, accepted — reconfirmed Tier 3; D53 independent 10 min, accepted — reconfirmed Tier 3 |
 | Linked List Cycle | 141 | Fast + slow pointer | Cycle detection | 3 | Aug 5 | Aug 12 | ✓ | D48 accepted in 10 min; Floyd cycle detection correct, Status field missing; D54 independent 5m, accepted — reconfirmed Tier 3 |
-| Middle of the Linked List | 876 | Fast + slow pointer | Middle node | 3 | Jul 30 | Aug 6 | ✓ | D45 independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min |
-| Linked List Cycle II | 142 | Fast + slow pointer | Cycle entry | 3 | Jul 28 | Aug 4 | ✓ | D48 accepted in 15 min; Floyd entry logic correct, Status field missing |
-| Palindrome Linked List | 234 | In-place manipulation | Palindrome check / reverse second half | 3 | Jul 28 | Aug 4 | ✓ | D49 independent 18 min, Accepted — reconfirmed Tier 3 |
-| Reorder List | 143 | In-place manipulation | Reorder by reversing second half | 3 | Jul 30 | Aug 6 | ✓ | D45 independent 25 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min |
-| Odd Even Linked List | 328 | In-place manipulation | Odd-even index partition | 3 | Jul 28 | Aug 4 | ✓ | D48 accepted in 20 min; pointer partition correct, Status field missing |
-| Swap Nodes in Pairs | 24 | In-place manipulation | Local pointer rewiring | 3 | Jul 28 | Aug 4 | ✓ | D48 accepted in 15 min; local rewiring correct, Status field missing |
-| Merge k Sorted Lists | 23 | Linked List | Dummy node — merge k sorted lists | 3 | Jul 30 | Aug 6 | ✓ | D44 independent 20 min, Accepted — PROMOTED Tier 3. Divide-and-conquer merge with dummy node solved cold.; D51 independent 25 min, accepted — reconfirmed Tier 3 |
+| Middle of the Linked List | 876 | Fast + slow pointer | Middle node | 3 | Aug 6 | Aug 13 | ✓ | D45 independent 20 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 10 min; D55 independent 5 min, accepted — reconfirmed Tier 3 |
+| Linked List Cycle II | 142 | Fast + slow pointer | Cycle entry | 3 | Aug 6 | Aug 13 | ✓ | D48 accepted in 15 min; Floyd entry logic correct, Status field missing; D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| Palindrome Linked List | 234 | In-place manipulation | Palindrome check / reverse second half | 3 | Aug 6 | Aug 13 | ✓ | D49 independent 18 min, Accepted — reconfirmed Tier 3; D55 independent 15 min, accepted — reconfirmed Tier 3 |
+| Reorder List | 143 | In-place manipulation | Reorder by reversing second half | 3 | Aug 6 | Aug 13 | ✓ | D45 independent 25 min, accepted — reconfirmed Tier 3; D50 reconfirmed Tier 3, 15 min; D55 independent 5 min, accepted — reconfirmed Tier 3 |
+| Odd Even Linked List | 328 | In-place manipulation | Odd-even index partition | 3 | Aug 6 | Aug 13 | ✓ | D48 accepted in 20 min; pointer partition correct, Status field missing; D55 independent 10 min, accepted — reconfirmed Tier 3 |
+| Swap Nodes in Pairs | 24 | In-place manipulation | Local pointer rewiring | 3 | Aug 6 | Aug 13 | ✓ | D48 accepted in 15 min; local rewiring correct, Status field missing; D55 independent 15 min, accepted — reconfirmed Tier 3 |
+| Merge k Sorted Lists | 23 | Linked List | Dummy node — merge k sorted lists | 3 | Aug 6 | Aug 13 | ✓ | D44 independent 20 min, Accepted — PROMOTED Tier 3. Divide-and-conquer merge with dummy node solved cold.; D51 independent 25 min, accepted — reconfirmed Tier 3; D55 independent 20 min, accepted — reconfirmed Tier 3 |
 | Valid Parentheses | 20 | Stack | Valid parens | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 20 min, Accepted — PROMOTED Tier 1→3. Stack push/pop logic fully internalized.; D52 independent 15 min, accepted — reconfirmed Tier 3 |
 | Min Stack | 155 | Stack | Min stack | 3 | Aug 3 | Aug 10 | ✓ | D46 independent 20 min, Accepted — PROMOTED Tier 1→3. Dual-stack approach fully internalized.; D52 independent 10 min, accepted — reconfirmed Tier 3 |
 | Remove All Adjacent Duplicates | 1047 | Stack | Remove adjacent duplicates | 3 | Aug 5 | Aug 12 | ✓ | D48 independent 20 min, Accepted — promoted Tier 2→3; D54 independent 10m, accepted — reconfirmed Tier 3 |
@@ -97,7 +97,9 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack target reac
 | Largest Rectangle in Histogram | 84 | Monotonic Stack | Next greater element | 2 | Aug 5 | Aug 8 | ✓ | D51 hint-needed 25 min, Accepted — introduced Tier 1; D52 scheduled but skipped due to time constraints; D53 hint-needed 25 min, Accepted — remains Tier 1; D54 independent 20m, Accepted — PROMOTED Tier 1→2 |
 | Maximal Rectangle | 85 | Monotonic Stack | Next greater element | 2 | Aug 5 | Aug 8 | ✓ | D53 hint-needed 25 min, Accepted — introduced Tier 1; D54 independent 25m, Accepted — PROMOTED Tier 1→2 |
 | Sliding Window Maximum | 239 | Deque / Sliding Window Max | Window max | 2 | Aug 5 | Aug 8 | ✓ | D53 hint-needed 30 min, Accepted — introduced Tier 1; D54 independent 30m, Accepted — PROMOTED Tier 1→2 |
-| Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit | 1438 | Deque / Sliding Window Max | Window max | 1 | Aug 5 | Aug 6 | ✓ | D54 hint-needed 20m, Accepted — introduced Tier 1 |
+| Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit | 1438 | Deque / Sliding Window Max | Window max | 2 | Aug 6 | Aug 9 | ✓ | D54 hint-needed 20m, Accepted — introduced Tier 1; D55 independent 25m, Accepted — PROMOTED Tier 1→2 |
+| Shortest Subarray with Sum at Least K | 862 | Deque / Sliding Window Max | Monotonic deque | 1 | Aug 6 | Aug 7 | ✓ | D55 hint-needed 45m, Accepted — introduced Tier 1 |
+| Jump Game VI | 1696 | Deque / Sliding Window Max | Monotonic deque | 1 | Aug 6 | Aug 7 | ✓ | D55 hint-needed 40m, Accepted — introduced Tier 1 |
 
 ---
 
@@ -131,7 +133,7 @@ Curriculum backlog. Remove a problem from Pending when it first enters Problem T
 | In-place manipulation | Reorder / reverse groups | 7 | 4 | 3 | LC 25, LC 61, LC 86 |
 | Basic Stack | Valid parens / min stack | 4 | 4 | 0 | — |
 | Monotonic Stack | Next greater element | 5 | 5 | 0 | — |
-| Deque / Sliding Window Max | Window max | 4 | 2 | 2 | LC 862, LC 1696 |
+| Deque / Sliding Window Max | Window max | 4 | 4 | 0 | — |
 | Tree DFS | Depth / height | 4 | 0 | 4 | LC 104, LC 111, LC 543, LC 110 |
 | Tree DFS | Path sum / structure | 4 | 0 | 4 | LC 112, LC 113, LC 437, LC 1448 |
 | Tree DFS | Traversal (pre/in/post) | 4 | 0 | 4 | LC 144, LC 94, LC 145, LC 105 |
@@ -154,7 +156,7 @@ Curriculum backlog. Remove a problem from Pending when it first enters Problem T
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D42 standalone Day 1 + D43 Day 2 cold confirmation: ALL 3 independent cold both days. LC33: 30min→15min, LC153: 15min→20min, LC875: 25min→15min. CHRONIC PATTERN BROKEN. Closed. | Jun 30 | Jul 22 (closed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
 | New DS | Linked Lists | Volume Building — Stabilization phase. In-place 6/6 complete; Dummy node 3/6, Fast+slow 3/6. Need 2-3 more cold cycles before Stable. | Jul 7 | Aug 1 |
-| New DS | Stack + Queue | Volume Building — D54. LC84 Tier 1→2, LC85 Tier 1→2. Monotonic Stack target reached 5/5; stability pending (LC84/LC85 need one more cold independent each for Tier 3). Basic Stack stable (4/4). Deque variant: 2/4 (LC239 Tier 2, LC1438 Tier 1). | Jul 23 | Aug 6 |
+| New DS | Stack + Queue | Volume Building — D55. LC84 Tier 2, LC85 Tier 2, LC239 Tier 2, LC1438 Tier 2. Monotonic Stack target reached 5/5; stability pending. Deque variant: target reached 4/4; stability pending (LC239/LC1438 need Tier 3, LC862/LC1696 need Tier 2→3). | Jul 23 | Aug 6 |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
 | New DS | Heap + 1D DP | Not started | Sep 10 | Sep 24 |

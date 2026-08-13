@@ -35,7 +35,7 @@ Determined automatically by checking conditions in the order listed below. A day
 | Type | Trigger | New Problems |
 |------|---------|-------------|
 | **Standalone** | `STATUS.md` → Unresolved-Since-Origin declares a mandatory session | 1 |
-| **Recovery** | Gap ≥ 3 days since last study day recorded in STATUS.md header | 0 |
+| **Recovery** | Gap ≥ 10 days since last study day recorded in STATUS.md header | 0 |
 | **Consolidation** | Count of Tier 1 problems in Problem Tracker ≥ 5 | 2-3 |
 | **Assessment** | Current DS has all variants at target solved count AND no assessment logged for this DS in Pattern Assessment Log | 0 (assessment problems instead) |
 | **Learning** | Current variant in Learning Phase Tracker has pending problems in Pattern Coverage Map | 2–3 mandatory |
