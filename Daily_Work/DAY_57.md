@@ -25,8 +25,9 @@ Read → Restate → Identify Pattern → Plan in Words → Dry Run → Code →
 
 ### New
 
-1. LC 202 — Happy Number
-2. LC 136 — Single Number
+1. LC 249 — Group Shifted Strings
+2. LC 890 — Find and Replace Pattern
+3. LC 1002 — Find Common Characters
 
 ### Tier 1
 
@@ -53,6 +54,8 @@ Read → Restate → Identify Pattern → Plan in Words → Dry Run → Code →
 ## Daily Summary
 
 New: 2 | Tier1: 4 | Tier2: 0 | Tier3: 6 | Tier4: 2 | Total: 14
+
+
 
 ---
 
