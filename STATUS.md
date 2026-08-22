@@ -1,7 +1,7 @@
 # STATUS
 
-Current Study Day: 56
-Last Study Date: 2026-08-13 (D56 processed)
+Current Study Day: 57
+Last Study Date: 2026-08-18 (D57 processed)
 Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack STABLE, Deque stability pending.
 
 ---
@@ -14,11 +14,14 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack STABLE, Deq
 | Valid Anagram | 242 | Freq Hashing | Count+query | 4 | 3-Aug | 2-Sep | 14d recall passed D23; D52 Tier 4 template recall 5 min, correct |
 | First Unique Character | 387 | Freq Hashing | Count+query | 4 | 20-Jun | 20-Jul | 14d recall passed D23 |
 | Intersection Arrays II | 350 | Freq Hashing | Count+query | 4 | 20-Jun | 20-Jul | 14d recall passed D23 |
-| Majority Element | 169 | Freq Hashing | Count+query | 4 | 20-Jun | 20-Jul | 14d recall passed D23 |
+| Majority Element | 169 | Freq Hashing | Count+query | 4 | 18-Aug | 17-Sep | D57 template recall 5m |
 | Unique Number of Occurrences | 1207 | Freq Hashing | Count+query | 4 | 3-Aug | 10-Sep | 14d recall passed |
 | Ransom Note | 383 | Freq Hashing | Count+query | 4 | 3-Aug | 10-Sep | 14d recall passed |
+| Find Common Characters | 1002 | Freq Hashing | Count+query | 2 | 18-Aug | 21-Aug | D57 independent 10m |
 | Group Anagrams | 49 | Grouping Hash Map | Canonical key | 4 | 20-Jun | 20-Jul | 14d recall D23 passed |
 | Isomorphic Strings | 205 | Grouping Hash Map | Canonical key | 4 | 3-Aug | 10-Sep | 14d recall passed |
+| Group Shifted Strings | 249 | Grouping Hash Map | Canonical key | 2 | 18-Aug | 21-Aug | D57 independent 30m |
+| Find and Replace Pattern | 890 | Grouping Hash Map | Canonical key | 2 | 18-Aug | 21-Aug | D57 independent 20m |
 | Top K Frequent Elements | 347 | Freq Sorting | Sort by count | 4 | 20-Jun | 20-Jul | 14d recall D23 passed |
 | Sort Chars by Frequency | 451 | Freq Sorting | Sort by count | 4 | 20-Jun | 20-Jul | 14d recall D23 passed |
 | Top K Frequent Words | 692 | Freq Sorting | Sort by count | 4 | 6-Aug | 13-Sep | 14d recall passed |
@@ -33,10 +36,12 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack STABLE, Deq
 | Contiguous Array | 525 | Prefix Sum | Prefix+Hash Map | 3 | 6-Aug | 13-Aug | D45 independent 20 min, accepted — reconfirmed Tier 3 |
 | Continuous Subarray Sum | 523 | Prefix Sum | Modulo | 3 | 3-Aug | 10-Aug | D49 independent 15 min, Accepted — reconfirmed Tier 3 |
 | Valid Palindrome | 125 | Two Pointers | Opposite ends | 4 | 28-Jul | 27-Aug | 14d recall passed |
-| Reverse String | 344 | Two Pointers | Opposite ends | 4 | 20-Jun | 20-Jul | 14d recall D22 passed |
+| Reverse String | 344 | Two Pointers | Opposite ends | 4 | 18-Aug | 17-Sep | D57 template recall 3m |
 | Is Subsequence | 392 | Two Pointers | Opposite ends | 4 | 20-Jun | 20-Jul | 14d recall D22 passed |
 | Remove Duplicates | 26 | Two Pointers | Write pointer | 4 | 6-Aug | 13-Sep | 14d recall passed |
 | Remove Element | 27 | Two Pointers | Write pointer | 4 | 6-Aug | 13-Sep | 14d recall passed |
+| Move Zeroes | 283 | Two Pointers | Write pointer | 3 | 18-Aug | 25-Aug | D57 independent 5m; promoted Tier 2→3 |
+| Remove Duplicates from Sorted Array II | 80 | Two Pointers | Write pointer | 3 | 18-Aug | 25-Aug | D57 independent 10m; promoted Tier 2→3 |
 | Container With Most Water | 11 | Two Pointers | Maximize/minimize | 4 | 13-Aug | 20-Aug | 14d recall passed |
 | Maximum Average Subarray I | 643 | Sliding Window | Fixed size | 4 | 6-Aug | 5-Sep | 14d recall passed |
 | Permutation in String | 567 | Sliding Window | Fixed size | 4 | 6-Aug | 5-Sep | 14d recall passed |
@@ -88,20 +93,18 @@ Current Phase: Month 2 | Week 13 | Stack + Queue — Monotonic Stack STABLE, Deq
 | Swap Nodes in Pairs | 24 | In-place manipulation | Local pointer rewiring | 3 | 6-Aug | 13-Aug | D48 accepted in 15 min |
 | Merge k Sorted Lists | 23 | Linked List | Dummy node — merge k sorted lists | 3 | 6-Aug | 13-Aug | D44 independent 20 min, Accepted |
 | Valid Parentheses | 20 | Stack | Valid parens | 3 | 13-Aug | 20-Aug | D46 independent 20 min, Accepted |
-| Min Stack | 155 | Stack | Min stack | 3 | 3-Aug | 10-Aug | D46 independent 20 min, Accepted |
-| Remove All Adjacent Duplicates | 1047 | Stack | Remove adjacent duplicates | 3 | 5-Aug | 12-Aug | D48 independent 20 min, Accepted |
-| Evaluate Reverse Polish Notation | 150 | Basic Stack | Valid parens / min stack | 3 | 3-Aug | 10-Aug | D51 hint-needed 25 min, Accepted |
-| Daily Temperatures | 739 | Monotonic Stack | Next greater element | 3 | 3-Aug | 10-Aug | D49 independent 10 min, Accepted |
-| Next Greater Element I | 496 | Monotonic Stack | Next greater element | 3 | 3-Aug | 10-Aug | D49 independent 20 min, Accepted |
-| Next Greater Element II | 503 | Monotonic Stack | Circular next greater element | 3 | 5-Aug | 12-Aug | D53 independent 20 min, Accepted |
+| Min Stack | 155 | Stack | Min stack | 3 | 18-Aug | 25-Aug | D57 independent 15m |
+| Remove All Adjacent Duplicates | 1047 | Stack | Remove adjacent duplicates | 3 | 18-Aug | 25-Aug | D57 independent 5m |
+| Evaluate Reverse Polish Notation | 150 | Basic Stack | Valid parens / min stack | 3 | 18-Aug | 25-Aug | D57 independent 10m |
+| Daily Temperatures | 739 | Monotonic Stack | Next greater element | 3 | 18-Aug | 25-Aug | D57 independent 5m |
+| Next Greater Element I | 496 | Monotonic Stack | Next greater element | 3 | 18-Aug | 25-Aug | D57 independent 10m |
+| Next Greater Element II | 503 | Monotonic Stack | Circular next greater element | 3 | 18-Aug | 25-Aug | D57 independent 10m |
 | Largest Rectangle in Histogram | 84 | Monotonic Stack | Next greater element | 3 | 13-Aug | 20-Aug | D56 independent 15 min, Accepted |
 | Maximal Rectangle | 85 | Monotonic Stack | Histogram + Previous/Next Smaller Boundary | 3 | 13-Aug | 20-Aug | D56 independent 20 min, Accepted |
 | Sliding Window Maximum | 239 | Deque / Sliding Window Max | Window max | 3 | 13-Aug | 20-Aug | D56 independent 10 min, Accepted |
 | Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit | 1438 | Deque / Sliding Window Max | Window max | 1 | 13-Aug | 14-Aug | D56 hint-needed 15 min, Accepted |
-| Shortest Subarray with Sum at Least K | 862 | Deque / Sliding Window Max | Monotonic deque | 1 | 13-Aug | 14-Aug | D56 hint-needed 30 min, Accepted |
+| Shortest Subarray with Sum at Least K | 862 | Deque / Sliding Window Max | Monotonic deque | 1 | 18-Aug | 19-Aug | D57 hint-needed 20m, Accepted |
 | Jump Game VI | 1696 | Deque / Sliding Window Max | Monotonic deque | 1 | 6-Aug | 7-Aug | D55 hint-needed 40m, Accepted |
-| Move Zeroes | 283 | Two Pointers | Write pointer — compact/remove | 2 | 13-Aug | 16-Aug | D56 independent 5 min, Accepted |
-| Remove Duplicates from Sorted Array II | 80 | Two Pointers | Write pointer — compact/remove | 2 | 13-Aug | 16-Aug | D56 independent 10 min, Accepted |
 
 ---
 
@@ -112,7 +115,7 @@ Curriculum backlog. Remove a problem from Pending when it first enters Problem T
 | Pattern | Variant | Target | Actual | Remaining | Pending Problems |
 |---------|---------|--------|--------|-----------|------------------|
 | Frequency Hashing | Count + query | 8 | 8 | 0 | — |
-| Grouping Hash Map | Canonical key grouping | 5 | 2 | 3 | LC 249, LC 890, LC 1002 |
+| Grouping Hash Map | Canonical key grouping | 5 | 5 | 0 | — |
 | Frequency Sorting | Sort by count | 4 | 3 | 1 | LC 1636 |
 | Complement Lookup | Two Sum style | 4 | 2 | 2 | LC 653, LC 1099 |
 | Prefix Sum | Running prefix | 6 | 5 | 1 | LC 1413 |
@@ -158,7 +161,7 @@ Curriculum backlog. Remove a problem from Pending when it first enters Problem T
 | Gap Fill | Binary Search Applied (LC 33, 153, 875) | D42 standalone Day 1 + D43 Day 2 cold confirmation: ALL 3 independent cold both days. LC33: 30min→15min, LC153: 15min→20min, LC875: 25min→15min. CHRONIC PATTERN BROKEN. Closed. | Jun 30 | Jul 22 (closed) |
 | Gap Fill | Binary Search Lower bound (close out) | Recovered — 441 independent D33 (was hint D32) | Jul 3 | Jul 6 (closed) |
 | New DS | Linked Lists | Volume Building — Stabilization phase. In-place 6/6 complete; Dummy node 3/6, Fast+slow 3/6. Need 2-3 more cold cycles before Stable. | Jul 7 | Aug 1 |
-| New DS | Stack + Queue | Volume Building — D56. Monotonic Stack STABLE (5/5 Tier 3+). Deque target reached 4/4 but NOT stable: LC239/LC84/LC85 Tier 3, LC1438 Tier 1, LC862 Tier 1, LC1696 Tier 1. Need LC1438/LC862/LC1696 to reach Tier 3 before phase complete. | Jul 23 | Aug 6 (extended) |
+| New DS | Stack + Queue | Volume Building — D57. Monotonic Stack STABLE (5/5 Tier 3+). Deque target reached 4/4 but NOT stable: LC239/LC84/LC85 Tier 3, LC1438 Tier 1, LC862 Tier 1, LC1696 Tier 1. Need LC1438/LC862/LC1696 to reach Tier 3 before phase complete. Phase extended. | Jul 23 | Aug 6 (extended) |
 | New DS | Trees | Not started | Aug 6 | Aug 27 |
 | New DS | Graphs | Not started | Aug 27 | Sep 10 |
 | New DS | Heap + 1D DP | Not started | Sep 10 | Sep 24 |
@@ -201,3 +204,4 @@ Rule: if any problem appears in this log twice, it requires a dedicated first-pr
 | Arrays+Hashing (partial) | Jun 24 | 3/5 | See notes | 383✓ 11✗ 523✗ 1456✓ 852✓(wrong complexity) |
 
 Full pattern assessment pending: complete gap fills first (Two Pointers maximize, Prefix Modulo, Binary Search Applied).
+```

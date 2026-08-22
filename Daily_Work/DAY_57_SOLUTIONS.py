@@ -544,3 +544,53 @@ class Solution(object):
 # Variant: Frequency Intersection / Minimum Frequency
 # Mistakes / Confusion:Na
 
+
+### Tier 1
+
+# 3. LC 862 — Shortest Subarray with Sum at Least K
+
+from collections import deque
+class Solution(object):
+    def shortestSubarray(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        prefix = [0]
+
+        for i in range(len(nums)):
+
+            prefix.append(prefix[i]+nums[i])
+
+        dq = deque()
+
+        answer = float('inf')
+
+        for j in range(len(prefix)):
+
+            while dq and prefix[j]-prefix[dq[0]] >=k:
+
+                answer = min(answer,j-dq[0])
+
+                dq.popleft()
+            
+            while dq and prefix[j] <= prefix[dq[-1]]:
+
+                dq.pop()
+            
+            dq.append(j)
+        
+        return answer if answer != float('inf') else -1
+
+
+# Status: hint
+# Time Taken: 20m
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC: Yes
+# Result: Accepted
+# Pattern: sliding window
+# Variant: montonotinc deque.
+# Mistakes / Confusion:Na
+
