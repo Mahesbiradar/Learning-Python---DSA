@@ -50,7 +50,7 @@ Read → Restate → Identify Pattern → Plan in Words → Dry Run → Code →
 29	-	LC	-	503	-	Next Greater Element II
 30	-	LC	-	84	-	Largest Rectangle in Histogram
 31	-	LC	-	85	-	Maximal Rectangle
-32	-	LC	-	239	-	Sliding Window Maximum
-33	-	LC	-	1438	-	Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
-34	-	LC	-	862	-	Shortest Subarray with Sum at Least K
-35	-	LC	-	1696	-	Jump Game VI
+## 32	-	LC	-	239	-	Sliding Window Maximum
+## 33	-	LC	-	1438	-	Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+## 34	-	LC	-	862	-	Shortest Subarray with Sum at Least K
+## 35	-	LC	-	1696	-	Jump Game VI

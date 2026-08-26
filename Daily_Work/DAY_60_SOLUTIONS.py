@@ -1089,3 +1089,453 @@ class Solution(object):
 # Variant: remove adjacent
 # Mistakes / Confusion:Na
 
+
+# 26	-	LC	-	150	-	Evaluate Reverse Polish Notation
+
+class Solution:
+    def evalRPN(self, tokens):
+        
+        stack = []
+
+        for i in tokens:
+
+            if i not in ["+", "-", "*", "/"]:
+                stack.append(int(i))
+            else:
+                right = stack.pop()
+                left =  stack.pop()
+                result = None
+
+                if i == "+":
+                    result = left + right
+                elif i == "-":
+                    result = left - right
+                elif i == "*":
+                    result = left * right
+                elif i == "/":
+                    result = int(left/right)
+                
+                stack.append(result)
+        
+        return stack[0]
+
+
+# Status: Independent
+# Time Taken: 10m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: reverse Polish Notation
+# Mistakes / Confusion:Na
+
+# 27	-	LC	-	739	-	Daily Temperatures
+
+class Solution(object):
+    def dailyTemperatures(self, temperatures):
+        """
+        :type temperatures: List[int]
+        :rtype: List[int]
+        """
+        
+        answer = [0]* len(temperatures)
+
+        stack = []
+
+        for i in range(len(temperatures)):
+
+            while stack and temperatures[i] > temperatures[stack[-1]]:
+
+                answer[stack[-1]] = i - stack[-1]
+                
+                stack.pop()
+
+            stack.append(i)
+        
+        return answer
+
+
+# Status: Independent
+# Time Taken: 5m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: monotonic stack
+# Mistakes / Confusion:Na
+
+# 28	-	LC	-	496	-	Next Greater Element I
+
+class Solution(object):
+    def nextGreaterElement(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        next_greater = {}
+
+        stack = []
+
+        for i in nums2:
+
+            while stack and i > stack[-1]:
+
+                next_greater[stack[-1]] = i
+
+                stack.pop()
+
+            stack.append(i)
+        
+
+        answer = [-1]*len(nums1)
+
+        for i in range(len(nums1)):
+            
+            if nums1[i] in next_greater:
+
+                answer[i] = next_greater[nums1[i]]
+
+        return answer
+
+
+# Status: Independent
+# Time Taken: 5m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: monotonic stack
+# Mistakes / Confusion:Na
+
+# 29	-	LC	-	503	-	Next Greater Element II
+
+class Solution(object):
+    def nextGreaterElements(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+
+        answer = [-1]* len(nums)
+
+        stack = []
+
+        n = len(nums)
+
+        for i in range(n*2):
+
+            while stack and nums[i%n] > nums[stack[-1]]:
+
+                answer[stack[-1]] = nums[i%n]
+
+                stack.pop()
+
+            if i < n:
+                stack.append(i)
+        
+        return answer
+
+
+# Status: Independent
+# Time Taken: 5m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: monotonic stack
+# Mistakes / Confusion:Na
+
+# 30	-	LC	-	84	-	Largest Rectangle in Histogram
+
+class Solution(object):
+    def largestRectangleArea(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        right = [len(heights)]*len(heights)
+
+        stack = []
+
+        for i in range(len(heights)):
+
+            while stack and heights[i] < heights[stack[-1]]:
+
+                right[stack[-1]] = i
+
+                stack.pop()
+    
+            stack.append(i)
+
+        left = [-1] * len(heights)
+
+        stack = []
+
+        for i in range(len(heights)-1,-1,-1):
+
+            while stack and  heights[i] < heights[stack[-1]]:
+
+                left[stack[-1]] = i
+
+                stack.pop()
+
+            stack.append(i)
+        
+
+        max_rectangle = 0
+
+        for i in range(len(heights)):
+
+            width = (right[i] - left[i]) - 1
+
+            area =  heights[i] * width
+
+            max_rectangle = max(max_rectangle,area)
+
+        return max_rectangle
+        
+
+# Status: Independent
+# Time Taken: 10m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: monotonic stack + histogram
+# Mistakes / Confusion:Na
+
+# 31	-	LC	-	85	-	Maximal Rectangle
+
+class Solution(object):
+    def largestRectangleArea(self, heights):
+        """
+        :type heights: List[int]
+        :rtype: int
+        """
+        right = [len(heights)]*len(heights)
+
+        stack = []
+
+        for i in range(len(heights)):
+
+            while stack and heights[i] < heights[stack[-1]]:
+
+                right[stack[-1]] = i
+
+                stack.pop()
+    
+            stack.append(i)
+
+        left = [-1] * len(heights)
+
+        stack = []
+
+        for i in range(len(heights)-1,-1,-1):
+
+            while stack and  heights[i] < heights[stack[-1]]:
+
+                left[stack[-1]] = i
+
+                stack.pop()
+
+            stack.append(i)
+        
+
+        max_rectangle = 0
+
+        for i in range(len(heights)):
+
+            width = (right[i] - left[i]) - 1
+
+            area =  heights[i] * width
+
+            max_rectangle = max(max_rectangle,area)
+
+        return max_rectangle
+
+
+    def maximalRectangle(self, matrix):
+        """
+        :type matrix: List[List[str]]
+        :rtype: int
+        """
+        
+        rectangle = [0]*len(matrix[0])
+
+        maximal_rectangel = 0
+
+        for row in matrix:
+
+            for i in range(len(row)):
+
+                if row[i] == "1":
+                    rectangle[i] += 1
+                else:
+                    rectangle[i] = 0
+            
+            area = self.largestRectangleArea(rectangle)
+
+            maximal_rectangel = max(maximal_rectangel,area)
+        
+        return maximal_rectangel
+
+
+
+# Status: Independent
+# Time Taken: 10m 
+# Time Complexity: O(n*l)
+# Space Complexity:O(l)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: stack
+# Variant: monotonic stack + histogram 
+# Mistakes / Confusion:Na
+
+# 32	-	LC	-	239	-	Sliding Window Maximum
+
+
+from collections import deque
+class Solution(object):
+    def maxSlidingWindow(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        dq =deque()
+
+
+        answer = []
+
+
+        for i in range(len(nums)):
+
+            left = i-k+1
+
+            while dq and left > dq[0]:
+
+                dq.popleft()
+            
+            while dq and nums[i] >= nums[dq[-1]]:
+
+                dq.pop()
+            
+            dq.append(i)
+
+            if i >= k-1:
+
+                answer.append(nums[dq[0]])
+        
+        return answer
+
+
+# Status: hint
+# Time Taken: 20m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: sliding window
+# Variant: monotonic deque
+# Mistakes / Confusion:Na
+
+# 33	-	LC	-	1438	-	Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+
+# Brute Force:
+
+class Solution(object):
+    def longestSubarray(self, nums, limit):
+        """
+        :type nums: List[int]
+        :type limit: int
+        :rtype: int
+        """
+        longest_subarray = 0
+        for i in range(len(nums)):
+
+            max_num = nums[i]
+            min_num = nums[i]
+
+            for j in range(i,len(nums)):
+
+                max_num = max(max_num,nums[j])
+                min_num = min(min_num,nums[j])
+
+                diff = max_num - min_num
+
+                if diff <= limit:
+
+                    longest_subarray = max(longest_subarray,j-i+1)
+
+        return longest_subarray
+
+# status: Independent
+
+# Optimal solution:
+
+from collections import deque
+class Solution(object):
+    def longestSubarray(self, nums, limit):
+        """
+        :type nums: List[int]
+        :type limit: int
+        :rtype: int
+        """
+
+        maxdeque = deque()
+        mindeque = deque()
+
+        answer = 0
+
+        left = 0
+
+        for right in range(len(nums)):
+
+            while maxdeque and nums[right] >= nums[maxdeque[-1]]:
+
+                maxdeque.pop()
+            
+            maxdeque.append(right)
+
+            while mindeque and nums[right] <= nums[mindeque[-1]]:
+
+                mindeque.pop()
+
+            mindeque.append(right)
+
+
+            while nums[maxdeque[0]]-nums[mindeque[0]] > limit:
+
+
+                if maxdeque[0] == left:
+
+                    maxdeque.popleft()
+                
+                if mindeque[0] == left:
+
+                    mindeque.popleft()
+                
+                left +=1
+                
+            answer = max(answer,right-left+1)
+
+
+        return answer
+
+# Status: hint
+# Time Taken: 20m 
+# Time Complexity: O(n)
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern: sliding window
+# Variant: monotonic deque
+# Mistakes / Confusion:Na
+
+# 34	-	LC	-	862	-	Shortest Subarray with Sum at Least K
