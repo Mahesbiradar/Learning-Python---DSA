@@ -1065,3 +1065,14 @@ class Solution(object):
                 left = mid + 1
         return left 
 
+
+
+# Status: independent
+# Time Taken: 10 M
+# Time Complexity: O(logn)
+# Space Complexity: O(1)
+# Submitted to LC: Yes
+# Result: Accepted
+# Pattern:Binary search 
+# Variant: Applied Boundry search
+# Mistakes / Confusion:Na
