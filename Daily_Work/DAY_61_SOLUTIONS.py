@@ -639,3 +639,14 @@ def shortestSubarray(nums, k):
 print(shortestSubarray(nums = [2,-1,2], k = 3))
 print(shortestSubarray(nums = [1,2], k = 4))
 print(shortestSubarray(nums = [1], k = 1))
+
+
+# Status: hint
+# Time Taken: 20m
+# Time Complexity: O(n) 
+# Space Complexity:O(n)
+# Submitted to LC:Yes
+# Result:Accepted
+# Pattern:sliding window
+# Variant:Monotonic deque.
+# Mistakes / Confusion:Na
