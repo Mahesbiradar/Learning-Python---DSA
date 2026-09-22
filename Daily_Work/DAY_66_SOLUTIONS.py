@@ -552,7 +552,6 @@ class Solution(object):
 
 # 9	-	LC	-	219	-	Contains Duplicate II
 
-
 def containsNearbyDuplicate(nums,k):
 
     seen = set()
