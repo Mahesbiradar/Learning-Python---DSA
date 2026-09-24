@@ -796,5 +796,3 @@ class Solution(object):
 # Pattern: sliding window
 # Variant: variable size
 # Mistakes / Confusion:Na
-
-
