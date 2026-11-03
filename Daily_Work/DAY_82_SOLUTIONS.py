@@ -79,10 +79,10 @@ class Solution:
 # 2	-	LC	-	203	-	Remove Linked List Elements
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 class Solution:
     def removeElements(self, head: ListNode | None, val: int) -> ListNode | None:
 
@@ -336,11 +336,11 @@ print(pathSum(root, 18))
 # 2 --- LC --- 111 --- Minimum Depth of Binary Tree
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 class Solution:
     def minDepth(self, root: TreeNode | None) -> int:
         
@@ -368,7 +368,7 @@ class Solution:
 #         self.left = left
 #         self.right = right
 class Solution:
-    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+    def diameterOfBinaryTree(self, root) -> int:
         
         diameter = 0
 
