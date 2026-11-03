@@ -134,4 +134,19 @@ print(diconnected(graph_2))
 
 
 
+word = "hot"
+
+for i in range(len(word)):
+    for ch in "abcdefghijklmnopqrstuvwxyz":
+
+        new_word = word[:i] + ch + word[i+1:]
+
+        print(new_word)
+
+
+
+
+
+
+
 
